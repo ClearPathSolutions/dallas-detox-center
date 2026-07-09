@@ -1,0 +1,162 @@
+{
+  "id": 1936,
+  "slug": "contact-us",
+  "path": "/contact-us",
+  "template": "page",
+  "title": "Contact Us",
+  "metaTitle": "Contact Us - Dallas Detox Center",
+  "metaDescription": "",
+  "ogImage": "/images/content/2022/06/8-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-8.jpg",
+  "canonical": "/contact-us",
+  "featured": {
+    "src": "/images/content/2022/06/8-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-8.jpg",
+    "alt": ""
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Professional Support Is Only a Call Away"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Contact Dallas Detox Center Today"
+    },
+    {
+      "type": "paragraph",
+      "html": "Our admissions team is available 24/7 to provide immediate guidance and<br> help you begin your recovery journey at our private Dallas estate.",
+      "text": "Our admissions team is available 24/7 to provide immediate guidance and help you begin your recovery journey at our private Dallas estate."
+    },
+    {
+      "type": "paragraph",
+      "html": "Our admissions team is available 24/7 to provide immediate, confidential guidance and help you begin your recovery journey at our private Dallas estate.",
+      "text": "Our admissions team is available 24/7 to provide immediate, confidential guidance and help you begin your recovery journey at our private Dallas estate."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Call Us"
+    },
+    {
+      "type": "paragraph",
+      "html": "24/7 Admissions Line",
+      "text": "24/7 Admissions Line"
+    },
+    {
+      "type": "paragraph",
+      "html": "<a href=\"tel:8179042197\">817-904-2197</a>",
+      "text": "817-904-2197"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Email Us"
+    },
+    {
+      "type": "paragraph",
+      "html": "24h Answer Window",
+      "text": "24h Answer Window"
+    },
+    {
+      "type": "paragraph",
+      "html": "<a href=\"mailto:info@dallasdetoxcenter.com\">info@dallasdetoxcenter.com</a>",
+      "text": "info@dallasdetoxcenter.com"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Find Us At"
+    },
+    {
+      "type": "paragraph",
+      "html": "Minutes From Dallas, TX",
+      "text": "Minutes From Dallas, TX"
+    },
+    {
+      "type": "paragraph",
+      "html": "<a href=\"http://googleusercontent.com/maps.google.com/7\">100 Mariah Drive, Weatherford, Texas 76087</a>",
+      "text": "100 Mariah Drive, Weatherford, Texas 76087"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get in Touch with Us"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Send Us a Message"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get the Help You Need Right Now"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "We Work With Most Major Insurance"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/amerihealth.png",
+      "alt": "amerihealth"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/anthem-white.png",
+      "alt": "anthem-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/bcbs-empire-2.png",
+      "alt": "bcbs-empire-2"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/highmark-logo.png",
+      "alt": "highmark-logo"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/horizon-bcbs-white.png",
+      "alt": "horizon-bcbs-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/magnacare-logo-2-white.png",
+      "alt": "magnacare-logo-2-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-aetna-white.png",
+      "alt": "mcr-aetna-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-beacon-white.png",
+      "alt": "mcr-beacon-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-compsych-white.png",
+      "alt": "mcr-compsych-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-optum-white.png",
+      "alt": "mcr-optum-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-uhc-white.png",
+      "alt": "mcr-uhc-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/umr-logo-white.png",
+      "alt": "umr-logo-white"
+    }
+  ]
+}

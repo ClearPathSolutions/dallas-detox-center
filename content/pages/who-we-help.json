@@ -1,0 +1,311 @@
+{
+  "id": 11052,
+  "slug": "who-we-help",
+  "path": "/who-we-help",
+  "template": "page",
+  "title": "Who We Help",
+  "metaTitle": "Dallas Drug Treatment Center - Dallas Detox Center",
+  "metaDescription": "At our drug treatment center in Dallas, we understand seeking treatment and leaving behind what you know to be “normal” to heal and get well is not easy. Get in touch!",
+  "ogImage": "/images/content/2026/02/1-web-or-mls-DJI_20260206132754_0577_D.jpg",
+  "canonical": "/who-we-help",
+  "featured": {
+    "src": "/images/content/2026/02/1-web-or-mls-DJI_20260206132754_0577_D.jpg",
+    "alt": ""
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Personalized paths to recovery for every walk of life"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Specialized Treatment Programs in Dallas, TX"
+    },
+    {
+      "type": "paragraph",
+      "html": "Our boutique facility provides tailored clinical<br> tracks designed for the unique needs of professionals, veterans, and families.",
+      "text": "Our boutique facility provides tailored clinical tracks designed for the unique needs of professionals, veterans, and families."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Addiction & Mental Health Treatment Services in Dallas, Texas"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Medically Reviewed By: Alexandria Grigsby LCDC",
+        "Last Updated: May 2026"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "Our Dallas detox &amp; residential center provides tailored recovery tracks for specific demographics to ensure clinical relevance and peer connection. We offer specialized programs for:",
+      "text": "Our Dallas detox & residential center provides tailored recovery tracks for specific demographics to ensure clinical relevance and peer connection. We offer specialized programs for:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Professionals & Executives: Discreet treatment designed for career continuity and high-level privacy.",
+        "Veterans & First Responders: Trauma-informed protocols addressing the specific stressors of frontline service.",
+        "Women & Men: Gender-specific therapy tracks that focus on unique psychological and social healing.",
+        "Young Adults & Students: Age-appropriate support for life skills and navigating academic pressures."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/goldseal_national.png",
+      "alt": "dallas detox center is joint commission approved - gold standard for addiction treatment"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Clinical tracks designed for your specific journey."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Our Customized Treatment Programs"
+    },
+    {
+      "type": "paragraph",
+      "html": "We recognize that every addiction and mental health struggle is as unique as the individual experiencing it. A one-size-fits-all approach often fails to address the specific life experiences, professional pressures, or traumatic backgrounds that drive a person’s challenges. At our Dallas facility, we utilize diverse, specialized approaches to <a href=\"/treatment-services\">treatment</a> to ensure that your care plan is precisely tailored to your history, your demographic, and your specific goals for long-term stabilization.",
+      "text": "We recognize that every addiction and mental health struggle is as unique as the individual experiencing it. A one-size-fits-all approach often fails to address the specific life experiences, professional pressures, or traumatic backgrounds that drive a person’s challenges. At our Dallas facility, we utilize diverse, specialized approaches to treatment to ensure that your care plan is precisely tailored to your history, your demographic, and your specific goals for long-term stabilization."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/8-web-or-mls-DSC04989.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Professionals"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Program"
+    },
+    {
+      "type": "paragraph",
+      "html": "Discreet treatment designed for those balancing high-level career responsibilities with recovery.",
+      "text": "Discreet treatment designed for those balancing high-level career responsibilities with recovery."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/33-web-or-mls-DSC05067.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "First Responders"
+    },
+    {
+      "type": "paragraph",
+      "html": "Focused, trauma-informed care addressing the unique stressors of frontline service.",
+      "text": "Focused, trauma-informed care addressing the unique stressors of frontline service."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/15-web-or-mls-DSC09539.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Veterans Custom"
+    },
+    {
+      "type": "paragraph",
+      "html": "Trauma-informed recovery tailored to the unique transition from military service to civil.",
+      "text": "Trauma-informed recovery tailored to the unique transition from military service to civil."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/1-web-or-mls-DSC05075.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Men Specialized"
+    },
+    {
+      "type": "paragraph",
+      "html": "Clinical support tailored to the specific social, psychological barriers men face in treatment.",
+      "text": "Clinical support tailored to the specific social, psychological barriers men face in treatment."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/11-web-or-mls-DSC09529.jpg",
+      "alt": "Modern detox and residential treatment facility in Dallas TX for addiction recovery"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Young Adults"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/31-web-or-mls-DSC05061.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Students"
+    },
+    {
+      "type": "paragraph",
+      "html": "Specialized guidance for navigating academic pressures and culture during recovery.",
+      "text": "Specialized guidance for navigating academic pressures and culture during recovery."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/5-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-5.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Women"
+    },
+    {
+      "type": "paragraph",
+      "html": "A dedicated space for gender-specific healing, focusing on safety and emotional wellness.",
+      "text": "A dedicated space for gender-specific healing, focusing on safety and emotional wellness."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "You Don’t Have to Carry This Alone"
+    },
+    {
+      "type": "paragraph",
+      "html": "Our clinicians are available 24/7 to answer your questions and help you find the right level of care.",
+      "text": "Our clinicians are available 24/7 to answer your questions and help you find the right level of care."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Why Chose Dallas Detox Center"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Premier Psychiatric & Addiction Care In Dallas, TX"
+    },
+    {
+      "type": "paragraph",
+      "html": "At Dallas Detox Center, we believe that the best way to heal is in a place that feels like home. Our <a href=\"/tour\">beautiful luxury property</a> is designed to be a quiet, private space where you can relax and focus entirely on getting better. You aren’t just a number here; our <a href=\"/about-us\">expert medical and clinical staff</a> works with you 24/7 to make sure you are safe and supported every step of the way. We know that everyone comes from a different background and faces different struggles, which is why we don’t use a one-size-fits-all plan. Whether you are an <a href=\"/professionals\">executive</a>, a veteran, or a <a href=\"/college-student\">student</a>, we change our approach to fit exactly who you are and what you need to find lasting peace and wellness.",
+      "text": "At Dallas Detox Center, we believe that the best way to heal is in a place that feels like home. Our beautiful luxury property is designed to be a quiet, private space where you can relax and focus entirely on getting better. You aren’t just a number here; our expert medical and clinical staff works with you 24/7 to make sure you are safe and supported every step of the way. We know that everyone comes from a different background and faces different struggles, which is why we don’t use a one-size-fits-all plan. Whether you are an executive, a veteran, or a student, we change our approach to fit exactly who you are and what you need to find lasting peace and wellness."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/shutterstock_2471516881-1024x576.jpg",
+      "alt": "Woman relaxing enjoying sobriety"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Real Results: Life-Changing Recovery at Our Dallas Facility"
+    },
+    {
+      "type": "paragraph",
+      "html": "See how Dallas Detox Center has helped individuals reclaim their lives and start their journey toward lasting wellness.",
+      "text": "See how Dallas Detox Center has helped individuals reclaim their lives and start their journey toward lasting wellness."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get the Help You Need Right Now"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "We Work With Most Major Insurance"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/amerihealth.png",
+      "alt": "amerihealth"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/anthem-white.png",
+      "alt": "anthem-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/bcbs-empire-2.png",
+      "alt": "bcbs-empire-2"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/highmark-logo.png",
+      "alt": "highmark-logo"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/horizon-bcbs-white.png",
+      "alt": "horizon-bcbs-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/magnacare-logo-2-white.png",
+      "alt": "magnacare-logo-2-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-aetna-white.png",
+      "alt": "mcr-aetna-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-beacon-white.png",
+      "alt": "mcr-beacon-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-compsych-white.png",
+      "alt": "mcr-compsych-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/prc-magellan.png",
+      "alt": "prc-magellan"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Available 24/7"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Take the first step toward a healthier future today."
+    },
+    {
+      "type": "paragraph",
+      "html": "Our team is here to help you find the right path, whether you are a professional, a veteran, or a student. Fill out the form below for a confidential consultation, and our admissions specialists will reach out to discuss our specialized programs and verify your insurance coverage.",
+      "text": "Our team is here to help you find the right path, whether you are a professional, a veteran, or a student. Fill out the form below for a confidential consultation, and our admissions specialists will reach out to discuss our specialized programs and verify your insurance coverage."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "No Obligation When You Contact Us",
+        "All Contact is Completely Confidential",
+        "Highly-Experienced & Caring Staff",
+        "Hand-Crafted, Individualized Treatment Plans",
+        "True Dual-Diagnosis with On-Staff Psychiatrist"
+      ]
+    }
+  ]
+}

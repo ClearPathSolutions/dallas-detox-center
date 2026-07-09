@@ -1,0 +1,287 @@
+{
+  "id": 10470,
+  "slug": "admissions",
+  "path": "/admissions",
+  "template": "page",
+  "title": "Admissions",
+  "metaTitle": "Admissions - Dallas Detox Center",
+  "metaDescription": "",
+  "ogImage": "/images/content/2026/02/10-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-10.jpg",
+  "canonical": "/admissions",
+  "featured": {
+    "src": "/images/content/2026/02/10-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-10.jpg",
+    "alt": ""
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "A Streamlined Path to Recovery"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Begin Your Journey at Dallas Detox Center"
+    },
+    {
+      "type": "paragraph",
+      "html": "You don’t have to do this alone. We provide 24/7 support to answer your questions and handle the details so you can start your recovery with confidence.",
+      "text": "You don’t have to do this alone. We provide 24/7 support to answer your questions and handle the details so you can start your recovery with confidence."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "A Clear, Supported Journey to Healing"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Starting Your Recovery is Simple"
+    },
+    {
+      "type": "paragraph",
+      "html": "Starting your recovery shouldn’t feel overwhelming. Our team has designed a straightforward, four-step process to get you the specialized support you need as quickly and comfortably as possible.",
+      "text": "Starting your recovery shouldn’t feel overwhelming. Our team has designed a straightforward, four-step process to get you the specialized support you need as quickly and comfortably as possible."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Connect With Us"
+    },
+    {
+      "type": "paragraph",
+      "html": "Reach out via phone or our secure online form for a 100% confidential conversation. Our caring team is available 24/7 to listen to your needs and answer any questions you have about our programs.",
+      "text": "Reach out via phone or our secure online form for a 100% confidential conversation. Our caring team is available 24/7 to listen to your needs and answer any questions you have about our programs."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Clinical Assessment"
+    },
+    {
+      "type": "paragraph",
+      "html": "We conduct a brief screening to understand your history and current challenges. This helps our clinical team ensure that our facility is the most effective environment for your specific recovery goals.",
+      "text": "We conduct a brief screening to understand your history and current challenges. This helps our clinical team ensure that our facility is the most effective environment for your specific recovery goals."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Insurance Verification"
+    },
+    {
+      "type": "paragraph",
+      "html": "Our specialists work directly with your insurance provider to confirm your benefits and minimize out-of-pocket costs. We handle all the financial logistics so you can focus entirely on getting better.",
+      "text": "Our specialists work directly with your insurance provider to confirm your benefits and minimize out-of-pocket costs. We handle all the financial logistics so you can focus entirely on getting better."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Admission & Arrival"
+    },
+    {
+      "type": "paragraph",
+      "html": "Once your plan is finalized, we coordinate your arrival and welcome you to our Dallas campus. From your arrival on-site, our team is there to support you through a stress-free transition into care.",
+      "text": "Once your plan is finalized, we coordinate your arrival and welcome you to our Dallas campus. From your arrival on-site, our team is there to support you through a stress-free transition into care."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get the Help You Need Right Now"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "We Work With Most Major Insurance"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/06/ins-logo-anthem.svg",
+      "alt": "ins-logo-anthem"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/06/ins-logo-beacon.svg",
+      "alt": "ins-logo-beacon"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/06/ins-logo-bluecross.svg",
+      "alt": "ins-logo-bluecross"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/06/ins-logo-compsych.svg",
+      "alt": "ins-logo-compsych"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/06/ins-logo-magellan.svg",
+      "alt": "ins-logo-magellan"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/06/ins-logo-multiplan.svg",
+      "alt": "ins-logo-multiplan"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/06/ins-logo-threerivers.svg",
+      "alt": "ins-logo-threerivers"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/06/ins-logo-valueoptions.svg",
+      "alt": "ins-logo-valueoptions"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get Instant Help for Addiction"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Verify Your Insurance Benefits"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Quick & Confidential Verification. 100% Free."
+    },
+    {
+      "type": "paragraph",
+      "html": "We accept most major insurance plans and are dedicated to making the admissions process as seamless as possible. Once you submit this form, our team will conduct a private review of your policy and contact you shortly to discuss your options for <a href=\"/detox\">detox</a> and <a href=\"/residential-inpatient\">residential care</a>.",
+      "text": "We accept most major insurance plans and are dedicated to making the admissions process as seamless as possible. Once you submit this form, our team will conduct a private review of your policy and contact you shortly to discuss your options for detox and residential care."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "What to Expect"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "The Dallas Detox Center Experience"
+    },
+    {
+      "type": "paragraph",
+      "html": "Your journey begins with a warm welcome to our private Dallas estate, where your comfort and safety are our immediate priorities. During your first 24 hours, our clinical team provides a medical evaluation and orientation to ensure your transition into our <a href=\"/detox\">medical detox</a> or <a href=\"/residential-inpatient\">residential programs</a> is seamless. We focus on immediate stabilization in a secure environment, allowing you to settle into your private suite and begin your recovery with peace of mind.",
+      "text": "Your journey begins with a warm welcome to our private Dallas estate, where your comfort and safety are our immediate priorities. During your first 24 hours, our clinical team provides a medical evaluation and orientation to ensure your transition into our medical detox or residential programs is seamless. We focus on immediate stabilization in a secure environment, allowing you to settle into your private suite and begin your recovery with peace of mind."
+    },
+    {
+      "type": "paragraph",
+      "html": "Beyond the initial intake, you will engage in a structured, <a href=\"/treatment-services\">evidence-based program</a> that addresses the root causes of addiction through physician-led therapies such as Individual or Equine Therapy. Our philosophy centers on treating the whole person, integrating <a href=\"/who-we-help\">specialized tracks</a> for professionals, veterans, and more, with holistic wellness practices. This clinical partnership is designed to provide you with the practical tools and emotional resilience needed for long-term wellness and a successful return to daily life.",
+      "text": "Beyond the initial intake, you will engage in a structured, evidence-based program that addresses the root causes of addiction through physician-led therapies such as Individual or Equine Therapy. Our philosophy centers on treating the whole person, integrating specialized tracks for professionals, veterans, and more, with holistic wellness practices. This clinical partnership is designed to provide you with the practical tools and emotional resilience needed for long-term wellness and a successful return to daily life."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/3-web-or-mls-DJI_20260206132919_0584_D-1024x576.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Safe and Seamless Logistics from Anywhere in the Country"
+    },
+    {
+      "type": "paragraph",
+      "html": "Distance should never stand in the way of high-quality clinical care. Whether you are traveling from across the state or flying in from across the country, our admissions team is here to handle your travel logistics. From coordinating private pickups at DFW or Love Field to assisting with local transportation, we manage the details of your arrival to ensure your journey to our Dallas campus is as safe, comfortable, and stress-free as possible.",
+      "text": "Distance should never stand in the way of high-quality clinical care. Whether you are traveling from across the state or flying in from across the country, our admissions team is here to handle your travel logistics. From coordinating private pickups at DFW or Love Field to assisting with local transportation, we manage the details of your arrival to ensure your journey to our Dallas campus is as safe, comfortable, and stress-free as possible."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/8-web-or-mls-DSC09520-1024x683.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Protecting Your Career While You Prioritize Your Health"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Job Protection & FMLA Assistance"
+    },
+    {
+      "type": "paragraph",
+      "html": "Many people avoid life-saving treatment because they fear they will return home to an empty desk. It is important to know that federal laws, such as the <a href=\"https://www.dol.gov/agencies/whd/fmla\">Family and Medical Leave Act</a> (FMLA), were created specifically to protect your job during a medical crisis, including <a href=\"/treatment-services\">addiction and mental health recovery</a>. These laws allow you to take a protected leave of absence without the risk of being fired, ensuring your position is waiting for you when you finish your program.",
+      "text": "Many people avoid life-saving treatment because they fear they will return home to an empty desk. It is important to know that federal laws, such as the Family and Medical Leave Act (FMLA), were created specifically to protect your job during a medical crisis, including addiction and mental health recovery. These laws allow you to take a protected leave of absence without the risk of being fired, ensuring your position is waiting for you when you finish your program."
+    },
+    {
+      "type": "paragraph",
+      "html": "Our team is here to guide you through the process from day one. We assist with all the necessary paperwork, including <a href=\"https://www.adp.com/resources/articles-and-insights/articles/s/short-term-disability.aspx\">Short-Term Disability (STD)</a> documentation, which can often help you continue receiving a portion of your income while you are in our care. We handle these logistics with the utmost discretion to protect your privacy, so you can focus on getting well with the peace of mind that your professional future is secure.",
+      "text": "Our team is here to guide you through the process from day one. We assist with all the necessary paperwork, including Short-Term Disability (STD) documentation, which can often help you continue receiving a portion of your income while you are in our care. We handle these logistics with the utmost discretion to protect your privacy, so you can focus on getting well with the peace of mind that your professional future is secure."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get In Touch"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "How to Find Us"
+    },
+    {
+      "type": "paragraph",
+      "html": "100 Mariah Drive, Weatherford, Texas 76087",
+      "text": "100 Mariah Drive, Weatherford, Texas 76087"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Frequently Asked Questions"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "How soon can I begin treatment?"
+    },
+    {
+      "type": "paragraph",
+      "html": "We understand that the need for help is often urgent. Our admissions team is available 24/7 to begin your consultation, and in many cases, we can coordinate same-day or next-day admissions once your clinical assessment and insurance verification are complete. Call us now at <a href=\"tel:8179042197\">817-904-2197</a> to get started.",
+      "text": "We understand that the need for help is often urgent. Our admissions team is available 24/7 to begin your consultation, and in many cases, we can coordinate same-day or next-day admissions once your clinical assessment and insurance verification are complete. Call us now at 817-904-2197 to get started."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Is the admissions process confidential?"
+    },
+    {
+      "type": "paragraph",
+      "html": "Absolutely. Every conversation, screening, and piece of documentation is 100% confidential and HIPAA-compliant. We prioritize your privacy from the very first phone call through your entire stay at our facility.",
+      "text": "Absolutely. Every conversation, screening, and piece of documentation is 100% confidential and HIPAA-compliant. We prioritize your privacy from the very first phone call through your entire stay at our facility."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Which insurance plans do you accept?"
+    },
+    {
+      "type": "paragraph",
+      "html": "We primarily work with major private insurance providers to help maximize your benefits and minimize out-of-pocket costs. Our specialists will perform a free, no-obligation verification of your policy to give you a clear understanding of your coverage before you arrive. If you do not have a private plan, we offer various private pay options and can discuss alternative ways to help you get the care you need. For more information, call us at <a href=\"tel:8179042197\">817-904-2197</a> so we can help you.",
+      "text": "We primarily work with major private insurance providers to help maximize your benefits and minimize out-of-pocket costs. Our specialists will perform a free, no-obligation verification of your policy to give you a clear understanding of your coverage before you arrive. If you do not have a private plan, we offer various private pay options and can discuss alternative ways to help you get the care you need. For more information, call us at 817-904-2197 so we can help you."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Can you help with travel arrangements?"
+    },
+    {
+      "type": "paragraph",
+      "html": "Yes. Our team is happy to assist with the logistics of getting to our Dallas campus. Whether you are traveling locally or from out of state, we can help coordinate transportation to ensure your arrival is as stress-free as possible.",
+      "text": "Yes. Our team is happy to assist with the logistics of getting to our Dallas campus. Whether you are traveling locally or from out of state, we can help coordinate transportation to ensure your arrival is as stress-free as possible."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "What happens if I’m not sure which program I need?"
+    },
+    {
+      "type": "paragraph",
+      "html": "That is what we are here for. During your initial clinical assessment, our experts will listen to your history and current challenges to recommend the appropriate level of care, whether that is <a href=\"/detox\">medical detox</a>, <a href=\"/residential-inpatient\">residential treatment</a>, <a href=\"/dual-diagnosis\">dual diagnosis</a> or one of our specialized tracks.",
+      "text": "That is what we are here for. During your initial clinical assessment, our experts will listen to your history and current challenges to recommend the appropriate level of care, whether that is medical detox, residential treatment, dual diagnosis or one of our specialized tracks."
+    }
+  ]
+}

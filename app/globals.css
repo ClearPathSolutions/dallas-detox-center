@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+/*
+  Dallas Detox Center — brand design system.
+  Palette derived from the live site's Elementor globals:
+  sky #6EC1E4 · green #61CE70 · navy #263746 · steel #4A7AA4.
+  Type: Marcellus (serif display) + Montserrat (sans body).
+*/
+
+@theme {
+  /* Fonts (wired to next/font variables in layout.tsx) */
+  --font-serif: var(--font-marcellus), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+
+  /* Navy — anchor / dark sections / headings */
+  --color-navy-50: #f2f5f7;
+  --color-navy-100: #e2e9ee;
+  --color-navy-200: #c4d1da;
+  --color-navy-300: #9db1c0;
+  --color-navy-400: #6f8ba1;
+  --color-navy-500: #4f6d84;
+  --color-navy-600: #3d566b;
+  --color-navy-700: #334759;
+  --color-navy-800: #263746;
+  --color-navy-900: #1b2833;
+  --color-navy-950: #111a22;
+
+  /* Brand sky — primary accent */
+  --color-brand-50: #f0f9fd;
+  --color-brand-100: #dbf0fa;
+  --color-brand-200: #bfe6f6;
+  --color-brand-300: #93d5ef;
+  --color-brand-400: #6ec1e4;
+  --color-brand-500: #43a7d3;
+  --color-brand-600: #2f89b8;
+  --color-brand-700: #296f95;
+  --color-brand-800: #285d7b;
+  --color-brand-900: #254e68;
+  --color-brand-950: #163244;
+
+  /* Green — success / CTA accent */
+  --color-accent-50: #f0fdf2;
+  --color-accent-100: #dcfce1;
+  --color-accent-200: #bbf7c6;
+  --color-accent-300: #86ef99;
+  --color-accent-400: #61ce70;
+  --color-accent-500: #37b54a;
+  --color-accent-600: #279239;
+  --color-accent-700: #227330;
+  --color-accent-800: #1f5b2b;
+  --color-accent-900: #1b4b26;
+
+  /* Steel blue — links / secondary */
+  --color-steel-400: #6d9bc0;
+  --color-steel-500: #4a7aa4;
+  --color-steel-600: #3d6588;
+
+  /* Warm sand neutrals — luxury light backgrounds */
+  --color-sand-50: #faf9f7;
+  --color-sand-100: #f4f2ec;
+  --color-sand-200: #e9e5db;
+  --color-sand-300: #d8d2c4;
+
+  /* Container width — capped so desktop never has cavernous dead space,
+     but content still uses a comfortable, modern max width. */
+  --spacing-shell: 80rem; /* 1280px content max */
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #263746;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Display headings use the serif face */
+h1, h2, h3, .font-display {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+/* Subtle focus ring for accessibility */
+:where(a, button, input, textarea, select):focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Reusable eyebrow label */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+/* Long-form article styling for blog posts + verbatim page content */
+.prose-ddc {
+  color: var(--color-navy-700);
+  line-height: 1.75;
+  font-size: 1.0625rem;
+}
+.prose-ddc > * + * { margin-top: 1.15rem; }
+.prose-ddc h2 {
+  font-family: var(--font-serif);
+  color: var(--color-navy-800);
+  font-size: 1.9rem;
+  line-height: 1.2;
+  margin-top: 2.5rem;
+  margin-bottom: 0.25rem;
+}
+.prose-ddc h3 {
+  font-family: var(--font-serif);
+  color: var(--color-navy-800);
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin-top: 1.75rem;
+}
+.prose-ddc h4 { color: var(--color-navy-800); font-weight: 700; margin-top: 1.25rem; }
+.prose-ddc a { color: var(--color-brand-700); text-decoration: underline; text-underline-offset: 2px; }
+.prose-ddc a:hover { color: var(--color-brand-800); }
+.prose-ddc ul { list-style: disc; padding-left: 1.4rem; }
+.prose-ddc ol { list-style: decimal; padding-left: 1.4rem; }
+.prose-ddc li { margin-top: 0.4rem; }
+.prose-ddc img { border-radius: var(--radius-xl); margin: 1.75rem 0; }
+.prose-ddc blockquote {
+  border-left: 3px solid var(--color-brand-400);
+  padding-left: 1.1rem;
+  color: var(--color-navy-600);
+  font-style: italic;
+}
+.prose-ddc strong { color: var(--color-navy-800); }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fade-up 0.6s ease-out both; }

@@ -1,0 +1,428 @@
+{
+  "id": 10448,
+  "slug": "treatment-services",
+  "path": "/treatment-services",
+  "template": "page",
+  "title": "Treatment Services",
+  "metaTitle": "Expert-led Addiction & Mental Health Treatment in Dallas, TX | Dallas Detox Center",
+  "metaDescription": "Explore our comprehensive addiction and mental health services in Dallas. We provide medical detox, residential and dual diagnosis programs.",
+  "ogImage": "/images/content/2022/06/16-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-16.jpg",
+  "canonical": "/treatment-services",
+  "featured": {
+    "src": "/images/content/2022/06/16-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-16.jpg",
+    "alt": ""
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Expert-led Comprehensive Recovery Programs"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Addiction & Mental Health Treatment Services in Dallas, Texas"
+    },
+    {
+      "type": "paragraph",
+      "html": "We provide evidence-based addiction treatment and<br> integrated mental health services designed to support every stage of recovery, from medical detox to long-term care.",
+      "text": "We provide evidence-based addiction treatment and integrated mental health services designed to support every stage of recovery, from medical detox to long-term care."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Written By: dev",
+        "Medically Reviewed By: Alexandria Grigsby LCDC"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "Dallas Detox Center provides <a href=\"/detox\">medically supervised detox</a>, <a href=\"/residential-inpatient\">substance abuse inpatient</a> &amp; <a href=\"/mental-health-residential\">mental health residential</a> treatment, and <a href=\"/dual-diagnosis\">dual diagnosis</a> care for individuals struggling with substance use and co-occurring mental health disorders.",
+      "text": "Dallas Detox Center provides medically supervised detox, substance abuse inpatient & mental health residential treatment, and dual diagnosis care for individuals struggling with substance use and co-occurring mental health disorders."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Joint Commission Accredited Facility",
+        "24/7 Medical & Psychiatric Supervision",
+        "Dual Diagnosis & Mental Health Residential Programs",
+        "Individualized Treatment & Stabilization Plans",
+        "Most Insurance Accepted & Rapid Admissions Process"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/goldseal_national.png",
+      "alt": "dallas detox center is joint commission approved - gold standard for addiction treatment"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Integrated medical and mental health services"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Comprehensive Addiction & Dual Diagnosis Treatment Programs in Dallas, Texas"
+    },
+    {
+      "type": "paragraph",
+      "html": "Addiction and mental health disorders affect millions of individuals and families across the United States each year. Behind every diagnosis is a person whose health, relationships, and daily life have been deeply impacted. According to the <a href=\"https://www.samhsa.gov/\">Substance Abuse and Mental Health Services Administration</a> (SAMHSA), more than 46 million Americans struggle with substance use disorders, including <a href=\"/alcohol-detox\">alcohol</a>, opioids, <a href=\"/benzo-detox\">benzodiazepines</a>, <a href=\"/cocaine-detox\">cocaine</a>, methamphetamine, and <a href=\"/prescription-drugs-addiction\">prescription drug</a> addiction. At the same time, the National Institute of Mental Health (<a href=\"https://www.nimh.nih.gov/\">NIMH</a>) reports that nearly 1 in 5 U.S. adults experiences a mental health disorder annually, with conditions such as depression, anxiety, PTSD, and bipolar disorder frequently occurring alongside addiction.",
+      "text": "Addiction and mental health disorders affect millions of individuals and families across the United States each year. Behind every diagnosis is a person whose health, relationships, and daily life have been deeply impacted. According to the Substance Abuse and Mental Health Services Administration (SAMHSA), more than 46 million Americans struggle with substance use disorders, including alcohol, opioids, benzodiazepines, cocaine, methamphetamine, and prescription drug addiction. At the same time, the National Institute of Mental Health (NIMH) reports that nearly 1 in 5 U.S. adults experiences a mental health disorder annually, with conditions such as depression, anxiety, PTSD, and bipolar disorder frequently occurring alongside addiction."
+    },
+    {
+      "type": "paragraph",
+      "html": "If you or someone you love is navigating these challenges, choosing the appropriate level of care and support is critical. At <a href=\"/home\">Dallas Detox Center</a>, we provide a full continuum of addiction and dual diagnosis treatment, from medically supervised <a href=\"/detox\">detox</a> and <a href=\"/residential-inpatient\">residential stabilization</a> to integrated <a href=\"/mental-health-residential\">mental health care</a> and structured <a href=\"/aftercare-planning\">aftercare planning</a>. Every program is personalized to ensure safety and long-term recovery support.",
+      "text": "If you or someone you love is navigating these challenges, choosing the appropriate level of care and support is critical. At Dallas Detox Center, we provide a full continuum of addiction and dual diagnosis treatment, from medically supervised detox and residential stabilization to integrated mental health care and structured aftercare planning. Every program is personalized to ensure safety and long-term recovery support."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/16-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-16.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Detox"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Services"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/25-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-25.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Residential"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Inpatient"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/8-web-or-mls-DSC04989.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Mental Health"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/5-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-5.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Aftercare"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Planning"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/11-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-11.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Dual-Diagnosis"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Program"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "You Don’t Have to Carry This Alone"
+    },
+    {
+      "type": "paragraph",
+      "html": "Our clinicians are available 24/7 to answer your questions and help you find the right level of care.",
+      "text": "Our clinicians are available 24/7 to answer your questions and help you find the right level of care."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Dallas Detox Center"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Our Approach To Treatment"
+    },
+    {
+      "type": "paragraph",
+      "html": "At Dallas Detox Center, we believe recovery is a process of rebuilding stability and hope. Addiction and mental health disorders affect individuals and families in deeply personal ways. That is why our approach combines medical excellence with compassion, structure with flexibility, and clinical expertise with individualized care. Every decision we make is guided by a commitment to long-term recovery. Our core values represent:",
+      "text": "At Dallas Detox Center, we believe recovery is a process of rebuilding stability and hope. Addiction and mental health disorders affect individuals and families in deeply personal ways. That is why our approach combines medical excellence with compassion, structure with flexibility, and clinical expertise with individualized care. Every decision we make is guided by a commitment to long-term recovery. Our core values represent:"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Safety First, Always"
+    },
+    {
+      "type": "paragraph",
+      "html": "We prioritize physical and emotional safety at every stage of care. From medically supervised detox to residential stabilization, our team ensures that individuals withdrawing from alcohol, opioids, benzodiazepines, and other substances receive attentive monitoring and clinical oversight in a secure environment.",
+      "text": "We prioritize physical and emotional safety at every stage of care. From medically supervised detox to residential stabilization, our team ensures that individuals withdrawing from alcohol, opioids, benzodiazepines, and other substances receive attentive monitoring and clinical oversight in a secure environment."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Treating the Whole Person"
+    },
+    {
+      "type": "paragraph",
+      "html": "Addiction does not exist in isolation. We are committed to addressing both substance use disorders and underlying mental health conditions such as depression, anxiety, trauma, and bipolar disorder. Our integrated dual diagnosis model focuses on healing the body, mind, and emotional health together.",
+      "text": "Addiction does not exist in isolation. We are committed to addressing both substance use disorders and underlying mental health conditions such as depression, anxiety, trauma, and bipolar disorder. Our integrated dual diagnosis model focuses on healing the body, mind, and emotional health together."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Individualized, Not Standardized"
+    },
+    {
+      "type": "paragraph",
+      "html": "No two recovery journeys are the same. We reject one-size-fits-all treatment models and instead develop personalized care plans based on clinical history, mental health needs, and long-term recovery goals. Treatment evolves as progress is made.",
+      "text": "No two recovery journeys are the same. We reject one-size-fits-all treatment models and instead develop personalized care plans based on clinical history, mental health needs, and long-term recovery goals. Treatment evolves as progress is made."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Long-Term Recovery Focused"
+    },
+    {
+      "type": "paragraph",
+      "html": "Detox and residential treatment are only the beginning. Our programs emphasize relapse prevention, coping skills development, and structured aftercare planning to help individuals maintain stability and continue building a sustainable future.",
+      "text": "Detox and residential treatment are only the beginning. Our programs emphasize relapse prevention, coping skills development, and structured aftercare planning to help individuals maintain stability and continue building a sustainable future."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Evidence-Based Therapies & Treatment Modalities"
+    },
+    {
+      "type": "paragraph",
+      "html": "At Dallas Detox Center, we use evidence-based and experiential treatment modalities designed to address substance use disorders and co-occurring mental health conditions. Each therapy is integrated into an individualized treatment plan to promote emotional regulation and behavioral change. We offer:",
+      "text": "At Dallas Detox Center, we use evidence-based and experiential treatment modalities designed to address substance use disorders and co-occurring mental health conditions. Each therapy is integrated into an individualized treatment plan to promote emotional regulation and behavioral change. We offer:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Individual Therapy",
+        "Group Therapy",
+        "Family Therapy",
+        "Equine Therapy"
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Dialectical Behavior Therapy (DBT)",
+        "Trauma-Informed Therapy",
+        "Music Therapy",
+        "Cognitive Behavioral Therapy (CBT)"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Support for individuals and families"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Conditions We Treat at Dallas Detox Center"
+    },
+    {
+      "type": "paragraph",
+      "html": "Addiction and mental health disorders affect individuals differently, requiring structured and personalized treatment. At Dallas Detox Center, we provide specialized care for a broad range of substance use and co-occurring mental health conditions. We treat:",
+      "text": "Addiction and mental health disorders affect individuals differently, requiring structured and personalized treatment. At Dallas Detox Center, we provide specialized care for a broad range of substance use and co-occurring mental health conditions. We treat:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Alcohol Addiction",
+        "Benzo Addiction",
+        "Opioid Addiction",
+        "Prescription Drug Addiction",
+        "And more..."
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Anxiety Disorders",
+        "Bipolar Disorders",
+        "Depression",
+        "PTSD & Trauma",
+        "And more..."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "detox tailored to the substance"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Specialized Detox Programs in Dallas"
+    },
+    {
+      "type": "paragraph",
+      "html": "Different substances require different medical protocols and stabilization plans. At Dallas Detox Center, our detox programs are tailored to the specific substance involved, as well as the individual’s medical history and mental health needs. We offer specialized detox programs for the following:",
+      "text": "Different substances require different medical protocols and stabilization plans. At Dallas Detox Center, our detox programs are tailored to the specific substance involved, as well as the individual’s medical history and mental health needs. We offer specialized detox programs for the following:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Alcohol Detox Program",
+        "Benzo Detox Program",
+        "Cocaine Detox Program",
+        "Fentanyl Detox Program"
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Meth Detox Program",
+        "Heroin Detox Program",
+        "Prescription Drug Detox Program"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/shutterstock_2105824442-1024x681.jpg",
+      "alt": "Woman breathing peacefully after going through the detox process, celebrating life without substance"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get the Help You Need Right Now"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "We Work With Most Major Insurance"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/amerihealth.png",
+      "alt": "amerihealth"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/anthem-white.png",
+      "alt": "anthem-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/bcbs-empire-2.png",
+      "alt": "bcbs-empire-2"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/highmark-logo.png",
+      "alt": "highmark-logo"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/horizon-bcbs-white.png",
+      "alt": "horizon-bcbs-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/magnacare-logo-2-white.png",
+      "alt": "magnacare-logo-2-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-aetna-white.png",
+      "alt": "mcr-aetna-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-beacon-white.png",
+      "alt": "mcr-beacon-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-compsych-white.png",
+      "alt": "mcr-compsych-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/prc-magellan.png",
+      "alt": "prc-magellan"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Request a Callback"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Let Us Help You Begin Your Journey to Recovery"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "No Obligation When You Contact Us",
+        "All Contact is Completely Confidential",
+        "Highly-Experienced & Caring Staff",
+        "Hand-Crafted, Individualized Treatment Plans",
+        "True Dual-Diagnosis with On-Staff Psychiatrist"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get the Help You Need at"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Our Trusted Addiction Treatment Center in Dallas"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get the Help You Need"
+    },
+    {
+      "type": "paragraph",
+      "html": "Dallas Detox Center is committed to providing comprehensive <a href=\"/treatment-services\">addiction treatment</a> and <a href=\"/dual-diagnosis\">dual diagnosis care</a> in a safe, medically supervised environment. Our programs are designed for individuals struggling with alcohol addiction, opioid dependence, benzodiazepine use, stimulant addiction, and co-occurring mental health disorders such as depression, anxiety, trauma-related conditions, and mood disorders. By integrating medical detox, residential stabilization, and structured mental health treatment, we ensure that both substance use and underlying psychological factors are addressed together.",
+      "text": "Dallas Detox Center is committed to providing comprehensive addiction treatment and dual diagnosis care in a safe, medically supervised environment. Our programs are designed for individuals struggling with alcohol addiction, opioid dependence, benzodiazepine use, stimulant addiction, and co-occurring mental health disorders such as depression, anxiety, trauma-related conditions, and mood disorders. By integrating medical detox, residential stabilization, and structured mental health treatment, we ensure that both substance use and underlying psychological factors are addressed together."
+    },
+    {
+      "type": "paragraph",
+      "html": "As a trusted provider of addiction and mental health treatment in Dallas, Texas, our team prioritizes clinical excellence and individualized care. No matter what you or your loved struggle with, we provide a structured continuum of care tailored to each person’s needs. Our goal is not only to help individuals stop using substances, but to help them build a sustainable path forward in recovery.",
+      "text": "As a trusted provider of addiction and mental health treatment in Dallas, Texas, our team prioritizes clinical excellence and individualized care. No matter what you or your loved struggle with, we provide a structured continuum of care tailored to each person’s needs. Our goal is not only to help individuals stop using substances, but to help them build a sustainable path forward in recovery."
+    }
+  ]
+}

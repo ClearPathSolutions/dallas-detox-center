@@ -1,0 +1,169 @@
+{
+  "id": 10444,
+  "slug": "blog",
+  "path": "/blog",
+  "template": "page",
+  "title": "Blog",
+  "metaTitle": "Blog - Dallas Detox Center",
+  "metaDescription": "",
+  "ogImage": "/images/content/2022/05/amerihealth.png",
+  "canonical": "/blog",
+  "featured": null,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Latest Articles"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Blog"
+    },
+    {
+      "type": "paragraph",
+      "html": "Stay informed and up-to-date on all<br> things related to addiction &amp; recovery.",
+      "text": "Stay informed and up-to-date on all things related to addiction & recovery."
+    },
+    {
+      "type": "paragraph",
+      "html": "Get 24/7 help for addiction from<br> Dallas Detox Center.",
+      "text": "Get 24/7 help for addiction from Dallas Detox Center."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/12/benjamin-davies-JrZ1yE1PjQ0-unsplash-scaled.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Why Treating Mental Health and Addiction Together Matters"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/05/shutterstock_1794469201-scaled.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "What Makes Luxury Rehab Different From Traditional Treatment?"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/07/shutterstock_2169855483.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Why Meth Addiction Is So Difficult to Overcome"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/01/shutterstock_2645206313-scaled.jpg",
+      "alt": "Two women having a supportive professional conversation in a library"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Why Addiction Treatment for Professionals Requires a Different Approach"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/12/marko-blazevic-O_8TISjo9sA-unsplash.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Can You Get Addicted to Prescription Drugs?"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/shutterstock_2105824442-scaled.jpg",
+      "alt": "Woman breathing peacefully after going through the detox process, celebrating life without substance"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Medical Detox in Dallas TX: Safe, Supervised Withdrawal Starts Here"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get the Help You Need Right Now"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "We Work With Most Major Insurance"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/amerihealth.png",
+      "alt": "amerihealth"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/anthem-white.png",
+      "alt": "anthem-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/bcbs-empire-2.png",
+      "alt": "bcbs-empire-2"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/highmark-logo.png",
+      "alt": "highmark-logo"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/horizon-bcbs-white.png",
+      "alt": "horizon-bcbs-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/magnacare-logo-2-white.png",
+      "alt": "magnacare-logo-2-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-aetna-white.png",
+      "alt": "mcr-aetna-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-beacon-white.png",
+      "alt": "mcr-beacon-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-compsych-white.png",
+      "alt": "mcr-compsych-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-optum-white.png",
+      "alt": "mcr-optum-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-uhc-white.png",
+      "alt": "mcr-uhc-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/prc-magellan.png",
+      "alt": "prc-magellan"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/umr-logo-white.png",
+      "alt": "umr-logo-white"
+    }
+  ]
+}

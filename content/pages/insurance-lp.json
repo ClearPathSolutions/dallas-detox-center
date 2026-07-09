@@ -1,0 +1,416 @@
+{
+  "id": 10737,
+  "slug": "insurance-lp",
+  "path": "/insurance-lp",
+  "template": "page",
+  "title": "Insurance LP",
+  "metaTitle": "Insurance LP - Dallas Detox Center",
+  "metaDescription": "",
+  "ogImage": "/images/content/2021/08/dallas-logo-white-1024x473.png",
+  "canonical": null,
+  "featured": null,
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/images/content/2021/08/dallas-logo-white-1024x473.png",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2021/08/dallas-logo-1024x507.png",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Your Health Insurance"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Can Pay for Rehab"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Detox & Inpatient Options",
+        "5-Star Rated Programming",
+        "Luxury Amenities",
+        "Recreational Activities",
+        "Equine Therapy"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get the Help You Need Right Now"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "We Work With Most Major Insurance"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/06/ins-logo-anthem.svg",
+      "alt": "ins-logo-anthem"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/06/ins-logo-beacon.svg",
+      "alt": "ins-logo-beacon"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/06/ins-logo-bluecross.svg",
+      "alt": "ins-logo-bluecross"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/06/ins-logo-compsych.svg",
+      "alt": "ins-logo-compsych"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/06/ins-logo-magellan.svg",
+      "alt": "ins-logo-magellan"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/06/ins-logo-multiplan.svg",
+      "alt": "ins-logo-multiplan"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/06/ins-logo-threerivers.svg",
+      "alt": "ins-logo-threerivers"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/06/ins-logo-valueoptions.svg",
+      "alt": "ins-logo-valueoptions"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/13-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-13.jpg",
+      "alt": "Luxury residential addiction treatment campus at Dallas Detox Center, featuring modern architecture and lush landscaping in a private Texas setting."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/12/fabian-burghardt-A81818EFqGQ-unsplash-scaled.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Your Journey to Recovery Begins Today"
+    },
+    {
+      "type": "paragraph",
+      "html": "Our admissions team is standing by ready to help<br> you forge your own path to long-term recovery from substance abuse.",
+      "text": "Our admissions team is standing by ready to help you forge your own path to long-term recovery from substance abuse."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Get Help Now"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Our Mission"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "We are Redefining Addiction Treatment in Texas."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/16-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-16.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Detox"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Services"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/25-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-25.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Residential"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Inpatient"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/5-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-5.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Aftercare"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Planning"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/11-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-11.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Dual-Diagnosis"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Program"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/10-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-10.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "A Modern, Luxury Facility"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Explore Our Environment"
+    },
+    {
+      "type": "paragraph",
+      "html": "Our newly-renovated treatment facility provides our clients with a secluded and safe space where recovery thrives. From our semi-private rooms with flat screens and en-suite bathrooms to our gorgeous property surrounded by acres of luscious greenery, our luxury rehab in Texas is here to provide you with the tools and space needed to recover from addiction.",
+      "text": "Our newly-renovated treatment facility provides our clients with a secluded and safe space where recovery thrives. From our semi-private rooms with flat screens and en-suite bathrooms to our gorgeous property surrounded by acres of luscious greenery, our luxury rehab in Texas is here to provide you with the tools and space needed to recover from addiction."
+    },
+    {
+      "type": "paragraph",
+      "html": "Our newly-renovated treatment facility provides our clients with a secluded and safe space where recovery thrives. From our semi-private rooms with flat screens and en-suite bathrooms to our gorgeous property surrounded by acres of luscious greenery, Dallas Detox Center is here to provide you with the tools and space needed to recover from addiction.",
+      "text": "Our newly-renovated treatment facility provides our clients with a secluded and safe space where recovery thrives. From our semi-private rooms with flat screens and en-suite bathrooms to our gorgeous property surrounded by acres of luscious greenery, Dallas Detox Center is here to provide you with the tools and space needed to recover from addiction."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/34-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-34-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/3-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-3-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/16-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-16-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/25-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-25-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/28-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-28-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/Blackened-Beef-Skewers-300x300-1.jpeg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/Baked_Potato_Station_Brisket.jpeg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/chipotle-deviled-eggs-300x300-1.jpeg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/18-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-18-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/20-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-20-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/11-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-11-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/33-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-33-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "What Makes Us Different?"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "We Treat the Individual, Not the Disease."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Individualized Care"
+    },
+    {
+      "type": "paragraph",
+      "html": "At our Dallas drug and alcohol rehab, we treat each client as a unique individual, with customized treatment plans according to each client's needs.",
+      "text": "At our Dallas drug and alcohol rehab, we treat each client as a unique individual, with customized treatment plans according to each client's needs."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Devices Allowed"
+    },
+    {
+      "type": "paragraph",
+      "html": "We understand that life doesn't stop just because you are ready to get help. Clients are allowed access to their devices per clinical recommendations.",
+      "text": "We understand that life doesn't stop just because you are ready to get help. Clients are allowed access to their devices per clinical recommendations."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Gourmet Meals"
+    },
+    {
+      "type": "paragraph",
+      "html": "Clients can expect daily catered meals prepared by a locally owned company. We can also accommodate clients with special dietary restrictions.",
+      "text": "Clients can expect daily catered meals prepared by a locally owned company. We can also accommodate clients with special dietary restrictions."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Dual-Diagnosis Focus"
+    },
+    {
+      "type": "paragraph",
+      "html": "We understand that many clients also need treatment for co-occurring mental health issues, which is why we focus on dual-diagnosis at our drug rehab in Dallas.",
+      "text": "We understand that many clients also need treatment for co-occurring mental health issues, which is why we focus on dual-diagnosis at our drug rehab in Dallas."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/shutterstock_1877575762.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/shutterstock_1259865697.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "We Can Help You - No Matter What."
+    },
+    {
+      "type": "paragraph",
+      "html": "Whether you come to our program or not, we<br> will help you find the best treatment options that meet your personal needs when seeking treatment.",
+      "text": "Whether you come to our program or not, we will help you find the best treatment options that meet your personal needs when seeking treatment."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Request a Callback"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Let Us Help You Begin Your Journey to Recovery"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "No Obligation When You Contact Us",
+        "All Contact is Completely Confidential",
+        "Highly-Experienced & Caring Staff",
+        "Hand-Crafted, Individualized Treatment Plans",
+        "True Dual-Diagnosis with On-Staff Psychiatrist"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "What to Expect"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Tour Our Facility"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Dallas Detox Center is unlike any other treatment center in the state of Texas. From the caring and compassionate staff to the luxury amenities, they have gone above and beyond to provide a world-class environment where people can really recover from the disease of addiction."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Josh K. Therapist"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get In Touch"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "How to Find Us"
+    },
+    {
+      "type": "paragraph",
+      "html": "100 Mariah Drive, Weatherford, Texas 76087",
+      "text": "100 Mariah Drive, Weatherford, Texas 76087"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Verify Your Insurance Benefits"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Get Help Right Now"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/02/david-holifield-eXFuKUd89oA-unsplash-scaled.jpg",
+      "alt": ""
+    }
+  ]
+}

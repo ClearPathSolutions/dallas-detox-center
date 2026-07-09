@@ -1,0 +1,185 @@
+{
+  "id": 1807,
+  "slug": "faq-page",
+  "path": "/faq-page",
+  "template": "page",
+  "title": "FAQ Page",
+  "metaTitle": "FAQ Page - Dallas Detox Center",
+  "metaDescription": "",
+  "ogImage": "/images/content/2022/05/amerihealth.png",
+  "canonical": "/faq-page",
+  "featured": null,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Your Questions, Answered"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "FAQs"
+    },
+    {
+      "type": "paragraph",
+      "html": "We answer your most commonly asked<br> questions about treatment, our program and more.",
+      "text": "We answer your most commonly asked questions about treatment, our program and more."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Admissions"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "100 Mariah Drive, Weatherford, Texas 76087",
+        "info@dallasdetoxcenter.com",
+        "817-904-2197"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "What are the steps of the admissions process?"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Verify benefits for eligibility",
+        "Complete over the phone Pre-Assessment for approval",
+        "Confirm admission date and travel"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Does Dallas Detox Center accept insurance?"
+    },
+    {
+      "type": "paragraph",
+      "html": "Dallas Detox accepts most major insurances.",
+      "text": "Dallas Detox accepts most major insurances."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Is Dallas Detox Center accredited?"
+    },
+    {
+      "type": "paragraph",
+      "html": "Dallas Detox is State Accredited, with JACHO Pending",
+      "text": "Dallas Detox is State Accredited, with JACHO Pending"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "What are your private pay costs?"
+    },
+    {
+      "type": "paragraph",
+      "html": "The rate for private pay can vary depending on the needs of the clients. Please give us a call so that we better understand the situation and may be able to give more accurate information.",
+      "text": "The rate for private pay can vary depending on the needs of the clients. Please give us a call so that we better understand the situation and may be able to give more accurate information."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "What do I bring to rehab?"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "ID , insurance card, debit card (personal purchases)",
+        "Clothes for 7-14 days (laundry services available on site)",
+        "Sneakers, bathing suit, activewear",
+        "Toothbrush, toothpaste, deodorant, wash cloth, body wash,"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "shampoo/conditioner (check items for alcohol content, if there are items with alcohol content please leave them at home ie; Mouthwash,certain perfumes)",
+      "text": "shampoo/conditioner (check items for alcohol content, if there are items with alcohol content please leave them at home ie; Mouthwash,certain perfumes)"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "We provide meals throughout the day however if someone has a specialty food item please ensure this item is fully sealed upon arrival to the facility",
+        "Unopened Tobacco products for your stay (Vape,Cigarettes, Chew) *We can also order these items at the facility at the patients expense*"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Are my family members or friends allowed to visit?"
+    },
+    {
+      "type": "paragraph",
+      "html": "Family visitation is not allowed for the first seven days of treatment, but then may be allowed with the approval of the Clinical Director.",
+      "text": "Family visitation is not allowed for the first seven days of treatment, but then may be allowed with the approval of the Clinical Director."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get the Help You Need Right Now"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "We Work With Most Major Insurance"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/amerihealth.png",
+      "alt": "amerihealth"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/anthem-white.png",
+      "alt": "anthem-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/bcbs-empire-2.png",
+      "alt": "bcbs-empire-2"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/highmark-logo.png",
+      "alt": "highmark-logo"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/horizon-bcbs-white.png",
+      "alt": "horizon-bcbs-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/magnacare-logo-2-white.png",
+      "alt": "magnacare-logo-2-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-aetna-white.png",
+      "alt": "mcr-aetna-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-beacon-white.png",
+      "alt": "mcr-beacon-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-compsych-white.png",
+      "alt": "mcr-compsych-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/prc-magellan.png",
+      "alt": "prc-magellan"
+    }
+  ]
+}

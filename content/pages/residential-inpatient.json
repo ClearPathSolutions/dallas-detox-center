@@ -1,0 +1,635 @@
+{
+  "id": 11088,
+  "slug": "residential-inpatient",
+  "path": "/treatment-services/residential-inpatient",
+  "template": "service",
+  "title": "Substance Abuse Residential",
+  "metaTitle": "Drug & Alcohol Inpatient Treatment Program in Dallas | Dallas Detox Center",
+  "metaDescription": "Get 24/7 clinical care at our private Dallas estate. We offer luxury residential inpatient treatment for alcohol and drug addiction.",
+  "ogImage": "/images/content/2026/02/18-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-18.jpg",
+  "canonical": "/treatment-services/residential-inpatient",
+  "featured": {
+    "src": "/images/content/2026/02/18-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-18.jpg",
+    "alt": ""
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "24/7 Clinical Support for Substance Use"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Substance Abuse Residential Inpatient Treatment in Dallas, TX"
+    },
+    {
+      "type": "paragraph",
+      "html": "Experience 24/7 clinical excellence in a private estate setting designed<br> for those seeking a sophisticated path to lasting recovery.",
+      "text": "Experience 24/7 clinical excellence in a private estate setting designed for those seeking a sophisticated path to lasting recovery."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Medically Reviewed By: Alexandria Grigsby LCDC",
+        "Last Updated: March 2026"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Residential Treatment Program Overview"
+    },
+    {
+      "type": "paragraph",
+      "html": "Our residential inpatient rehab in Dallas provides 24/7 clinical care and medical supervision in a private estate setting to ensure a safe and effective recovery from substance abuse.",
+      "text": "Our residential inpatient rehab in Dallas provides 24/7 clinical care and medical supervision in a private estate setting to ensure a safe and effective recovery from substance abuse."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "24/7 Clinical Oversight",
+        "Dual Diagnosis Care",
+        "Evidence-Based Therapies",
+        "Most major private insurance providers accepted",
+        "Luxury Private Accommodations"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/goldseal_national.png",
+      "alt": "dallas detox center is joint commission approved - gold standard for addiction treatment"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Where true healing takes place"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Is Residential Inpatient The Right Fit For You?"
+    },
+    {
+      "type": "paragraph",
+      "html": "Residential inpatient treatment is a high-level clinical program where individuals live on-site at our private estate 24/7 to receive intensive, around-the-clock support. Unlike<a href=\"https://quadranthealthgroup.com/treatment/intensive-outpatient/\"> outpatient programs</a> where patients return home after sessions, our inpatient model provides a fully immersive 24/7 supervised support. In our private Dallas facility, you receive around-the-clock clinical supervision and daily evidence-based therapy in a structured environment, allowing you to step away from daily stressors and focus entirely on stabilization and healing. It is the ideal choice for individuals who:",
+      "text": "Residential inpatient treatment is a high-level clinical program where individuals live on-site at our private estate 24/7 to receive intensive, around-the-clock support. Unlike outpatient programs where patients return home after sessions, our inpatient model provides a fully immersive 24/7 supervised support. In our private Dallas facility, you receive around-the-clock clinical supervision and daily evidence-based therapy in a structured environment, allowing you to step away from daily stressors and focus entirely on stabilization and healing. It is the ideal choice for individuals who:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Need 24/7 Oversight: Require constant medical monitoring and psychiatric care during stabilization.",
+        "Need a Controlled Setting: Must disconnect from high-stress environments and external triggers.",
+        "Have Co-Occurring Disorders: Require simultaneous treatment for both addiction and mental health.",
+        "Need Intensive Therapy: Are ready for daily immersion in modalities like CBT, DBT, and EMDR."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/shutterstock_2707319467-1024x683.jpg",
+      "alt": "A supportive couple discussing residential inpatient treatment options in a comfortable living room."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Evidence-Based Care Within a Structured Clinical Framework"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "The Dallas Detox Center Residential Treatment Experience"
+    },
+    {
+      "type": "paragraph",
+      "html": "When you stay at our Dallas estate for <a href=\"/residential-inpatient\">residential inpatient treatment</a>, your day is set up to help you focus entirely on getting better. We take care of all the background parameters, like meals and scheduling, so you can put your energy into your recovery. Our program is a mix of serious clinical therapy and time to recharge in a comfortable, private setting. Whether you are seeking help for <a href=\"/alcohol-detox\">alcoholism</a>, <a href=\"/fentanyl-detox\">fentanyl addiction</a>, or <a href=\"/prescription-drugs-detox\">prescription drug abuse</a>, our team is here to help you navigate the process.",
+      "text": "When you stay at our Dallas estate for residential inpatient treatment, your day is set up to help you focus entirely on getting better. We take care of all the background parameters, like meals and scheduling, so you can put your energy into your recovery. Our program is a mix of serious clinical therapy and time to recharge in a comfortable, private setting. Whether you are seeking help for alcoholism, fentanyl addiction, or prescription drug abuse, our team is here to help you navigate the process."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Support Around the Clock"
+    },
+    {
+      "type": "paragraph",
+      "html": "You’ll have 24/7 access to our medical team and psychiatrist to make sure you’re safe while detoxing from opioids, benzos, or alcohol.",
+      "text": "You’ll have 24/7 access to our medical team and psychiatrist to make sure you’re safe while detoxing from opioids, benzos, or alcohol."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Integrated Dual Diagnosis"
+    },
+    {
+      "type": "paragraph",
+      "html": "Our team works with you on depression, anxiety, or PTSD that might be fueling your use of substances.",
+      "text": "Our team works with you on depression, anxiety, or PTSD that might be fueling your use of substances."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Highly Structured Daily Living"
+    },
+    {
+      "type": "paragraph",
+      "html": "It’s not just sitting in a room. We use group sessions, family time, and equine therapy to help you heal from the inside out.",
+      "text": "It’s not just sitting in a room. We use group sessions, family time, and equine therapy to help you heal from the inside out."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Luxury Home-Like Setting"
+    },
+    {
+      "type": "paragraph",
+      "html": "You’ll be living in a high-end, private home with plenty of space and privacy while you do the work to overcome substance abuse.",
+      "text": "You’ll be living in a high-end, private home with plenty of space and privacy while you do the work to overcome substance abuse."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Proven tools to beat addiction and mental health struggles"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Effective Therapies for Lasting Change in Dallas, TX"
+    },
+    {
+      "type": "paragraph",
+      "html": "We don’t believe in a one-size-fits-all approach. To beat substance abuse, you need tools that actually work for your specific situation. We combine traditional clinical therapy with more active, hands-on methods to help you move past addiction.",
+      "text": "We don’t believe in a one-size-fits-all approach. To beat substance abuse, you need tools that actually work for your specific situation. We combine traditional clinical therapy with more active, hands-on methods to help you move past addiction."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "CBT: Rewire the negative thought loops that lead you back to alcohol or drugs.",
+        "DBT: Build the skills to manage anxiety and stay calm without substance..",
+        "EMDR: Process the underlying trauma so you don't feel the need to use to escape.",
+        "Group Therapy: Build a real support system with others who understand the struggle of substance abuse.",
+        "Family Therapy: Repair relationships and create a healthy home environment for long-term sobriety.",
+        "Equine Therapy: Use work with horses to build trust and reduce stress outside of a traditional office."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "High-end comfort designed for healing"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Premium Amenities for Holistic Substance Abuse Recovery"
+    },
+    {
+      "type": "paragraph",
+      "html": "Recovery is hard work, so we make sure your environment is as stress-free as possible. <a href=\"/tour\">Our private Dallas estate</a> offers a home-like feel with premium perks that help you stay comfortable while you focus on getting sober.",
+      "text": "Recovery is hard work, so we make sure your environment is as stress-free as possible. Our private Dallas estate offers a home-like feel with premium perks that help you stay comfortable while you focus on getting sober."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Private & Semi-Private Suites",
+        "Outdoor Pool & Lounge",
+        "Chef-Prepared Meals",
+        "Equipment for Physical Movement",
+        "Lounges & Mindfulness Zones"
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Holistic Spa Services",
+        "Housekeeping & Laundry Service",
+        "High-Speed Fiber Wi-Fi",
+        "Outdoor Fire Pit Lounge",
+        "Organic Toiletry Suites"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Expert clinical support for a wide range of substance use disorders"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Addictions We Treat at Our Dallas Rehab"
+    },
+    {
+      "type": "paragraph",
+      "html": "We know that every drug affects the body and mind differently. Whether you’re struggling with alcohol, prescription meds, or street drugs, <a href=\"/about-us\">our team</a> is trained to handle the <a href=\"/detox\">specific detox</a> and therapy needs that come with each one. We focus on getting you stable safely so you can start the real work of recovery.",
+      "text": "We know that every drug affects the body and mind differently. Whether you’re struggling with alcohol, prescription meds, or street drugs, our team is trained to handle the specific detox and therapy needs that come with each one. We focus on getting you stable safely so you can start the real work of recovery."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Alcohol Addiction",
+        "Benzo Addiction",
+        "Cocaine Addiction",
+        "Fentanyl Addiction"
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Heroin Addiction",
+        "Meth Addiction",
+        "Opioid Addiction",
+        "Prescription Drug Addiction"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/shutterstock_2701400845-1024x540.jpg",
+      "alt": "Couple reviewing PPO insurance coverage for residential inpatient treatment in Dallas"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Real stories of recovery from those who have been where you are."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "What Our Alumni Are Saying"
+    },
+    {
+      "type": "paragraph",
+      "html": "We’re proud of the community we’ve built here. These are real stories from people who came to our Dallas estate feeling lost and left with the tools to stay sober. Whether they were battling alcoholism , opioid use, or other substance, their success is why we do what we do.",
+      "text": "We’re proud of the community we’ve built here. These are real stories from people who came to our Dallas estate feeling lost and left with the tools to stay sober. Whether they were battling alcoholism , opioid use, or other substance, their success is why we do what we do."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Real Stories of Recovery from Our Dallas Community"
+    },
+    {
+      "type": "paragraph",
+      "html": "See how Dallas Detox Center has helped individuals reclaim their lives and start their journey toward lasting wellness.",
+      "text": "See how Dallas Detox Center has helped individuals reclaim their lives and start their journey toward lasting wellness."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "We’re here to help 24/7."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ready to Start Your Recovery?"
+    },
+    {
+      "type": "paragraph",
+      "html": "Don’t wait for things to get worse. Our team is ready right now to help you verify your insurance and plan your stay at our private Dallas estate. Whether you're dealing with alcohol, fentanyl, or other substance, the first step is just a quick, confidential call.",
+      "text": "Don’t wait for things to get worse. Our team is ready right now to help you verify your insurance and plan your stay at our private Dallas estate. Whether you're dealing with alcohol, fentanyl, or other substance, the first step is just a quick, confidential call."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "See Where Your Recovery Journey Begins"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Take a Look Inside Dallas Detox Center"
+    },
+    {
+      "type": "paragraph",
+      "html": "Our residential center is designed to be a peaceful retreat, combining modern clinical amenities with the warmth and privacy of a high-end residence. Take a virtual walk through our therapy rooms, private suites, and serene outdoor spaces to see where your path to stabilization and healing takes place.",
+      "text": "Our residential center is designed to be a peaceful retreat, combining modern clinical amenities with the warmth and privacy of a high-end residence. Take a virtual walk through our therapy rooms, private suites, and serene outdoor spaces to see where your path to stabilization and healing takes place."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/11-web-or-mls-DSC04998.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/11-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-11.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/20-web-or-mls-DSC05028.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/8-web-or-mls-DSC04989-1024x684.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/11-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-11-1024x683.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/31-web-or-mls-DSC05061-1024x684.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/20-web-or-mls-DSC05028-1024x684.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/25-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-25-1024x683.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Providing a full continuum of care for addiction and mental health."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Comprehensive Inpatient Rehab Services in Dallas, TX"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get the Help You Need With"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Our Residential Mental Health Treatment in Dallas"
+    },
+    {
+      "type": "paragraph",
+      "html": "Our residential treatment center in Dallas provides a high-level, integrated approach for those seeking a private inpatient program that goes beyond standard care. As a premier <a href=\"/tour\">Dallas inpatient facility</a>, we specialize in residential substance abuse treatment for <a href=\"/alcohol-detox\">alcoholism</a>, <a href=\"/fentanyl-detox\">fentanyl</a> addiction, opioid use disorder, <a href=\"/benzo-detox\">benzodiazepine</a> dependency, and more.&nbsp;We focus on creating a seamless transition from <a href=\"/detox\">medical detox</a> to long-term clinical stabilization, ensuring that every patient at our residential rehab receives 24/7 oversight in a secure, professional environment.",
+      "text": "Our residential treatment center in Dallas provides a high-level, integrated approach for those seeking a private inpatient program that goes beyond standard care. As a premier Dallas inpatient facility, we specialize in residential substance abuse treatment for alcoholism, fentanyl addiction, opioid use disorder, benzodiazepine dependency, and more. We focus on creating a seamless transition from medical detox to long-term clinical stabilization, ensuring that every patient at our residential rehab receives 24/7 oversight in a secure, professional environment."
+    },
+    {
+      "type": "paragraph",
+      "html": "Because we understand that addiction rarely happens in a vacuum, our inpatient treatment in Dallas, TX is built around a <a href=\"/dual-diagnosis\">dual diagnosis</a> model. This means we simultaneously address mental health concerns like clinical depression, anxiety, and PTSD alongside substance use. We accept most private insurance plans and offer an immediate <a href=\"/admissions\">admissions process</a> for those who need a high-end drug rehab in Dallas that prioritizes both clinical expertise and total privacy. Whether you are looking for long-term residential recovery or a short-term intensive stay, our estate provides the structured support and specialized medical care necessary to achieve lasting sobriety.",
+      "text": "Because we understand that addiction rarely happens in a vacuum, our inpatient treatment in Dallas, TX is built around a dual diagnosis model. This means we simultaneously address mental health concerns like clinical depression, anxiety, and PTSD alongside substance use. We accept most private insurance plans and offer an immediate admissions process for those who need a high-end drug rehab in Dallas that prioritizes both clinical expertise and total privacy. Whether you are looking for long-term residential recovery or a short-term intensive stay, our estate provides the structured support and specialized medical care necessary to achieve lasting sobriety."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Supporting your recovery at every stage."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "A Full Continuum of Care in Dallas, TX"
+    },
+    {
+      "type": "paragraph",
+      "html": "We don’t just treat you and send you home, we offer a complete path from detox to long-term sobriety. Our residential inpatient treatment is the foundation, but it’s integrated into a <a href=\"/treatment-services\">full continuum of care</a> so you always have the right level of support as you get stronger. Whether you’re starting with <a href=\"/detox\">medical detox</a> for <a href=\"/alcohol-detox\">alcohol</a> or <a href=\"/fentanyl-detox\">fentanyl</a>, or stepping down into our <a href=\"https://quadranthealthgroup.com/treatment/intensive-outpatient/\">outpatient programs</a>, we make sure the transition is smooth and your clinical team stays connected to your progress.",
+      "text": "We don’t just treat you and send you home, we offer a complete path from detox to long-term sobriety. Our residential inpatient treatment is the foundation, but it’s integrated into a full continuum of care so you always have the right level of support as you get stronger. Whether you’re starting with medical detox for alcohol or fentanyl, or stepping down into our outpatient programs, we make sure the transition is smooth and your clinical team stays connected to your progress."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/16-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-16.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Detox"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Services"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/8-web-or-mls-DSC04989.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Residential"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Mental Health"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/5-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-5.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Aftercare"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Planning"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/11-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-11.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Dual-Diagnosis"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Program"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Confidential help is available 24/7"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Take the First Step Toward Recovery"
+    },
+    {
+      "type": "paragraph",
+      "html": "Ready to change your life? Fill out the form below to start your journey at our private Dallas estate. Our admissions team is standing by to help you with a free, 100% confidential insurance verification. Whether you’re reaching out for yourself or a loved one struggling with <a href=\"/alcohol-detox\">alcohol</a>, <a href=\"/fentanyl-detox\">fentanyl</a>, or <a href=\"/prescription-drugs-detox\">prescription drugs</a>, we’ll help you navigate the next steps and get you the clinical support you need today.",
+      "text": "Ready to change your life? Fill out the form below to start your journey at our private Dallas estate. Our admissions team is standing by to help you with a free, 100% confidential insurance verification. Whether you’re reaching out for yourself or a loved one struggling with alcohol, fentanyl, or prescription drugs, we’ll help you navigate the next steps and get you the clinical support you need today."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get the Help You Need Right Now"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "We Work With Most Major Insurance"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/amerihealth.png",
+      "alt": "amerihealth"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/anthem-white.png",
+      "alt": "anthem-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/bcbs-empire-2.png",
+      "alt": "bcbs-empire-2"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/highmark-logo.png",
+      "alt": "highmark-logo"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/horizon-bcbs-white.png",
+      "alt": "horizon-bcbs-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/magnacare-logo-2-white.png",
+      "alt": "magnacare-logo-2-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-aetna-white.png",
+      "alt": "mcr-aetna-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-beacon-white.png",
+      "alt": "mcr-beacon-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-compsych-white.png",
+      "alt": "mcr-compsych-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/prc-magellan.png",
+      "alt": "prc-magellan"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Frequently Asked Questions"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "What exactly is residential inpatient treatment?"
+    },
+    {
+      "type": "paragraph",
+      "html": "It’s a high-level program where you live on-site at our private estate 24/7. Unlike outpatient care, you have constant access to medical and clinical support, which is vital for safely overcoming substance abuse.",
+      "text": "It’s a high-level program where you live on-site at our private estate 24/7. Unlike outpatient care, you have constant access to medical and clinical support, which is vital for safely overcoming substance abuse."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "How long is the stay at your Dallas facility?"
+    },
+    {
+      "type": "paragraph",
+      "html": "Most people stay between 30 and 90 days, but it really depends on your specific needs. We’ll build a timeline that gives you the best shot at staying sober.",
+      "text": "Most people stay between 30 and 90 days, but it really depends on your specific needs. We’ll build a timeline that gives you the best shot at staying sober."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Can you treat mental health issues at the same time?"
+    },
+    {
+      "type": "paragraph",
+      "html": "Absolutely. We specialize in <a href=\"/dual-diagnosis\">dual diagnosis</a>, meaning we treat things like anxiety, depression, and PTSD alongside your addiction to alcohol or drugs.",
+      "text": "Absolutely. We specialize in dual diagnosis, meaning we treat things like anxiety, depression, and PTSD alongside your addiction to alcohol or drugs."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "What substances do you provide treatment for?"
+    },
+    {
+      "type": "paragraph",
+      "html": "We handle everything from alcohol and benzos to opioids, cocaine, fentanyl and meth. Our medical team is specifically trained to manage the different withdrawal and therapy needs for each substance. Call us at <a href=\"tel:8179042197\">817-904-2197</a> so we can help you go in the right direction.",
+      "text": "We handle everything from alcohol and benzos to opioids, cocaine, fentanyl and meth. Our medical team is specifically trained to manage the different withdrawal and therapy needs for each substance. Call us at 817-904-2197 so we can help you go in the right direction."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Do you accept insurance for residential rehab?"
+    },
+    {
+      "type": "paragraph",
+      "html": "Yes, we primarily work with PPO insurance plans. We can do a free, confidential verification for you right over the phone to see exactly what your policy covers for inpatient treatment. Call us at <a href=\"tel:8179042197\">817-904-2197</a> to confirm your specific benefits.",
+      "text": "Yes, we primarily work with PPO insurance plans. We can do a free, confidential verification for you right over the phone to see exactly what your policy covers for inpatient treatment. Call us at 817-904-2197 to confirm your specific benefits."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "What should I bring with me?"
+    },
+    {
+      "type": "paragraph",
+      "html": "You’ll need comfortable clothes, personal ID, and insurance cards. We provide a detailed list once your admission is confirmed to make sure you have everything you need for a comfortable stay.",
+      "text": "You’ll need comfortable clothes, personal ID, and insurance cards. We provide a detailed list once your admission is confirmed to make sure you have everything you need for a comfortable stay."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Can my family visit me?"
+    },
+    {
+      "type": "paragraph",
+      "html": "Yes, we believe family is a big part of healing. We have scheduled family days and offer <b data-path-to-node=\"10\" data-index-in-node=\"116\">family therapy</b> sessions to help repair relationships and build a support system for when you return home.",
+      "text": "Yes, we believe family is a big part of healing. We have scheduled family days and offer family therapy sessions to help repair relationships and build a support system for when you return home."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "What happens after I finish the program?"
+    },
+    {
+      "type": "paragraph",
+      "html": "We don’t just send you on your way. We create a solid aftercare plan, which might include moving into an <a href=\"https://quadranthealthgroup.com/treatment/intensive-outpatient/\">IOP (Intensive Outpatient Program)</a> or connecting you with local support groups in Dallas.",
+      "text": "We don’t just send you on your way. We create a solid aftercare plan, which might include moving into an IOP (Intensive Outpatient Program) or connecting you with local support groups in Dallas."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "How do I start the admissions process?"
+    },
+    {
+      "type": "paragraph",
+      "html": "The fastest way is to call us or fill out our online form. We can often get you through the insurance and intake process and admitted into our residential program within 24 hours. Call us at <a href=\"tel:8179042197\">817-904-2197</a> to get started.",
+      "text": "The fastest way is to call us or fill out our online form. We can often get you through the insurance and intake process and admitted into our residential program within 24 hours. Call us at 817-904-2197 to get started."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Is the environment private?"
+    },
+    {
+      "type": "paragraph",
+      "html": "Total privacy is a huge part of what we do. Our facility is a gated, <a href=\"/tour\">private estate</a> in Dallas, ensuring that your stay remains completely confidential while you focus on recovery.",
+      "text": "Total privacy is a huge part of what we do. Our facility is a gated, private estate in Dallas, ensuring that your stay remains completely confidential while you focus on recovery."
+    }
+  ]
+}

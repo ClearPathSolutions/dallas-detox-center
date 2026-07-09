@@ -1,0 +1,727 @@
+{
+  "pages": [
+    {
+      "slug": "lp-recovery",
+      "path": "/lp-recovery",
+      "template": "page",
+      "title": "recovery.com lp",
+      "blocks": 92
+    },
+    {
+      "slug": "residential-inpatient",
+      "path": "/treatment-services/residential-inpatient",
+      "template": "service",
+      "title": "Substance Abuse Residential",
+      "blocks": 115
+    },
+    {
+      "slug": "dual-diagnosis",
+      "path": "/treatment-services/dual-diagnosis",
+      "template": "service",
+      "title": "Dual Diagnosis",
+      "blocks": 77
+    },
+    {
+      "slug": "who-we-help",
+      "path": "/who-we-help",
+      "template": "page",
+      "title": "Who We Help",
+      "blocks": 56
+    },
+    {
+      "slug": "mental-health-residential",
+      "path": "/treatment-services/mental-health-residential",
+      "template": "service",
+      "title": "Mental Health Residential",
+      "blocks": 86
+    },
+    {
+      "slug": "ricki-cochran",
+      "path": "/about-us/ricki-cochran",
+      "template": "team",
+      "title": "Ricki Cochran",
+      "blocks": 13
+    },
+    {
+      "slug": "trevor-grigsby",
+      "path": "/about-us/trevor-grigsby",
+      "template": "team",
+      "title": "Trevor Grigsby",
+      "blocks": 8
+    },
+    {
+      "slug": "alexandria-grigsby",
+      "path": "/about-us/alexandria-grigsby",
+      "template": "team",
+      "title": "Alexandria Grigsby",
+      "blocks": 5
+    },
+    {
+      "slug": "michael-young",
+      "path": "/about-us/michael-young",
+      "template": "team",
+      "title": "Michael Young",
+      "blocks": 5
+    },
+    {
+      "slug": "va-cnn",
+      "path": "/va-cnn",
+      "template": "page",
+      "title": "VA CNN",
+      "blocks": 68
+    },
+    {
+      "slug": "veterans",
+      "path": "/who-we-help/veterans",
+      "template": "audience",
+      "title": "Veterans",
+      "blocks": 64
+    },
+    {
+      "slug": "waco",
+      "path": "/waco",
+      "template": "location",
+      "title": "Waco",
+      "blocks": 66
+    },
+    {
+      "slug": "benzo-detox",
+      "path": "/benzo-detox",
+      "template": "detox",
+      "title": "Benzo Detox",
+      "blocks": 73
+    },
+    {
+      "slug": "meth-detox",
+      "path": "/meth-detox",
+      "template": "detox",
+      "title": "Meth Detox",
+      "blocks": 68
+    },
+    {
+      "slug": "alcohol-detox",
+      "path": "/alcohol-detox",
+      "template": "detox",
+      "title": "Alcohol Detox",
+      "blocks": 62
+    },
+    {
+      "slug": "fentanyl-detox",
+      "path": "/fentanyl-detox",
+      "template": "detox",
+      "title": "Fentanyl Detox",
+      "blocks": 63
+    },
+    {
+      "slug": "prescription-drugs-detox",
+      "path": "/prescription-drugs-detox",
+      "template": "detox",
+      "title": "Prescription Drugs Detox",
+      "blocks": 61
+    },
+    {
+      "slug": "abilene",
+      "path": "/abilene",
+      "template": "location",
+      "title": "Abilene",
+      "blocks": 62
+    },
+    {
+      "slug": "farmers-branch",
+      "path": "/farmers-branch",
+      "template": "location",
+      "title": "Farmers Branch",
+      "blocks": 63
+    },
+    {
+      "slug": "wichita-falls",
+      "path": "/wichita-falls",
+      "template": "location",
+      "title": "Wichita Falls",
+      "blocks": 64
+    },
+    {
+      "slug": "university-park",
+      "path": "/university-park",
+      "template": "location",
+      "title": "University Park",
+      "blocks": 64
+    },
+    {
+      "slug": "highland-park",
+      "path": "/highland-park",
+      "template": "location",
+      "title": "Highland Park",
+      "blocks": 60
+    },
+    {
+      "slug": "arlington",
+      "path": "/arlington",
+      "template": "location",
+      "title": "Arlington",
+      "blocks": 62
+    },
+    {
+      "slug": "insurance-lp",
+      "path": "/insurance-lp",
+      "template": "page",
+      "title": "Insurance LP",
+      "blocks": 78
+    },
+    {
+      "slug": "luxury-inpatient-lp",
+      "path": "/luxury-inpatient-lp",
+      "template": "page",
+      "title": "Luxury Inpatient Rehab LP",
+      "blocks": 78
+    },
+    {
+      "slug": "drug-alcohol-detox-lp",
+      "path": "/drug-alcohol-detox-lp",
+      "template": "page",
+      "title": "Drug & Alcohol Detox LP",
+      "blocks": 78
+    },
+    {
+      "slug": "garland",
+      "path": "/garland",
+      "template": "location",
+      "title": "Garland",
+      "blocks": 54
+    },
+    {
+      "slug": "fort-worth-drug-rehab",
+      "path": "/fort-worth-drug-rehab",
+      "template": "location",
+      "title": "Fort Worth",
+      "blocks": 56
+    },
+    {
+      "slug": "cocaine-detox",
+      "path": "/cocaine-detox",
+      "template": "detox",
+      "title": "Cocaine Detox",
+      "blocks": 68
+    },
+    {
+      "slug": "heroin-detox",
+      "path": "/heroin-detox",
+      "template": "detox",
+      "title": "Heroin Detox",
+      "blocks": 70
+    },
+    {
+      "slug": "luxury-treatment",
+      "path": "/luxury-treatment",
+      "template": "page",
+      "title": "Luxury Treatment",
+      "blocks": 61
+    },
+    {
+      "slug": "first-responders",
+      "path": "/who-we-help/first-responders",
+      "template": "audience",
+      "title": "First Responders",
+      "blocks": 58
+    },
+    {
+      "slug": "college-students",
+      "path": "/who-we-help/college-students",
+      "template": "audience",
+      "title": "College Students",
+      "blocks": 57
+    },
+    {
+      "slug": "young-adults",
+      "path": "/who-we-help/young-adults",
+      "template": "audience",
+      "title": "Young Adults",
+      "blocks": 66
+    },
+    {
+      "slug": "women",
+      "path": "/who-we-help/women",
+      "template": "audience",
+      "title": "Women",
+      "blocks": 65
+    },
+    {
+      "slug": "men",
+      "path": "/who-we-help/men",
+      "template": "audience",
+      "title": "Men",
+      "blocks": 54
+    },
+    {
+      "slug": "professionals",
+      "path": "/who-we-help/professionals",
+      "template": "audience",
+      "title": "Professionals",
+      "blocks": 73
+    },
+    {
+      "slug": "mckinney",
+      "path": "/mckinney",
+      "template": "location",
+      "title": "McKinney",
+      "blocks": 65
+    },
+    {
+      "slug": "frisco",
+      "path": "/frisco",
+      "template": "location",
+      "title": "Frisco",
+      "blocks": 62
+    },
+    {
+      "slug": "richardson",
+      "path": "/richardson",
+      "template": "location",
+      "title": "Richardson",
+      "blocks": 63
+    },
+    {
+      "slug": "plano",
+      "path": "/plano",
+      "template": "location",
+      "title": "Plano",
+      "blocks": 66
+    },
+    {
+      "slug": "southlake",
+      "path": "/southlake",
+      "template": "location",
+      "title": "Southlake",
+      "blocks": 68
+    },
+    {
+      "slug": "privacy-policy",
+      "path": "/privacy-policy",
+      "template": "page",
+      "title": "Privacy Policy",
+      "blocks": 127
+    },
+    {
+      "slug": "admissions",
+      "path": "/admissions",
+      "template": "page",
+      "title": "Admissions",
+      "blocks": 54
+    },
+    {
+      "slug": "tour",
+      "path": "/tour",
+      "template": "page",
+      "title": "Tour Facility",
+      "blocks": 93
+    },
+    {
+      "slug": "aftercare-planning",
+      "path": "/treatment-services/aftercare-planning",
+      "template": "service",
+      "title": "Aftercare Planning",
+      "blocks": 46
+    },
+    {
+      "slug": "detox",
+      "path": "/treatment-services/detox",
+      "template": "service",
+      "title": "Detoxification",
+      "blocks": 84
+    },
+    {
+      "slug": "treatment-services",
+      "path": "/treatment-services",
+      "template": "page",
+      "title": "Treatment Services",
+      "blocks": 73
+    },
+    {
+      "slug": "blog",
+      "path": "/blog",
+      "template": "page",
+      "title": "Blog",
+      "blocks": 31
+    },
+    {
+      "slug": "contact-us",
+      "path": "/contact-us",
+      "template": "page",
+      "title": "Contact Us",
+      "blocks": 29
+    },
+    {
+      "slug": "faq-page",
+      "path": "/faq-page",
+      "template": "page",
+      "title": "FAQ Page",
+      "blocks": 31
+    },
+    {
+      "slug": "about-us",
+      "path": "/about-us",
+      "template": "page",
+      "title": "About Us",
+      "blocks": 48
+    },
+    {
+      "slug": "home",
+      "path": "/",
+      "template": "home",
+      "title": "Homepage",
+      "blocks": 107
+    }
+  ],
+  "posts": [
+    {
+      "slug": "why-dual-diagnosis-treatment-matters",
+      "path": "/2026/06/17/why-dual-diagnosis-treatment-matters",
+      "title": "Why Treating Mental Health and Addiction Together Matters",
+      "date": "2026-06-17T19:10:19",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "what-makes-luxury-rehab-different",
+      "path": "/2026/06/03/what-makes-luxury-rehab-different",
+      "title": "What Makes Luxury Rehab Different From Traditional Treatment?",
+      "date": "2026-06-03T21:26:02",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "why-meth-addiction-is-so-difficult",
+      "path": "/2026/05/20/why-meth-addiction-is-so-difficult",
+      "title": "Why Meth Addiction Is So Difficult to Overcome",
+      "date": "2026-05-20T13:04:34",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "addiction-treatment-for-professionals",
+      "path": "/2026/05/08/addiction-treatment-for-professionals",
+      "title": "Why Addiction Treatment for Professionals Requires a Different Approach",
+      "date": "2026-05-08T15:56:40",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "prescription-drug-addiction-signs",
+      "path": "/2026/04/21/prescription-drug-addiction-signs",
+      "title": "Can You Get Addicted to Prescription Drugs?",
+      "date": "2026-04-21T20:02:59",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "medical-detox-dallas-tx",
+      "path": "/2026/04/07/medical-detox-dallas-tx",
+      "title": "Medical Detox in Dallas TX: Safe, Supervised Withdrawal Starts Here",
+      "date": "2026-04-07T20:03:24",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "alcohol-detox-dallas-tx",
+      "path": "/2026/03/24/alcohol-detox-dallas-tx",
+      "title": "Alcohol Detox in Dallas TX: Safe Treatment for Lasting Recovery",
+      "date": "2026-03-24T19:56:29",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "equine-therapy-addiction-treatment-dallas",
+      "path": "/2026/03/09/equine-therapy-addiction-treatment-dallas",
+      "title": "Equine Therapy for Addiction Treatment in Dallas",
+      "date": "2026-03-09T21:28:16",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "the-fentanyl-plus-crisis-navigating-synthetic-polysubstance-detox-in-dallas",
+      "path": "/2026/01/27/the-fentanyl-plus-crisis-navigating-synthetic-polysubstance-detox-in-dallas",
+      "title": "The Fentanyl-Plus Crisis: Navigating Synthetic Polysubstance Detox in Dallas",
+      "date": "2026-01-27T21:59:13",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "alcohol-drug-detox-in-dallas-what-to-expect-when-starting-recovery-in-the-new-year",
+      "path": "/2025/12/29/alcohol-drug-detox-in-dallas-what-to-expect-when-starting-recovery-in-the-new-year",
+      "title": "Alcohol & Drug Detox in Dallas: What to Expect When Starting Recovery in the New Year",
+      "date": "2025-12-29T12:16:04",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "dallas-detox-center-a-guiding-light-on-your-path-to-recovery",
+      "path": "/2024/04/04/dallas-detox-center-a-guiding-light-on-your-path-to-recovery",
+      "title": "Dallas Detox Center: A Guiding Light on Your Path to Recovery",
+      "date": "2024-04-04T20:50:19",
+      "category": "Detox"
+    },
+    {
+      "slug": "the-vital-role-of-aftercare-in-sustaining-long-term-recovery-insights-from-dallas-detox-center",
+      "path": "/2024/02/23/the-vital-role-of-aftercare-in-sustaining-long-term-recovery-insights-from-dallas-detox-center",
+      "title": "The Vital Role of Aftercare in Sustaining Long-Term Recovery: Insights from Dallas Detox Center",
+      "date": "2024-02-23T18:16:24",
+      "category": "Uncategorized"
+    },
+    {
+      "slug": "resources-for-children-of-parents-with-dual-diagnosis",
+      "path": "/2023/12/20/resources-for-children-of-parents-with-dual-diagnosis",
+      "title": "Nurturing Resilience: A Guide to Finding the Right Resources for Children of Parents with Dual Diagnosis",
+      "date": "2023-12-20T22:11:57",
+      "category": "For Families"
+    },
+    {
+      "slug": "borderline-personality-disorder-and-addiction",
+      "path": "/2023/11/29/borderline-personality-disorder-and-addiction",
+      "title": "Understanding Borderline Personality Disorder and Addiction",
+      "date": "2023-11-29T21:33:47",
+      "category": "Mental Health"
+    },
+    {
+      "slug": "impact-of-substance-abuse-and-mental-health-disorders-on-families",
+      "path": "/2023/10/26/impact-of-substance-abuse-and-mental-health-disorders-on-families",
+      "title": "The Impact of Substance Abuse and Mental Health Disorders on Families",
+      "date": "2023-10-26T14:03:17",
+      "category": "For Families"
+    },
+    {
+      "slug": "evolution-of-addiction-treatment",
+      "path": "/2023/10/11/evolution-of-addiction-treatment",
+      "title": "The Evolution of Addiction Treatment",
+      "date": "2023-10-11T13:57:06",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "ethical-considerations-in-counseling",
+      "path": "/2023/10/04/ethical-considerations-in-counseling",
+      "title": "Ethical Considerations in Addiction and Mental Health Counseling",
+      "date": "2023-10-04T12:00:00",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "how-to-convince-someone-to-get-help-for-drug-addiction",
+      "path": "/2023/09/22/how-to-convince-someone-to-get-help-for-drug-addiction",
+      "title": "How to Convince Someone to Get Help For Drug Addiction",
+      "date": "2023-09-22T15:38:10",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "transformative-power-of-forgiveness-in-recovery",
+      "path": "/2023/09/12/transformative-power-of-forgiveness-in-recovery",
+      "title": "The Transformative Power of Forgiveness in Recovery",
+      "date": "2023-09-12T15:33:13",
+      "category": "Mental Health"
+    },
+    {
+      "slug": "intensive-peer-recovery",
+      "path": "/2023/08/31/intensive-peer-recovery",
+      "title": "What is Intensive Peer Recovery?",
+      "date": "2023-08-31T17:42:18",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "grey-area-drinking",
+      "path": "/2023/08/03/grey-area-drinking",
+      "title": "What is Grey Area Drinking?",
+      "date": "2023-08-03T17:31:07",
+      "category": "Drug & Alcohol"
+    },
+    {
+      "slug": "medically-assisted-detox-near-me",
+      "path": "/2022/07/29/medically-assisted-detox-near-me",
+      "title": "How to Find Medically-Assisted Detox Near Me",
+      "date": "2022-07-29T15:44:00",
+      "category": "Detox"
+    },
+    {
+      "slug": "detox-medications",
+      "path": "/2022/07/22/detox-medications",
+      "title": "What are Examples of Detox Medications?",
+      "date": "2022-07-22T16:30:00",
+      "category": "Detox"
+    },
+    {
+      "slug": "does-alcohol-cause-withdrawal",
+      "path": "/2022/07/15/does-alcohol-cause-withdrawal",
+      "title": "Does Alcohol Cause Withdrawal Symptoms?",
+      "date": "2022-07-15T17:32:00",
+      "category": "Detox"
+    },
+    {
+      "slug": "symptoms-of-cocaine-withdrawal",
+      "path": "/2022/07/08/symptoms-of-cocaine-withdrawal",
+      "title": "What are the Symptoms of Cocaine Withdrawal?",
+      "date": "2022-07-08T17:29:00",
+      "category": "Detox"
+    },
+    {
+      "slug": "role-of-sober-living-in-recovery",
+      "path": "/2022/06/28/role-of-sober-living-in-recovery",
+      "title": "What is the Role of Sober Living in Recovery?",
+      "date": "2022-06-28T17:57:44",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "what-is-withdrawal-management",
+      "path": "/2022/06/16/what-is-withdrawal-management",
+      "title": "What is Withdrawal Management?",
+      "date": "2022-06-16T17:42:59",
+      "category": "Detox"
+    },
+    {
+      "slug": "symptoms-of-opioid-withdrawal",
+      "path": "/2022/06/10/symptoms-of-opioid-withdrawal",
+      "title": "What are the Symptoms of Opioid Withdrawal?",
+      "date": "2022-06-10T15:06:00",
+      "category": "Detox"
+    },
+    {
+      "slug": "timeline-for-alcohol-detox",
+      "path": "/2022/06/03/timeline-for-alcohol-detox",
+      "title": "What is the Timeline for Alcohol Detox?",
+      "date": "2022-06-03T14:10:00",
+      "category": "Detox"
+    },
+    {
+      "slug": "the-importance-of-having-a-hobby-in-addiction-recovery",
+      "path": "/2022/05/17/the-importance-of-having-a-hobby-in-addiction-recovery",
+      "title": "The Importance of Having a Hobby in Addiction Recovery",
+      "date": "2022-05-17T14:31:35",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "addiction-rehab-near-irving-texas",
+      "path": "/2022/05/09/addiction-rehab-near-irving-texas",
+      "title": "Is There Addiction Rehab near Irving, Texas",
+      "date": "2022-05-09T15:48:09",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "how-to-find-alcohol-rehab-near-garland-texas",
+      "path": "/2022/05/05/how-to-find-alcohol-rehab-near-garland-texas",
+      "title": "How to Find Alcohol Rehab near Garland, Texas",
+      "date": "2022-05-05T15:40:18",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "what-is-drug-withdrawal",
+      "path": "/2022/04/25/what-is-drug-withdrawal",
+      "title": "What is Drug Withdrawal?",
+      "date": "2022-04-25T14:24:25",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "do-you-detox-from-alcohol",
+      "path": "/2022/04/21/do-you-detox-from-alcohol",
+      "title": "Do You Detox From Alcohol?",
+      "date": "2022-04-21T13:07:04",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "how-long-are-inpatient-programs",
+      "path": "/2022/04/15/how-long-are-inpatient-programs",
+      "title": "How Long are Inpatient Programs?",
+      "date": "2022-04-15T13:03:42",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "sober-living-house",
+      "path": "/2022/04/08/sober-living-house",
+      "title": "What is a Sober Living House?",
+      "date": "2022-04-08T13:01:43",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "group-therapy-used-in-rehab",
+      "path": "/2022/03/22/group-therapy-used-in-rehab",
+      "title": "How is Group Therapy Used in Rehab?",
+      "date": "2022-03-22T16:55:29",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "what-is-the-difference-between-inpatient-and-outpatient-treatment",
+      "path": "/2022/03/14/what-is-the-difference-between-inpatient-and-outpatient-treatment",
+      "title": "What is the Difference Between Inpatient and Outpatient Treatment?",
+      "date": "2022-03-14T16:45:38",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "what-is-a-relapse-prevention-program",
+      "path": "/2022/03/10/what-is-a-relapse-prevention-program",
+      "title": "What is a Relapse Prevention Program?",
+      "date": "2022-03-10T17:04:46",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "how-to-find-a-rehab-program",
+      "path": "/2022/03/04/how-to-find-a-rehab-program",
+      "title": "How to Find a Rehab Program Best for Me?",
+      "date": "2022-03-04T14:52:18",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "what-is-the-difference-between-adderall-and-meth",
+      "path": "/2022/02/24/what-is-the-difference-between-adderall-and-meth",
+      "title": "What is the Difference Between Adderall and Meth?",
+      "date": "2022-02-24T15:48:29",
+      "category": "Drug & Alcohol"
+    },
+    {
+      "slug": "what-is-the-timeline-for-opioid-detox",
+      "path": "/2022/02/14/what-is-the-timeline-for-opioid-detox",
+      "title": "What is the Timeline for Opioid Detox?",
+      "date": "2022-02-14T07:14:51",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "why-is-prescription-drug-abuse-common",
+      "path": "/2022/02/08/why-is-prescription-drug-abuse-common",
+      "title": "Why is Prescription Drug Abuse Common?",
+      "date": "2022-02-08T16:29:43",
+      "category": "Drug & Alcohol"
+    },
+    {
+      "slug": "what-are-the-signs-of-opioid-abuse",
+      "path": "/2022/02/03/what-are-the-signs-of-opioid-abuse",
+      "title": "What are the Signs of Opioid Abuse?",
+      "date": "2022-02-03T16:26:36",
+      "category": "Drug & Alcohol"
+    },
+    {
+      "slug": "how-to-tell-if-someone-is-on-cocaine",
+      "path": "/2022/01/26/how-to-tell-if-someone-is-on-cocaine",
+      "title": "How to Tell if Someone is on Cocaine",
+      "date": "2022-01-26T16:18:28",
+      "category": "Drug & Alcohol"
+    },
+    {
+      "slug": "is-there-al-anon-for-drug-addiction",
+      "path": "/2022/01/19/is-there-al-anon-for-drug-addiction",
+      "title": "Is there Al-Anon for Drug Addiction?",
+      "date": "2022-01-19T16:12:21",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "how-to-detox-safely-from-opioids",
+      "path": "/2022/01/12/how-to-detox-safely-from-opioids",
+      "title": "How to Detox Safely From Opioids",
+      "date": "2022-01-12T16:10:47",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "what-to-look-for-in-a-detox-center",
+      "path": "/2022/01/07/what-to-look-for-in-a-detox-center",
+      "title": "What to Look for in a Detox Center",
+      "date": "2022-01-07T16:14:44",
+      "category": "Addiction Treatment"
+    },
+    {
+      "slug": "does-depression-cause-addiction",
+      "path": "/2021/12/22/does-depression-cause-addiction",
+      "title": "Does Depression Cause Addiction?",
+      "date": "2021-12-22T16:24:10",
+      "category": "Mental Health"
+    },
+    {
+      "slug": "is-xanax-addictive",
+      "path": "/2021/12/15/is-xanax-addictive",
+      "title": "Is Xanax Addictive?",
+      "date": "2021-12-15T16:11:26",
+      "category": "Drug & Alcohol"
+    }
+  ]
+}

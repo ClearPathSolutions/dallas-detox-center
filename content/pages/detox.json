@@ -1,0 +1,477 @@
+{
+  "id": 10450,
+  "slug": "detox",
+  "path": "/treatment-services/detox",
+  "template": "service",
+  "title": "Detoxification",
+  "metaTitle": "Premier Physician-Led Drug & Alcohol Detox in Dallas, TX | Dallas Detox Center",
+  "metaDescription": "Dallas Detox Center provides 24/7 medically supervised drug and alcohol detox in Dallas with safe withdrawal management and clinical support.",
+  "ogImage": "/images/content/2026/05/39-web-or-mls-DJI_20260505160314_0956_D.jpg",
+  "canonical": "/treatment-services/detox",
+  "featured": {
+    "src": "/images/content/2026/05/39-web-or-mls-DJI_20260505160314_0956_D.jpg",
+    "alt": "Outdoor pool and lounge area at Dallas Detox Center inpatient rehab facility in Dallas"
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Quit Abusing Drugs & Alcohol"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Medically Supervised Drug & Alcohol Detox in Dallas, TX"
+    },
+    {
+      "type": "paragraph",
+      "html": "Safe, Comfort-First Withdrawal Management &amp; 24/7<br> Clinical Support in a Private Residential Setting.",
+      "text": "Safe, Comfort-First Withdrawal Management & 24/7 Clinical Support in a Private Residential Setting."
+    },
+    {
+      "type": "paragraph",
+      "html": "Experience high-quality medical drug &amp; alcohol<br> detox services in Dallas, Texas.",
+      "text": "Experience high-quality medical drug & alcohol detox services in Dallas, Texas."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Medically Reviewed By: Alexandria Grigsby LCDC",
+        "Last Updated: April 2026"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Accredited Drug and Alcohol Detox Facility in Dallas - At Glance"
+    },
+    {
+      "type": "paragraph",
+      "html": "If you or a loved one are ready to take the first step toward recovery, our <a href=\"/tour\">Dallas Detox facility</a> provides the professional oversight needed to navigate withdrawal safely. We offer specialized detoxification protocols for alcohol, opioids, and prescription drugs, ensuring you are physically and mentally prepared for the next stage of treatment.",
+      "text": "If you or a loved one are ready to take the first step toward recovery, our Dallas Detox facility provides the professional oversight needed to navigate withdrawal safely. We offer specialized detoxification protocols for alcohol, opioids, and prescription drugs, ensuring you are physically and mentally prepared for the next stage of treatment."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Private, single-location residential facility in Dallas, TX.",
+        "24/7 clinical supervision for safe withdrawal from alcohol, opioids, benzos, and more",
+        "Use of Medication-Assisted Treatment (MAT) to minimize physical pain and cravings.",
+        "We accept most private insurance providers.",
+        "Specialized Dual Diagnosis tracks for co-occurring mental health conditions."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/goldseal_national.png",
+      "alt": "dallas detox center is joint commission approved - gold standard for addiction treatment"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "The first step towards recovery"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "What is Detoxification?"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "First Step Towards Recovery"
+    },
+    {
+      "type": "paragraph",
+      "html": "Medical detoxification, or detox, is the process of allowing the body to safely clear itself of drugs or <a href=\"/alcohol-detox\">alcohol</a> while managing the symptoms of withdrawal. At Dallas Detox Center, this isn’t just about stopping substance use; it is a specialized medical intervention. Our program uses evidence-based protocols to stabilize your physical health, reduce cravings, and prevent the dangerous complications that can occur when you stop using substances abruptly.",
+      "text": "Medical detoxification, or detox, is the process of allowing the body to safely clear itself of drugs or alcohol while managing the symptoms of withdrawal. At Dallas Detox Center, this isn’t just about stopping substance use; it is a specialized medical intervention. Our program uses evidence-based protocols to stabilize your physical health, reduce cravings, and prevent the dangerous complications that can occur when you stop using substances abruptly."
+    },
+    {
+      "type": "paragraph",
+      "html": "By combining 24/7 clinical supervision with a supportive residential environment, we transform a difficult physical transition into a manageable, safe start to your wellness journey.",
+      "text": "By combining 24/7 clinical supervision with a supportive residential environment, we transform a difficult physical transition into a manageable, safe start to your wellness journey."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2023/01/shutterstock_2140852747-683x1024.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Evidence-based withdrawal management tailored to your specific recovery goals."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "The Dangers of Withdrawal And Why Medical Detox Is Essential"
+    },
+    {
+      "type": "paragraph",
+      "html": "Stopping drug or alcohol use cold turkey can be life-threatening. Withdrawal is a complex physiological process where the brain struggles to recalibrate after long-term substance use. Without <a href=\"/treatment-services\">professional intervention</a>, the physical and psychological symptoms can become overwhelming, leading to high relapse rates or severe medical emergencies.",
+      "text": "Stopping drug or alcohol use cold turkey can be life-threatening. Withdrawal is a complex physiological process where the brain struggles to recalibrate after long-term substance use. Without professional intervention, the physical and psychological symptoms can become overwhelming, leading to high relapse rates or severe medical emergencies."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Understanding the Dangers of Withdrawal"
+    },
+    {
+      "type": "paragraph",
+      "html": "Withdrawal occurs when the body attempts to purge toxins while craving the substance it has become dependent on. The severity of these symptoms varies by substance, but the risks are universal. Here are examples of the most common risks by substances:&nbsp;",
+      "text": "Withdrawal occurs when the body attempts to purge toxins while craving the substance it has become dependent on. The severity of these symptoms varies by substance, but the risks are universal. Here are examples of the most common risks by substances:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Alcohol: High risk of seizures, tremors (Delirium Tremens), and dangerous spikes in blood pressure.",
+        "Benzodiazepines: Can cause severe anxiety, insomnia, and life-threatening grand mal seizures if not tapered properly.",
+        "Opioids & Heroin: Intense physical pain, dehydration from nausea/vomiting, and extreme respiratory distress.",
+        "Stimulants: Severe depression, suicidal ideation, and cardiovascular complications or heart palpitations."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "The timeline for physical and psychological recovery is also unique to each substance and individual. Some symptoms may peak within 24 to 72 hours, while others can persist for weeks. Our clinical team monitors these varying timelines closely, adjusting your medical detox protocol in real-time to ensure you remain stable and comfortable from the first hour through full physical clearance. Recovery generally follows a three-phase pattern, moving from acute withdrawal into stabilization, and eventually managing Post-Acute Withdrawal Syndrome (PAWS) as the brain recalibrates over time.",
+      "text": "The timeline for physical and psychological recovery is also unique to each substance and individual. Some symptoms may peak within 24 to 72 hours, while others can persist for weeks. Our clinical team monitors these varying timelines closely, adjusting your medical detox protocol in real-time to ensure you remain stable and comfortable from the first hour through full physical clearance. Recovery generally follows a three-phase pattern, moving from acute withdrawal into stabilization, and eventually managing Post-Acute Withdrawal Syndrome (PAWS) as the brain recalibrates over time."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Why Medical Detox Is Essential And How We Help At Dallas Detox Center"
+    },
+    {
+      "type": "paragraph",
+      "html": "Medical detoxification provides a safety net that home detox simply cannot offer. In a clinical setting, withdrawal is treated as a medical condition rather than just a test of willpower. Professional oversight ensures that complications are caught before they become emergencies, and cravings are managed before they lead to relapse. It is the only way to ensure that the bridge from addiction to recovery is both safe and sustainable. At Dallas Detox Center, we remove the fear of withdrawal by providing a controlled, supportive environment. Our approach combines high-level medical care with the comforts of a residential setting, ensuring you are never alone in your darkest hours.",
+      "text": "Medical detoxification provides a safety net that home detox simply cannot offer. In a clinical setting, withdrawal is treated as a medical condition rather than just a test of willpower. Professional oversight ensures that complications are caught before they become emergencies, and cravings are managed before they lead to relapse. It is the only way to ensure that the bridge from addiction to recovery is both safe and sustainable. At Dallas Detox Center, we remove the fear of withdrawal by providing a controlled, supportive environment. Our approach combines high-level medical care with the comforts of a residential setting, ensuring you are never alone in your darkest hours."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "24/7 Clinical Supervision"
+    },
+    {
+      "type": "paragraph",
+      "html": "Around-the-clock monitoring of vitals by experienced nursing staff to prevent complications and ensure safety.",
+      "text": "Around-the-clock monitoring of vitals by experienced nursing staff to prevent complications and ensure safety."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Medication-Assisted Treatment"
+    },
+    {
+      "type": "paragraph",
+      "html": "The use of FDA-approved medications to significantly reduce cravings and alleviate the physical pain of withdrawal.",
+      "text": "The use of FDA-approved medications to significantly reduce cravings and alleviate the physical pain of withdrawal."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Vital Sign & Safety Monitoring"
+    },
+    {
+      "type": "paragraph",
+      "html": "Continuous assessment of heart rate, blood pressure, and neurological health to keep you stable throughout the process.",
+      "text": "Continuous assessment of heart rate, blood pressure, and neurological health to keep you stable throughout the process."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Compassionate On-Site Support"
+    },
+    {
+      "type": "paragraph",
+      "html": "A dedicated team available at any moment to provide emotional support and direct clinical intervention when you need it most.",
+      "text": "A dedicated team available at any moment to provide emotional support and direct clinical intervention when you need it most."
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/shutterstock_1877575762.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/shutterstock_1259865697.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "We Can Help You - No Matter What."
+    },
+    {
+      "type": "paragraph",
+      "html": "Whether you come to our program or not, we<br> will help you find the best treatment options that meet your personal needs when seeking treatment.",
+      "text": "Whether you come to our program or not, we will help you find the best treatment options that meet your personal needs when seeking treatment."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Get Help Now"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Evidence-based withdrawal management"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Specialized Detoxification Programs for Every Need"
+    },
+    {
+      "type": "paragraph",
+      "html": "Detoxification is not a one-size-fits-all process. Different substances interact with the body and brain in unique ways, requiring specific medical protocols to ensure a safe transition. At our Dallas facility, we provide a clinically managed environment where every withdrawal symptom is addressed with precision. We offer the following substance-custom detox programs:",
+      "text": "Detoxification is not a one-size-fits-all process. Different substances interact with the body and brain in unique ways, requiring specific medical protocols to ensure a safe transition. At our Dallas facility, we provide a clinically managed environment where every withdrawal symptom is addressed with precision. We offer the following substance-custom detox programs:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Alcohol Detox Program",
+        "Benzo Detox Program",
+        "Cocaine Detox Program",
+        "Fentanyl Detox Program"
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Meth Detox Program",
+        "Heroin Detox Program",
+        "Prescription Drug Detox Program"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/34-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-34-1024x575.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Real Stories of Recovery from Our Dallas Community"
+    },
+    {
+      "type": "paragraph",
+      "html": "See how Dallas Detox Center has helped individuals reclaim their lives and start their journey toward lasting wellness.",
+      "text": "See how Dallas Detox Center has helped individuals reclaim their lives and start their journey toward lasting wellness."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Healing the mind while we stabilize the body."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Therapeutic Support During Detox"
+    },
+    {
+      "type": "paragraph",
+      "html": "Detox is more than a physical process, it is the beginning of emotional recovery. While our clinical team manages your physical safety, we introduce supportive therapies to help manage the psychological impact of withdrawal. Our therapeutic approach includes:",
+      "text": "Detox is more than a physical process, it is the beginning of emotional recovery. While our clinical team manages your physical safety, we introduce supportive therapies to help manage the psychological impact of withdrawal. Our therapeutic approach includes:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Individual Therapy: One-on-one sessions to address immediate concerns and begin processing the journey ahead.",
+        "Supportive Group Sessions: Facilitated meetings that build community and reduce the isolation often felt during early recovery.",
+        "Relapse Prevention Education: Early-stage tools designed to help you recognize triggers and maintain your commitment to sobriety.",
+        "Motivational Interviewing: A goal-oriented, client-centered counseling style for eliciting behavior change by helping you explore and resolve ambivalence."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Transition from stabilization to specialized treatment"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Preparing for Long-Term Recovery & Dual Diagnosis Care"
+    },
+    {
+      "type": "paragraph",
+      "html": "Detoxification is the gateway to wellness, not the destination. Our program is designed to prepare you for the vital next stage of recovery, ensuring you are clinically stable and mentally prepared for deep, lasting healing. At our Dallas facility, we provide a full continuum of care to support you through every phase of your journey. Our levels of care include:",
+      "text": "Detoxification is the gateway to wellness, not the destination. Our program is designed to prepare you for the vital next stage of recovery, ensuring you are clinically stable and mentally prepared for deep, lasting healing. At our Dallas facility, we provide a full continuum of care to support you through every phase of your journey. Our levels of care include:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Medical Detoxification: 24/7 supervised withdrawal management for safety and comfort.",
+        "Residential Inpatient: Immersive 24-hour care focused on intensive therapy and recovery skills.",
+        "Mental Health Residential: Specialized stabilization and healing for primary mental health conditions.",
+        "Dual Diagnosis Treatment: Integrated care for substance use and co-occurring mental health disorders.",
+        "Aftercare & Alumni Support: Long-term resources and community connection to maintain sobriety."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get the Help You Need at"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Our Drug & Alcohol Detox Center in Dallas"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get the Help You Need"
+    },
+    {
+      "type": "paragraph",
+      "html": "At our luxury Dallas drug and alcohol detox center, our team of highly trained medical providers and mental health treatment counselors are skilled in helping guide you through the challenges of detox. We are here to help you manage the physical and emotional difficulties that are part of the detox and withdrawal process. Detoxification is only the first step on your recovery journey. However, it is a vital part of your commitment to attaining and maintaining lasting sobriety.",
+      "text": "At our luxury Dallas drug and alcohol detox center, our team of highly trained medical providers and mental health treatment counselors are skilled in helping guide you through the challenges of detox. We are here to help you manage the physical and emotional difficulties that are part of the detox and withdrawal process. Detoxification is only the first step on your recovery journey. However, it is a vital part of your commitment to attaining and maintaining lasting sobriety."
+    },
+    {
+      "type": "paragraph",
+      "html": "If you or a loved one struggles with drug or alcohol addiction and are ready to get sober, contact Dallas Detox Center today. Our admissions team is here to answer your questions about how you can begin healing today at our Dallas Medical Detox Center.",
+      "text": "If you or a loved one struggles with drug or alcohol addiction and are ready to get sober, contact Dallas Detox Center today. Our admissions team is here to answer your questions about how you can begin healing today at our Dallas Medical Detox Center."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "We're available 24/7"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Let Us Help You Begin Your Journey to Recovery"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "No Obligation When You Contact Us",
+        "All Contact is Completely Confidential",
+        "Highly-Experienced & Caring Staff",
+        "Hand-Crafted, Individualized Treatment Plans",
+        "True Dual-Diagnosis with On-Staff Psychiatrist"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get the Help You Need Right Now"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "We Work With Most Major Insurance"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/amerihealth.png",
+      "alt": "amerihealth"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/anthem-white.png",
+      "alt": "anthem-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/bcbs-empire-2.png",
+      "alt": "bcbs-empire-2"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/highmark-logo.png",
+      "alt": "highmark-logo"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/horizon-bcbs-white.png",
+      "alt": "horizon-bcbs-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/magnacare-logo-2-white.png",
+      "alt": "magnacare-logo-2-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-aetna-white.png",
+      "alt": "mcr-aetna-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-beacon-white.png",
+      "alt": "mcr-beacon-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-compsych-white.png",
+      "alt": "mcr-compsych-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/prc-magellan.png",
+      "alt": "prc-magellan"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Frequently Asked Questions About Medical Detox in Dallas"
+    },
+    {
+      "type": "paragraph",
+      "html": "Medical detox is a clinically supervised process where patients safely withdraw from drugs or <a href=\"/alcohol-detox\">alcohol</a>. At our Dallas facility, we use evidence-based protocols to manage physical symptoms and ensure safety during the initial clearing of substances.",
+      "text": "Medical detox is a clinically supervised process where patients safely withdraw from drugs or alcohol. At our Dallas facility, we use evidence-based protocols to manage physical symptoms and ensure safety during the initial clearing of substances."
+    },
+    {
+      "type": "paragraph",
+      "html": "Detoxing cold turkey at home can be life-threatening, especially for <a href=\"/alcohol-detox\">alcohol</a> and <a href=\"/benzo-detox\">benzodiazepines</a>, which carry risks of seizures and cardiovascular distress. Professional <a href=\"/detox\">medical detox</a> provides 24/7 monitoring to prevent these emergencies.",
+      "text": "Detoxing cold turkey at home can be life-threatening, especially for alcohol and benzodiazepines, which carry risks of seizures and cardiovascular distress. Professional medical detox provides 24/7 monitoring to prevent these emergencies."
+    },
+    {
+      "type": "paragraph",
+      "html": "While timelines vary by substance and by individual, most acute withdrawal symptoms peak within 24 to 72 hours. Our team monitors your progress through the three phases of withdrawal to ensure you are stable before transitioning to the next level of care.",
+      "text": "While timelines vary by substance and by individual, most acute withdrawal symptoms peak within 24 to 72 hours. Our team monitors your progress through the three phases of withdrawal to ensure you are stable before transitioning to the next level of care."
+    },
+    {
+      "type": "paragraph",
+      "html": "Yes. We prioritize a comfort-first approach, utilizing Medication-Assisted Treatment (MAT) and 24/7 clinical support to alleviate physical pain and reduce intense cravings throughout the withdrawal process.",
+      "text": "Yes. We prioritize a comfort-first approach, utilizing Medication-Assisted Treatment (MAT) and 24/7 clinical support to alleviate physical pain and reduce intense cravings throughout the withdrawal process."
+    },
+    {
+      "type": "paragraph",
+      "html": "We accept most major private insurance providers. Since coverage varies, we recommend using our online verification tool or calling our admissions team at <a href=\"tel:8179042197\">817-904-2197</a> to confirm your specific benefits.",
+      "text": "We accept most major private insurance providers. Since coverage varies, we recommend using our online verification tool or calling our admissions team at 817-904-2197 to confirm your specific benefits."
+    },
+    {
+      "type": "paragraph",
+      "html": "Detox is the first step in a continuum of care. Once physically stable, patients typically transition into our <a href=\"/residential-inpatient\">residential inpatient</a> or <a href=\"/mental-health-residential\">mental health residential</a> programs to begin intensive therapeutic work.",
+      "text": "Detox is the first step in a continuum of care. Once physically stable, patients typically transition into our residential inpatient or mental health residential programs to begin intensive therapeutic work."
+    },
+    {
+      "type": "paragraph",
+      "html": "Absolutely. We specialize in <a href=\"/dual-diagnosis\">Dual Diagnosis Care</a>, meaning we begin addressing co-occurring disorders like anxiety or depression while you are undergoing medical stabilization.",
+      "text": "Absolutely. We specialize in Dual Diagnosis Care, meaning we begin addressing co-occurring disorders like anxiety or depression while you are undergoing medical stabilization."
+    },
+    {
+      "type": "paragraph",
+      "html": "PAWS refers to lingering psychological symptom, like mood swings or sleep disturbances that can occur after the acute physical <a href=\"/detox\">detox phase</a>. We provide education and tools to help you manage these as your brain recalibrates.",
+      "text": "PAWS refers to lingering psychological symptom, like mood swings or sleep disturbances that can occur after the acute physical detox phase. We provide education and tools to help you manage these as your brain recalibrates."
+    },
+    {
+      "type": "paragraph",
+      "html": "Yes. Our <a href=\"/tour\">Dallas facility</a> provides around-the-clock nursing and clinical supervision to ensure immediate intervention if any complications arise during the withdrawal process.",
+      "text": "Yes. Our Dallas facility provides around-the-clock nursing and clinical supervision to ensure immediate intervention if any complications arise during the withdrawal process."
+    },
+    {
+      "type": "paragraph",
+      "html": "Starting is simple. You can call our confidential line at <a href=\"tel:8179042197\">817-904-2197 </a>or fill out our <a href=\"/admissions\">online form</a>. We will conduct a brief assessment and verify your insurance to get you or your loved one into care as quickly as possible.",
+      "text": "Starting is simple. You can call our confidential line at 817-904-2197 or fill out our online form. We will conduct a brief assessment and verify your insurance to get you or your loved one into care as quickly as possible."
+    }
+  ]
+}

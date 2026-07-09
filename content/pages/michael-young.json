@@ -1,0 +1,39 @@
+{
+  "id": 10873,
+  "slug": "michael-young",
+  "path": "/about-us/michael-young",
+  "template": "team",
+  "title": "Michael Young",
+  "metaTitle": "Michael Young - Dallas Detox Center",
+  "metaDescription": "",
+  "ogImage": "/images/content/2024/01/20240122_145550-650x650.jpg",
+  "canonical": "/about-us/michael-young",
+  "featured": null,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Who We Are"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Michael Young"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2024/01/20240122_145550-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Case Manager"
+    },
+    {
+      "type": "paragraph",
+      "html": "<strong>What is your role at Dallas Detox Center? What does that look like day to day?</strong><br><br>I am a Case Manager. My day-to-day can vary quite a bit (which I actually like), but I help clients with the things going on outside of treatment, whether that’s legal, probation/parole, FMLA and short term disability, and a long list of other issues. My job is to help them handle that outside stuff so that they can be fully present and focused on what’s most important: their recovery. I’m also a fan of the 12 Steps, so if clients have questions about, or want to get started on the 12 Steps, I’m here to assist with that as well.&nbsp;",
+      "text": "What is your role at Dallas Detox Center? What does that look like day to day?I am a Case Manager. My day-to-day can vary quite a bit (which I actually like), but I help clients with the things going on outside of treatment, whether that’s legal, probation/parole, FMLA and short term disability, and a long list of other issues. My job is to help them handle that outside stuff so that they can be fully present and focused on what’s most important: their recovery. I’m also a fan of the 12 Steps, so if clients have questions about, or want to get started on the 12 Steps, I’m here to assist with that as well."
+    }
+  ]
+}

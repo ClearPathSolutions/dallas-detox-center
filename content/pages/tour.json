@@ -1,0 +1,482 @@
+{
+  "id": 10457,
+  "slug": "tour",
+  "path": "/tour",
+  "template": "page",
+  "title": "Tour Facility",
+  "metaTitle": "Tour Facility - Dallas Detox Center",
+  "metaDescription": "",
+  "ogImage": "/images/content/2022/06/4-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-4.jpg",
+  "canonical": "/tour",
+  "featured": {
+    "src": "/images/content/2022/06/4-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-4.jpg",
+    "alt": ""
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Your Private Sanctuary for Healing"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Tour Our Luxury Dallas Facility"
+    },
+    {
+      "type": "paragraph",
+      "html": "Where luxury amenities and expert clinical<br> care create the perfect environment for your recovery.",
+      "text": "Where luxury amenities and expert clinical care create the perfect environment for your recovery."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "From detoxification to inpatient and lifetime aftercare, we offer our clients the ability to recover once and for all."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Dallas Detox Center"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/3-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-3.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/25-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-25.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "A Modern, Luxury Facility"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Explore Our Environment"
+    },
+    {
+      "type": "paragraph",
+      "html": "Take a look inside our exclusive recovery campus, designed to offer a peaceful and supportive environment for your healing journey. Our boutique estate features three distinct residences, each providing a unique setting for privacy, comfort, and specialized care. We invite you to explore these spaces and see how our high-end amenities and small 6-bed census create a sanctuary where you can focus entirely on your stabilization and wellness.",
+      "text": "Take a look inside our exclusive recovery campus, designed to offer a peaceful and supportive environment for your healing journey. Our boutique estate features three distinct residences, each providing a unique setting for privacy, comfort, and specialized care. We invite you to explore these spaces and see how our high-end amenities and small 6-bed census create a sanctuary where you can focus entirely on your stabilization and wellness."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "The Magnolia House"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/34-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-34-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/16-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-16-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/3-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-3-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/25-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-25-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/5-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-51-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/28-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-28-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/33-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-33-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/Baked_Potato_Station_Brisket.jpeg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/18-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-18-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/11-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-11-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/06/20-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-20-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/10-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-10-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/10-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-10-1024x683.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/11-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-11-1024x683.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/28-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-28-1024x683.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/16-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-16-1024x683.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/18-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-18-1024x683.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/5-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-5-1024x683.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/20-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-20-1024x683.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/25-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-25-1024x683.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "The Cedar Creek Barn"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/1-web-or-mls-DSC05075-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/6-web-or-mls-DSC04983-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/8-web-or-mls-DSC04989-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/10-web-or-mls-DSC04995-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/16-web-or-mls-DSC05013-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/18-web-or-mls-DSC05022-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/24-web-or-mls-DSC05040-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/2-web-or-mls-DSC05078-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/31-web-or-mls-DSC05061-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/13-web-or-mls-DSC05004-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/23-web-or-mls-DSC05037-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/33-web-or-mls-DSC05067-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/2-web-or-mls-DSC05078-1024x684.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/8-web-or-mls-DSC04989-1024x684.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/10-web-or-mls-DSC04995-1024x684.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/15-web-or-mls-DSC05010-1024x684.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/18-web-or-mls-DSC05022-1024x684.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/11-web-or-mls-DSC04998-1024x684.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/6-web-or-mls-DSC04983-1024x684.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/31-web-or-mls-DSC05061-1024x684.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "The Willow House"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/05/36-web-or-mls-DJI_20260505160036_0947_D-650x650.jpg",
+      "alt": "Private residence exterior at Dallas Detox Center medical detox and inpatient treatment center"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/8-web-or-mls-DSC09520-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/05/39-web-or-mls-DJI_20260505160314_0956_D-650x650.jpg",
+      "alt": "Outdoor pool and lounge area at Dallas Detox Center inpatient rehab facility in Dallas"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/10-web-or-mls-DSC09526-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/14-web-or-mls-DSC09536-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/12-web-or-mls-DSC09532-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/05/34-web-or-mls-DJI_20260505155925_0941_D-650x650.jpg",
+      "alt": "Outdoor grounds, beach volley and walking area at Dallas Detox Center residential rehab facility in Dallas"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/11-web-or-mls-DSC09529-650x650.jpg",
+      "alt": "Modern detox and residential treatment facility in Dallas TX for addiction recovery"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/13-web-or-mls-DSC09533-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/7-web-or-mls-DSC09517-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/4-web-or-mls-DJI_20260206132944_0587_D-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/9-web-or-mls-DSC09523-650x650.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/05/36-web-or-mls-DJI_20260505160036_0947_D-1024x768.jpg",
+      "alt": "Private residence exterior at Dallas Detox Center medical detox and inpatient treatment center"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/8-web-or-mls-DSC09520-1024x683.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/10-web-or-mls-DSC09526-1024x683.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/05/39-web-or-mls-DJI_20260505160314_0956_D-1024x768.jpg",
+      "alt": "Outdoor pool and lounge area at Dallas Detox Center inpatient rehab facility in Dallas"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/12-web-or-mls-DSC09532-1024x683.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/2-web-or-mls-DJI_20260206132819_0580_D-1024x576.jpg",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/11-web-or-mls-DSC09529-1024x683.jpg",
+      "alt": "Modern detox and residential treatment facility in Dallas TX for addiction recovery"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2026/02/7-web-or-mls-DSC09517-1024x683.jpg",
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "What Makes Us Different?"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "We Treat the Individual, Not the Disease."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Individualized Care"
+    },
+    {
+      "type": "paragraph",
+      "html": "At Dallas Detox Center we treat each client as a unique individual and customized treatment plans according to each client's needs.",
+      "text": "At Dallas Detox Center we treat each client as a unique individual and customized treatment plans according to each client's needs."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Devices Allowed"
+    },
+    {
+      "type": "paragraph",
+      "html": "We understand that life doesn't stop just because you are ready to get help. Clients are allowed access to their devices per clinical recommedations.",
+      "text": "We understand that life doesn't stop just because you are ready to get help. Clients are allowed access to their devices per clinical recommedations."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Dual-Diagnosis Focus"
+    },
+    {
+      "type": "paragraph",
+      "html": "We understand that many clients also need treatment for co-occurring mental health issues, which is why we focus on dual-diagnosis at our rehab.",
+      "text": "We understand that many clients also need treatment for co-occurring mental health issues, which is why we focus on dual-diagnosis at our rehab."
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Get the Help You Need Right Now"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "We Accept Most Major Insurance Plans"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/amerihealth.png",
+      "alt": "amerihealth"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/anthem-white.png",
+      "alt": "anthem-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/bcbs-empire-2.png",
+      "alt": "bcbs-empire-2"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/highmark-logo.png",
+      "alt": "highmark-logo"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/horizon-bcbs-white.png",
+      "alt": "horizon-bcbs-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/magnacare-logo-2-white.png",
+      "alt": "magnacare-logo-2-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-aetna-white.png",
+      "alt": "mcr-aetna-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-beacon-white.png",
+      "alt": "mcr-beacon-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/mcr-compsych-white.png",
+      "alt": "mcr-compsych-white"
+    },
+    {
+      "type": "image",
+      "src": "/images/content/2022/05/prc-magellan.png",
+      "alt": "prc-magellan"
+    }
+  ]
+}
