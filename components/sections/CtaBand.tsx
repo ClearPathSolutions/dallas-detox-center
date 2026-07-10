@@ -35,7 +35,7 @@ export function CtaBand({
               <Phone className="h-5 w-5" /> {site.phone.display}
             </a>
             <Link
-              href="/contact-us"
+              href="/verify-insurance"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-500 px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-accent-600"
             >
               Verify Your Insurance

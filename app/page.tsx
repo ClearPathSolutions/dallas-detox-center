@@ -96,7 +96,7 @@ export default function Home() {
               <a href={site.phone.href} className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-500 px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-brand-600">
                 <Phone className="h-5 w-5" /> {site.phone.display}
               </a>
-              <Link href="/contact-us" className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-500 px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-accent-600">
+              <Link href="/verify-insurance" className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-500 px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-accent-600">
                 <ShieldCheck className="h-5 w-5" /> Verify Insurance
               </Link>
             </div>
@@ -295,7 +295,7 @@ export default function Home() {
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a href={site.phone.href} className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-500 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-600"><Phone className="h-5 w-5" /> {site.phone.display}</a>
-                <Link href="/contact-us" className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-500 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-accent-600">Verify Insurance</Link>
+                <Link href="/verify-insurance" className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-500 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-accent-600">Verify Insurance</Link>
               </div>
             </div>
             <ul className="space-y-3">

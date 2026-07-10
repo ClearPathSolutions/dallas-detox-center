@@ -98,7 +98,7 @@ export function Header() {
               {site.phone.display}
             </a>
             <Link
-              href="/contact-us"
+              href="/verify-insurance"
               className="inline-flex items-center gap-2 rounded-full bg-accent-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-accent-600 hover:shadow-md"
             >
               <ShieldCheck className="h-4 w-4" />
@@ -249,7 +249,7 @@ function MobileDrawer({ onClose, pathname }: { onClose: () => void; pathname: st
 
         <div className="space-y-2 border-t border-sand-200 p-4">
           <Link
-            href="/contact-us"
+            href="/verify-insurance"
             className="flex w-full items-center justify-center gap-2 rounded-full bg-accent-500 px-5 py-3.5 text-sm font-semibold text-white"
           >
             <ShieldCheck className="h-4 w-4" /> Verify Insurance

@@ -43,7 +43,7 @@ export function PageHero({
               <Phone className="h-5 w-5" /> {site.phone.display}
             </a>
             <a
-              href="/contact-us"
+              href="/verify-insurance"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 px-7 py-4 font-semibold text-white ring-1 ring-white/25 backdrop-blur transition hover:bg-white/20"
             >
               <ShieldCheck className="h-5 w-5" /> Verify Insurance

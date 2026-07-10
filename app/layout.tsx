@@ -4,6 +4,7 @@ import "./globals.css";
 import { site } from "@/lib/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import Clarion from "@/components/Clarion";
 
 const marcellus = Marcellus({
   variable: "--font-marcellus",
@@ -56,6 +57,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Clarion />
       </body>
     </html>
   );

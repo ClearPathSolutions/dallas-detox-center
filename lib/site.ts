@@ -25,6 +25,12 @@ export const site = {
     facebook: "https://www.facebook.com/dallasdetoxcenter",
     linkedin: "https://www.linkedin.com/company/dallas-detox-center/",
   },
+  widgets: {
+    clarion: {
+      siteKey: "cpx_b3ULWMuK13qriOhukW31Cg48wIbMvGN6",
+      api: "https://api.clarionlabs.ai",
+    },
+  },
 } as const;
 
 export type NavItem = {

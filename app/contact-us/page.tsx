@@ -4,7 +4,7 @@ import { getPageByPath } from "@/lib/content";
 import { metaFor } from "@/lib/seo";
 import { site } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
-import { ContactForm } from "@/components/ContactForm";
+import { LeadForm } from "@/components/LeadForm";
 
 export function generateMetadata(): Metadata {
   const page = getPageByPath("/contact-us");
@@ -83,7 +83,7 @@ export default function ContactPage() {
               </div>
             </div>
             <div className="rounded-3xl bg-sand-50 p-7 shadow-sm ring-1 ring-navy-900/5 lg:p-9">
-              <ContactForm />
+              <LeadForm intent="contact" />
             </div>
           </div>
         </Container>

@@ -35,7 +35,7 @@ export function InsuranceStrip() {
 
         <div className="mt-12 flex justify-center">
           <Link
-            href="/contact-us"
+            href="/verify-insurance"
             className="inline-flex items-center gap-2 rounded-full bg-accent-500 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-accent-600"
           >
             <ShieldCheck className="h-5 w-5" /> Verify Your Benefits
