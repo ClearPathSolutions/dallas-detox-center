@@ -1,0 +1,44 @@
+{
+ "id": "sarah-bentley",
+ "slug": "sarah-bentley",
+ "path": "/about-us/sarah-bentley",
+ "template": "team",
+ "title": "Sarah Bentley",
+ "metaTitle": "Sarah Bentley — Case Manager | Dallas Detox Center",
+ "metaDescription": "Meet Sarah Bentley, Case Manager at Dallas Detox Center.",
+ "ogImage": "/images/content/2022/05/shutterstock_1377067472.jpg",
+ "canonical": "/about-us/sarah-bentley",
+ "featured": false,
+ "blocks": [
+  {
+   "type": "heading",
+   "level": 6,
+   "text": "Who We Are"
+  },
+  {
+   "type": "heading",
+   "level": 1,
+   "text": "Sarah Bentley"
+  },
+  {
+   "type": "heading",
+   "level": 6,
+   "text": "Case Manager"
+  },
+  {
+   "type": "paragraph",
+   "html": "Sarah serves as a Case Manager at Dallas Detox Center, where she is dedicated to helping individuals navigate their recovery journey with compassion, empathy, and unwavering support. Sarah earned her Bachelor of Science in Psychology from the University of Texas at Dallas in 2017 and also holds a teaching certification for preschool through sixth grade. Her passion for behavioral health began early in life, as her own experiences fostered a deep understanding of the importance of mental health, self-awareness, and advocacy.",
+   "text": "Sarah serves as a Case Manager at Dallas Detox Center, where she is dedicated to helping individuals navigate their recovery journey with compassion, empathy, and unwavering support. Sarah earned her Bachelor of Science in Psychology from the University of Texas at Dallas in 2017 and also holds a teaching certification for preschool through sixth grade. Her passion for behavioral health began early in life, as her own experiences fostered a deep understanding of the importance of mental health, self-awareness, and advocacy."
+  },
+  {
+   "type": "paragraph",
+   "html": "Those experiences inspired her commitment to supporting individuals who may feel misunderstood and empowering those who need someone to stand beside them. With more than five years of experience in case management, Sarah joined Dallas Detox Center in March 2026. She is passionate about helping clients overcome challenges, access the resources they need, and build a foundation for lasting recovery. She believes meaningful connections, compassionate guidance, and individualized support can make a lasting difference in a person's healing journey.",
+   "text": "Those experiences inspired her commitment to supporting individuals who may feel misunderstood and empowering those who need someone to stand beside them. With more than five years of experience in case management, Sarah joined Dallas Detox Center in March 2026. She is passionate about helping clients overcome challenges, access the resources they need, and build a foundation for lasting recovery. She believes meaningful connections, compassionate guidance, and individualized support can make a lasting difference in a person's healing journey."
+  },
+  {
+   "type": "paragraph",
+   "html": "Sarah is honored to be part of a team committed to changing lives and looks forward to continuing to serve others, advocate for those in need, and help individuals find hope, healing, and a brighter future.",
+   "text": "Sarah is honored to be part of a team committed to changing lives and looks forward to continuing to serve others, advocate for those in need, and help individuals find hope, healing, and a brighter future."
+  }
+ ]
+}

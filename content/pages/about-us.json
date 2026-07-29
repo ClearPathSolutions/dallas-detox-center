@@ -1,262 +1,272 @@
 {
-  "id": 1140,
-  "slug": "about-us",
-  "path": "/about-us",
-  "template": "page",
-  "title": "About Us",
-  "metaTitle": "About Us - Dallas Detox Center",
-  "metaDescription": "",
-  "ogImage": "/images/content/2022/05/shutterstock_1377067472.jpg",
-  "canonical": "/about-us",
-  "featured": null,
-  "blocks": [
-    {
-      "type": "heading",
-      "level": 6,
-      "text": "WE ARE YOUR PARTNERS IN PERMANENT RECOVERY"
-    },
-    {
-      "type": "heading",
-      "level": 1,
-      "text": "Learn More About Us"
-    },
-    {
-      "type": "paragraph",
-      "html": "We built Dallas Detox Center to be a clinical sanctuary where recovery finally sticks. Our team provides the elite medical and emotional oversight you need to overcome addiction in a private, high-end setting.",
-      "text": "We built Dallas Detox Center to be a clinical sanctuary where recovery finally sticks. Our team provides the elite medical and emotional oversight you need to overcome addiction in a private, high-end setting."
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "text": "Who We Are"
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "text": "Our Mission: Helping Others"
-    },
-    {
-      "type": "paragraph",
-      "html": "At Dallas Detox Center, we pride ourselves on understanding the importance of implementing a balance of emotional, spiritual, and physical well-being for each individual throughout the process of continuous growth both during and after treatment. DDC is here to empower those suffering from the disease of addiction by walking them through proven recovery methods that they can then use and apply to sustain recovery in their daily lives.",
-      "text": "At Dallas Detox Center, we pride ourselves on understanding the importance of implementing a balance of emotional, spiritual, and physical well-being for each individual throughout the process of continuous growth both during and after treatment. DDC is here to empower those suffering from the disease of addiction by walking them through proven recovery methods that they can then use and apply to sustain recovery in their daily lives."
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "text": "Our Philosophy: Everyone Deserves Treatment"
-    },
-    {
-      "type": "paragraph",
-      "html": "At Dallas Detox Center, we know that recovery is possible because we see it and live it every day. In knowing that each person deserves the help required to live a life free from the sufferings of addiction and alcoholism, we are able to truly dedicate ourselves to each client that comes to our program. DDC will aid in identifying the underlying issues that have led to those sufferings and treat the individual as a whole by rebuilding their lives upon their newfound belief that they are worthy of a meaningful life.",
-      "text": "At Dallas Detox Center, we know that recovery is possible because we see it and live it every day. In knowing that each person deserves the help required to live a life free from the sufferings of addiction and alcoholism, we are able to truly dedicate ourselves to each client that comes to our program. DDC will aid in identifying the underlying issues that have led to those sufferings and treat the individual as a whole by rebuilding their lives upon their newfound belief that they are worthy of a meaningful life."
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2022/05/shutterstock_1377067472.jpg",
-      "alt": ""
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2022/05/shutterstock_1028709061.jpg",
-      "alt": ""
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "text": "We Can Help You - No Matter What."
-    },
-    {
-      "type": "paragraph",
-      "html": "Whether you come to our program or not, we<br> will help you find the best treatment options that meet your personal needs when seeking treatment.",
-      "text": "Whether you come to our program or not, we will help you find the best treatment options that meet your personal needs when seeking treatment."
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "text": "Get Immediate Help Now"
-    },
-    {
-      "type": "heading",
-      "level": 6,
-      "text": "Trusted & Experienced"
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "text": "Why Dallas Detox Center Is Your Top Choice"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        "360 Individualized Care Every client that enters our program is offered a unique experience personalized to their individual needs when seeking treatment.",
-        "Home Away From Home Our residential setting is located on multiple acres of land, providing our clients with an escape while focusing on healing.",
-        "Unique Therapies Dallas Detox Center is proud to offer a number of unique therapies designed to fit each clients personal situtaions."
-      ]
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        "Highly-Experienced Staff The team at Dallas Detox Center boasts over 30+ years of combined treatment experience. Our team provides a judgment-free environment where clients can recover in peace.",
-        "Luxury Amenities Our newly renovated detox & inpatient facility, located just outside metro Dallas, offers luxury amenities such as semi-private rooms with flat-screen TVs, and more.",
-        "Lifetime Aftercare Once you become a part of the DDC family, you are with us for life. Our clients will have access to lifetime aftercare, from visits, to calls, to re-admission; we are here to help, always."
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 6,
-      "text": "We Offer an Experience In"
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "text": "Addiction Treatment"
-    },
-    {
-      "type": "paragraph",
-      "html": "Discover why Dallas Detox Center is your top choice in addiction treatment in Texas and beyond.",
-      "text": "Discover why Dallas Detox Center is your top choice in addiction treatment in Texas and beyond."
-    },
-    {
-      "type": "heading",
-      "level": 6,
-      "text": "Decades of Experience"
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "text": "Meet Our Team"
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2026/02/Screenshot-2026-02-15-190959.png",
-      "alt": ""
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "text": "Antoine Gross Sr"
-    },
-    {
-      "type": "paragraph",
-      "html": "Director of Clinical Services <br> (Mental Health Program)",
-      "text": "Director of Clinical Services (Mental Health Program)"
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2026/02/Screenshot-2026-02-15-191155.png",
-      "alt": ""
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "text": "Deborah Wade, BSN, RN"
-    },
-    {
-      "type": "paragraph",
-      "html": "Director of Nursing",
-      "text": "Director of Nursing"
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2026/05/Josh-L.png",
-      "alt": "Joshua Leder - Director of Operations Dallas"
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "text": "Joshua Leder"
-    },
-    {
-      "type": "paragraph",
-      "html": "Director of Operations",
-      "text": "Director of Operations"
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "text": "What Our Clients Say"
-    },
-    {
-      "type": "paragraph",
-      "html": "We are honored to have been a part of so many journeys toward better mental health and lasting stability. These stories from our neighbors here in Dallas reflect our dedication to helping everyone find their own path to wellness.",
-      "text": "We are honored to have been a part of so many journeys toward better mental health and lasting stability. These stories from our neighbors here in Dallas reflect our dedication to helping everyone find their own path to wellness."
-    },
-    {
-      "type": "heading",
-      "level": 6,
-      "text": "Get the Help You Need Right Now"
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "text": "We Work With Most Major Insurance"
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2022/05/amerihealth.png",
-      "alt": "amerihealth"
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2022/05/anthem-white.png",
-      "alt": "anthem-white"
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2022/05/bcbs-empire-2.png",
-      "alt": "bcbs-empire-2"
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2022/05/highmark-logo.png",
-      "alt": "highmark-logo"
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2022/05/horizon-bcbs-white.png",
-      "alt": "horizon-bcbs-white"
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2022/05/magnacare-logo-2-white.png",
-      "alt": "magnacare-logo-2-white"
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2022/05/mcr-aetna-white.png",
-      "alt": "mcr-aetna-white"
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2022/05/mcr-beacon-white.png",
-      "alt": "mcr-beacon-white"
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2022/05/mcr-compsych-white.png",
-      "alt": "mcr-compsych-white"
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2022/05/mcr-optum-white.png",
-      "alt": "mcr-optum-white"
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2022/05/mcr-uhc-white.png",
-      "alt": "mcr-uhc-white"
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2022/05/prc-magellan.png",
-      "alt": "prc-magellan"
-    },
-    {
-      "type": "image",
-      "src": "/images/content/2022/05/umr-logo-white.png",
-      "alt": "umr-logo-white"
-    }
-  ]
+ "id": 1140,
+ "slug": "about-us",
+ "path": "/about-us",
+ "template": "page",
+ "title": "About Us",
+ "metaTitle": "About Us - Dallas Detox Center",
+ "metaDescription": "",
+ "ogImage": "/images/content/2022/05/shutterstock_1377067472.jpg",
+ "canonical": "/about-us",
+ "featured": null,
+ "blocks": [
+  {
+   "type": "heading",
+   "level": 6,
+   "text": "WE ARE YOUR PARTNERS IN PERMANENT RECOVERY"
+  },
+  {
+   "type": "heading",
+   "level": 1,
+   "text": "Learn More About Us"
+  },
+  {
+   "type": "paragraph",
+   "html": "We built Dallas Detox Center to be a clinical sanctuary where recovery finally sticks. Our team provides the elite medical and emotional oversight you need to overcome addiction in a private, high-end setting.",
+   "text": "We built Dallas Detox Center to be a clinical sanctuary where recovery finally sticks. Our team provides the elite medical and emotional oversight you need to overcome addiction in a private, high-end setting."
+  },
+  {
+   "type": "heading",
+   "level": 2,
+   "text": "Who We Are"
+  },
+  {
+   "type": "heading",
+   "level": 3,
+   "text": "Our Mission: Helping Others"
+  },
+  {
+   "type": "paragraph",
+   "html": "At Dallas Detox Center, we pride ourselves on understanding the importance of implementing a balance of emotional, spiritual, and physical well-being for each individual throughout the process of continuous growth both during and after treatment. DDC is here to empower those suffering from the disease of addiction by walking them through proven recovery methods that they can then use and apply to sustain recovery in their daily lives.",
+   "text": "At Dallas Detox Center, we pride ourselves on understanding the importance of implementing a balance of emotional, spiritual, and physical well-being for each individual throughout the process of continuous growth both during and after treatment. DDC is here to empower those suffering from the disease of addiction by walking them through proven recovery methods that they can then use and apply to sustain recovery in their daily lives."
+  },
+  {
+   "type": "heading",
+   "level": 3,
+   "text": "Our Philosophy: Everyone Deserves Treatment"
+  },
+  {
+   "type": "paragraph",
+   "html": "At Dallas Detox Center, we know that recovery is possible because we see it and live it every day. In knowing that each person deserves the help required to live a life free from the sufferings of addiction and alcoholism, we are able to truly dedicate ourselves to each client that comes to our program. DDC will aid in identifying the underlying issues that have led to those sufferings and treat the individual as a whole by rebuilding their lives upon their newfound belief that they are worthy of a meaningful life.",
+   "text": "At Dallas Detox Center, we know that recovery is possible because we see it and live it every day. In knowing that each person deserves the help required to live a life free from the sufferings of addiction and alcoholism, we are able to truly dedicate ourselves to each client that comes to our program. DDC will aid in identifying the underlying issues that have led to those sufferings and treat the individual as a whole by rebuilding their lives upon their newfound belief that they are worthy of a meaningful life."
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2022/05/shutterstock_1377067472.jpg",
+   "alt": ""
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2022/05/shutterstock_1028709061.jpg",
+   "alt": ""
+  },
+  {
+   "type": "heading",
+   "level": 3,
+   "text": "We Can Help You - No Matter What."
+  },
+  {
+   "type": "paragraph",
+   "html": "Whether you come to our program or not, we<br> will help you find the best treatment options that meet your personal needs when seeking treatment.",
+   "text": "Whether you come to our program or not, we will help you find the best treatment options that meet your personal needs when seeking treatment."
+  },
+  {
+   "type": "heading",
+   "level": 4,
+   "text": "Get Immediate Help Now"
+  },
+  {
+   "type": "heading",
+   "level": 6,
+   "text": "Trusted & Experienced"
+  },
+  {
+   "type": "heading",
+   "level": 2,
+   "text": "Why Dallas Detox Center Is Your Top Choice"
+  },
+  {
+   "type": "list",
+   "ordered": false,
+   "items": [
+    "360 Individualized Care Every client that enters our program is offered a unique experience personalized to their individual needs when seeking treatment.",
+    "Home Away From Home Our residential setting is located on multiple acres of land, providing our clients with an escape while focusing on healing.",
+    "Unique Therapies Dallas Detox Center is proud to offer a number of unique therapies designed to fit each clients personal situtaions."
+   ]
+  },
+  {
+   "type": "list",
+   "ordered": false,
+   "items": [
+    "Highly-Experienced Staff The team at Dallas Detox Center boasts over 30+ years of combined treatment experience. Our team provides a judgment-free environment where clients can recover in peace.",
+    "Luxury Amenities Our newly renovated detox & inpatient facility, located just outside metro Dallas, offers luxury amenities such as semi-private rooms with flat-screen TVs, and more.",
+    "Lifetime Aftercare Once you become a part of the DDC family, you are with us for life. Our clients will have access to lifetime aftercare, from visits, to calls, to re-admission; we are here to help, always."
+   ]
+  },
+  {
+   "type": "heading",
+   "level": 6,
+   "text": "We Offer an Experience In"
+  },
+  {
+   "type": "heading",
+   "level": 2,
+   "text": "Addiction Treatment"
+  },
+  {
+   "type": "paragraph",
+   "html": "Discover why Dallas Detox Center is your top choice in addiction treatment in Texas and beyond.",
+   "text": "Discover why Dallas Detox Center is your top choice in addiction treatment in Texas and beyond."
+  },
+  {
+   "type": "heading",
+   "level": 6,
+   "text": "Decades of Experience"
+  },
+  {
+   "type": "heading",
+   "level": 2,
+   "text": "Meet Our Team"
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2026/02/Screenshot-2026-02-15-190959.png",
+   "alt": ""
+  },
+  {
+   "type": "heading",
+   "level": 3,
+   "text": "Antoine Gross Sr"
+  },
+  {
+   "type": "paragraph",
+   "html": "Director of Clinical Services <br> (Mental Health Program)",
+   "text": "Director of Clinical Services (Mental Health Program)"
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2026/02/Screenshot-2026-02-15-191155.png",
+   "alt": ""
+  },
+  {
+   "type": "heading",
+   "level": 3,
+   "text": "Deborah Wade, BSN, RN"
+  },
+  {
+   "type": "paragraph",
+   "html": "Director of Nursing",
+   "text": "Director of Nursing"
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2026/05/Josh-L.png",
+   "alt": "Joshua Leder - Director of Operations Dallas"
+  },
+  {
+   "type": "heading",
+   "level": 3,
+   "text": "Joshua Leder"
+  },
+  {
+   "type": "paragraph",
+   "html": "Director of Operations",
+   "text": "Director of Operations"
+  },
+  {
+   "type": "heading",
+   "level": 3,
+   "text": "Sarah Bentley"
+  },
+  {
+   "type": "paragraph",
+   "html": "Case Manager",
+   "text": "Case Manager"
+  },
+  {
+   "type": "heading",
+   "level": 2,
+   "text": "What Our Clients Say"
+  },
+  {
+   "type": "paragraph",
+   "html": "We are honored to have been a part of so many journeys toward better mental health and lasting stability. These stories from our neighbors here in Dallas reflect our dedication to helping everyone find their own path to wellness.",
+   "text": "We are honored to have been a part of so many journeys toward better mental health and lasting stability. These stories from our neighbors here in Dallas reflect our dedication to helping everyone find their own path to wellness."
+  },
+  {
+   "type": "heading",
+   "level": 6,
+   "text": "Get the Help You Need Right Now"
+  },
+  {
+   "type": "heading",
+   "level": 2,
+   "text": "We Work With Most Major Insurance"
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2022/05/amerihealth.png",
+   "alt": "amerihealth"
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2022/05/anthem-white.png",
+   "alt": "anthem-white"
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2022/05/bcbs-empire-2.png",
+   "alt": "bcbs-empire-2"
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2022/05/highmark-logo.png",
+   "alt": "highmark-logo"
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2022/05/horizon-bcbs-white.png",
+   "alt": "horizon-bcbs-white"
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2022/05/magnacare-logo-2-white.png",
+   "alt": "magnacare-logo-2-white"
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2022/05/mcr-aetna-white.png",
+   "alt": "mcr-aetna-white"
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2022/05/mcr-beacon-white.png",
+   "alt": "mcr-beacon-white"
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2022/05/mcr-compsych-white.png",
+   "alt": "mcr-compsych-white"
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2022/05/mcr-optum-white.png",
+   "alt": "mcr-optum-white"
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2022/05/mcr-uhc-white.png",
+   "alt": "mcr-uhc-white"
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2022/05/prc-magellan.png",
+   "alt": "prc-magellan"
+  },
+  {
+   "type": "image",
+   "src": "/images/content/2022/05/umr-logo-white.png",
+   "alt": "umr-logo-white"
+  }
+ ]
 }

@@ -1,0 +1,44 @@
+{
+ "id": "antoine-gross",
+ "slug": "antoine-gross",
+ "path": "/about-us/antoine-gross",
+ "template": "team",
+ "title": "Antoine Gross Sr.",
+ "metaTitle": "Antoine Gross Sr., LPC — Director of Clinical Services | Dallas Detox Center",
+ "metaDescription": "Meet Antoine Gross Sr., LPC, Director of Clinical Services at Dallas Detox Center.",
+ "ogImage": "/images/content/2022/05/shutterstock_1377067472.jpg",
+ "canonical": "/about-us/antoine-gross",
+ "featured": false,
+ "blocks": [
+  {
+   "type": "heading",
+   "level": 6,
+   "text": "Who We Are"
+  },
+  {
+   "type": "heading",
+   "level": 1,
+   "text": "Antoine Gross Sr."
+  },
+  {
+   "type": "heading",
+   "level": 6,
+   "text": "Director of Clinical Services"
+  },
+  {
+   "type": "paragraph",
+   "html": "Antoine is an independently licensed counselor with nearly a decade of experience in the mental health field. Over the past three years, he has provided independent counseling services, supporting individuals who are committed to creating meaningful and lasting change in their lives. Antoine is deeply passionate about walking alongside individuals during some of their most challenging and transformative seasons.",
+   "text": "Antoine is an independently licensed counselor with nearly a decade of experience in the mental health field. Over the past three years, he has provided independent counseling services, supporting individuals who are committed to creating meaningful and lasting change in their lives. Antoine is deeply passionate about walking alongside individuals during some of their most challenging and transformative seasons."
+  },
+  {
+   "type": "paragraph",
+   "html": "He believes therapy should be a safe, welcoming space where clients can openly explore their identity, experiences, and struggles without judgment—while also being thoughtfully challenged to grow. His clinical approach is collaborative and practical, focusing on identifying patterns, building effective coping strategies, and developing the skills necessary for long-term success. Antoine’s goal is for each client to leave treatment feeling empowered, balanced, and equipped to maintain continued growth well beyond their time in therapy.",
+   "text": "He believes therapy should be a safe, welcoming space where clients can openly explore their identity, experiences, and struggles without judgment—while also being thoughtfully challenged to grow. His clinical approach is collaborative and practical, focusing on identifying patterns, building effective coping strategies, and developing the skills necessary for long-term success. Antoine’s goal is for each client to leave treatment feeling empowered, balanced, and equipped to maintain continued growth well beyond their time in therapy."
+  },
+  {
+   "type": "paragraph",
+   "html": "He firmly believes in the principle: “You can be great by chance, or you can be great by choice,” and is dedicated to helping individuals intentionally choose a path toward growth, healing, and fulfillment.",
+   "text": "He firmly believes in the principle: “You can be great by chance, or you can be great by choice,” and is dedicated to helping individuals intentionally choose a path toward growth, healing, and fulfillment."
+  }
+ ]
+}
