@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Phone, ShieldCheck, Clock, Award, HeartHandshake } from "lucide-react";
 import { site } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
@@ -38,16 +39,16 @@ export function PageHero({
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
               href={site.phone.href}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-500 px-7 py-4 font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-brand-600"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-7 py-4 font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-brand-800"
             >
               <Phone className="h-5 w-5" /> {site.phone.display}
             </a>
-            <a
+            <Link
               href="/verify-insurance"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 px-7 py-4 font-semibold text-white ring-1 ring-white/25 backdrop-blur transition hover:bg-white/20"
             >
               <ShieldCheck className="h-5 w-5" /> Verify Insurance
-            </a>
+            </Link>
           </div>
 
           <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-navy-200">

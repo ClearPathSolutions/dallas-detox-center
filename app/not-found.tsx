@@ -17,7 +17,7 @@ export default function NotFound() {
           <Link href="/" className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 font-semibold text-navy-800 transition hover:bg-sand-100">
             <Home className="h-5 w-5" /> Back Home
           </Link>
-          <a href={site.phone.href} className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-7 py-4 font-semibold text-white transition hover:bg-brand-600">
+          <a href={site.phone.href} className="inline-flex items-center gap-2 rounded-full bg-brand-700 px-7 py-4 font-semibold text-white transition hover:bg-brand-800">
             <Phone className="h-5 w-5" /> {site.phone.display}
           </a>
         </div>

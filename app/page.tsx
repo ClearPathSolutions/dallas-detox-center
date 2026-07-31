@@ -24,6 +24,7 @@ import { Container } from "@/components/ui/Container";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { InsuranceStrip } from "@/components/sections/InsuranceStrip";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { GoogleReviews } from "@/components/sections/GoogleReviews";
 import { PostCard } from "@/components/content/PostCard";
 import { Faq, FaqSchema } from "@/components/ui/Faq";
 import faqs from "@/content/faqs.json";
@@ -63,6 +64,7 @@ const localBusinessSchema = {
     addressCountry: "US",
   },
   medicalSpecialty: "Addiction Medicine",
+  foundingDate: String(site.founded),
   availableService: services.map((s) => ({ "@type": "MedicalProcedure", name: s.title })),
 };
 
@@ -93,10 +95,10 @@ export default function Home() {
               you achieve lasting sobriety.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <a href={site.phone.href} className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-500 px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-brand-600">
+              <a href={site.phone.href} className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-brand-800">
                 <Phone className="h-5 w-5" /> {site.phone.display}
               </a>
-              <Link href="/verify-insurance" className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-500 px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-accent-600">
+              <Link href="/verify-insurance" className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-700 px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-accent-800">
                 <ShieldCheck className="h-5 w-5" /> Verify Insurance
               </Link>
             </div>
@@ -174,7 +176,7 @@ export default function Home() {
             <div className="flex flex-col justify-center rounded-2xl bg-navy-800 p-7 text-white">
               <h3 className="font-display text-2xl">Not sure where to start?</h3>
               <p className="mt-2 text-sm text-navy-200">Our admissions team will help you find the right level of care — confidentially and at no cost.</p>
-              <a href={site.phone.href} className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-600"><Phone className="h-4 w-4" /> {site.phone.display}</a>
+              <a href={site.phone.href} className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-800"><Phone className="h-4 w-4" /> {site.phone.display}</a>
             </div>
           </div>
         </Container>
@@ -294,14 +296,14 @@ export default function Home() {
                 options that meet your personal needs. Reach out — there is never any obligation.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a href={site.phone.href} className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-500 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-600"><Phone className="h-5 w-5" /> {site.phone.display}</a>
-                <Link href="/verify-insurance" className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-500 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-accent-600">Verify Insurance</Link>
+                <a href={site.phone.href} className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-800"><Phone className="h-5 w-5" /> {site.phone.display}</a>
+                <Link href="/verify-insurance" className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-700 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-accent-800">Verify Insurance</Link>
               </div>
             </div>
             <ul className="space-y-3">
               {callbackBenefits.map((b) => (
                 <li key={b} className="flex items-center gap-3 rounded-xl bg-white/5 px-5 py-4 text-white ring-1 ring-white/10">
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent-500"><Check className="h-3.5 w-3.5" strokeWidth={3} /></span>
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent-700"><Check className="h-3.5 w-3.5" strokeWidth={3} /></span>
                   {b}
                 </li>
               ))}
@@ -353,6 +355,9 @@ export default function Home() {
         </Container>
       </section>
       <FaqSchema items={faqs.home} />
+
+      {/* GOOGLE REVIEWS — renders only when GOOGLE_PLACES_API_KEY is configured */}
+      <GoogleReviews />
 
       <CtaBand />
     </>

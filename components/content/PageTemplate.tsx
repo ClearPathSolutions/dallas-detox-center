@@ -2,7 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { Check, ArrowRight, ShieldCheck } from "lucide-react";
 import type { PageContent } from "@/lib/content";
-import { structurePage, serviceHref, type Section, type Group, type GalleryItem } from "@/lib/blocks";
+import {
+  structurePage,
+  serviceHref,
+  serviceBlurb,
+  type Section,
+  type Group,
+  type GalleryItem,
+} from "@/lib/blocks";
 import { Container } from "@/components/ui/Container";
 import { BlockFlow } from "@/components/content/BlockRenderer";
 import { PageHero } from "@/components/content/PageHero";
@@ -164,7 +171,7 @@ function StepsSection({ section }: { section: Extract<Section, { kind: "steps" }
             {section.steps.map((step, i) => (
               <li key={i} className="relative flex gap-5">
                 <div className="flex flex-col items-center">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-500 font-display text-lg text-white shadow">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-700 font-display text-lg text-white shadow">
                     {i + 1}
                   </span>
                   {i < section.steps.length - 1 && <span className="mt-1 w-px flex-1 bg-brand-200" />}
@@ -212,6 +219,9 @@ function CardsSection({ section }: { section: Extract<Section, { kind: "cards" }
 
 function Card({ card }: { card: Group }) {
   const href = serviceHref(card.title);
+  // Service labels arrived from the migration with no body at all; fall back to
+  // the canonical one-liner so the card isn't just an icon and a heading.
+  const blurb = card.body.length === 0 ? serviceBlurb(card.title) : null;
   const inner = (
     <>
       <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
@@ -223,6 +233,7 @@ function Card({ card }: { card: Group }) {
           <BlockFlow blocks={card.body} />
         </div>
       )}
+      {blurb && <p className="mt-3 text-sm leading-relaxed text-navy-600">{blurb}</p>}
       {href && (
         <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 group-hover:gap-2.5">
           Learn more <ArrowRight className="h-4 w-4 transition-all" />

@@ -5,7 +5,7 @@
   "template": "page",
   "title": "Admissions",
   "metaTitle": "Admissions - Dallas Detox Center",
-  "metaDescription": "",
+  "metaDescription": "Start admissions at Dallas Detox Center in one confidential call. Free insurance verification, same-day arrival when a bed is available, and 24/7 support.",
   "ogImage": "/images/content/2026/02/10-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-10.jpg",
   "canonical": "/admissions",
   "featured": {
@@ -150,7 +150,7 @@
     },
     {
       "type": "paragraph",
-      "html": "We accept most major insurance plans and are dedicated to making the admissions process as seamless as possible. Once you submit this form, our team will conduct a private review of your policy and contact you shortly to discuss your options for <a href=\"/detox\">detox</a> and <a href=\"/residential-inpatient\">residential care</a>.",
+      "html": "We accept most major insurance plans and are dedicated to making the admissions process as seamless as possible. Once you submit this form, our team will conduct a private review of your policy and contact you shortly to discuss your options for <a href=\"/treatment-services/detox\">detox</a> and <a href=\"/treatment-services/residential-inpatient\">residential care</a>.",
       "text": "We accept most major insurance plans and are dedicated to making the admissions process as seamless as possible. Once you submit this form, our team will conduct a private review of your policy and contact you shortly to discuss your options for detox and residential care."
     },
     {
@@ -165,7 +165,7 @@
     },
     {
       "type": "paragraph",
-      "html": "Your journey begins with a warm welcome to our private Dallas estate, where your comfort and safety are our immediate priorities. During your first 24 hours, our clinical team provides a medical evaluation and orientation to ensure your transition into our <a href=\"/detox\">medical detox</a> or <a href=\"/residential-inpatient\">residential programs</a> is seamless. We focus on immediate stabilization in a secure environment, allowing you to settle into your private suite and begin your recovery with peace of mind.",
+      "html": "Your journey begins with a warm welcome to our private Dallas estate, where your comfort and safety are our immediate priorities. During your first 24 hours, our clinical team provides a medical evaluation and orientation to ensure your transition into our <a href=\"/treatment-services/detox\">medical detox</a> or <a href=\"/treatment-services/residential-inpatient\">residential programs</a> is seamless. We focus on immediate stabilization in a secure environment, allowing you to settle into your private suite and begin your recovery with peace of mind.",
       "text": "Your journey begins with a warm welcome to our private Dallas estate, where your comfort and safety are our immediate priorities. During your first 24 hours, our clinical team provides a medical evaluation and orientation to ensure your transition into our medical detox or residential programs is seamless. We focus on immediate stabilization in a secure environment, allowing you to settle into your private suite and begin your recovery with peace of mind."
     },
     {
@@ -280,7 +280,7 @@
     },
     {
       "type": "paragraph",
-      "html": "That is what we are here for. During your initial clinical assessment, our experts will listen to your history and current challenges to recommend the appropriate level of care, whether that is <a href=\"/detox\">medical detox</a>, <a href=\"/residential-inpatient\">residential treatment</a>, <a href=\"/dual-diagnosis\">dual diagnosis</a> or one of our specialized tracks.",
+      "html": "That is what we are here for. During your initial clinical assessment, our experts will listen to your history and current challenges to recommend the appropriate level of care, whether that is <a href=\"/treatment-services/detox\">medical detox</a>, <a href=\"/treatment-services/residential-inpatient\">residential treatment</a>, <a href=\"/treatment-services/dual-diagnosis\">dual diagnosis</a> or one of our specialized tracks.",
       "text": "That is what we are here for. During your initial clinical assessment, our experts will listen to your history and current challenges to recommend the appropriate level of care, whether that is medical detox, residential treatment, dual diagnosis or one of our specialized tracks."
     }
   ]

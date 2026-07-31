@@ -45,11 +45,12 @@ export default function TourPage() {
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-navy-200">
             Where luxury amenities and expert clinical care create the perfect
-            environment for your recovery. Take a look inside our exclusive recovery
-            campus, designed to offer a peaceful and supportive place to heal.
+            environment for your recovery. Take a look inside our {site.capacity.total}-bed
+            private campus — two distinct residences designed to offer a peaceful
+            and supportive place to heal.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href={site.phone.href} className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-500 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-600">
+            <a href={site.phone.href} className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-800">
               <Phone className="h-5 w-5" /> {site.phone.display}
             </a>
             <Link href="/contact-us" className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 px-7 py-4 font-semibold text-white ring-1 ring-white/25 transition hover:bg-white/20">

@@ -12,6 +12,11 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Local working dirs: the wget mirror of the old WordPress site and the
+    // extraction scratch space. Linting the mirror's minified vendor bundles
+    // produced 127 of the project's 135 warnings.
+    "_source/**",
+    "_content/**",
   ]),
 ]);
 

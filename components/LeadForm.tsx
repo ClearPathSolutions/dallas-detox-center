@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Link from "next/link";
 import { Send, Loader2, CheckCircle2, ShieldCheck, ArrowRight } from "lucide-react";
 import { site, insurers } from "@/lib/site";
 
@@ -50,7 +51,6 @@ export function LeadForm({ intent = "contact" }: { intent?: Intent }) {
       // We own validation now (form uses noValidate).
       const name = String(data.name || "").trim();
       const phone = String(data.phone || "").trim();
-      const email = String(data.email || "").trim();
       if (!name || !phone) {
         setStatus("error");
         setError("Please include your name and a phone number.");
@@ -66,27 +66,40 @@ export function LeadForm({ intent = "contact" }: { intent?: Intent }) {
         }
       }
 
-      // Send to Clarion (best-effort — never blocks the user's success state).
+      // Two independent sinks. The lead only counts as captured if at least one
+      // accepts it — otherwise we must not show a thank-you, because a dropped
+      // lead here is a lost admission.
+      let clarionOk = false;
       try {
-        await window.ClarionForms?.submit({
+        const res = await window.ClarionForms?.submit({
           form_key: CLARION_FORM_KEY[intent],
           data: { ...data, intent },
         });
+        clarionOk = !!res && res.ok !== false;
       } catch {
-        /* best-effort */
+        clarionOk = false;
       }
 
-      // Contact inquiries also go to our own email pipeline.
-      if (intent === "contact") {
+      let apiOk = false;
+      let apiError = "";
+      try {
         const res = await fetch("/api/contact", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
+          body: JSON.stringify({ ...data, intent }),
         });
-        const json = await res.json();
-        if (!res.ok || !json.ok) {
-          throw new Error(json.error || "Something went wrong.");
-        }
+        const json = await res.json().catch(() => ({}));
+        apiOk = res.ok && json.ok === true;
+        if (!apiOk) apiError = json.error || "";
+      } catch {
+        apiOk = false;
+      }
+
+      if (!clarionOk && !apiOk) {
+        throw new Error(
+          apiError ||
+            `We couldn't submit the form. Please call us at ${site.phone.display} — we're available 24/7.`,
+        );
       }
 
       setStatus("success");
@@ -219,7 +232,11 @@ export function LeadForm({ intent = "contact" }: { intent?: Intent }) {
           />
         </div>
 
-        {status === "error" && <p className="text-sm text-red-600">{error}</p>}
+        {status === "error" && (
+          <p role="alert" aria-live="assertive" className="text-sm text-red-600">
+            {error}
+          </p>
+        )}
 
         <button
           type="submit"
@@ -237,8 +254,10 @@ export function LeadForm({ intent = "contact" }: { intent?: Intent }) {
           )}
         </button>
 
-        <p className="flex items-center gap-2 text-xs text-navy-400">
-          <ShieldCheck className="h-4 w-4 shrink-0 text-accent-500" />
+        <ConsentNote />
+
+        <p className="flex items-center gap-2 text-xs text-navy-500">
+          <ShieldCheck className="h-4 w-4 shrink-0 text-accent-600" />
           <span>
             Your information is 100% confidential. Prefer to talk now?{" "}
             <a href={site.phone.href} className="font-semibold text-brand-700">
@@ -284,12 +303,16 @@ export function LeadForm({ intent = "contact" }: { intent?: Intent }) {
         />
       </div>
 
-      {status === "error" && <p className="text-sm text-red-600">{error}</p>}
+      {status === "error" && (
+          <p role="alert" aria-live="assertive" className="text-sm text-red-600">
+            {error}
+          </p>
+        )}
 
       <button
         type="submit"
         disabled={submitting}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent-500 px-7 py-4 font-semibold text-white shadow-sm transition hover:bg-accent-600 disabled:opacity-70 sm:w-auto"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent-700 px-7 py-4 font-semibold text-white shadow-sm transition hover:bg-accent-800 disabled:opacity-70 sm:w-auto"
       >
         {submitting ? (
           <>
@@ -301,9 +324,10 @@ export function LeadForm({ intent = "contact" }: { intent?: Intent }) {
           </>
         )}
       </button>
-      <p className="text-xs text-navy-400">
-        Your information is kept strictly confidential and is never shared.
+      <p className="text-xs text-navy-500">
+        Your information is kept strictly confidential.
       </p>
+      <ConsentNote />
     </form>
   );
 }
@@ -331,17 +355,44 @@ function Field({
         htmlFor={name}
         className="mb-1.5 block text-sm font-medium text-navy-700"
       >
-        {label} {required && <span className="text-red-500">*</span>}
+        {label}{" "}
+        {required && (
+          <span className="text-red-600" aria-hidden>
+            *
+          </span>
+        )}
       </label>
       <input
         id={name}
         name={name}
         type={type}
+        required={required}
+        aria-required={required || undefined}
         autoComplete={autoComplete}
         placeholder={placeholder}
         list={list}
         className="w-full rounded-xl border border-navy-200 bg-white px-4 py-3 text-navy-800 shadow-sm outline-none transition placeholder:text-navy-400 focus:border-brand-400 focus:ring-2 focus:ring-brand-200"
       />
     </div>
+  );
+}
+
+/**
+ * Express consent for the callback. Collecting a phone number and promising to
+ * call it needs this on the record for TCPA purposes.
+ */
+function ConsentNote() {
+  return (
+    <p className="text-xs leading-relaxed text-navy-500">
+      By submitting this form you agree that Dallas Detox Center may contact you
+      by phone, text, or email about treatment — including with an autodialer or
+      prerecorded message — at the number provided. Consent is not a condition of
+      treatment, message and data rates may apply, and you can opt out at any
+      time by replying STOP. See our{" "}
+      <Link href="/privacy-policy" className="underline hover:text-navy-700">
+        Privacy Policy
+      </Link>
+      .
+    </p>
   );
 }

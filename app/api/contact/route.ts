@@ -8,6 +8,12 @@ type Payload = {
   phone?: string;
   email?: string;
   message?: string;
+  /** "contact" | "verify" — which form produced the lead. */
+  intent?: string;
+  // Insurance-verification fields
+  dob?: string;
+  memberId?: string;
+  insuranceProvider?: string;
   // honeypot
   company?: string;
 };
@@ -35,42 +41,62 @@ export async function POST(req: Request) {
     );
   }
 
-  const body =
-    `New inquiry from the Dallas Detox Center website:\n\n` +
-    `Name: ${name}\nPhone: ${phone || "—"}\nEmail: ${email || "—"}\n\nMessage:\n${message || "—"}`;
+  const isVerify = data.intent === "verify";
+  const extra = isVerify
+    ? `\nDate of birth: ${(data.dob || "").trim() || "—"}` +
+      `\nInsurance provider: ${(data.insuranceProvider || "").trim() || "—"}` +
+      `\nMember ID: ${(data.memberId || "").trim() || "—"}`
+    : "";
 
-  // If an email provider is configured, deliver the lead. Otherwise accept
-  // gracefully so the site works out of the box (configure RESEND_API_KEY on Vercel).
+  const body =
+    `New ${isVerify ? "insurance verification request" : "inquiry"} from the Dallas Detox Center website:\n\n` +
+    `Name: ${name}\nPhone: ${phone || "—"}\nEmail: ${email || "—"}${extra}\n\nMessage:\n${message || "—"}`;
+
   const key = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO || site.email;
   const from = process.env.CONTACT_FROM || "Website <onboarding@resend.dev>";
 
-  if (key) {
-    try {
-      const res = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${key}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          from,
-          to: [to],
-          reply_to: email || undefined,
-          subject: `New website inquiry — ${name}`,
-          text: body,
-        }),
-      });
-      if (!res.ok) throw new Error(`Resend responded ${res.status}`);
-    } catch (err) {
-      console.error("Contact email failed:", err);
-      return NextResponse.json(
-        { ok: false, error: "We couldn't send your message. Please call us at " + site.phone.display },
-        { status: 502 },
-      );
-    }
-  } else {
-    console.log("[contact] lead received (no email provider configured):\n" + body);
+  // No provider configured means the lead has nowhere to go. Never answer OK —
+  // a silent success here loses an admission while showing the visitor a
+  // thank-you message. Fail so the form can show the phone number instead.
+  if (!key) {
+    console.error(
+      "[contact] RESEND_API_KEY is not set — lead could NOT be delivered:\n" + body,
+    );
+    return NextResponse.json(
+      {
+        ok: false,
+        error: `We couldn't submit the form. Please call us at ${site.phone.display} — we're available 24/7.`,
+      },
+      { status: 503 },
+    );
+  }
+
+  try {
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${key}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from,
+        to: [to],
+        reply_to: email || undefined,
+        subject: `${isVerify ? "Insurance verification" : "New website inquiry"} — ${name}`,
+        text: body,
+      }),
+    });
+    if (!res.ok) throw new Error(`Resend responded ${res.status}: ${await res.text()}`);
+  } catch (err) {
+    console.error("[contact] lead delivery failed:", err, "\n" + body);
+    return NextResponse.json(
+      {
+        ok: false,
+        error: `We couldn't submit the form. Please call us at ${site.phone.display} — we're available 24/7.`,
+      },
+      { status: 502 },
+    );
   }
 
   return NextResponse.json({ ok: true });

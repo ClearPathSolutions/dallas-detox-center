@@ -20,10 +20,30 @@ export const site = {
     zip: "76087",
     full: "100 Mariah Drive, Weatherford, Texas 76087",
   },
+  // Year the facility opened.
+  founded: 2022,
+  // Licensed level of care.
+  levelOfCare: "Residential",
+  // Licensed bed count, split across the two residences on the campus.
+  // NOTE: not yet used in any public-facing copy — see the "6-bed census"
+  // claim in content/pages/tour.json before publishing a capacity figure.
+  capacity: {
+    total: 32,
+    house: 16,
+    barn: 16,
+  },
   social: {
     instagram: "https://www.instagram.com/dallasdetoxcenter/",
     facebook: "https://www.facebook.com/dallasdetoxcenter",
     linkedin: "https://www.linkedin.com/company/dallas-detox-center/",
+  },
+  // Google Business Profile. `cid` is the numeric customer ID derived from the
+  // profile's feature ID (0x8651e3167eddf8d5:0x9ec6acb5f66f8539) — it gives us
+  // stable profile/review links without needing an API call.
+  google: {
+    cid: "11441021800904885561",
+    profileUrl: "https://maps.google.com/?cid=11441021800904885561",
+    writeReviewUrl: "https://g.page/r/CTmFb_a1rMaeEAI/review",
   },
   widgets: {
     clarion: {
@@ -54,6 +74,8 @@ export const nav: NavItem[] = [
           { label: "Trevor Grigsby", href: "/about-us/trevor-grigsby" },
           { label: "Michael Young", href: "/about-us/michael-young" },
           { label: "Ricki Cochran", href: "/about-us/ricki-cochran" },
+          { label: "Sarah Bentley", href: "/about-us/sarah-bentley" },
+          { label: "Antoine Gross Sr.", href: "/about-us/antoine-gross" },
           { label: "Latest Articles", href: "/blog" },
         ],
       },
@@ -133,7 +155,7 @@ export const nav: NavItem[] = [
     href: "/admissions",
     children: [
       { label: "Admissions", href: "/admissions" },
-      { label: "Veterans (VA CCN)", href: "/va-cnn" },
+      { label: "Veterans (VA CCN)", href: "/va-ccn" },
     ],
   },
   { label: "Contact", href: "/contact-us" },

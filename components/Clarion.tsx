@@ -22,7 +22,6 @@ export default function Clarion() {
 }`,
         }}
       />
-      {/* eslint-disable-next-line @next/next/no-sync-scripts */}
       <script
         src="https://www.clarionlabs.ai/widget.v1.js"
         async
@@ -34,7 +33,6 @@ export default function Clarion() {
         data-position={BRAND.position}
         data-font={BRAND.font}
       />
-      {/* eslint-disable-next-line @next/next/no-sync-scripts */}
       <script
         src="https://www.clarionlabs.ai/forms-capture.v1.js"
         async

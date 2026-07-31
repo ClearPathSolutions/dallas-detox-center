@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { InstagramIcon, FacebookIcon, LinkedinIcon } from "@/components/ui/SocialIcons";
 
 export function Footer() {
-  const year = 2026;
+  const year = new Date().getFullYear();
   return (
     <footer className="bg-navy-900 text-navy-200">
       {/* CTA band */}
@@ -21,13 +21,13 @@ export function Footer() {
           <div className="flex flex-col gap-3 sm:flex-row">
             <a
               href={site.phone.href}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-500 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-600"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-800"
             >
               <Phone className="h-5 w-5" /> {site.phone.display}
             </a>
             <Link
-              href="/contact-us"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-500 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-accent-600"
+              href="/verify-insurance"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-700 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-accent-800"
             >
               Verify Your Insurance
             </Link>
@@ -86,7 +86,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 sm:flex-row">
-          <p className="text-xs text-navy-400">
+          <p className="text-xs text-navy-300">
             © {year} {site.name}. All rights reserved. ·{" "}
             <Link href="/privacy-policy" className="hover:text-white">
               Privacy Policy
@@ -124,7 +124,7 @@ function SocialIcon({
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-brand-500"
+      className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-brand-700"
     >
       {children}
     </a>

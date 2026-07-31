@@ -24,26 +24,71 @@ const INSURANCE_HEADING_RE = /work with most major insurance|insurance we (accep
 const GLANCE_HEADING_RE = /at a glance|quick facts|by the numbers/i;
 const FACT_RE = /^([^:]{2,46}):\s*(.+)$/;
 const STEP_RE = /^step\b/i;
+const QUESTION_RE = /\?\s*$/;
+
+// The Elementor CTA widget whose heading + single paragraph are byte-identical
+// on 36 pages. It restates what <CtaBand /> already says, so it is dropped
+// wholesale rather than rendered as a stray card.
+const CTA_BOILERPLATE_RE = /^we can help you\s*[-–—]\s*no matter what/i;
+
+// The migrated twin of <CtaBand />: an H2 with the same headline, appearing on
+// 38 pages. Its trust bullets now live in CtaBand itself, so the section goes.
+const CTA_DUPLICATE_RE = /^let us help you begin your journey/i;
 
 // Decorative / brand / badge images that should never render as inline content.
 const DECOR_IMG_RE =
   /(goldseal|joint-commission|national-quality|ins-logo-|dallas-logo|cropped-ddc|\/ddc[-.]|placeholder|qi-addons|loader-bckg|h7-dots|-white\.(png|jpg|jpeg)|amerihealth\.|anthem-|bcbs-|highmark-|horizon-|magnacare|prc-magellan|mcr-|umr-logo|multiplan|threerivers|valueoptions)/i;
 
-// Known program titles → their canonical page, so flattened "service" labels
-// become useful links.
-const SERVICE_LINKS: [RegExp, string][] = [
-  [/dual[\s-]?diagnosis/i, "/treatment-services/dual-diagnosis"],
-  [/mental health/i, "/treatment-services/mental-health-residential"],
-  [/residential|inpatient/i, "/treatment-services/residential-inpatient"],
-  [/aftercare/i, "/treatment-services/aftercare-planning"],
-  [/luxury/i, "/luxury-treatment"],
-  [/detox/i, "/treatment-services/detox"],
+// Known program titles → their canonical page plus a one-line summary. The
+// migration flattened these to bare labels, so without the summary they render
+// as a heading and a link with nothing else. Copy matches the homepage cards.
+const SERVICE_LINKS: [RegExp, string, string][] = [
+  [
+    /dual[\s-]?diagnosis/i,
+    "/treatment-services/dual-diagnosis",
+    "Treating addiction and co-occurring mental health together.",
+  ],
+  [
+    /mental health/i,
+    "/treatment-services/mental-health-residential",
+    "Integrated treatment for depression, anxiety, trauma, and more.",
+  ],
+  [
+    /residential|inpatient/i,
+    "/treatment-services/residential-inpatient",
+    "Immersive, structured care in a private residential setting.",
+  ],
+  [
+    /aftercare/i,
+    "/treatment-services/aftercare-planning",
+    "A lasting plan and support network to protect your recovery.",
+  ],
+  [
+    /luxury/i,
+    "/luxury-treatment",
+    "Elevated accommodations and amenities alongside full clinical care.",
+  ],
+  [
+    /detox/i,
+    "/treatment-services/detox",
+    "24/7 physician-supervised withdrawal management for a safe, comfortable start.",
+  ],
 ];
 
 export function serviceHref(title: string): string | null {
   for (const [re, href] of SERVICE_LINKS) if (re.test(title)) return href;
   return null;
 }
+
+/** One-line summary for a flattened service label, when the migration left none. */
+export function serviceBlurb(title: string): string | null {
+  for (const [re, , blurb] of SERVICE_LINKS) if (re.test(title)) return blurb;
+  return null;
+}
+
+/** Normalised form for comparing a section heading against the page title. */
+const normalise = (s: string) =>
+  s.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 
 const isDecor = (b: Block) => b.type === "image" && DECOR_IMG_RE.test(b.src);
 const wordCount = (s: string) => s.trim().split(/\s+/).length;
@@ -76,6 +121,52 @@ function mergeHeadingPairs(blocks: Block[]): Block[] {
       continue;
     }
     out.push(a);
+  }
+  return out;
+}
+
+/**
+ * True when a heading-led group is a leftover Elementor CTA widget rather than
+ * content. The migration flattened those widgets into bare headings, which then
+ * rendered as empty cards ("Get Help Now", "Request a Callback", …).
+ *
+ * Deliberately conservative: a group carrying any real paragraph or list is
+ * never dropped, so the handful of these headings that do introduce unique copy
+ * survive. The only exception is the CTA_BOILERPLATE_RE widget, whose body was
+ * verified identical across all 36 pages that carry it.
+ */
+function isWidgetGroup(title: string, body: Block[]): boolean {
+  const t = title.trim();
+  if (CTA_BOILERPLATE_RE.test(t)) return true;
+  const hasCopy = body.some((b) => b.type === "paragraph" || b.type === "list");
+  if (hasCopy) return false;
+  // Bodyless: worth keeping only if the title links somewhere useful, which is
+  // what turns "Detox Services" into a real navigational card.
+  return !serviceHref(t);
+}
+
+/**
+ * Remove widget groups (heading plus everything under it) before a section is
+ * classified, so neither the card grid nor the prose fallback renders them.
+ */
+function stripWidgetGroups(blocks: Block[]): Block[] {
+  const out: Block[] = [];
+  for (let i = 0; i < blocks.length; i++) {
+    const b = blocks[i];
+    if (b.type === "heading" && b.level >= 3) {
+      let j = i + 1;
+      const body: Block[] = [];
+      for (; j < blocks.length; j++) {
+        const n = blocks[j];
+        if (n.type === "heading" && n.level <= b.level) break;
+        body.push(n);
+      }
+      if (isWidgetGroup(b.text, body)) {
+        i = j - 1; // skip the heading and its body
+        continue;
+      }
+    }
+    out.push(b);
   }
   return out;
 }
@@ -126,8 +217,24 @@ function classify(heading: string | null, rawBlocks: Block[]): Section {
     return { kind: "steps", heading, intro, steps: groups };
   }
 
-  // Card grid: several short heading-led groups with little body each
-  if (groups.length >= 2 && groups.every((g) => g.body.filter((b) => b.type === "paragraph").length <= 1)) {
+  // Question-led groups are Q&A copy, not cards — a card strips the answer down
+  // to a teaser, which is why these kept getting filed as "needs its own section".
+  const questions = groups.filter((g) => QUESTION_RE.test(g.title)).length;
+  if (groups.length >= 2 && questions >= Math.ceil(groups.length / 2)) {
+    return { kind: "prose", heading, blocks };
+  }
+
+  // Card grid: several short heading-led groups with little body each. A group
+  // with NO body only earns a card if its title links somewhere — otherwise the
+  // card renders as an icon and a heading with nothing in it.
+  const cardable = groups.filter(
+    (g) => g.body.some((b) => b.type === "paragraph" || b.type === "list") || serviceHref(g.title),
+  );
+  if (
+    cardable.length >= 2 &&
+    cardable.length === groups.length &&
+    groups.every((g) => g.body.filter((b) => b.type === "paragraph").length <= 1)
+  ) {
     const shortTitles = groups.filter((g) => wordCount(g.title) <= 5).length;
     if (shortTitles >= Math.ceil(groups.length / 2)) {
       return { kind: "cards", heading, intro, cards: groups };
@@ -202,7 +309,22 @@ export function structurePage(page: PageContent): StructuredPage {
 
   const sections = raw
     .filter((r) => !(r.heading && INSURANCE_HEADING_RE.test(r.heading)))
-    .map((r) => ({ ...r, blocks: r.blocks.filter((b) => b.type !== "image") }))
+    // The migrated CtaBand twin — <CtaBand /> is appended by the template.
+    .filter((r) => !(r.heading && CTA_DUPLICATE_RE.test(r.heading.trim())))
+    // A bodyless heading that just restates the H1 — the "double title" the
+    // content walkthrough flagged on the detox and landing pages.
+    .filter(
+      (r) =>
+        !(
+          r.heading &&
+          normalise(r.heading) === normalise(title) &&
+          !r.blocks.some((b) => b.type !== "image")
+        ),
+    )
+    .map((r) => ({
+      ...r,
+      blocks: stripWidgetGroups(r.blocks.filter((b) => b.type !== "image")),
+    }))
     .filter((r) => r.heading || r.blocks.length)
     .map((r) => classify(r.heading, r.blocks))
     .filter((s) => {
