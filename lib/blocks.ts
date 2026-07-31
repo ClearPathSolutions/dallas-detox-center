@@ -38,6 +38,12 @@ const CTA_BOILERPLATE_RE = /^we can help you\s*[-–—]\s*no matter what/i;
 // 38 pages. Its trust bullets now live in CtaBand itself, so the section goes.
 const CTA_DUPLICATE_RE = /^let us help you begin your journey/i;
 
+// Elementor CTA widget titles. When one of these ends up as a section heading it
+// labels nothing — the copy beneath it is ordinary content — so the heading is
+// dropped and the copy kept.
+const CTA_SECTION_RE =
+  /^(get help now|get immediate help now|get the help you need|we are here for you|contact us today|request a callback)\b/i;
+
 // Decorative / brand / badge images that should never render as inline content.
 const DECOR_IMG_RE =
   /(goldseal|joint-commission|national-quality|ins-logo-|dallas-logo|cropped-ddc|\/ddc[-.]|placeholder|qi-addons|loader-bckg|h7-dots|-white\.(png|jpg|jpeg)|amerihealth\.|anthem-|bcbs-|highmark-|horizon-|magnacare|prc-magellan|mcr-|umr-logo|multiplan|threerivers|valueoptions)/i;
@@ -174,6 +180,25 @@ function stripWidgetGroups(blocks: Block[]): Block[] {
   return out;
 }
 
+/**
+ * Elementor put a small label above most section titles ("First Step Towards
+ * Recovery", "Get the Help You Need", "We're available 24/7"). The migration
+ * flattened those to H4–H6 headings sitting as the first block of the section,
+ * where they read as a stray sub-title. A deeper heading that opens a section is
+ * always one of these; genuine H4s — FAQ questions, staff roles — appear after
+ * some copy, never first.
+ */
+function dropLeadingEyebrow(blocks: Block[]): Block[] {
+  let out = blocks;
+  const first = out[0];
+  if (first && first.type === "heading" && first.level >= 4) out = out.slice(1);
+  // A deep heading in last position is the eyebrow for the *next* section, which
+  // the split left stranded at the end of this one.
+  const last = out[out.length - 1];
+  if (last && last.type === "heading" && last.level >= 4) out = out.slice(0, -1);
+  return out;
+}
+
 /** Split a section's blocks into heading-led groups. */
 function toGroups(blocks: Block[]): { intro: Block[]; groups: Group[] } {
   const intro: Block[] = [];
@@ -192,8 +217,40 @@ function toGroups(blocks: Block[]): { intro: Block[]; groups: Group[] } {
   return { intro, groups };
 }
 
+const FAQ_HEADING_RE = /frequently asked|^faqs?$|common questions/i;
+
+/**
+ * Q&A pairs already present in the body as "question heading + answer".
+ * Several pages kept their questions through the migration and rendered them as
+ * flat prose; those become an accordion with FAQPage markup like the pages whose
+ * questions had to be recovered.
+ */
+function inlineFaq(blocks: Block[]): QA[] | null {
+  const items: QA[] = [];
+  for (let i = 0; i < blocks.length; i++) {
+    const h = blocks[i];
+    if (h.type !== "heading" || !QUESTION_RE.test(h.text)) continue;
+    const parts: string[] = [];
+    for (let j = i + 1; j < blocks.length; j++) {
+      const b = blocks[j];
+      if (b.type === "heading") break;
+      if (b.type === "paragraph") parts.push(b.text.trim());
+      else if (b.type === "list") parts.push(b.items.map((x) => `• ${x}`).join("\n"));
+      else break;
+    }
+    if (parts.length) items.push({ q: h.text.trim(), a: parts.join("\n\n") });
+  }
+  // Only worth an accordion if it is genuinely a Q&A run, not one stray question.
+  return items.length >= 2 ? items : null;
+}
+
 function classify(heading: string | null, rawBlocks: Block[]): Section {
   const blocks = rawBlocks.filter((b) => !isByline(b));
+
+  if (heading && FAQ_HEADING_RE.test(heading.trim())) {
+    const items = inlineFaq(blocks);
+    if (items) return { kind: "faq", heading, items };
+  }
 
   // Facts / "At a Glance"
   const factList = blocks.find(
@@ -343,9 +400,15 @@ export function structurePage(page: PageContent): StructuredPage {
   type Raw = { heading: string | null; blocks: Block[] };
   const raw: Raw[] = [];
   let cur: Raw | null = null;
+
+  // A page has one H1, rendered by the hero. Any later level-1 heading is a
+  // migration artifact restating the title, so it is skipped rather than
+  // demoted into the body.
+  const isDuplicateH1 = (b: Block) => b.type === "heading" && b.level === 1;
   for (; i < blocks.length; i++) {
     const b = blocks[i];
     if (isByline(b)) continue;
+    if (isDuplicateH1(b)) continue;
     if (b.type === "heading" && (b.level === 2 || (b.level === 3 && !cur))) {
       cur = { heading: b.text, blocks: [] };
       raw.push(cur);
@@ -377,6 +440,10 @@ export function structurePage(page: PageContent): StructuredPage {
     .filter((r) => !(r.heading && INSURANCE_HEADING_RE.test(r.heading)))
     // The migrated CtaBand twin — <CtaBand /> is appended by the template.
     .filter((r) => !(r.heading && CTA_DUPLICATE_RE.test(r.heading.trim())))
+    // The boilerplate widget, verified identical on all 36 pages carrying it.
+    .filter((r) => !(r.heading && CTA_BOILERPLATE_RE.test(r.heading.trim())))
+    // Other CTA widget titles: keep the copy, drop the label.
+    .map((r) => (r.heading && CTA_SECTION_RE.test(r.heading.trim()) ? { ...r, heading: null } : r))
     // A bodyless heading that just restates the H1 — the "double title" the
     // content walkthrough flagged on the detox and landing pages. Matched by
     // containment rather than equality, because the restatement is often a
@@ -391,7 +458,7 @@ export function structurePage(page: PageContent): StructuredPage {
     })
     .map((r) => ({
       ...r,
-      blocks: stripWidgetGroups(r.blocks.filter((b) => b.type !== "image")),
+      blocks: dropLeadingEyebrow(stripWidgetGroups(r.blocks.filter((b) => b.type !== "image"))),
     }))
     .filter((r) => r.heading || r.blocks.length)
     .map((r) => classify(r.heading, r.blocks))

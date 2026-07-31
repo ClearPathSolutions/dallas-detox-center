@@ -18,6 +18,7 @@ import { PageHero } from "@/components/content/PageHero";
 import { InsuranceStrip } from "@/components/sections/InsuranceStrip";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { InlineCta } from "@/components/sections/InlineCta";
+import { LocationMap } from "@/components/sections/LocationMap";
 import { Faq, FaqSchema } from "@/components/ui/Faq";
 import { cn } from "@/lib/cn";
 
@@ -29,6 +30,9 @@ const SHOW_INSURANCE = new Set(["detox", "location", "audience", "service", "pag
  * served by a rotated selection from the wider pool.
  */
 const OVERUSED = /\/(16|11|5|25)-web-or-mls-Dallas-Detox-Center/;
+
+/** Sections that tell people how to reach the campus but shipped without a map. */
+const WANTS_MAP = /how to find us|our location|directions|where we are|visit us/i;
 
 function isGenericGallery(items: GalleryItem[]): boolean {
   const generic = items.filter((i) => OVERUSED.test(i.src)).length;
@@ -101,6 +105,13 @@ export function PageTemplate({
         return (
           <Fragment key={i}>
             {node}
+            {section.heading && WANTS_MAP.test(section.heading) && (
+              <section className="bg-white pb-14">
+                <Container>
+                  <LocationMap className="mx-auto max-w-3xl" />
+                </Container>
+              </section>
+            )}
             {i === inlineCtaAfter && <InlineCta />}
             {i === insuranceAfter && <InsuranceStrip />}
           </Fragment>

@@ -6,6 +6,7 @@ import { site } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 import { LeadForm } from "@/components/LeadForm";
 import { JsonLd, breadcrumbSchema, organisationSchema } from "@/lib/schema";
+import { LocationMap } from "@/components/sections/LocationMap";
 
 export function generateMetadata(): Metadata {
   const page = getPageByPath("/contact-us");
@@ -74,15 +75,7 @@ export default function ContactPage() {
                 <li className="inline-flex items-center gap-2"><Clock className="h-4 w-4 text-brand-500" /> Available 24 hours a day, 7 days a week</li>
                 <li className="inline-flex items-center gap-2"><Phone className="h-4 w-4 text-brand-500" /> Prefer to talk now? Call {site.phone.display}</li>
               </ul>
-              <div className="mt-8 overflow-hidden rounded-2xl ring-1 ring-navy-900/5">
-                <iframe
-                  title="Dallas Detox Center location"
-                  src="https://www.google.com/maps?q=100+Mariah+Drive,+Weatherford,+TX+76087&output=embed"
-                  loading="lazy"
-                  className="h-64 w-full border-0"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
+              <LocationMap className="mt-8" />
             </div>
             <div className="rounded-3xl bg-sand-50 p-7 shadow-sm ring-1 ring-navy-900/5 lg:p-9">
               <LeadForm intent="contact" />
