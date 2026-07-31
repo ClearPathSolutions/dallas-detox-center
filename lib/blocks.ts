@@ -174,6 +174,10 @@ function stripWidgetGroups(blocks: Block[]): Block[] {
         i = j - 1; // skip the heading and its body
         continue;
       }
+      // A CTA widget title that does carry real copy: drop the label, keep the
+      // copy inline so it joins the surrounding discussion instead of becoming
+      // a card headed "Get Immediate Help Now".
+      if (CTA_SECTION_RE.test(b.text.trim())) continue;
     }
     out.push(b);
   }
