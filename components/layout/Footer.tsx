@@ -90,6 +90,10 @@ export function Footer() {
             © {year} {site.name}. All rights reserved. ·{" "}
             <Link href="/privacy-policy" className="hover:text-white">
               Privacy Policy
+            </Link>{" "}
+            ·{" "}
+            <Link href="/notice-of-privacy-practices" className="hover:text-white">
+              Notice of Privacy Practices
             </Link>
           </p>
           <div className="flex items-center gap-3">

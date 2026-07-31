@@ -20,12 +20,16 @@ export function BlockFlow({ blocks }: { blocks: Block[] }) {
 function BlockItem({ block }: { block: Block }) {
   switch (block.type) {
     case "heading": {
-      const level = Math.min(Math.max(block.level, 3), 4);
-      const Tag = (`h${level}` as "h3") ;
+      // Floor is 2, not 3: lib/blocks.ts normalises levels so the outline never
+      // skips, and a section with no heading of its own needs an H2 here.
+      const level = Math.min(Math.max(block.level, 2), 4);
+      const Tag = `h${level}` as "h2" | "h3" | "h4";
       const cls =
         level >= 4
           ? "mt-6 text-lg font-semibold text-navy-800"
-          : "mt-8 font-display text-2xl text-navy-800";
+          : level === 3
+            ? "mt-8 font-display text-2xl text-navy-800"
+            : "mt-10 font-display text-3xl text-navy-800";
       return <Tag className={cls}>{block.text}</Tag>;
     }
     case "paragraph":

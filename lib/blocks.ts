@@ -200,8 +200,13 @@ function classify(heading: string | null, rawBlocks: Block[]): Section {
     (b): b is Extract<Block, { type: "list" }> =>
       b.type === "list" && b.items.filter((i) => FACT_RE.test(i)).length >= Math.max(2, b.items.length - 1),
   );
-  if ((heading && GLANCE_HEADING_RE.test(heading)) || factList) {
-    if (factList) {
+  // Requires BOTH an "At a Glance"-style heading and a fact list. Previously a
+  // fact list alone was enough, so any section containing a "Label: text" list
+  // was rendered as a fact box — and since that layout only shows the facts,
+  // every paragraph in the section disappeared. That is what produced the
+  // "missing section" and "only contains bullet points" reports.
+  if (heading && GLANCE_HEADING_RE.test(heading) && factList) {
+    {
       const facts = factList.items
         .map((i) => {
           const m = i.match(FACT_RE);
@@ -245,6 +250,36 @@ function classify(heading: string | null, rawBlocks: Block[]): Section {
   }
 
   return { kind: "prose", heading, blocks };
+}
+
+/**
+ * Stop the document outline from skipping levels.
+ *
+ * The migrated pages put H3s directly under the page H1 with no H2 between,
+ * which tripped 65 of 106 pages. Section headings render as H2 via the template,
+ * so a heading inside a section may sit at most one level below whatever was
+ * emitted last.
+ *
+ * Heading blocks are cloned rather than mutated: `page.blocks` comes from a
+ * cached module, and rewriting it in place would leak between requests.
+ */
+function normaliseHeadingLevels(sections: Section[]): Section[] {
+  let last = 1; // the page H1, rendered by PageHero
+  return sections.map((s) => {
+    if (s.kind !== "prose") {
+      // These templates emit their own H2 heading and H3 item titles.
+      if (s.heading) last = 2;
+      return s;
+    }
+    if (s.heading) last = 2;
+    const blocks = s.blocks.map((b) => {
+      if (b.type !== "heading") return b;
+      const level = Math.min(Math.max(2, Math.min(b.level, last + 1)), 4);
+      last = level;
+      return { ...b, level };
+    });
+    return { ...s, blocks };
+  });
 }
 
 export function structurePage(page: PageContent): StructuredPage {
@@ -292,6 +327,18 @@ export function structurePage(page: PageContent): StructuredPage {
     if (b.type === "paragraph") lead.push(b);
   }
 
+  // The extraction sometimes captured the hero subtitle twice. lead[0] goes in
+  // the hero and the remainder renders below it, so a duplicate showed up as a
+  // stray paragraph floating under the header.
+  const seenLead = new Set<string>();
+  const dedupedLead = lead.filter((b) => {
+    if (b.type !== "paragraph") return true;
+    const k = normalise(b.text);
+    if (seenLead.has(k)) return false;
+    seenLead.add(k);
+    return true;
+  });
+
   // Raw sections split on H2 (promote a leading H3 group if no H2 yet).
   type Raw = { heading: string | null; blocks: Block[] };
   const raw: Raw[] = [];
@@ -331,15 +378,17 @@ export function structurePage(page: PageContent): StructuredPage {
     // The migrated CtaBand twin — <CtaBand /> is appended by the template.
     .filter((r) => !(r.heading && CTA_DUPLICATE_RE.test(r.heading.trim())))
     // A bodyless heading that just restates the H1 — the "double title" the
-    // content walkthrough flagged on the detox and landing pages.
-    .filter(
-      (r) =>
-        !(
-          r.heading &&
-          normalise(r.heading) === normalise(title) &&
-          !r.blocks.some((b) => b.type !== "image")
-        ),
-    )
+    // content walkthrough flagged on the detox and landing pages. Matched by
+    // containment rather than equality, because the restatement is often a
+    // prefix of the H1 ("Cocaine Detox in Dallas, Texas" under "Cocaine Detox
+    // in Dallas, Texas | Drug & Alcohol Detox").
+    .filter((r) => {
+      if (!r.heading) return true;
+      if (r.blocks.some((b) => b.type !== "image")) return true;
+      const h = normalise(r.heading);
+      const t = normalise(title);
+      return !(h.length > 12 && (t.includes(h) || h.includes(t)));
+    })
     .map((r) => ({
       ...r,
       blocks: stripWidgetGroups(r.blocks.filter((b) => b.type !== "image")),
@@ -347,18 +396,26 @@ export function structurePage(page: PageContent): StructuredPage {
     .filter((r) => r.heading || r.blocks.length)
     .map((r) => classify(r.heading, r.blocks))
     .filter((s) => {
-      // Drop empty/heading-only prose (usually a duplicate heading whose body
-      // was images now shown in the gallery); keep all structured sections.
-      if (s.kind === "prose") return s.blocks.length > 0;
+      // Drop prose that carries no actual copy. A heading counts as a block, so
+      // checking length alone let heading-only sections through — they rendered
+      // as a lone title with nothing beneath it (the "double title" reports).
+      if (s.kind === "prose") {
+        const hasCopy = s.blocks.some(
+          (b) => b.type === "paragraph" || b.type === "list" || b.type === "quote",
+        );
+        // No paragraph, list or quote means there is nothing to read, whether
+        // the title sits in `heading` or as a heading block.
+        return hasCopy;
+      }
       return true;
     });
 
   return {
     eyebrow,
     title,
-    lead: lead,
+    lead: dedupedLead,
     byline,
-    sections: faqSection ? [...sections, faqSection] : sections,
+    sections: normaliseHeadingLevels(faqSection ? [...sections, faqSection] : sections),
     gallery: gallery.slice(0, 8),
   };
 }

@@ -17,7 +17,7 @@ import {
 export const dynamicParams = false;
 
 // Pages with their own bespoke routes — excluded from this catch-all.
-const BESPOKE = new Set(["blog", "faq-page", "tour", "contact-us"]);
+const BESPOKE = new Set(["blog", "faq-page", "tour", "contact-us", "privacy-policy"]);
 
 const BREADCRUMB: Record<string, string> = {
   detox: "Medical Detox",

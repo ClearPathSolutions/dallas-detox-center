@@ -295,13 +295,6 @@
       "blocks": 68
     },
     {
-      "slug": "privacy-policy",
-      "path": "/privacy-policy",
-      "template": "page",
-      "title": "Privacy Policy",
-      "blocks": 127
-    },
-    {
       "slug": "admissions",
       "path": "/admissions",
       "template": "page",
@@ -384,6 +377,13 @@
       "template": "team",
       "title": "Sarah Bentley",
       "blocks": 6
+    },
+    {
+      "slug": "notice-of-privacy-practices",
+      "path": "/notice-of-privacy-practices",
+      "template": "page",
+      "title": "Notice of Privacy Practices",
+      "blocks": 58
     }
   ],
   "posts": [

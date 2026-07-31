@@ -200,6 +200,14 @@ function GlanceSection({ section }: { section: Extract<Section, { kind: "glance"
             </div>
           )}
         </div>
+
+        {/* Anything else in the section. This was computed but never rendered,
+            so prose sitting alongside a fact list was silently discarded. */}
+        {section.rest.length > 0 && (
+          <div className="prose-ddc mx-auto mt-12 max-w-3xl [&_*]:text-navy-100 [&_a]:text-brand-300 [&_h2]:text-white [&_h3]:text-white [&_h4]:text-white [&_strong]:text-white">
+            <BlockFlow blocks={section.rest} />
+          </div>
+        )}
       </Container>
     </section>
   );

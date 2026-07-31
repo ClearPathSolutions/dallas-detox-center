@@ -10,7 +10,12 @@ export const dynamic = "force-static";
  * Routes that exist as bespoke pages rather than migrated content, so they are
  * absent from content/index.json and have to be listed explicitly.
  */
-const EXTRA_PATHS = ["/verify-insurance", "/areas-we-serve", "/about-us/meet-the-team"];
+const EXTRA_PATHS = [
+  "/verify-insurance",
+  "/areas-we-serve",
+  "/about-us/meet-the-team",
+  "/privacy-policy",
+];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const index = getIndex();
