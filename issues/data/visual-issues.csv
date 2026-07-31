@@ -1,0 +1,472 @@
+ID,Facility,Issue,Fix,Location
+1,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient
+2,Dallas Detox,Modern Tools for Complex Healing - Empty Text Box,Add content,https://dallas-detox-center.vercel.app/treatment-services/dual-diagnosis
+3,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/treatment-services/dual-diagnosis
+4,Dallas Detox,"Our Customized Treatment Programs - Young Adults - Empty Text box
+",Add content,https://dallas-detox-center.vercel.app/who-we-help
+5,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/who-we-help
+6,Dallas Detox,What to Expect During Residential Treatment at Dallas Detox Center - Science-backed healing for the mind - Empty Text box,Add content,https://dallas-detox-center.vercel.app/who-we-help
+7,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/treatment-services/mental-health-residential
+8,Dallas Detox,Our Team Ricki Cochran Therapist - Content built out sloppy,The content can be built out as a faq accordian or have ai rebuild the content to match the structure in the other staff pages,https://dallas-detox-center.vercel.app/about-us/ricki-cochran
+9,Dallas Detox,Our Team Trevor Grigsby Clinical Director - Missing image of staff,Ask the facility for a picture of the staff member,https://dallas-detox-center.vercel.app/about-us/trevor-grigsby
+10,Dallas Detox,Our Team Alexandria Grigsby Clinical Director - Missing image of staff,Ask the facility for a picture of the staff member,https://dallas-detox-center.vercel.app/about-us/alexandria-grigsby
+11,Dallas Detox,Our Team Alexandria Grigsby Clinical Director - Partial content produced,Missing content from the original site,https://dallas-detox-center.vercel.app/about-us/alexandria-grigsby
+12,Dallas Detox,Our Team Michael Young Case Manager - Partial Content produced,Missing content from the original site,https://dallas-detox-center.vercel.app/about-us/michael-young
+13,Dallas Detox,"Written By: admin · Medically Reviewed By: Alexandria Grigsby LCDC · November 29, 2023",Remove the written by: admin in this page,https://dallas-detox-center.vercel.app/va-cnn
+14,Dallas Detox,Get Help Now Introduction - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/va-cnn
+15,Dallas Detox,We Can Help You - No Matter What. - Text box,"Remove entirely, use the Get Help Now box instead, AI copied the sections incorrectly in development",https://dallas-detox-center.vercel.app/va-cnn
+16,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images (2x) using the pictures in the shared drive,https://dallas-detox-center.vercel.app/va-cnn
+17,Dallas Detox,"Request a Callback - Should be a above the text of ""Let Us Help You Begin Your Journey to Recovery"" in fine text
+",modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/va-cnn
+18,Dallas Detox,"Get the Help You Need Right Now - should be above the text of ""How Common is Addiction Among Veterans?"" in fine text
+",modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/va-cnn
+19,Dallas Detox,"""Insurance Accepted - We Work With Most Major Insurance"" - CTA Should be below ""Request a Callback - Let Us Help You Begin Your Journey to Recovery""",Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,
+20,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/va-cnn
+21,Dallas Detox,,,https://dallas-detox-center.vercel.app/va-cnn
+22,Dallas Detox,"Get Immediate Help Now needs to be a box with a verify your insurance button linking to the admissions page
+",modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/va-cnn
+23,Dallas Detox,"Written By: admin · Medically Reviewed By: Alexandria Grigsby LCDC · November 29, 2023",Remove the written by: admin in this page,https://dallas-detox-center.vercel.app/who-we-help/veterans
+24,Dallas Detox,Get Help Now Introduction - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/who-we-help/veterans
+25,Dallas Detox,We Can Help You - No Matter What. - Text box doesn't match the style of the rest,"Remove entirely, use the Get Help Now box instead, AI copied the sections incorrectly in development",https://dallas-detox-center.vercel.app/who-we-help/veterans
+26,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images (2x) using the pictures in the shared drive,https://dallas-detox-center.vercel.app/who-we-help/veterans
+27,Dallas Detox,"Request a Callback - Should be a above the text of ""Let Us Help You Begin Your Journey to Recovery"" in fine text
+",modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/who-we-help/veterans
+28,Dallas Detox,"Get the Help You Need Right Now - should be above the text of ""How Common is Addiction Among Veterans?"" in fine text
+",modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/who-we-help/veterans
+29,Dallas Detox,"""Insurance Accepted - We Work With Most Major Insurance"" - CTA Should be below ""Request a Callback - Let Us Help You Begin Your Journey to Recovery""",Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/who-we-help/veterans
+30,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/who-we-help/veterans
+31,Dallas Detox,,,https://dallas-detox-center.vercel.app/who-we-help/veterans
+32,Dallas Detox,"Get Immediate Help Now needs to be a box with a verify your insurance button linking to the admissions page
+",modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/who-we-help/veterans
+33,Dallas Detox,We Can Help You - No Matter What. - Text box doesn't match the style of the rest,"Remove entirely, use the Get Help Now box instead, AI copied the sections incorrectly in development",https://dallas-detox-center.vercel.app/waco
+34,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/waco
+35,Dallas Detox,We are here for you - Blank text box,Remove,https://dallas-detox-center.vercel.app/waco
+36,Dallas Detox,"Add ""We are here for you"" above ""What Are the Waco Drug Rehab Options?"" in fine text",modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/waco
+37,Dallas Detox,"Request a Callback - Should be a above the text of ""Let Us Help You Begin Your Journey to Recovery"" in fine text
+",modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/waco
+38,Dallas Detox,"Request a Callback - Let Us Help You Begin Your Journey to Recovery - Needs a submission box with Name, Phone, Email, and a ""Paying with"" picklist containing PPO insurance, POS Insurance, EPO Insurance, HMO Insurance, Medicaid, Medicare, Self-Pay, and No Insurance",modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/waco
+39,Dallas Detox,"""Get the Help You Need Right Now"" under ""Let Us Help You Begin Your Journey to Recovery""","Remove, was the fine text above an old section",https://dallas-detox-center.vercel.app/waco
+40,Dallas Detox,What Should I Look for Within Addition Treatment in Waco?,Remove as a text widget and create its own section,https://dallas-detox-center.vercel.app/waco
+41,Dallas Detox,Request a Callback - Let Us Help You Begin Your Journey to Recovery - Needs a call button linked to the sites number,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/waco
+42,Dallas Detox,Get Immediate Help Now blank text box widget,Remove,https://dallas-detox-center.vercel.app/waco
+43,Dallas Detox,Contact Us blank text box widget,Remove,https://dallas-detox-center.vercel.app/waco
+44,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images (2x) using the pictures in the shared drive,https://dallas-detox-center.vercel.app/waco
+45,Dallas Detox,"""Insurance Accepted - We Work With Most Major Insurance"" - CTA Should be below ""Request a Callback - Let Us Help You Begin Your Journey to Recovery""",Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/waco
+46,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/waco
+47,Dallas Detox,Missing Medically Reviewed By section ,Add to page,https://dallas-detox-center.vercel.app/benzo-detox
+48,Dallas Detox,"""Benzo Detox in Dallas, Texas Drug & Alcohol Detox in Dallas, Texas"" redundant title created",Remove,https://dallas-detox-center.vercel.app/benzo-detox
+49,Dallas Detox,We Can Help You - No Matter What. - Text box,"Remove entirely, use the Get Help Now box instead, AI copied the sections incorrectly in development",https://dallas-detox-center.vercel.app/benzo-detox
+50,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/benzo-detox
+51,Dallas Detox,learn more about benzos - text box,Remove,https://dallas-detox-center.vercel.app/benzo-detox
+52,Dallas Detox,"Request a Callback - Should be a above the text of ""Let Us Help You Begin Your Journey to Recovery"" in fine text
+",modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/benzo-detox
+53,Dallas Detox,"Get the Help You Need Right Now - should be above the text of ""Are Benzos Addictive?"" in fine text
+",modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/benzo-detox
+54,Dallas Detox,Do Benzos Cause Withdrawal?,Text box needs to be its own section,https://dallas-detox-center.vercel.app/benzo-detox
+55,Dallas Detox,What Are Common Benzo Withdrawal Symptoms?,Text box needs to be its own section,https://dallas-detox-center.vercel.app/benzo-detox
+56,Dallas Detox,Get the Help You Need at,Text box needs to be removed,https://dallas-detox-center.vercel.app/benzo-detox
+57,Dallas Detox,"Get the Help You Need text under ""How to Detox from Benzos""",Text needs to be removed,https://dallas-detox-center.vercel.app/benzo-detox
+58,Dallas Detox,"Contact Us Today - we are here for you above ""Dallas Detox is a Benzo Detox Center in Texas""",Text needs to be removed,https://dallas-detox-center.vercel.app/benzo-detox
+59,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/benzo-detox
+60,Dallas Detox,Get Immediate Help Now - Text box,Text box needs to be removed,https://dallas-detox-center.vercel.app/benzo-detox
+61,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/benzo-detox
+62,Dallas Detox,Written By: admin · Medically Reviewed By: Alexandria Grigsby LCDC,remove written by: admin,https://dallas-detox-center.vercel.app/meth-detox
+63,Dallas Detox,We Can Help You - No Matter What. section,"remove section, old cta",https://dallas-detox-center.vercel.app/meth-detox
+64,Dallas Detox,"Request a Callback - Should be a above the text of ""Let Us Help You Begin Your Journey to Recovery"" in fine text
+","Should be a above the text of ""Let Us Help You Begin Your Journey to Recovery"" in fine text",https://dallas-detox-center.vercel.app/meth-detox
+65,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/meth-detox
+66,Dallas Detox,"Get Immediate Help Now above ""How Does Meth Impact the Body?""","Use the CTA ""Take the first step toward recovery today"" by the footer",https://dallas-detox-center.vercel.app/meth-detox
+67,Dallas Detox,"Request a Callback - Should be a above the text of ""Let Us Help You Begin Your Journey to Recovery"" in fine text
+","Should be a above the text of ""Let Us Help You Begin Your Journey to Recovery"" in fine text",https://dallas-detox-center.vercel.app/alcohol-detox
+68,Dallas Detox,"""Get the Help You Need Right Now"" in the ""What to Expect: The Alcohol Detox Process at DDC"" section
+",remove,https://dallas-detox-center.vercel.app/alcohol-detox
+69,Dallas Detox,Request a call back text box,remove,https://dallas-detox-center.vercel.app/alcohol-detox
+70,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/alcohol-detox
+71,Dallas Detox,Most Frequently Asked Questions,missing the questions for the answers. should also be formatted as an accordian,https://dallas-detox-center.vercel.app/alcohol-detox
+72,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/alcohol-detox
+73,Dallas Detox,We Can Help You - No Matter What. - Text box,"Remove entirely, use the Get Help Now box instead, AI copied the sections incorrectly in development",https://dallas-detox-center.vercel.app/fentanyl-detox
+74,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/fentanyl-detox
+75,Dallas Detox,"Request a Callback - Should be a above the text of ""Let Us Help You Begin Your Journey to Recovery"" in fine text
+",modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/fentanyl-detox
+76,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/fentanyl-detox
+77,Dallas Detox,The Impact of Fentanyl on the Body text box,create its own designated section,https://dallas-detox-center.vercel.app/fentanyl-detox
+78,Dallas Detox,Symptoms of Fentanyl Withdrawal text box,create its own designated section,https://dallas-detox-center.vercel.app/fentanyl-detox
+79,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/fentanyl-detox
+80,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/fentanyl-detox
+81,Dallas Detox,"Written By: admin · Medically Reviewed By: Alexandria Grigsby LCDC · June 8, 2023",Remove the written by: admin in this page,https://dallas-detox-center.vercel.app/prescription-drugs-detox
+82,Dallas Detox,We Can Help You - No Matter What.,"Remove section, old cta",https://dallas-detox-center.vercel.app/prescription-drugs-detox
+83,Dallas Detox,"Request a Callback - Should be a above the text of ""Let Us Help You Begin Your Journey to Recovery"" in fine text
+","Should be a above the text of ""Let Us Help You Begin Your Journey to Recovery"" in fine text",https://dallas-detox-center.vercel.app/prescription-drugs-detox
+84,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/prescription-drugs-detox
+85,Dallas Detox,"""Get the Help You Need Right Now"" in the ""Let Us Help You Begin Your Journey to Recovery"" section
+",remove,https://dallas-detox-center.vercel.app/prescription-drugs-detox
+86,Dallas Detox,"""Get Immediate Help Now"" in the ""What Are the Signs of Prescription Drug Abuse?"" section
+",remove,https://dallas-detox-center.vercel.app/prescription-drugs-detox
+87,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/prescription-drugs-detox
+88,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/abilene
+89,Dallas Detox,Get Help Now Introduction - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/abilene
+90,Dallas Detox,We are here for you - Blank text box,remove,https://dallas-detox-center.vercel.app/abilene
+91,Dallas Detox,"Request a Callback - Should be a above the text of ""Let Us Help You Begin Your Journey to Recovery"" in fine text
+",modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/abilene
+92,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/abilene
+93,Dallas Detox,Get the Help You Need Right Now,remove,https://dallas-detox-center.vercel.app/abilene
+94,Dallas Detox,"Dallas Detox Center Offers Addiction Treatment near Abilene, TX",create its own designated section,https://dallas-detox-center.vercel.app/abilene
+95,Dallas Detox,Get Immediate Help Now text box,remove,https://dallas-detox-center.vercel.app/abilene
+96,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/abilene
+97,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/abilene
+98,Dallas Detox,"Written By: admin · Medically Reviewed By: Alexandria Grigsby LCDC · May 1, 2023",Remove the written by: admin in this page,https://dallas-detox-center.vercel.app/farmers-branch
+99,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/farmers-branch
+100,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/farmers-branch
+101,Dallas Detox,We are here for you - Blank text box,remove,https://dallas-detox-center.vercel.app/farmers-branch
+102,Dallas Detox,"Request a Callback - Should be a above the text of ""Let Us Help You Begin Your Journey to Recovery"" in fine text
+",modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/farmers-branch
+103,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/farmers-branch
+104,Dallas Detox,Get the Help You Need Right Now,remove,https://dallas-detox-center.vercel.app/farmers-branch
+105,Dallas Detox,"Dallas Detox Center Offers Addiction Treatment near Farmers Branch, TX",create its own designated section,https://dallas-detox-center.vercel.app/farmers-branch
+106,Dallas Detox,Get Immediate Help Now text box,remove,https://dallas-detox-center.vercel.app/farmers-branch
+107,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/farmers-branch
+108,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/farmers-branch
+109,Dallas Detox,"Drug Rehab Near Arlington, TX","double title on the page, remove",https://dallas-detox-center.vercel.app/wichita-falls
+110,Dallas Detox,Missing Medically Reviewed By section ,"add Medically Reviewed By: Alexandria Grigsby LCDC + March 31, 2023",https://dallas-detox-center.vercel.app/wichita-falls
+111,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/wichita-falls
+112,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/wichita-falls
+113,Dallas Detox,We are here for you - Blank text box,remove,https://dallas-detox-center.vercel.app/wichita-falls
+114,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/wichita-falls
+115,Dallas Detox,Get the Help You Need Right Now,remove,https://dallas-detox-center.vercel.app/wichita-falls
+116,Dallas Detox,"Dallas Detox Center Offers Addiction Treatment near Wichita Falls, TX",create its own designated section,https://dallas-detox-center.vercel.app/wichita-falls
+117,Dallas Detox,Get Immediate Help Now text box,remove,https://dallas-detox-center.vercel.app/wichita-falls
+118,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/wichita-falls
+119,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/wichita-falls
+120,Dallas Detox,"Drug Rehab Near Arlington, TX",remove ,https://dallas-detox-center.vercel.app/university-park
+121,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/university-park
+122,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/university-park
+123,Dallas Detox,We are here for you - Blank text box,remove,https://dallas-detox-center.vercel.app/university-park
+124,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/university-park
+125,Dallas Detox,Get the Help You Need Right Now,remove,https://dallas-detox-center.vercel.app/university-park
+126,Dallas Detox,"Dallas Detox Center Offers Addiction Treatment near University Park, TX",create its own designated section,https://dallas-detox-center.vercel.app/university-park
+127,Dallas Detox,Get Immediate Help Now text box,remove,https://dallas-detox-center.vercel.app/university-park
+128,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/university-park
+129,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/university-park
+130,Dallas Detox,Written By: admin,remove admin,https://dallas-detox-center.vercel.app/highland-park
+131,Dallas Detox,"Experience high-quality medical drug & alcohol detox services near Highland Park, Texas - double title",Remove,https://dallas-detox-center.vercel.app/highland-park
+132,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/highland-park
+133,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/highland-park
+134,Dallas Detox,We are here for you - Blank text box,remove,https://dallas-detox-center.vercel.app/highland-park
+135,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/highland-park
+136,Dallas Detox,Get the Help You Need Right Now,remove,https://dallas-detox-center.vercel.app/highland-park
+137,Dallas Detox,Get Immediate Help Now text box,remove,https://dallas-detox-center.vercel.app/highland-park
+138,Dallas Detox,"Dallas Detox Center Offers Addiction Treatment near Highland Park, TX",create its own designated section,https://dallas-detox-center.vercel.app/highland-park
+139,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/highland-park
+140,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/highland-park
+141,Dallas Detox,Written By: admin,remove admin,https://dallas-detox-center.vercel.app/arlington
+142,Dallas Detox,"Experience high-quality medical drug & alcohol detox services near Arlington, Texas - double title",Remove,https://dallas-detox-center.vercel.app/arlington
+143,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/arlington
+144,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/arlington
+145,Dallas Detox,We are here for you - Blank text box,remove,https://dallas-detox-center.vercel.app/arlington
+146,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/arlington
+147,Dallas Detox,Get the Help You Need Right Now,remove,https://dallas-detox-center.vercel.app/arlington
+148,Dallas Detox,Get Immediate Help Now text box,remove,https://dallas-detox-center.vercel.app/arlington
+149,Dallas Detox,"Dallas Detox Center Offers Addiction Treatment near Arlington, TX",create its own designated section,https://dallas-detox-center.vercel.app/arlington
+150,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/arlington
+151,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/garland
+152,Dallas Detox,"Experience high-quality medical drug & alcohol detox services near Garland, Texas - double title",remove,https://dallas-detox-center.vercel.app/garland
+153,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/garland
+154,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/garland
+155,Dallas Detox,We are here for you - Blank text box,remove,https://dallas-detox-center.vercel.app/garland
+156,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/garland
+157,Dallas Detox,Get the Help You Need Right Now,remove,https://dallas-detox-center.vercel.app/garland
+158,Dallas Detox,Get Immediate Help Now text box,remove,https://dallas-detox-center.vercel.app/garland
+159,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/garland
+160,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/garland
+161,Dallas Detox,"Experience high-quality medical drug & alcohol detox services near Fort Worth, Texas","double title on the page, remove",https://dallas-detox-center.vercel.app/fort-worth-drug-rehab
+162,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/fort-worth-drug-rehab
+163,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/fort-worth-drug-rehab
+164,Dallas Detox,We are here for you - Blank text box,remove,https://dallas-detox-center.vercel.app/fort-worth-drug-rehab
+165,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/fort-worth-drug-rehab
+166,Dallas Detox,Get the Help You Need Right Now,remove,https://dallas-detox-center.vercel.app/fort-worth-drug-rehab
+167,Dallas Detox,Get Immediate Help Now,remove,https://dallas-detox-center.vercel.app/fort-worth-drug-rehab
+168,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/fort-worth-drug-rehab
+169,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/fort-worth-drug-rehab
+170,Dallas Detox,"Cocaine Detox in Dallas, Texas - Double Title",remove,https://dallas-detox-center.vercel.app/cocaine-detox
+171,Dallas Detox,Missing Medically Reviewed By section ,"add Medically Reviewed By: Alexandria Grigsby LCDC December 28, 2022",https://dallas-detox-center.vercel.app/cocaine-detox
+172,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/cocaine-detox
+173,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/cocaine-detox
+174,Dallas Detox,Learn more about cocaine - Blank text box,remove,https://dallas-detox-center.vercel.app/cocaine-detox
+175,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/cocaine-detox
+176,Dallas Detox,"Request a Callback",remove,https://dallas-detox-center.vercel.app/cocaine-detox
+177,Dallas Detox,What Are the Signs of Cocaine Addiction?,create its own designated section,https://dallas-detox-center.vercel.app/cocaine-detox
+178,Dallas Detox,How Long Does It Take To Detox from Cocaine?,create its own designated section,https://dallas-detox-center.vercel.app/cocaine-detox
+179,Dallas Detox,the symptoms text box,remove,https://dallas-detox-center.vercel.app/cocaine-detox
+180,Dallas Detox,We are here for you - Blank text box,remove,https://dallas-detox-center.vercel.app/cocaine-detox
+181,Dallas Detox,Contact Us Today - blank text box,remove,https://dallas-detox-center.vercel.app/cocaine-detox
+182,Dallas Detox,Get Immediate Help Now text box,remove,https://dallas-detox-center.vercel.app/cocaine-detox
+183,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/cocaine-detox
+184,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/cocaine-detox
+185,Dallas Detox,Missing Medically Reviewed By section ,"add Medically Reviewed By: Alexandria Grigsby LCDC December 28, 2022",https://dallas-detox-center.vercel.app/heroin-detox
+186,Dallas Detox,"Heroin Detox in Dallas, Texas Drug & Alcohol Detox in Dallas, Texas - double title",remove,https://dallas-detox-center.vercel.app/heroin-detox
+187,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/heroin-detox
+188,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/heroin-detox
+189,Dallas Detox,Learn more about heroin - Blank text box,remove,https://dallas-detox-center.vercel.app/heroin-detox
+190,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/heroin-detox
+191,Dallas Detox,"Request a Callback",remove,https://dallas-detox-center.vercel.app/heroin-detox
+192,Dallas Detox,Get Immediate Help Now text box,remove,https://dallas-detox-center.vercel.app/heroin-detox
+193,Dallas Detox,"What Are the Symptoms of Heroin Withdrawal? section content missing
+",add content from the original page (content is under the following header),https://dallas-detox-center.vercel.app/heroin-detox
+194,Dallas Detox,Get the Help You Need,remove,https://dallas-detox-center.vercel.app/heroin-detox
+195,Dallas Detox,Contact Us Today,remove,https://dallas-detox-center.vercel.app/heroin-detox
+196,Dallas Detox,Dallas Detox Center Offers Heroin Detox Programs in Texas - header in the wrong section,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/heroin-detox
+197,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/heroin-detox
+198,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/heroin-detox
+199,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/luxury-treatment
+200,Dallas Detox,Get Help Now - Blank text box,Remove Introduction & add a link to admission page,https://dallas-detox-center.vercel.app/luxury-treatment
+201,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/luxury-treatment
+202,Dallas Detox,"Request a Callback",remove,https://dallas-detox-center.vercel.app/luxury-treatment
+203,Dallas Detox,Get Immediate Help Now text box,remove,https://dallas-detox-center.vercel.app/luxury-treatment
+204,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/luxury-treatment
+205,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/luxury-treatment
+206,Dallas Detox,"Written By: admin · Medically Reviewed By: Alexandria Grigsby LCDC · November 1, 2022",remove admin,https://dallas-detox-center.vercel.app/who-we-help/first-responders
+207,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/who-we-help/first-responders
+208,Dallas Detox,Get Help Now - Blank text box,Remove Introduction & add a link to admission page,https://dallas-detox-center.vercel.app/who-we-help/first-responders
+209,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/who-we-help/first-responders
+210,Dallas Detox,"Request a Callback",remove,https://dallas-detox-center.vercel.app/who-we-help/first-responders
+211,Dallas Detox,Get Immediate Help Now text box,remove,https://dallas-detox-center.vercel.app/who-we-help/first-responders
+212,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/who-we-help/first-responders
+213,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/who-we-help/first-responders
+214,Dallas Detox,"Written By: admin · Medically Reviewed By: Alexandria Grigsby LCDC · November 1, 2022",remove admin,https://dallas-detox-center.vercel.app/who-we-help/college-students
+215,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/who-we-help/college-students
+216,Dallas Detox,Get Help Now - Blank text box,Remove Introduction & add a link to admission page,https://dallas-detox-center.vercel.app/who-we-help/college-students
+217,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/who-we-help/college-students
+218,Dallas Detox,"Request a Callback",remove,https://dallas-detox-center.vercel.app/who-we-help/college-students
+219,Dallas Detox,Get Immediate Help Now text box,remove,https://dallas-detox-center.vercel.app/who-we-help/college-students
+220,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/who-we-help/college-students
+221,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/who-we-help/college-students
+222,Dallas Detox,"Written By: admin · Medically Reviewed By: Alexandria Grigsby LCDC · September 28, 2022",remove admin,https://dallas-detox-center.vercel.app/who-we-help/young-adults
+223,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/who-we-help/young-adults
+224,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/who-we-help/young-adults
+225,Dallas Detox,Know What to Look For - Blank text box,remove,https://dallas-detox-center.vercel.app/who-we-help/young-adults
+226,Dallas Detox,"Request a Callback",remove,https://dallas-detox-center.vercel.app/who-we-help/young-adults
+227,Dallas Detox,Alcohol,create its own designated section,https://dallas-detox-center.vercel.app/who-we-help/young-adults
+228,Dallas Detox,Marijuana,create its own designated section,https://dallas-detox-center.vercel.app/who-we-help/young-adults
+229,Dallas Detox,Prescription Pills,create its own designated section,https://dallas-detox-center.vercel.app/who-we-help/young-adults
+230,Dallas Detox,Ecstasy,create its own designated section,https://dallas-detox-center.vercel.app/who-we-help/young-adults
+231,Dallas Detox,Cocaine,create its own designated section,https://dallas-detox-center.vercel.app/who-we-help/young-adults
+232,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/who-we-help/young-adults
+233,Dallas Detox,Get Immediate Help Now,remove,https://dallas-detox-center.vercel.app/who-we-help/young-adults
+234,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/who-we-help/young-adults
+235,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/who-we-help/young-adults
+236,Dallas Detox,"Written By: admin · Medically Reviewed By: Alexandria Grigsby LCDC · September 28, 2022",remove admin,https://dallas-detox-center.vercel.app/who-we-help/women
+237,Dallas Detox,Detox Services,need a text box widget with a link to their respective pages,https://dallas-detox-center.vercel.app/who-we-help/women
+238,Dallas Detox,Residential Inpatient,need a text box widget with a link to their respective pages,https://dallas-detox-center.vercel.app/who-we-help/women
+239,Dallas Detox,Aftercare Planning,need a text box widget with a link to their respective pages,https://dallas-detox-center.vercel.app/who-we-help/women
+240,Dallas Detox,Dual-Diagnosis Program,need a text box widget with a link to their respective pages,https://dallas-detox-center.vercel.app/who-we-help/women
+241,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/who-we-help/women
+242,Dallas Detox,Get Help Now - needs a text box,add a link to admission page,https://dallas-detox-center.vercel.app/who-we-help/women
+243,Dallas Detox,Eliminate Distractions and Heal,remove,https://dallas-detox-center.vercel.app/who-we-help/women
+244,Dallas Detox,How Does Substance Abuse Impact Women?Are There Women's Only Detox Programs?,two separate sections merged into one header. need to be split and the content from the original page should appear on under their respective headers,https://dallas-detox-center.vercel.app/who-we-help/women
+245,Dallas Detox,Request a Callback,remove,https://dallas-detox-center.vercel.app/who-we-help/women
+246,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/who-we-help/women
+247,Dallas Detox,Get Immediate Help Now,remove,https://dallas-detox-center.vercel.app/who-we-help/women
+248,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/who-we-help/women
+249,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/who-we-help/women
+250,Dallas Detox,"Written By: admin · Medically Reviewed By: Alexandria Grigsby LCDC · August 29, 2022",remove admin,https://dallas-detox-center.vercel.app/who-we-help/men
+251,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/who-we-help/men
+252,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/who-we-help/men
+253,Dallas Detox,Eliminate Distractions and Heal,remove,https://dallas-detox-center.vercel.app/who-we-help/men
+254,Dallas Detox,Request a Callback,remove,https://dallas-detox-center.vercel.app/who-we-help/men
+255,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/who-we-help/men
+256,Dallas Detox,Get Immediate Help Now,remove,https://dallas-detox-center.vercel.app/who-we-help/men
+257,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/who-we-help/men
+258,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/who-we-help/men
+259,Dallas Detox,"Written By: admin · Medically Reviewed By: Alexandria Grigsby LCDC · August 29, 2022",remove admin,https://dallas-detox-center.vercel.app/who-we-help/professionals
+260,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/who-we-help/professionals
+261,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/who-we-help/professionals
+262,Dallas Detox,We are here for you,remove,https://dallas-detox-center.vercel.app/who-we-help/professionals
+263,Dallas Detox,Request a Callback,remove,https://dallas-detox-center.vercel.app/who-we-help/professionals
+264,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/who-we-help/professionals
+265,Dallas Detox,Get Immediate Help Now,remove,https://dallas-detox-center.vercel.app/who-we-help/professionals
+266,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/who-we-help/professionals
+267,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/who-we-help/professionals
+268,Dallas Detox,"Mickinney, Texas Addiction Treatment
+Experience high-quality medical drug & alcohol
+detox services in Mckinney, TX","double title on the page, remove",https://dallas-detox-center.vercel.app/mckinney
+269,Dallas Detox,We Can Help You Find Long-Term Recovery from Addiction,remove,https://dallas-detox-center.vercel.app/mckinney
+270,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/mckinney
+271,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/mckinney
+272,Dallas Detox,"Mckinney, Texas Addiction Treatment - Text box",remove,https://dallas-detox-center.vercel.app/mckinney
+273,Dallas Detox,Request a Callback,remove,https://dallas-detox-center.vercel.app/mckinney
+274,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/mckinney
+275,Dallas Detox,Get Immediate Help Now,remove,https://dallas-detox-center.vercel.app/mckinney
+276,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/mckinney
+277,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/mckinney
+278,Dallas Detox,"Written By: admin · Medically Reviewed By: Alexandria Grigsby LCDC · July 1, 2022",remove admin,https://dallas-detox-center.vercel.app/frisco
+279,Dallas Detox,"Experience high-quality medical drug & alcohol
+detox services near Frisco, Texas",remove,https://dallas-detox-center.vercel.app/frisco
+280,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/frisco
+281,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/frisco
+282,Dallas Detox,"We are here for you - text box
+",remove,https://dallas-detox-center.vercel.app/frisco
+283,Dallas Detox,Request a Callback,remove,https://dallas-detox-center.vercel.app/frisco
+284,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/frisco
+285,Dallas Detox,Get Immediate Help Now,remove,https://dallas-detox-center.vercel.app/frisco
+286,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/frisco
+287,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/frisco
+288,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/richardson
+289,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/richardson
+290,Dallas Detox,"Learn About Your Community - text box
+",remove,https://dallas-detox-center.vercel.app/richardson
+291,Dallas Detox,Get Help at Dallas Detox Center,remove,https://dallas-detox-center.vercel.app/richardson
+292,Dallas Detox,Request a Callback,remove,https://dallas-detox-center.vercel.app/richardson
+293,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/richardson
+294,Dallas Detox,Get Immediate Help Now,remove,https://dallas-detox-center.vercel.app/richardson
+295,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/richardson
+296,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/richardson
+297,Dallas Detox,"Written By: admin · Medically Reviewed By: Alexandria Grigsby LCDC · July 1, 2022",remove admin,https://dallas-detox-center.vercel.app/plano
+298,Dallas Detox,"Experience high-quality medical drug & alcohol
+detox services in Plano, TX",remove,https://dallas-detox-center.vercel.app/plano
+299,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/plano
+300,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/plano
+301,Dallas Detox,"What type of care is right for you? - text box
+",remove,https://dallas-detox-center.vercel.app/plano
+302,Dallas Detox,Request a Callback,remove,https://dallas-detox-center.vercel.app/plano
+303,Dallas Detox,Reach Out to Dallas Detox For Help - text box,create its own designated section,https://dallas-detox-center.vercel.app/plano
+304,Dallas Detox,Get Immediate Help Now text box,remove,https://dallas-detox-center.vercel.app/plano
+305,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/plano
+306,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/plano
+307,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/plano
+308,Dallas Detox,"Southlake, Texas Addiction Treatment
+Experience high-quality medical drug & alcohol
+detox services in Southlake, TX","double title on the page, remove",https://dallas-detox-center.vercel.app/southlake
+309,Dallas Detox,"Substance Abuse in Our Country",remove,https://dallas-detox-center.vercel.app/southlake
+310,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/southlake
+311,Dallas Detox,Get Help Now - Blank text box,add a link to admission page,https://dallas-detox-center.vercel.app/southlake
+312,Dallas Detox,"Learn About Your Community - text box
+",remove,https://dallas-detox-center.vercel.app/southlake
+313,Dallas Detox,Request a Callback,remove,https://dallas-detox-center.vercel.app/southlake
+314,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/southlake
+315,Dallas Detox,Get Immediate Help Now,remove,https://dallas-detox-center.vercel.app/southlake
+316,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/southlake
+317,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/southlake
+318,Dallas Detox,"Get the Help You Need Right Now - text box
+",remove,https://dallas-detox-center.vercel.app/admissions
+319,Dallas Detox,Quick & Confidential Verification. 100% Free. - text box,"remove and replace with a ""Verify Your Insurance Benefits"" submission tool that contains Name, Phone, Date of Birth, Insurance Provider, & Member ID input",https://dallas-detox-center.vercel.app/admissions
+320,Dallas Detox,What to Expect - text box,remove,https://dallas-detox-center.vercel.app/admissions
+321,Dallas Detox,Protecting Your Career While You Prioritize Your Health,remove,https://dallas-detox-center.vercel.app/admissions
+322,Dallas Detox,"How to Find Us",include Google Maps location that allows to view drivable distance,https://dallas-detox-center.vercel.app/admissions
+323,Dallas Detox,Get In Touch,remove,https://dallas-detox-center.vercel.app/admissions
+324,Dallas Detox,Frequently Asked Questions,"leave content as is, include an accordian tool to expand the answer when the question is selected",https://dallas-detox-center.vercel.app/admissions
+325,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/admissions
+326,Dallas Detox,The Magnolia House section,Include in this section only pictures from magnolia like on the original site,https://dallas-detox-center.vercel.app/tour
+327,Dallas Detox,"The Cedar Creek Barn section
+",Include in this section only pictures from cedar creek barn like on the original site,https://dallas-detox-center.vercel.app/tour
+328,Dallas Detox,The Willow House,Include in this section only pictures from the willow house like on the original site,https://dallas-detox-center.vercel.app/tour
+329,Dallas Detox,"Missing ""We Treat the Individual, Not the Disease."" section from the original site","Include Individualized Care, Devices Allowed, & Dual-Diagnosis Focus
+from the original site",https://dallas-detox-center.vercel.app/tour
+330,Dallas Detox,"The Bridge to Permanent Sobriety",Missing the paragraph from the original site for this section,https://dallas-detox-center.vercel.app/treatment-services/aftercare-planning
+331,Dallas Detox,"Finding Strength in a Community That Truly Understands Your Journey",remove,https://dallas-detox-center.vercel.app/treatment-services/aftercare-planning
+332,Dallas Detox,"Get the Help You Need Right Now",remove,https://dallas-detox-center.vercel.app/treatment-services/aftercare-planning
+333,Dallas Detox,"What Can I Expect After I Leave Treatment?",remove,https://dallas-detox-center.vercel.app/treatment-services/aftercare-planning
+334,Dallas Detox,"Get Immediate Help Now",remove,https://dallas-detox-center.vercel.app/treatment-services/aftercare-planning
+335,Dallas Detox,"Get Started Today
+","Include a ""Verify Your Insurance Benefits"" submission tool that contains Name, Phone, Date of Birth, Insurance Provider, & Member ID input",https://dallas-detox-center.vercel.app/treatment-services/aftercare-planning
+336,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/treatment-services/aftercare-planning
+337,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/treatment-services/aftercare-planning
+338,Dallas Detox,"Experience high-quality medical drug & alcohol
+detox services in Dallas, Texas.",remove,https://dallas-detox-center.vercel.app/treatment-services/detox
+339,Dallas Detox,"Accredited Drug and Alcohol Detox Facility in Dallas - At Glance
+",Needs a legit script icon,https://dallas-detox-center.vercel.app/treatment-services/detox
+340,Dallas Detox,"The first step towards recovery
+",remove,https://dallas-detox-center.vercel.app/treatment-services/detox
+341,Dallas Detox,"First Step Towards Recovery",remove,https://dallas-detox-center.vercel.app/treatment-services/detox
+342,Dallas Detox,"Evidence-based withdrawal management tailored to your specific recovery goals.",remove,https://dallas-detox-center.vercel.app/treatment-services/detox
+343,Dallas Detox,"The Dangers of Withdrawal And Why Medical Detox Is Essential","contains only bullet points from the main site, add paragraph content as well",https://dallas-detox-center.vercel.app/treatment-services/detox
+344,Dallas Detox,"Why Medical Detox Is Essential And How We Help At Dallas Detox Center",Missing section from the original site,https://dallas-detox-center.vercel.app/treatment-services/detox
+345,Dallas Detox,"Real Stories of Recovery from Our Dallas Community",Needs google reviews slide show like on the original site,https://dallas-detox-center.vercel.app/treatment-services/detox
+346,Dallas Detox,Healing the mind while we stabilize the body.,remove,https://dallas-detox-center.vercel.app/treatment-services/detox
+347,Dallas Detox,"Therapeutic Support During Detox","contains only bullet points from the main site, add paragraph content as well",https://dallas-detox-center.vercel.app/treatment-services/detox
+348,Dallas Detox,"Preparing for Long-Term Recovery & Dual Diagnosis Care",Missing section from the original site,https://dallas-detox-center.vercel.app/treatment-services/detox
+349,Dallas Detox,"Get the Help You Need",remove,https://dallas-detox-center.vercel.app/treatment-services/detox
+350,Dallas Detox,"We're available 24/7",remove,https://dallas-detox-center.vercel.app/treatment-services/detox
+351,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/treatment-services/detox
+352,Dallas Detox,"Frequently Asked Questions About Medical Detox in Dallas","missing FAQ questions, only shows the answers. Should be in an accordian tool type format",https://dallas-detox-center.vercel.app/treatment-services/detox
+353,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/treatment-services/detox
+354,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/treatment-services/detox
+355,Dallas Detox,Written By: dev · Medically Reviewed By: Alexandria Grigsby LCDC,remove dev,https://dallas-detox-center.vercel.app/treatment-services
+356,Dallas Detox,"Dallas Detox Center provides medically supervised detox, substance abuse inpatient & mental health residential treatment, and dual diagnosis care for individuals struggling with substance use and co-occurring mental health disorders.",missing the bullet points from the original site,https://dallas-detox-center.vercel.app/treatment-services
+357,Dallas Detox,"You Don’t Have to Carry This Alone","Needs a call button and a verify insurance button. Also remove Dallas Detox Center
+from this section",https://dallas-detox-center.vercel.app/treatment-services
+358,Dallas Detox,"Evidence-Based Therapies & Treatment Modalities","remove Support for individuals and families
+",https://dallas-detox-center.vercel.app/treatment-services
+359,Dallas Detox,"Specialized Detox Programs in Dallas","each bullet point needs to redirect to their respective pages on click. Also remove Get the Help You Need Right Now
+ ",https://dallas-detox-center.vercel.app/treatment-services
+360,Dallas Detox,"Our Trusted Addiction Treatment Center in Dallas","remove Get the Help You Need
+",https://dallas-detox-center.vercel.app/treatment-services
+361,Dallas Detox,2x - Let Us Help You Begin Your Journey to Recovery CTA's - Should be merged into one,modify page structure to match the structure in the original page,https://dallas-detox-center.vercel.app/treatment-services
+362,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/treatment-services
+363,Dallas Detox,Rearrange CTA's throughout the page,Arrangement of the CTA's are bundled at the bottom of the page. They need to be spread out,https://dallas-detox-center.vercel.app/treatment-services
+364,Dallas Detox,The blogs created on Clarion are appearing separate from the blogs previously published,All blogs published should appear on the same area,https://dallas-detox-center.vercel.app/blog
+365,Dallas Detox,All blogs are appearing in one page,blogs should appear 6 at a time on this page with a next page & previous page tool that shows the following 6 blogs,https://dallas-detox-center.vercel.app/blog
+366,Dallas Detox,remove the text above read more from the blog widgets that show the text in the page,remove the text above read more from the blog widgets that show the text in the page,https://dallas-detox-center.vercel.app/blog
+367,Dallas Detox,We Can Help You - No Matter What. text box,remove,https://dallas-detox-center.vercel.app/about-us
+368,Dallas Detox,Get Immediate Help Now - Blank text box,remove,https://dallas-detox-center.vercel.app/about-us
+369,Dallas Detox,Trusted & Experienced,remove,https://dallas-detox-center.vercel.app/about-us
+370,Dallas Detox,Our Mission: Helping Others,create its own designated section,https://dallas-detox-center.vercel.app/about-us
+371,Dallas Detox,Our Philosophy: Everyone Deserves Treatment,create its own designated section,https://dallas-detox-center.vercel.app/about-us
+372,Dallas Detox,"Why Dallas Detox Center Is Your Top Choice","These should be put in text box widgets, they are missing the headers for each on the original page",https://dallas-detox-center.vercel.app/about-us
+373,Dallas Detox,"We Offer an Experience In",remove,https://dallas-detox-center.vercel.app/about-us
+374,Dallas Detox,"Addiction Treatment section
+","Needs the facility video, also remove Decades of Experience
+",https://dallas-detox-center.vercel.app/about-us
+375,Dallas Detox,"Meet Our Team
+",Missing staff images from original site,https://dallas-detox-center.vercel.app/about-us
+376,Dallas Detox,"What Our Clients Say","Needs google reviews slide show like on the original site, also remove Get the Help You Need Right Now
+",https://dallas-detox-center.vercel.app/about-us
+377,Dallas Detox,Our Facility - A Look Inside Our Campus - Contains stock images instead of facility images,Change images using the pictures in the shared drive,https://dallas-detox-center.vercel.app/about-us
+378,Dallas Detox,page is missing from original site,"confirm if the staff member is still a part of their team, if so add an area for a picture",https://dallas-detox-center.vercel.app/about-us/antoine-gross
+379,Dallas Detox,page is missing from original site,"confirm if the staff member is still a part of their team, if so add an area for a picture",https://dallas-detox-center.vercel.app/about-us/sarah-bentley
+380,Dallas Detox,All blogs have a date URL using domain/2026/06/17/blog-title,should be domain/blog/blog-title,https://dallas-detox-center.vercel.app/2026/06/17/why-dual-diagnosis-treatment-matters
+381,Dallas Detox,Latest blog is missing from the vercel site,Add the new blog to the vercel site,https://dallasdetoxcenter.com/2026/07/17/oxycontin-vs-oxycodone/
+382,Dallas Detox,"Missing a legit script logo in the Residential Treatment Program Overview
+","Add logo and remove Where true healing takes place
+",https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient
+383,Dallas Detox,"Is Residential Inpatient The Right Fit For You?","Missing paragraph, only contains bullet points from original page",https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient
+384,Dallas Detox,Proven tools to beat addiction and mental health struggles,remove,https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient
+385,Dallas Detox,"Effective Therapies for Lasting Change in Dallas, TX","Missing paragraph, only contains bullet points from original page",https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient
+386,Dallas Detox,"Real stories of recovery from those who have been where you are.",remove,https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient
+387,Dallas Detox,"What Our Alumni Are Saying","Needs google reviews slide show, also remove We’re here to help 24/7.
+",https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient
+388,Dallas Detox,"Take a Look Inside Dallas Detox Center","Missing facility images, also remove Providing a full continuum of care for addiction and mental health.
+",https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient
+389,Dallas Detox,"Comprehensive Inpatient Rehab Services in Dallas, TX
+",Missing content from the section,https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient
+390,Dallas Detox,"Our Residential Mental Health Treatment in Dallas
+","the content in this section is the missing content from Comprehensive Inpatient Rehab Services in Dallas, TX. Remove the current title, its no where to be found on the original site.
+also remove Supporting your recovery at every stage.
+",https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient
+391,Dallas Detox,Frequently Asked Questions,Should be an accordian tool format,https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient
+392,Dallas Detox,Confidential help is available 24/7 - text box,remove,https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient
+393,Dallas Detox,"Take the First Step Toward Recovery section
+","remove Get the Help You Need Right Now
+and add a submission box like the one in the verify Insurance page",https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient
+394,Dallas Detox,Integrated Dual Diagnosis Treatment in Dallas,"Double title on the page, remove",https://dallas-detox-center.vercel.app/treatment-services/dual-diagnosis
+395,Dallas Detox,"Accredited Dual Diagnosis Program in Dallas, Texas - At Glance","Remove The first step towards recovery
+and add the legitscript icon",https://dallas-detox-center.vercel.app/treatment-services/dual-diagnosis
+396,Dallas Detox,"What is Dual Diagnosis?
+","Missing paragraph, only contains bullet points from original page",https://dallas-detox-center.vercel.app/treatment-services/dual-diagnosis
+397,Dallas Detox,Dual Diagnosis (Simultaneous) - text box,Remove the link to the page on the text box,https://dallas-detox-center.vercel.app/treatment-services/dual-diagnosis
+398,Dallas Detox,"Targeted Clinical Care for Co-Occurring Challenges",Remove text,https://dallas-detox-center.vercel.app/treatment-services/dual-diagnosis
+399,Dallas Detox,"Simultaneous Clinical Support from Detox through Aftercare",Remove text,https://dallas-detox-center.vercel.app/treatment-services/dual-diagnosis
+400,Dallas Detox,"Real Results from Our Integrated Approach","Needs google reviews slide show, also remove The Standard for Clinical Excellence and Private Recovery
+",https://dallas-detox-center.vercel.app/treatment-services/dual-diagnosis
+401,Dallas Detox,"Why Choose Dallas Detox Center for Dual Diagnosis?
+","remove We're available 24/7
+",https://dallas-detox-center.vercel.app/treatment-services/dual-diagnosis
+402,Dallas Detox,"Your Confidential Path to Recovery Begins Here","add a link to verify insurance page, and remove Get the Help You Need Right Now
+",https://dallas-detox-center.vercel.app/treatment-services/dual-diagnosis
+403,Dallas Detox,"Frequently Asked Questions
+","Missing questions for the FAQ, only contains answers. should be in an accordian style",https://dallas-detox-center.vercel.app/treatment-services/dual-diagnosis
+404,Dallas Detox,You Don’t Have to Carry This Alone,"Remove and replace with ""Take the first step toward recovery today"" cta at the bottom of the page",
+405,Dallas Detox,Real Results: Life-Changing Recovery at Our Dallas Facility,"Needs google reviews slide show, also remove Get the Help You Need Right Now
+
+",
+406,Dallas Detox,Missing text above the first four bullet points,"add ""Our Dallas detox & residential center provides tailored recovery tracks for specific demographics to ensure clinical relevance and peer connection. We offer specialized programs for:""",
+407,Dallas Detox,Footer text on the vercel site is different from the original site,"should be ""Dallas Detox Center is a state-of-the-art drug & alcohol treatment program in Dallas, Texas. We offer detoxification, residential inpatient treatment and dual diagnosis in Dallas for those seeking long-term recovery.""",

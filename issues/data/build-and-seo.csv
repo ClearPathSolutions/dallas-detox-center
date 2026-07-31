@@ -1,0 +1,79 @@
+Issue ID,Facility,Issue,Location,Fix,Status,Verdict,Verified,Correction applied,Priority
+V0017,Dallas Detox Center,"No verify-insurance page in the sitemap, and the homepage CTA labelled ""Verify Your Insurance"" points to /contact-us instead. A /verify-insurance page is live but absent from the sitemap.","https://dallas-detox-center.vercel.app/ (footer CTA)
+Live but unlisted: https://dallas-detox-center.vercel.app/verify-insurance","Repoint the footer CTA to this live page:
+https://dallas-detox-center.vercel.app/verify-insurance
+(verified live, HTTP 200)
+
+And add it to:
+https://dallas-detox-center.vercel.app/sitemap.xml",Open,CONFIRMED_AMENDED,2026-07-28,"PRIORITY MEDIUM: Scope narrower than written: 1 of 6 CTAs
+
+Row says ""the homepage CTA ... points to /contact-us"", implying the CTA or all of them. It is 1 of 6, and the other 5 are correct. The offending one is the FINAL CTA band (""Take the first step toward recovery today""). Two CTAs carry the exact label ""Verify Your Insurance""; the upper one is correct, the final one is not. Reword to: ""the final homepage CTA band links Verify Your Insurance to /contact-us; the other 5 verify CTAs on the page are correct.""",MEDIUM
+V0018,Dallas Detox Center,"Missing canonical tag on 1 page(s) (homepage only, 1 of 103 pages). Verified that the preview serves robots.txt with ""Allow: /"", a robots meta of ""index, follow"" and no X-Robots-Tag header, so these pages are fully indexable. The production domain is live and self-canonicalising, so any preview page that gets discovered competes with its production twin as a near-duplicate.","https://dallas-detox-center.vercel.app  - homepage only, 1 of 103 pages","Add a self-referencing canonical on every template, pointing at the production domain:
+https://dallasdetoxcenter.com
+
+Affected build:
+https://dallas-detox-center.vercel.app
+
+Working example to copy: https://laguna-view-detox.vercel.app/about canonicals to https://lagunaviewdetox.com/about",Open,CONFIRMED_AMENDED,2026-07-28,"Two corrections, one softening and one hardening.
+SOFTER: the preview homepage does carry og:url = https://dallasdetoxcenter.com, so a production URL signal exists even without a canonical. Row implies no signal at all.
+HARDER, and more important: the other 102 canonicals are present but ALL point at URLs that 301-redirect. Preview canonicalises to https://dallasdetoxcenter.com/about-us while production serves /about-us/ and 301s the slashless form. A canonical aimed at a redirect is a conflicting signal. Tested 5 Dallas pages, 5 of 5 redirect. So Dallas canonicals are wrong on 103 of 103 pages, not 1 of 103: one missing, 102 misdirected.",not triaged
+V0020,Dallas Detox Center,"14 geo/city pages exist and all 14 have ZERO inbound internal links across the site. No Areas We Serve hub exists (/areas-we-serve, /locations, /service-areas all 404). Roughly 21,000 words of content, 1,406-1,675 per page, sitting unlinked. Count corrected from 13 to 14 on verification.","https://dallas-detox-center.vercel.app/abilene
+https://dallas-detox-center.vercel.app/arlington
+https://dallas-detox-center.vercel.app/farmers-branch
+https://dallas-detox-center.vercel.app/frisco
+https://dallas-detox-center.vercel.app/garland
+https://dallas-detox-center.vercel.app/highland-park
+https://dallas-detox-center.vercel.app/mckinney
+https://dallas-detox-center.vercel.app/plano
+https://dallas-detox-center.vercel.app/richardson
+https://dallas-detox-center.vercel.app/southlake
+https://dallas-detox-center.vercel.app/university-park
+https://dallas-detox-center.vercel.app/waco
+https://dallas-detox-center.vercel.app/wichita-falls
+https://dallas-detox-center.vercel.app/fort-worth-drug-rehab","Build this hub and link all of them:
+https://dallas-detox-center.vercel.app/areas-we-serve
+
+Model on:
+https://wellness-recovery-nj.vercel.app/areas-we-serve
+
+Or noindex and drop from:
+https://dallas-detox-center.vercel.app/sitemap.xml",Open,CONFIRMED_AMENDED,2026-07-28,"COUNT WRONG: issue text says 13 geo/city pages, the Location column lists 14 and 14 are orphaned. Correct figure is 14. Roughly 21,000 words of content sitting unlinked.",not triaged
+V0021,Dallas Detox Center,4 staff bio pages are orphaned - there is no team hub page linking them.,"https://dallas-detox-center.vercel.app/about-us/alexandria-grigsby
+https://dallas-detox-center.vercel.app/about-us/michael-young
+https://dallas-detox-center.vercel.app/about-us/ricki-cochran
+https://dallas-detox-center.vercel.app/about-us/trevor-grigsby","Build this hub and link all four:
+https://dallas-detox-center.vercel.app/about-us/meet-the-team
+
+Model on:
+https://quadrant-health-group.vercel.app/about/meet-the-team",Open,CONFIRMED,2026-07-28,none - row accurate as written,not triaged
+V0022,Dallas Detox Center,"5 paid landing pages are indexable (robots ""index, follow""), present in the sitemap, and linked from nowhere. Count corrected from 4 to 5 on verification.","https://dallas-detox-center.vercel.app/drug-alcohol-detox-lp
+https://dallas-detox-center.vercel.app/insurance-lp
+https://dallas-detox-center.vercel.app/lp-recovery
+https://dallas-detox-center.vercel.app/luxury-inpatient-lp
+https://dallas-detox-center.vercel.app/va-cnn","If paid-traffic only, noindex and remove from:
+https://dallas-detox-center.vercel.app/sitemap.xml
+
+If organic, link them from the relevant hubs.",Open,CONFIRMED_AMENDED,2026-07-28,"COUNT WRONG: issue text says 4 paid landing pages, the Location column lists 5 and all 5 are orphaned. Correct figure is 5.",not triaged
+V0110,Dallas Detox Center,"Brand suffix is doubled in the title tag on 87 of 103 pages, rendering as ""| Dallas Detox Center | Dallas Detox Center"". Wastes title pixels and looks unprofessional in search results.","https://dallas-detox-center.vercel.app  - 87 of 103 pages
+e.g. https://dallas-detox-center.vercel.app/lp-recovery
+e.g. https://dallas-detox-center.vercel.app/2022/01/07/what-to-look-for-in-a-detox-center","Remove the duplicated site-name append in the title template.
+
+Compare a correct one:
+https://dallas-detox-center.vercel.app/  (single brand suffix)",Open,NEW - found during verification,2026-07-28,n/a - new row,HIGH
+V0111,Dallas Detox Center,"Author byline reads ""Written By: admin"" on 18 pages, including 8 of the 14 geo pages, /meth-detox, /prescription-drugs-detox and /va-cnn. A placeholder dev account as the named author on YMYL healthcare content undermines E-E-A-T. Separately, only 25 of 103 pages name a medically reviewing clinician, so 78 pages carry no reviewer byline.","https://dallas-detox-center.vercel.app/va-cnn
+https://dallas-detox-center.vercel.app/meth-detox
+https://dallas-detox-center.vercel.app/prescription-drugs-detox
+https://dallas-detox-center.vercel.app/abilene  (plus 7 more geo pages)","Reassign the 18 admin-authored pages to a named credentialed author, and extend the ""Medically Reviewed By"" byline beyond the current 25 pages.
+
+Working example on the same site:
+https://dallas-detox-center.vercel.app/va-cnn  already shows ""Medically Reviewed By: Alexandria Grigsby LCDC""",Open,NEW - found during verification,2026-07-28,n/a - new row,HIGH
+V0112,Dallas Detox Center,"URL and title tag misspell CCN as CNN. The page is about VA CCN (Veterans Affairs Community Care Network) - H1 reads ""VA CCN"" and the body says CCN 14 times against CNN once - but the slug is /va-cnn and the title reads ""VA CNN Drug Rehab in Texas"". CNN is also a news brand, so the title is actively misleading on a veterans benefits page.","https://dallas-detox-center.vercel.app/va-cnn
+(/va-ccn returns HTTP 404)","Rename to /va-ccn with a 301 from /va-cnn, and correct the title tag to ""VA CCN"".
+
+Page to fix:
+https://dallas-detox-center.vercel.app/va-cnn",Open,NEW - found during verification,2026-07-28,n/a - new row,MEDIUM
+V0113,Dallas Detox Center,"Landing page duplicates the homepage. /lp-recovery carries the identical H1 to the homepage (""Premier Mental Health & Addiction Recovery in Dallas, TX""), 46.4 percent body overlap, and a doubled brand suffix in its title.","https://dallas-detox-center.vercel.app/lp-recovery
+https://dallas-detox-center.vercel.app/","If paid-traffic only, noindex it and remove from the sitemap. If organic, rewrite the H1 and body so it does not compete with the homepage.
+
+Pages:
+https://dallas-detox-center.vercel.app/lp-recovery",Open,NEW - found during verification,2026-07-28,n/a - new row,MEDIUM

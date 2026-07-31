@@ -1,0 +1,89 @@
+HOW TO READ THIS TAB Issue ID,"Every internal link in the portfolio that returns 404, one row per broken URL. Issue IDs match the Vercel Build Issues tab, which is why that tab skips these numbers. Column D is the destination to send the URL to and column E is that destination status-checked live: 200 means the page already exists and this is a one-line redirect, 404 means the destination has to be built first. Column H lists every page containing the bad link, and column I the anchor text used on each, so in-body links can be edited directly. Only Dallas and Fort Worth have broken internal links; the other 10 builds came back clean. Facility",Broken URL (404),Send it to,Destination status,Fix type,Source pages,All pages containing the link,Anchor text used on each,Link instances,Action (fill in),Owner (fill in),Done (fill in),Verdict,Verified
+V0001,Dallas Detox Center,https://dallas-detox-center.vercel.app/about,https://dallas-detox-center.vercel.app/about-us,200,301 redirect,1,1. https://dallas-detox-center.vercel.app/2022/01/26/how-to-tell-if-someone-is-on-cocaine,"1. ""Our staff""",1,,,,NOT YET VERIFIED,
+V0002,Dallas Detox Center,https://dallas-detox-center.vercel.app/aftercare-planning,https://dallas-detox-center.vercel.app/treatment-services/aftercare-planning,200,301 redirect,1,1. https://dallas-detox-center.vercel.app/treatment-services,"1. ""aftercare planning""",1,,,,NOT YET VERIFIED,
+V0003,Dallas Detox Center,https://dallas-detox-center.vercel.app/college-student,https://dallas-detox-center.vercel.app/who-we-help/college-students,200,301 redirect,1,1. https://dallas-detox-center.vercel.app/who-we-help,"1. ""student""",1,,,,NOT YET VERIFIED,
+V0004,Dallas Detox Center,https://dallas-detox-center.vercel.app/contact,https://dallas-detox-center.vercel.app/contact-us,200,301 redirect,9,"1. https://dallas-detox-center.vercel.app/2022/01/12/how-to-detox-safely-from-opioids
+2. https://dallas-detox-center.vercel.app/2022/02/08/why-is-prescription-drug-abuse-common
+3. https://dallas-detox-center.vercel.app/2022/02/24/what-is-the-difference-between-adderall-and-meth
+4. https://dallas-detox-center.vercel.app/2022/03/22/group-therapy-used-in-rehab
+5. https://dallas-detox-center.vercel.app/2022/04/08/sober-living-house
+6. https://dallas-detox-center.vercel.app/2022/04/21/do-you-detox-from-alcohol
+7. https://dallas-detox-center.vercel.app/2022/04/25/what-is-drug-withdrawal
+8. https://dallas-detox-center.vercel.app/2022/05/05/how-to-find-alcohol-rehab-near-garland-texas
+9. https://dallas-detox-center.vercel.app/2022/05/17/the-importance-of-having-a-hobby-in-addiction-recovery","1. ""Reach out to us today""
+2. ""lend a hand""
+3. ""Reach out today""
+4. ""Call""
+5. ""Contact us today""
+6. ""Contact us today""
+7. ""Contact us today""
+8. ""Contact us""
+9. ""Contact us""",9,,,,NOT YET VERIFIED,
+V0005,Dallas Detox Center,https://dallas-detox-center.vercel.app/detox,https://dallas-detox-center.vercel.app/treatment-services/detox,200,301 redirect,6,"1. https://dallas-detox-center.vercel.app/2026/01/27/the-fentanyl-plus-crisis-navigating-synthetic-polysubstance-detox-in-dallas
+2. https://dallas-detox-center.vercel.app/admissions
+3. https://dallas-detox-center.vercel.app/treatment-services
+4. https://dallas-detox-center.vercel.app/treatment-services/detox
+5. https://dallas-detox-center.vercel.app/treatment-services/dual-diagnosis
+6. https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient","1. ""detox process""; ""medical detox""; ""detox""; ""medical detox""
+2. ""detox""; ""medical detox""; ""medical detox""
+3. ""medically supervised detox""; ""detox""
+4. ""medical detox""; ""detox phase""
+5. ""medical detox""
+6. ""specific detox""; ""medical detox""; ""medical detox""",15,,,,NOT YET VERIFIED,
+V0006,Dallas Detox Center,https://dallas-detox-center.vercel.app/dual-diagnosis,https://dallas-detox-center.vercel.app/treatment-services/dual-diagnosis,200,301 redirect,5,"1. https://dallas-detox-center.vercel.app/admissions
+2. https://dallas-detox-center.vercel.app/treatment-services
+3. https://dallas-detox-center.vercel.app/treatment-services/detox
+4. https://dallas-detox-center.vercel.app/treatment-services/dual-diagnosis
+5. https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient","1. ""dual diagnosis""
+2. ""dual diagnosis""; ""dual diagnosis care""
+3. ""Dual Diagnosis Care""
+4. ""co-occurring disorders""
+5. ""dual diagnosis""; ""dual diagnosis""",7,,,,NOT YET VERIFIED,
+V0007,Dallas Detox Center,https://dallas-detox-center.vercel.app/home,https://dallas-detox-center.vercel.app/,200,301 redirect,3,"1. https://dallas-detox-center.vercel.app/2026/01/27/the-fentanyl-plus-crisis-navigating-synthetic-polysubstance-detox-in-dallas
+2. https://dallas-detox-center.vercel.app/treatment-services
+3. https://dallas-detox-center.vercel.app/treatment-services/mental-health-residential","1. ""Dallas Detox Center""; ""Dallas Detox Center""
+2. ""Dallas Detox Center""
+3. ""Dallas Detox Center""; ""Dallas Detox Center""",5,,,,NOT YET VERIFIED,
+V0008,Dallas Detox Center,https://dallas-detox-center.vercel.app/mental-health-residential,https://dallas-detox-center.vercel.app/treatment-services/mental-health-residential,200,301 redirect,4,"1. https://dallas-detox-center.vercel.app/treatment-services
+2. https://dallas-detox-center.vercel.app/treatment-services/detox
+3. https://dallas-detox-center.vercel.app/treatment-services/dual-diagnosis
+4. https://dallas-detox-center.vercel.app/treatment-services/mental-health-residential","1. ""mental health residential""; ""mental health care""
+2. ""mental health residential""
+3. ""mental health treatment program""
+4. ""medically supervised residential program""",5,,,,NOT YET VERIFIED,
+V0009,Dallas Detox Center,https://dallas-detox-center.vercel.app/opioid-detox,https://dallas-detox-center.vercel.app/heroin-detox,200,301 redirect,1,1. https://dallas-detox-center.vercel.app/2026/01/27/the-fentanyl-plus-crisis-navigating-synthetic-polysubstance-detox-in-dallas,"1. ""opioid dependency""",1,,,,NOT YET VERIFIED,
+V0010,Dallas Detox Center,https://dallas-detox-center.vercel.app/prescription-drugs-addiction,https://dallas-detox-center.vercel.app/prescription-drugs-detox,200,301 redirect,1,1. https://dallas-detox-center.vercel.app/treatment-services,"1. ""prescription drug""",1,,,,NOT YET VERIFIED,
+V0011,Dallas Detox Center,https://dallas-detox-center.vercel.app/professionals,https://dallas-detox-center.vercel.app/who-we-help/professionals,200,301 redirect,1,1. https://dallas-detox-center.vercel.app/who-we-help,"1. ""executive""",1,,,,NOT YET VERIFIED,
+V0012,Dallas Detox Center,https://dallas-detox-center.vercel.app/residential-inpatient,https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient,200,301 redirect,4,"1. https://dallas-detox-center.vercel.app/admissions
+2. https://dallas-detox-center.vercel.app/treatment-services
+3. https://dallas-detox-center.vercel.app/treatment-services/detox
+4. https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient","1. ""residential care""; ""residential programs""; ""residential treatment""
+2. ""substance abuse inpatient""; ""residential stabilization""
+3. ""residential inpatient""
+4. ""residential inpatient treatment""",7,,,,NOT YET VERIFIED,
+V0013,Dallas Detox Center,https://dallas-detox-center.vercel.app/treatment-services/_wp_link_placeholder,https://dallas-detox-center.vercel.app/treatment-services/aftercare-planning,200,Edit page copy,1,1. https://dallas-detox-center.vercel.app/treatment-services/mental-health-residential,"1. ""/afte""",1,,,,NOT YET VERIFIED,
+V0014,Dallas Detox Center,https://dallas-detox-center.vercel.app/treatment-services/aftercare,https://dallas-detox-center.vercel.app/treatment-services/aftercare-planning,200,301 redirect,3,"1. https://dallas-detox-center.vercel.app/2022/03/04/how-to-find-a-rehab-program
+2. https://dallas-detox-center.vercel.app/2022/03/10/what-is-a-relapse-prevention-program
+3. https://dallas-detox-center.vercel.app/2022/05/17/the-importance-of-having-a-hobby-in-addiction-recovery","1. ""lifetime aftercare programs""
+2. ""relapse prevention program in Dallas""; ""aftercare in Dallas""
+3. ""Aftercare in Dallas""",4,,,,NOT YET VERIFIED,
+V0015,Dallas Detox Center,https://dallas-detox-center.vercel.app/treatment-services/inpatient,https://dallas-detox-center.vercel.app/treatment-services/residential-inpatient,200,301 redirect,8,"1. https://dallas-detox-center.vercel.app/2022/01/19/is-there-al-anon-for-drug-addiction
+2. https://dallas-detox-center.vercel.app/2022/03/22/group-therapy-used-in-rehab
+3. https://dallas-detox-center.vercel.app/2022/04/08/sober-living-house
+4. https://dallas-detox-center.vercel.app/2022/04/15/how-long-are-inpatient-programs
+5. https://dallas-detox-center.vercel.app/2022/04/25/what-is-drug-withdrawal
+6. https://dallas-detox-center.vercel.app/2022/05/05/how-to-find-alcohol-rehab-near-garland-texas
+7. https://dallas-detox-center.vercel.app/2022/05/09/addiction-rehab-near-irving-texas
+8. https://dallas-detox-center.vercel.app/2022/05/17/the-importance-of-having-a-hobby-in-addiction-recovery","1. ""inpatient programs""
+2. ""residential program""
+3. ""inpatient programs in Dallas""
+4. ""inpatient treatment programs in Dallas""
+5. ""inpatient addiction treatment in Dallas""
+6. ""Dallas inpatient program""
+7. ""Texas inpatient rehab program""
+8. ""Dallas inpatient treatment programs""",8,,,,NOT YET VERIFIED,
+V0016,Dallas Detox Center,https://dallas-detox-center.vercel.app/treatment-services/texas-dual-diagnosis,https://dallas-detox-center.vercel.app/treatment-services/dual-diagnosis,200,301 redirect,3,"1. https://dallas-detox-center.vercel.app/2022/02/24/what-is-the-difference-between-adderall-and-meth
+2. https://dallas-detox-center.vercel.app/2022/03/04/how-to-find-a-rehab-program
+3. https://dallas-detox-center.vercel.app/2022/04/15/how-long-are-inpatient-programs","1. ""treat co-existing disorders""
+2. ""dual diagnosis treatment""
+3. ""Texas dual diagnosis treatment""",3,,,,NOT YET VERIFIED,
