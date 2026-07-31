@@ -24,6 +24,14 @@ export type PageContent = {
   canonical: string | null;
   featured: Media;
   blocks: Block[];
+  /**
+   * FAQ pairs recovered from the live site's <details>/<summary> accordions.
+   * The extractor kept only the answer paragraphs, leaving the questions lost;
+   * see scripts/recover-faqs.mjs. `faqRange` is the inclusive block span the
+   * pairs replace, so the renderer doesn't print the answers twice.
+   */
+  faqs?: { q: string; a: string }[];
+  faqRange?: [number, number];
 };
 
 export type PostContent = {

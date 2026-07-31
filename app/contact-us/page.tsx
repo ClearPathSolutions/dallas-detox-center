@@ -5,6 +5,7 @@ import { metaFor } from "@/lib/seo";
 import { site } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 import { LeadForm } from "@/components/LeadForm";
+import { JsonLd, breadcrumbSchema, organisationSchema } from "@/lib/schema";
 
 export function generateMetadata(): Metadata {
   const page = getPageByPath("/contact-us");
@@ -20,6 +21,7 @@ const cards = [
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={[organisationSchema(), breadcrumbSchema([{ name: "Contact Us", path: "/contact-us" }])]} />
       <section className="bg-navy-900 py-16 lg:py-20">
         <Container>
           <p className="eyebrow text-brand-400">Professional Support Is Only a Call Away</p>

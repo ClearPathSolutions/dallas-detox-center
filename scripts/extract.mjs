@@ -25,9 +25,9 @@ const imageManifest = new Set(); // "2022/05/foo.jpg"
 
 // ---- helpers ---------------------------------------------------------------
 
-const decode = (s = "") => load(`<x>${s}</x>`)("x").text().trim();
+export const decode = (s = "") => load(`<x>${s}</x>`)("x").text().trim();
 
-function pathFromLink(link) {
+export function pathFromLink(link) {
   try {
     const u = new URL(link);
     let p = u.pathname;
@@ -40,7 +40,7 @@ function pathFromLink(link) {
 }
 
 // Map a media URL to a local /images/content path + record it for copying.
-function localizeMedia(src) {
+export function localizeMedia(src) {
   if (!src) return null;
   if (src.startsWith("data:")) return null;
   const idx = src.indexOf(UPLOADS);
@@ -54,7 +54,7 @@ function localizeMedia(src) {
 const NOISE_IMG = /(loader-bckg|h7-dots|dots-img|spacer|blank\.gif|pixel|separator)/i;
 
 // Rewrite internal links to relative + sanitize inline HTML of a paragraph.
-function cleanInlineHtml($, el) {
+export function cleanInlineHtml($, el) {
   const $el = $(el).clone();
   // Drop icons / spans-only wrappers but keep their text
   $el.find("i, svg").remove();
@@ -80,7 +80,7 @@ function cleanInlineHtml($, el) {
 }
 
 // Extract ordered semantic blocks from an Elementor content DOM.
-function extractBlocks(html) {
+export function extractBlocks(html) {
   const $ = load(html);
   const blocks = [];
   const seen = new Set(); // dedupe Elementor responsive duplicates
@@ -184,7 +184,7 @@ function extractBlocks(html) {
   return blocks;
 }
 
-function yoast(entry) {
+export function yoast(entry) {
   const y = entry.yoast_head_json || {};
   return {
     metaTitle: decode(y.title || entry.title?.rendered || ""),
@@ -194,7 +194,7 @@ function yoast(entry) {
   };
 }
 
-function featuredFromEmbed(entry) {
+export function featuredFromEmbed(entry) {
   const media = entry._embedded?.["wp:featuredmedia"]?.[0];
   const url = media?.source_url || entry.featured_image_src || null;
   return url ? { src: localizeMedia(url), alt: decode(media?.alt_text || "") } : null;
@@ -202,17 +202,11 @@ function featuredFromEmbed(entry) {
 
 // ---- run -------------------------------------------------------------------
 
-mkdirSync(join(OUT, "pages"), { recursive: true });
-mkdirSync(join(OUT, "posts"), { recursive: true });
-
-const pagesRaw = JSON.parse(readFileSync(join(CONTENT, "pages_full.json"), "utf8"));
-const postsRaw = JSON.parse(readFileSync(join(CONTENT, "posts.json"), "utf8"));
-
-// Slug registries for template typing
+// Slug groups that decide which template a page renders with.
 const DETOX = new Set(["alcohol-detox","benzo-detox","cocaine-detox","fentanyl-detox","heroin-detox","meth-detox","prescription-drugs-detox"]);
 const LOCATIONS = new Set(["arlington","farmers-branch","fort-worth-drug-rehab","frisco","garland","highland-park","plano","richardson","southlake","university-park","waco","wichita-falls","mckinney","abilene"]);
 
-function templateFor(slug, path) {
+export function templateFor(slug, path) {
   if (path === "/") return "home";
   if (DETOX.has(slug)) return "detox";
   if (LOCATIONS.has(slug)) return "location";
@@ -222,54 +216,69 @@ function templateFor(slug, path) {
   return "page";
 }
 
-const index = { pages: [], posts: [] };
+// Running this file performs the full extraction. Importing it only exposes
+// the helpers above, which scripts/add-post.mjs reuses for a single post.
+const isMain = process.argv[1] && import.meta.url === `file://${process.argv[1]}`;
+if (isMain) {
+  mkdirSync(join(OUT, "pages"), { recursive: true });
+  mkdirSync(join(OUT, "posts"), { recursive: true });
 
-for (const p of pagesRaw) {
-  const path = p.id === 17 ? "/" : pathFromLink(p.link);
-  const slug = p.id === 17 ? "home" : p.slug;
-  const blocks = extractBlocks(p.content?.rendered || "");
-  const meta = yoast(p);
-  const data = {
-    id: p.id,
-    slug,
-    path,
-    template: templateFor(slug, path),
-    title: decode(p.title?.rendered || ""),
-    ...meta,
-    featured: featuredFromEmbed(p),
-    blocks,
-  };
-  writeFileSync(join(OUT, "pages", `${slug}.json`), JSON.stringify(data, null, 2));
-  index.pages.push({ slug, path, template: data.template, title: data.title, blocks: blocks.length });
+  const pagesRaw = JSON.parse(readFileSync(join(CONTENT, "pages_full.json"), "utf8"));
+  const postsRaw = JSON.parse(readFileSync(join(CONTENT, "posts.json"), "utf8"));
+
+  // Slug registries for template typing
+
+
+  const index = { pages: [], posts: [] };
+
+  for (const p of pagesRaw) {
+    const path = p.id === 17 ? "/" : pathFromLink(p.link);
+    const slug = p.id === 17 ? "home" : p.slug;
+    const blocks = extractBlocks(p.content?.rendered || "");
+    const meta = yoast(p);
+    const data = {
+      id: p.id,
+      slug,
+      path,
+      template: templateFor(slug, path),
+      title: decode(p.title?.rendered || ""),
+      ...meta,
+      featured: featuredFromEmbed(p),
+      blocks,
+    };
+    writeFileSync(join(OUT, "pages", `${slug}.json`), JSON.stringify(data, null, 2));
+    index.pages.push({ slug, path, template: data.template, title: data.title, blocks: blocks.length });
+  }
+
+  for (const p of postsRaw) {
+    const path = pathFromLink(p.link);
+    const blocks = extractBlocks(p.content?.rendered || "");
+    const meta = yoast(p);
+    const cat = p._embedded?.["wp:term"]?.[0]?.[0]?.name || null;
+    const data = {
+      id: p.id,
+      slug: p.slug,
+      path,
+      template: "post",
+      title: decode(p.title?.rendered || ""),
+      date: p.date,
+      category: cat ? decode(cat) : null,
+      excerpt: decode((p.excerpt?.rendered || "").replace(/<[^>]+>/g, "")),
+      ...meta,
+      featured: featuredFromEmbed(p),
+      blocks,
+    };
+    writeFileSync(join(OUT, "posts", `${p.slug}.json`), JSON.stringify(data, null, 2));
+    index.posts.push({ slug: p.slug, path, title: data.title, date: p.date, category: data.category });
+  }
+
+  index.posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+
+  writeFileSync(join(OUT, "index.json"), JSON.stringify(index, null, 2));
+  writeFileSync(join(OUT, "images.manifest.json"), JSON.stringify([...imageManifest].sort(), null, 2));
+
+  console.log(`Pages extracted: ${index.pages.length}`);
+  console.log(`Posts extracted: ${index.posts.length}`);
+  console.log(`Unique media referenced: ${imageManifest.size}`);
+
 }
-
-for (const p of postsRaw) {
-  const path = pathFromLink(p.link);
-  const blocks = extractBlocks(p.content?.rendered || "");
-  const meta = yoast(p);
-  const cat = p._embedded?.["wp:term"]?.[0]?.[0]?.name || null;
-  const data = {
-    id: p.id,
-    slug: p.slug,
-    path,
-    template: "post",
-    title: decode(p.title?.rendered || ""),
-    date: p.date,
-    category: cat ? decode(cat) : null,
-    excerpt: decode((p.excerpt?.rendered || "").replace(/<[^>]+>/g, "")),
-    ...meta,
-    featured: featuredFromEmbed(p),
-    blocks,
-  };
-  writeFileSync(join(OUT, "posts", `${p.slug}.json`), JSON.stringify(data, null, 2));
-  index.posts.push({ slug: p.slug, path, title: data.title, date: p.date, category: data.category });
-}
-
-index.posts.sort((a, b) => (a.date < b.date ? 1 : -1));
-
-writeFileSync(join(OUT, "index.json"), JSON.stringify(index, null, 2));
-writeFileSync(join(OUT, "images.manifest.json"), JSON.stringify([...imageManifest].sort(), null, 2));
-
-console.log(`Pages extracted: ${index.pages.length}`);
-console.log(`Posts extracted: ${index.posts.length}`);
-console.log(`Unique media referenced: ${imageManifest.size}`);

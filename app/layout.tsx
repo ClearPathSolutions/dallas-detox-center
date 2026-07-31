@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import Clarion from "@/components/Clarion";
+import { Analytics } from "@/components/Analytics";
 
 const marcellus = Marcellus({
   variable: "--font-marcellus",
@@ -70,6 +71,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <Clarion />
+        <Analytics />
       </body>
     </html>
   );

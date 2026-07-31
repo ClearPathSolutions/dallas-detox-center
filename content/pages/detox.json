@@ -473,5 +473,51 @@
       "html": "Starting is simple. You can call our confidential line at <a href=\"tel:8179042197\">817-904-2197 </a>or fill out our <a href=\"/admissions\">online form</a>. We will conduct a brief assessment and verify your insurance to get you or your loved one into care as quickly as possible.",
       "text": "Starting is simple. You can call our confidential line at 817-904-2197 or fill out our online form. We will conduct a brief assessment and verify your insurance to get you or your loved one into care as quickly as possible."
     }
+  ],
+  "faqs": [
+    {
+      "q": "What is medical detoxification?",
+      "a": "Medical detox is a clinically supervised process where patients safely withdraw from drugs or alcohol. At our Dallas facility, we use evidence-based protocols to manage physical symptoms and ensure safety during the initial clearing of substances."
+    },
+    {
+      "q": "Is detoxing at home safe?",
+      "a": "Detoxing cold turkey at home can be life-threatening, especially for alcohol and benzodiazepines, which carry risks of seizures and cardiovascular distress. Professional medical detox provides 24/7 monitoring to prevent these emergencies."
+    },
+    {
+      "q": "How long does the detox process take?",
+      "a": "While timelines vary by substance and by individual, most acute withdrawal symptoms peak within 24 to 72 hours. Our team monitors your progress through the three phases of withdrawal to ensure you are stable before transitioning to the next level of care."
+    },
+    {
+      "q": "Will I be comfortable during detox?",
+      "a": "Yes. We prioritize a comfort-first approach, utilizing Medication-Assisted Treatment (MAT) and 24/7 clinical support to alleviate physical pain and reduce intense cravings throughout the withdrawal process."
+    },
+    {
+      "q": "Do you accept private insurance for detox in Dallas?",
+      "a": "We accept most major private insurance providers. Since coverage varies, we recommend using our online verification tool or calling our admissions team at 817-904-2197 to confirm your specific benefits."
+    },
+    {
+      "q": "What happens after detox is finished?",
+      "a": "Detox is the first step in a continuum of care. Once physically stable, patients typically transition into our residential inpatient or mental health residential programs to begin intensive therapeutic work."
+    },
+    {
+      "q": "Can you treat mental health issues during detox?",
+      "a": "Absolutely. We specialize in Dual Diagnosis Care, meaning we begin addressing co-occurring disorders like anxiety or depression while you are undergoing medical stabilization."
+    },
+    {
+      "q": "What is PAWS (Post-Acute Withdrawal Syndrome)?",
+      "a": "PAWS refers to lingering psychological symptom, like mood swings or sleep disturbances that can occur after the acute physical detox phase. We provide education and tools to help you manage these as your brain recalibrates."
+    },
+    {
+      "q": "Are your detox programs 24/7?",
+      "a": "Yes. Our Dallas facility provides around-the-clock nursing and clinical supervision to ensure immediate intervention if any complications arise during the withdrawal process."
+    },
+    {
+      "q": "How do I start the admissions process?",
+      "a": "Starting is simple. You can call our confidential line at 817-904-2197 or fill out our online form. We will conduct a brief assessment and verify your insurance to get you or your loved one into care as quickly as possible."
+    }
+  ],
+  "faqRange": [
+    73,
+    83
   ]
 }

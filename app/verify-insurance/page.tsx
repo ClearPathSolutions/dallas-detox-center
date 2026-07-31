@@ -3,6 +3,7 @@ import { Phone, Clock, ShieldCheck, Lock } from "lucide-react";
 import { site } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 import { LeadForm } from "@/components/LeadForm";
+import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Verify Your Insurance",
@@ -27,6 +28,7 @@ const points = [
 export default function VerifyInsurancePage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: "Verify Your Insurance", path: "/verify-insurance" }])} />
       <section className="bg-navy-900 py-16 lg:py-20">
         <Container>
           <p className="eyebrow text-brand-400">No Obligation, Fully Confidential</p>

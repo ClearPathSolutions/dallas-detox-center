@@ -5,6 +5,14 @@ import { metaFor } from "@/lib/seo";
 import { PageTemplate } from "@/components/content/PageTemplate";
 import { TeamTemplate } from "@/components/content/TeamTemplate";
 import { PostTemplate } from "@/components/content/PostTemplate";
+import {
+  JsonLd,
+  breadcrumbSchema,
+  areaServedSchema,
+  serviceSchema,
+  personSchema,
+  articleSchema,
+} from "@/lib/schema";
 
 export const dynamicParams = false;
 
@@ -49,14 +57,49 @@ export async function generateMetadata({
   return post ? metaFor(post) : {};
 }
 
+/** Breadcrumb trail for a page, mirroring the on-page breadcrumb label. */
+function trailFor(page: { template: string; title: string; path: string }) {
+  const parents: Record<string, { name: string; path: string }> = {
+    detox: { name: "Treatment Services", path: "/treatment-services" },
+    service: { name: "Treatment Services", path: "/treatment-services" },
+    audience: { name: "Who We Help", path: "/who-we-help" },
+    team: { name: "About Us", path: "/about-us" },
+    location: { name: "Areas We Serve", path: "/areas-we-serve" },
+  };
+  const parent = parents[page.template];
+  const self = { name: page.title, path: page.path };
+  return parent && parent.path !== page.path ? [parent, self] : [self];
+}
+
 export default async function CatchAll({ params }: { params: Promise<Params> }) {
   const { slug } = await params;
   const path = toPath(slug);
 
   const page = getPageByPath(path);
   if (page) {
-    if (page.template === "team") return <TeamTemplate page={page} />;
-    return <PageTemplate page={page} breadcrumb={BREADCRUMB[page.template]} />;
+    const graphs: object[] = [breadcrumbSchema(trailFor(page))];
+    if (page.template === "location") {
+      // City name is the page title's locality, e.g. "Drug Rehab Near Plano".
+      const city =
+        page.title.replace(/^.*?\b(?:near|in)\b\s*/i, "").replace(/,?\s*(TX|Texas)\b.*$/i, "").trim() ||
+        page.title;
+      graphs.push(areaServedSchema(page, city));
+    } else if (page.template === "detox" || page.template === "service") {
+      graphs.push(serviceSchema(page));
+    } else if (page.template === "team") {
+      graphs.push(personSchema(page));
+    }
+
+    return (
+      <>
+        <JsonLd data={graphs} />
+        {page.template === "team" ? (
+          <TeamTemplate page={page} />
+        ) : (
+          <PageTemplate page={page} breadcrumb={BREADCRUMB[page.template]} />
+        )}
+      </>
+    );
   }
 
   // Date-based blog post: /YYYY/MM/DD/slug
@@ -77,7 +120,20 @@ export default async function CatchAll({ params }: { params: Promise<Params> }) 
           image: full.featured?.src ?? null,
         };
       });
-    return <PostTemplate post={post} related={related} />;
+    return (
+      <>
+        <JsonLd
+          data={[
+            articleSchema(post),
+            breadcrumbSchema([
+              { name: "Blog", path: "/blog" },
+              { name: post.title, path: post.path },
+            ]),
+          ]}
+        />
+        <PostTemplate post={post} related={related} />
+      </>
+    );
   }
 
   notFound();

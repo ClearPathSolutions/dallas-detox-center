@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Check, ArrowRight, ShieldCheck } from "lucide-react";
@@ -10,14 +11,29 @@ import {
   type Group,
   type GalleryItem,
 } from "@/lib/blocks";
+import { galleryFor } from "@/lib/media";
 import { Container } from "@/components/ui/Container";
 import { BlockFlow } from "@/components/content/BlockRenderer";
 import { PageHero } from "@/components/content/PageHero";
 import { InsuranceStrip } from "@/components/sections/InsuranceStrip";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { InlineCta } from "@/components/sections/InlineCta";
+import { Faq, FaqSchema } from "@/components/ui/Faq";
 import { cn } from "@/lib/cn";
 
 const SHOW_INSURANCE = new Set(["detox", "location", "audience", "service", "page"]);
+
+/**
+ * The four photos the migration duplicated across 36 pages. When a page's
+ * gallery is mostly these, it carries no page-specific imagery and is better
+ * served by a rotated selection from the wider pool.
+ */
+const OVERUSED = /\/(16|11|5|25)-web-or-mls-Dallas-Detox-Center/;
+
+function isGenericGallery(items: GalleryItem[]): boolean {
+  const generic = items.filter((i) => OVERUSED.test(i.src)).length;
+  return generic >= Math.ceil(items.length / 2);
+}
 
 export function PageTemplate({
   page,
@@ -33,6 +49,14 @@ export function PageTemplate({
 
   // Alternate light backgrounds only across "prose" sections for rhythm.
   let proseIdx = 0;
+
+  // Distribute the conversion modules through the page rather than stacking
+  // them after the last section. Only long pages get the mid-page break; short
+  // ones would end up with two CTAs a screen apart.
+  const showInsurance = SHOW_INSURANCE.has(page.template);
+  const inlineCtaAfter = sections.length >= 4 ? Math.floor(sections.length * 0.4) : -1;
+  const insuranceAfter =
+    showInsurance && sections.length >= 5 ? Math.floor(sections.length * 0.75) : -1;
 
   return (
     <>
@@ -56,18 +80,45 @@ export function PageTemplate({
       )}
 
       {sections.map((section, i) => {
-        if (section.kind === "prose") {
-          const tone = proseIdx++ % 2 === 1 ? "bg-sand-50" : "bg-white";
-          return <ProseSection key={i} section={section} tone={tone} />;
-        }
-        if (section.kind === "glance") return <GlanceSection key={i} section={section} />;
-        if (section.kind === "steps") return <StepsSection key={i} section={section} />;
-        return <CardsSection key={i} section={section} />;
+        const node =
+          section.kind === "prose" ? (
+            <ProseSection
+              key={i}
+              section={section}
+              tone={proseIdx++ % 2 === 1 ? "bg-sand-50" : "bg-white"}
+            />
+          ) : section.kind === "glance" ? (
+            <GlanceSection key={i} section={section} />
+          ) : section.kind === "steps" ? (
+            <StepsSection key={i} section={section} />
+          ) : section.kind === "faq" ? (
+            <FaqSection key={i} section={section} />
+          ) : (
+            <CardsSection key={i} section={section} />
+          );
+
+        // Break up long pages instead of stacking every CTA at the end.
+        return (
+          <Fragment key={i}>
+            {node}
+            {i === inlineCtaAfter && <InlineCta />}
+            {i === insuranceAfter && <InsuranceStrip />}
+          </Fragment>
+        );
       })}
 
-      {gallery.length >= 3 && <GallerySection items={gallery} />}
+      {/*
+        The migrated body carried the same four photos on nearly every page, so
+        pages whose gallery is that generic set get a rotated selection from the
+        wider facility pool instead. Pages with their own distinctive photos keep
+        them.
+      */}
+      {gallery.length >= 3 && (
+        <GallerySection items={isGenericGallery(gallery) ? galleryFor(page.slug, 6) : gallery} />
+      )}
 
-      {SHOW_INSURANCE.has(page.template) && <InsuranceStrip />}
+      {/* Short pages never reached the interleaved position above. */}
+      {showInsurance && insuranceAfter === -1 && <InsuranceStrip />}
       <CtaBand />
     </>
   );
@@ -193,6 +244,27 @@ function StepsSection({ section }: { section: Extract<Section, { kind: "steps" }
 
 function cleanStepTitle(t: string) {
   return t.replace(/^step\s*\d+\s*[:.-]?\s*/i, "");
+}
+
+/* ---------- faq ---------- */
+
+/**
+ * Recovered FAQ pairs, rendered as an accordion with FAQPage markup. Before the
+ * questions were recovered these pages showed a heading followed by a wall of
+ * unlabelled answers.
+ */
+function FaqSection({ section }: { section: Extract<Section, { kind: "faq" }> }) {
+  return (
+    <section className="bg-sand-50 py-16 lg:py-20">
+      <Container>
+        <Heading centered>{section.heading || "Frequently Asked Questions"}</Heading>
+        <div className="mt-10">
+          <Faq items={section.items} />
+        </div>
+      </Container>
+      <FaqSchema items={section.items} />
+    </section>
+  );
 }
 
 /* ---------- cards ---------- */

@@ -25,8 +25,7 @@ export const site = {
   // Licensed level of care.
   levelOfCare: "Residential",
   // Licensed bed count, split across the two residences on the campus.
-  // NOTE: not yet used in any public-facing copy — see the "6-bed census"
-  // claim in content/pages/tour.json before publishing a capacity figure.
+  // Surfaced on /tour and /areas-we-serve.
   capacity: {
     total: 32,
     house: 16,
@@ -70,6 +69,7 @@ export const nav: NavItem[] = [
         heading: "About",
         items: [
           { label: "About Dallas Detox", href: "/about-us" },
+          { label: "Meet the Team", href: "/about-us/meet-the-team" },
           { label: "Alexandria Grigsby", href: "/about-us/alexandria-grigsby" },
           { label: "Trevor Grigsby", href: "/about-us/trevor-grigsby" },
           { label: "Michael Young", href: "/about-us/michael-young" },
@@ -82,6 +82,7 @@ export const nav: NavItem[] = [
       {
         heading: "Local Resources",
         items: [
+          { label: "All Areas We Serve", href: "/areas-we-serve" },
           { label: "Arlington", href: "/arlington" },
           { label: "Fort Worth", href: "/fort-worth-drug-rehab" },
           { label: "Frisco", href: "/frisco" },
@@ -184,6 +185,8 @@ export const footerNav = {
       { label: "About Us", href: "/about-us" },
       { label: "Tour the Facility", href: "/tour" },
       { label: "Admissions", href: "/admissions" },
+      { label: "Meet the Team", href: "/about-us/meet-the-team" },
+      { label: "Areas We Serve", href: "/areas-we-serve" },
       { label: "Latest Articles", href: "/blog" },
       { label: "Contact", href: "/contact-us" },
     ],

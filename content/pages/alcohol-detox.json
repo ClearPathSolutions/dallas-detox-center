@@ -344,5 +344,35 @@
       "html": "Yes. At Dallas Detox Center, we believe family support is crucial for long-term recovery. Once the acute medical detox phase is complete and the client is physically stable, we offer scheduled family visitation hours in our comfortable, private facility. Furthermore, during the residential inpatient phase, we integrate structured <b data-path-to-node=\"3\" data-index-in-node=\"335\">family therapy sessions</b> and educational counseling to help mend relationships, establish healthy boundaries, and prepare a supportive home environment for lasting sobriety.",
       "text": "Yes. At Dallas Detox Center, we believe family support is crucial for long-term recovery. Once the acute medical detox phase is complete and the client is physically stable, we offer scheduled family visitation hours in our comfortable, private facility. Furthermore, during the residential inpatient phase, we integrate structured family therapy sessions and educational counseling to help mend relationships, establish healthy boundaries, and prepare a supportive home environment for lasting sobriety."
     }
+  ],
+  "faqs": [
+    {
+      "q": "How long does the alcohol detox process take at Dallas Detox Center?",
+      "a": "The acute medical alcohol detox process typically takes between 5 to 7 days. The exact timeline depends on the severity of the chemical dependency, the client’s medical history, and the presence of co-occurring mental health disorders. Physical withdrawal symptoms usually peak within the first 24 to 72 hours, after which clients are safely stabilized before transitioning into residential inpatient care."
+    },
+    {
+      "q": "What medications are used during medical alcohol detox?",
+      "a": "Our physician-led clinical team utilizes evidence-based Medication-Assisted Treatment (MAT) protocols to ensure client safety and comfort. We prescribe FDA-approved medications, including targeted sedatives (such as benzodiazepines) to prevent seizures and manage anxiety, anti-nausea medications, and non-addictive tapering protocols to safely regulate the central nervous system during acute alcohol withdrawal."
+    },
+    {
+      "q": "Does Dallas Detox Center accept private PPO insurance for alcohol rehab?",
+      "a": "Yes. Dallas Detox Center accepts most major out-of-network PPO and POS health insurance plans to cover the cost of medical detox and residential inpatient stabilization. Our admissions team is available 24/7 to provide instant, confidential insurance verification to help you maximize your benefits and secure same-day admission into our facility."
+    },
+    {
+      "q": "Can I immediately transition into therapy after completing alcohol detox?",
+      "a": "Yes. Once your physical medical detox is successfully completed, you will immediately transition into our on-site residential inpatient treatment program. Here, you will begin intensive individual therapy, trauma-informed group counseling, relapse prevention planning, and comprehensive dual diagnosis care to treat the underlying psychological roots of addiction."
+    },
+    {
+      "q": "Can I lose my job if I enter alcohol detox or residential inpatient rehab?",
+      "a": "No, your employer cannot legally fire you simply for seeking treatment. If you qualify for the federal Family and Medical Leave Act (FMLA), you are legally entitled to up to 12 weeks of unpaid, job-protected leave per year for medical stabilization and substance use rehabilitation. Under FMLA, your employer is required to maintain your health insurance benefits and restore you to your original position (or an equivalent role with identical pay and seniority) once your treatment is complete."
+    },
+    {
+      "q": "Can my family visit me during my stay, and are they involved in the rehab process?",
+      "a": "Yes. At Dallas Detox Center, we believe family support is crucial for long-term recovery. Once the acute medical detox phase is complete and the client is physically stable, we offer scheduled family visitation hours in our comfortable, private facility. Furthermore, during the residential inpatient phase, we integrate structured family therapy sessions and educational counseling to help mend relationships, establish healthy boundaries, and prepare a supportive home environment for lasting sobriety."
+    }
+  ],
+  "faqRange": [
+    55,
+    61
   ]
 }

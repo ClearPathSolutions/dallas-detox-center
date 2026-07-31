@@ -492,5 +492,39 @@
       "html": "We provide a comprehensive <a href=\"/treatment-services/aftercare-planning\">aftercare planning</a>, including referrals to outpatient therapy and access to our local Dallas alumni network.",
       "text": "We provide a comprehensive /afte, including referrals to outpatient therapy and access to our local Dallas alumni network."
     }
+  ],
+  "faqs": [
+    {
+      "q": "What is residential mental health treatment?",
+      "a": "It is a 24/7, live-in program where patients receive intensive psychiatric care and therapy in a safe, structured environment."
+    },
+    {
+      "q": "How long is the residential program in Dallas?",
+      "a": "Program lengths are personalized, typically ranging from 30 to 90 days depending on the individual’s clinical needs and stabilization goals."
+    },
+    {
+      "q": "Do you treat co-occurring disorders (Dual Diagnosis)?",
+      "a": "Yes, we specialize in treating individuals struggling with both a mental health condition and a substance use history simultaneously."
+    },
+    {
+      "q": "What conditions do you treat at your Dallas facility?",
+      "a": "We provide expert care for depression, anxiety, PTSD, trauma, bipolar disorder, OCD, and personality disorders."
+    },
+    {
+      "q": "Will my insurance cover residential mental health care?",
+      "a": "We accept most major private insurance plans; our team can verify your benefits and coverage levels in minutes. Call us at 817-904-2197 to confirm your specific benefits."
+    },
+    {
+      "q": "What is the difference between inpatient and residential care?",
+      "a": "Residential care offers a more home-like, long-term therapeutic setting compared to the short-term, acute crisis stabilization of a hospital."
+    },
+    {
+      "q": "Can I use my phone or laptop during treatment?",
+      "a": "We balance connectivity with clinical focus; scheduled access is often allowed, particularly for executives needing to manage work."
+    }
+  ],
+  "faqRange": [
+    75,
+    82
   ]
 }

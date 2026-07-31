@@ -139,7 +139,7 @@ export function LeadForm({ intent = "contact" }: { intent?: Intent }) {
 
   if (intent === "verify") {
     return (
-      <form onSubmit={onSubmit} noValidate className="space-y-4">
+      <form onSubmit={onSubmit} noValidate data-intent={intent} className="space-y-4">
         {/* Honeypot */}
         <input
           type="text"
@@ -270,7 +270,7 @@ export function LeadForm({ intent = "contact" }: { intent?: Intent }) {
   }
 
   return (
-    <form onSubmit={onSubmit} noValidate className="space-y-4">
+    <form onSubmit={onSubmit} noValidate data-intent={intent} className="space-y-4">
       {/* Honeypot */}
       <input
         type="text"

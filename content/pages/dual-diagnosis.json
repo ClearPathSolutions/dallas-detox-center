@@ -448,5 +448,51 @@
       "html": "Yes. We have a dedicated <a href=\"/treatment-services/mental-health-residential\">mental health treatment program</a> designed for individuals seeking primary residential care for disorders such as depression, anxiety, or PTSD without a co-occurring addiction. Call us at <a href=\"tel:8179042197\">817-904-2197</a> to see if this program is the right solution for you or your loved one.",
       "text": "Yes. We have a dedicated mental health treatment program designed for individuals seeking primary residential care for disorders such as depression, anxiety, or PTSD without a co-occurring addiction. Call us at 817-904-2197 to see if this program is the right solution for you or your loved one."
     }
+  ],
+  "faqs": [
+    {
+      "q": "What is dual diagnosis treatment?",
+      "a": "It is a specialized clinical approach that treats a substance use disorder and a mental health condition (like depression or PTSD) simultaneously rather than separately."
+    },
+    {
+      "q": "Why is integrated treatment better than traditional rehab?",
+      "a": "Integrated care addresses the root causes of addiction. Treating mental health at the same time as the addiction significantly reduces the risk of relapse triggered by untreated emotional distress."
+    },
+    {
+      "q": "Can I go to treatment without losing my job?",
+      "a": "Absolutely. We assist with FMLA and Short-Term Disability documentation to ensure your career is legally protected while you are in our care."
+    },
+    {
+      "q": "How long is the dual diagnosis program?",
+      "a": "While the duration varies based on individual needs, most programs range from 30 to 90 days to ensure both the physical and psychological components of recovery are stabilized."
+    },
+    {
+      "q": "Does insurance cover dual diagnosis treatment?",
+      "a": "Yes, most major insurance providers cover dual diagnosis care. We offer a free, no-obligation verification to help you understand your specific coverage. Call us at 817-904-2197 to learn more."
+    },
+    {
+      "q": "Will my employer find out why I am in treatment?",
+      "a": "No. Under HIPAA laws, your privacy is strictly protected. We provide the medical necessity documentation required for your leave without disclosing your specific diagnosis to your employer."
+    },
+    {
+      "q": "Do you help with travel if I live outside of Dallas?",
+      "a": "Yes. Our admissions team handles all travel logistics, including airport pickups from DFW or Love Field and coordination for out-of-state arrivals."
+    },
+    {
+      "q": "What therapies are used for dual diagnosis?",
+      "a": "We utilize a comprehensive range of evidence-based and experiential modalities, including CBT, DBT, and EMDR for trauma, as well as individual, group, family, and equine-assisted therapy."
+    },
+    {
+      "q": "Is the facility a hospital setting?",
+      "a": "No. Dallas Detox Center is a private, luxury estate designed to feel like a home. It offers premium amenities and a tranquil environment that promotes healing."
+    },
+    {
+      "q": "Can I receive treatment for just mental health without a substance issue?",
+      "a": "Yes. We have a dedicated mental health treatment program designed for individuals seeking primary residential care for disorders such as depression, anxiety, or PTSD without a co-occurring addiction. Call us at 817-904-2197 to see if this program is the right solution for you or your loved one."
+    }
+  ],
+  "faqRange": [
+    66,
+    76
   ]
 }

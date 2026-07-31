@@ -1,5 +1,16 @@
 import type { NextConfig } from "next";
 
+/**
+ * Hosts the Google tags need. Listed unconditionally so enabling
+ * NEXT_PUBLIC_GA_ID / NEXT_PUBLIC_GTM_ID on Vercel needs no code change; with
+ * no id configured nothing is ever requested from them.
+ */
+const ANALYTICS_HOSTS = [
+  "https://www.googletagmanager.com",
+  "https://www.google-analytics.com",
+  "https://region1.google-analytics.com",
+].join(" ");
+
 const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
@@ -7,6 +18,8 @@ const nextConfig: NextConfig = {
     // review-author avatars, which the Places API serves from lh3.
     remotePatterns: [
       { protocol: "https", hostname: "lh3.googleusercontent.com", pathname: "/**" },
+      // Cover images on Clarion-managed blog posts.
+      { protocol: "https", hostname: "images.unsplash.com", pathname: "/**" },
     ],
   },
   /**
@@ -66,11 +79,11 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.clarionlabs.ai",
+              `script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.clarionlabs.ai ${ANALYTICS_HOSTS}`,
               "style-src 'self' 'unsafe-inline'",
-              "img-src 'self' data: blob: https://lh3.googleusercontent.com https://www.clarionlabs.ai",
+              `img-src 'self' data: blob: https://lh3.googleusercontent.com https://www.clarionlabs.ai https://images.unsplash.com ${ANALYTICS_HOSTS}`,
               "font-src 'self' data:",
-              "connect-src 'self' https://api.clarionlabs.ai https://www.clarionlabs.ai",
+              `connect-src 'self' https://api.clarionlabs.ai https://www.clarionlabs.ai ${ANALYTICS_HOSTS}`,
               "frame-src https://www.google.com https://www.clarionlabs.ai",
               "form-action 'self'",
               "base-uri 'self'",

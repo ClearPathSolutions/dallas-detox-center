@@ -28,6 +28,7 @@ import { GoogleReviews } from "@/components/sections/GoogleReviews";
 import { PostCard } from "@/components/content/PostCard";
 import { Faq, FaqSchema } from "@/components/ui/Faq";
 import faqs from "@/content/faqs.json";
+import { JsonLd, organisationSchema } from "@/lib/schema";
 
 const services = [
   { title: "Medical Detox", href: "/treatment-services/detox", icon: Stethoscope, img: facility.gallery[4], desc: "24/7 physician-supervised withdrawal management for a safe, comfortable start." },
@@ -48,25 +49,6 @@ const mental = ["Anxiety", "Bipolar Disorder", "Depression", "PTSD/Trauma", "And
 const therapies = ["Individual Therapy", "Process Group Therapy", "Cognitive Behavioral Therapy", "Equine Therapy", "Dual-Diagnosis Program", "Family Therapy", "Medication-Assisted Therapy", "Rational Emotive Therapy", "Art & Music Therapy", "Recreational Activities"];
 const callbackBenefits = ["No Obligation When You Contact Us", "All Contact is Completely Confidential", "Highly-Experienced & Caring Staff", "Hand-Crafted, Individualized Treatment Plans", "True Dual-Diagnosis with On-Staff Psychiatrist"];
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": ["MedicalBusiness", "MedicalClinic"],
-  name: site.name,
-  url: site.url,
-  telephone: site.phone.display,
-  email: site.email,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: site.address.street,
-    addressLocality: site.address.city,
-    addressRegion: site.address.stateAbbr,
-    postalCode: site.address.zip,
-    addressCountry: "US",
-  },
-  medicalSpecialty: "Addiction Medicine",
-  foundingDate: String(site.founded),
-  availableService: services.map((s) => ({ "@type": "MedicalProcedure", name: s.title })),
-};
 
 export default function Home() {
   const recent = getRecentPosts(3).map((p) => {
@@ -76,7 +58,7 @@ export default function Home() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <JsonLd data={organisationSchema()} />
 
       {/* HERO */}
       <section className="relative overflow-hidden bg-navy-950">

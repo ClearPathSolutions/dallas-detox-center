@@ -7,6 +7,7 @@ import { site } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 
 export function generateMetadata(): Metadata {
   const page = getPage("tour");
@@ -37,6 +38,7 @@ export default function TourPage() {
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: "Tour Our Facility", path: "/tour" }])} />
       <section className="bg-navy-900 py-16 lg:py-20">
         <Container>
           <p className="eyebrow text-brand-400">Your Private Sanctuary for Healing</p>

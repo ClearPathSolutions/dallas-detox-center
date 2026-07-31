@@ -4,10 +4,13 @@ export type Fact = { label: string; text: string };
 export type Group = { title: string; body: Block[] };
 export type GalleryItem = { src: string; alt: string };
 
+export type QA = { q: string; a: string };
+
 export type Section =
   | { kind: "glance"; heading: string | null; facts: Fact[]; rest: Block[] }
   | { kind: "steps"; heading: string | null; intro: Block[]; steps: Group[] }
   | { kind: "cards"; heading: string | null; intro: Block[]; cards: Group[] }
+  | { kind: "faq"; heading: string | null; items: QA[] }
   | { kind: "prose"; heading: string | null; blocks: Block[] };
 
 export type StructuredPage = {
@@ -245,7 +248,23 @@ function classify(heading: string | null, rawBlocks: Block[]): Section {
 }
 
 export function structurePage(page: PageContent): StructuredPage {
-  const blocks = mergeHeadingPairs([...page.blocks]);
+  // Where FAQ pairs were recovered, remove the orphaned answer paragraphs so
+  // the accordion is the only place they appear. The heading is kept: it labels
+  // the section the accordion renders under.
+  const source = [...page.blocks];
+  let faqSection: Extract<Section, { kind: "faq" }> | null = null;
+  if (page.faqs?.length && page.faqRange) {
+    const [hi, last] = page.faqRange;
+    const headingBlock = source[hi];
+    faqSection = {
+      kind: "faq",
+      heading:
+        headingBlock && headingBlock.type === "heading" ? headingBlock.text : null,
+      items: page.faqs,
+    };
+    source.splice(hi, last - hi + 1);
+  }
+  const blocks = mergeHeadingPairs(source);
 
   const h1Index = blocks.findIndex((b) => b.type === "heading" && b.level === 1);
   let eyebrow: string | null = null;
@@ -339,7 +358,7 @@ export function structurePage(page: PageContent): StructuredPage {
     title,
     lead: lead,
     byline,
-    sections,
+    sections: faqSection ? [...sections, faqSection] : sections,
     gallery: gallery.slice(0, 8),
   };
 }
