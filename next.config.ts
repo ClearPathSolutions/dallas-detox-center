@@ -51,6 +51,12 @@ const nextConfig: NextConfig = {
       "/treatment-services/texas-dual-diagnosis": "/treatment-services/dual-diagnosis",
       // Corrected slug: the page is about VA CCN (Community Care Network).
       "/va-cnn": "/va-ccn",
+      // Staff who have left. Their bios are gone, but the URLs are indexed and
+      // linked, so they point at the team hub rather than 404.
+      "/about-us/alexandria-grigsby": "/about-us/meet-the-team",
+      "/about-us/trevor-grigsby": "/about-us/meet-the-team",
+      "/about-us/michael-young": "/about-us/meet-the-team",
+      "/about-us/ricki-cochran": "/about-us/meet-the-team",
     };
     return Object.entries(map).map(([source, destination]) => ({
       source,

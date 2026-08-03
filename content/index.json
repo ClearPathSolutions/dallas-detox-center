@@ -36,34 +36,6 @@
       "blocks": 86
     },
     {
-      "slug": "ricki-cochran",
-      "path": "/about-us/ricki-cochran",
-      "template": "team",
-      "title": "Ricki Cochran",
-      "blocks": 13
-    },
-    {
-      "slug": "trevor-grigsby",
-      "path": "/about-us/trevor-grigsby",
-      "template": "team",
-      "title": "Trevor Grigsby",
-      "blocks": 8
-    },
-    {
-      "slug": "alexandria-grigsby",
-      "path": "/about-us/alexandria-grigsby",
-      "template": "team",
-      "title": "Alexandria Grigsby",
-      "blocks": 5
-    },
-    {
-      "slug": "michael-young",
-      "path": "/about-us/michael-young",
-      "template": "team",
-      "title": "Michael Young",
-      "blocks": 5
-    },
-    {
       "slug": "va-ccn",
       "path": "/va-ccn",
       "template": "page",
