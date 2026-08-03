@@ -105,10 +105,6 @@ export default function PrivacyPolicyPage() {
             referred you, campaign parameters, and your browser user agent.
           </li>
           <li>
-            <strong>Resend</strong> — delivers form submissions to our admissions
-            inbox by email.
-          </li>
-          <li>
             <strong>Google</strong> — provides the map on our contact page and the
             reviews shown on this site. If website analytics is enabled, Google
             also receives usage data. Google does not receive your form

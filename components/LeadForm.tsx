@@ -66,39 +66,27 @@ export function LeadForm({ intent = "contact" }: { intent?: Intent }) {
         }
       }
 
-      // Two independent sinks. The lead only counts as captured if at least one
-      // accepts it — otherwise we must not show a thank-you, because a dropped
-      // lead here is a lost admission.
-      let clarionOk = false;
+      // Clarion is the single sink for leads. There is deliberately no server
+      // -side email fallback: the second channel was dropped rather than take
+      // on another vendor, so this call succeeding IS the lead being captured.
+      //
+      // Because of that, never resolve to a thank-you unless Clarion actually
+      // accepted the submission. If its script was blocked or the POST failed,
+      // the visitor must see the phone number instead of a false confirmation.
+      let accepted = false;
       try {
         const res = await window.ClarionForms?.submit({
           form_key: CLARION_FORM_KEY[intent],
           data: { ...data, intent },
         });
-        clarionOk = !!res && res.ok !== false;
+        accepted = !!res && res.ok !== false;
       } catch {
-        clarionOk = false;
+        accepted = false;
       }
 
-      let apiOk = false;
-      let apiError = "";
-      try {
-        const res = await fetch("/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ ...data, intent }),
-        });
-        const json = await res.json().catch(() => ({}));
-        apiOk = res.ok && json.ok === true;
-        if (!apiOk) apiError = json.error || "";
-      } catch {
-        apiOk = false;
-      }
-
-      if (!clarionOk && !apiOk) {
+      if (!accepted) {
         throw new Error(
-          apiError ||
-            `We couldn't submit the form. Please call us at ${site.phone.display} — we're available 24/7.`,
+          `We couldn't submit the form. Please call us at ${site.phone.display} — we're available 24/7.`,
         );
       }
 

@@ -38,14 +38,18 @@ vercel --prod     # production
 
 ### Environment variables (optional)
 
-The contact form works out of the box (submissions are logged server-side). To email leads,
-set these in Vercel → Project → Settings → Environment Variables:
+Lead capture needs no configuration: both forms submit to Clarion Labs, which is
+configured by site key in `lib/site.ts`, not by environment. There is no
+server-side email fallback — if Clarion does not accept a submission the form
+shows the phone number rather than a thank-you, so a blocked script never looks
+like a captured lead.
 
-| Variable | Purpose |
-|---|---|
-| `RESEND_API_KEY` | [Resend](https://resend.com) API key to deliver form submissions by email |
-| `CONTACT_TO` | Destination inbox (defaults to `info@dallasdetoxcenter.com`) |
-| `CONTACT_FROM` | Verified "from" address on your Resend domain |
+Set these in Vercel → Project → Settings → Environment Variables:
+
+| Variable | Purpose | Without it |
+|---|---|---|
+| `GOOGLE_PLACES_API_KEY` | Pulls Google reviews for the reviews sections | Those sections render nothing |
+| `NEXT_PUBLIC_GA_ID` | GA4 measurement ID (`G-XXXXXXXXXX`) | No analytics loads at all |
 
 ## Project structure
 
