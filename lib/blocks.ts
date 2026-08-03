@@ -11,6 +11,7 @@ export type Section =
   | { kind: "steps"; heading: string | null; intro: Block[]; steps: Group[] }
   | { kind: "cards"; heading: string | null; intro: Block[]; cards: Group[] }
   | { kind: "faq"; heading: string | null; items: QA[] }
+  | { kind: "reviews"; heading: string | null; intro: string | null }
   | { kind: "prose"; heading: string | null; blocks: Block[] };
 
 export type StructuredPage = {
@@ -37,6 +38,13 @@ const CTA_BOILERPLATE_RE = /^we can help you\s*[-–—]\s*no matter what/i;
 // The migrated twin of <CtaBand />: an H2 with the same headline, appearing on
 // 38 pages. Its trust bullets now live in CtaBand itself, so the section goes.
 const CTA_DUPLICATE_RE = /^let us help you begin your journey/i;
+
+// Testimonial sections whose actual content — a Google reviews widget on the
+// old site — never migrated, leaving a heading and an intro over empty space.
+// These become a live reviews block, which renders nothing when no API key is
+// configured, so the section collapses rather than shipping an empty shell.
+const REVIEWS_HEADING_RE =
+  /real stories|what our (clients|alumni)|real results|testimonial|what families say|stories of recovery/i;
 
 // Elementor CTA widget titles. When one of these ends up as a section heading it
 // labels nothing — the copy beneath it is ordinary content — so the heading is
@@ -246,6 +254,28 @@ function inlineFaq(blocks: Block[]): QA[] | null {
   }
   // Only worth an accordion if it is genuinely a Q&A run, not one stray question.
   return items.length >= 2 ? items : null;
+}
+
+/**
+ * Turn one raw section into one or more rendered sections.
+ *
+ * A testimonial heading is usually followed by its intro and then, because the
+ * old page had no H2 between them, several unrelated H3 topics. Splitting keeps
+ * the reviews block separate from that trailing content instead of swallowing
+ * it or leaving an empty shell above it.
+ */
+function classifyRaw(heading: string | null, blocks: Block[]): Section[] {
+  if (heading && REVIEWS_HEADING_RE.test(heading)) {
+    const rest = [...blocks];
+    let intro: string | null = null;
+    if (rest[0]?.type === "paragraph") {
+      intro = rest[0].text;
+      rest.shift();
+    }
+    const reviews: Section = { kind: "reviews", heading, intro };
+    return rest.length ? [reviews, classify(null, rest)] : [reviews];
+  }
+  return [classify(heading, blocks)];
 }
 
 function classify(heading: string | null, rawBlocks: Block[]): Section {
@@ -465,7 +495,7 @@ export function structurePage(page: PageContent): StructuredPage {
       blocks: dropLeadingEyebrow(stripWidgetGroups(r.blocks.filter((b) => b.type !== "image"))),
     }))
     .filter((r) => r.heading || r.blocks.length)
-    .map((r) => classify(r.heading, r.blocks))
+    .flatMap((r) => classifyRaw(r.heading, r.blocks))
     .filter((s) => {
       // Drop prose that carries no actual copy. A heading counts as a block, so
       // checking length alone let heading-only sections through — they rendered

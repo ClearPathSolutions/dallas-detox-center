@@ -74,6 +74,37 @@ export function getPageByPath(path: string): PageContent | null {
   return entry ? getPage(entry.slug) : null;
 }
 
+/**
+ * The job title on a team bio, e.g. "Director of Nursing".
+ *
+ * Bios open with a "Who We Are" eyebrow, then the name, then the role — all as
+ * headings — so the role is the first small heading that is neither. Shared by
+ * the bio template, the team hub and the Person schema; when the hub had its
+ * own copy of this it omitted the eyebrow check and published "Who We Are" as
+ * everyone's jobTitle.
+ */
+export function teamRole(page: PageContent): string | null {
+  const heading = page.blocks.find(
+    (b): b is Extract<Block, { type: "heading" }> =>
+      b.type === "heading" &&
+      b.level >= 4 &&
+      b.text.trim().length > 0 &&
+      b.text.trim().length < 60 &&
+      b.text !== "Who We Are" &&
+      b.text.toLowerCase() !== page.title.toLowerCase(),
+  );
+  return heading ? heading.text.trim() : null;
+}
+
+/** Headshot for a team bio: the featured image, or an inline image block. */
+export function teamHeadshot(page: PageContent): { src: string; alt: string } | null {
+  if (page.featured?.src) return { src: page.featured.src, alt: page.featured.alt || page.title };
+  const block = page.blocks.find(
+    (b): b is Extract<Block, { type: "image" }> => b.type === "image",
+  );
+  return block ? { src: block.src, alt: block.alt || page.title } : null;
+}
+
 export function getPost(slug: string): PostContent | null {
   try {
     return JSON.parse(readFileSync(join(CONTENT, "posts", `${slug}.json`), "utf8"));

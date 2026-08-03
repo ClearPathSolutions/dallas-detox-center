@@ -1,18 +1,14 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import type { PageContent } from "@/lib/content";
+import { teamHeadshot, teamRole, type PageContent } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { BlockFlow } from "@/components/content/BlockRenderer";
 import { CtaBand } from "@/components/sections/CtaBand";
 
 export function TeamTemplate({ page }: { page: PageContent }) {
-  const headshot = page.blocks.find((b) => b.type === "image") as
-    | { type: "image"; src: string; alt: string }
-    | undefined;
-  const role = page.blocks.find(
-    (b) => b.type === "heading" && b.level >= 4 && b.text !== page.title && b.text !== "Who We Are",
-  ) as { text: string } | undefined;
+  const headshot = teamHeadshot(page);
+  const role = teamRole(page);
   const bio = page.blocks.filter((b) => b.type === "paragraph");
 
   return (
@@ -28,13 +24,13 @@ export function TeamTemplate({ page }: { page: PageContent }) {
           <div className="grid items-center gap-10 lg:grid-cols-[auto_1fr]">
             {headshot && (
               <div className="mx-auto w-56 overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/10 lg:w-72">
-                <SmartImage src={headshot.src} alt={headshot.alt || page.title} sizes="18rem" />
+                <SmartImage src={headshot.src} alt={headshot.alt} sizes="18rem" />
               </div>
             )}
             <div>
               <p className="eyebrow text-brand-400">Our Team</p>
               <h1 className="mt-3 text-4xl text-white sm:text-5xl">{page.title}</h1>
-              {role && <p className="mt-3 text-lg font-medium text-brand-300">{role.text}</p>}
+              {role && <p className="mt-3 text-lg font-medium text-brand-300">{role}</p>}
             </div>
           </div>
         </Container>

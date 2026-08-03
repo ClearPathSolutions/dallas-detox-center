@@ -1,5 +1,5 @@
 import { site } from "@/lib/site";
-import type { PageContent, PostContent } from "@/lib/content";
+import { teamHeadshot, teamRole, type PageContent, type PostContent } from "@/lib/content";
 
 /**
  * JSON-LD builders.
@@ -140,13 +140,15 @@ export function personSchema(page: PageContent) {
   const m = raw.match(/^(.*?),\s*(.+)$/);
   const name = (m ? m[1] : raw).trim();
   const credential = m ? m[2].trim() : undefined;
+  const headshot = teamHeadshot(page);
   return {
     "@context": "https://schema.org",
     "@type": "Person",
     name,
     honorificSuffix: credential,
+    jobTitle: teamRole(page) ?? undefined,
     url: abs(page.path),
-    image: page.featured?.src ? abs(page.featured.src) : undefined,
+    image: headshot ? abs(headshot.src) : undefined,
     worksFor: { "@id": organisationId },
     ...(credential ? { hasCredential: credential } : {}),
   };

@@ -21,8 +21,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 const OUT = join(ROOT, "content");
 
-/** Shared social card, matching the bios already in the content layer. */
-const OG_IMAGE = "/images/content/2022/05/shutterstock_1377067472.jpg";
+/** Social card for anyone without a headshot of their own. */
+const FALLBACK_OG = "/images/content/2022/05/shutterstock_1377067472.jpg";
 
 const bios = JSON.parse(readFileSync(join(OUT, "team-bios.json"), "utf8"));
 
@@ -36,10 +36,14 @@ for (const bio of bios) {
   const blocks = [
     { type: "heading", level: 6, text: "Who We Are" },
     { type: "heading", level: 1, text: bio.title },
+    { type: "heading", level: 6, text: bio.role },
   ];
-  if (bio.headshot) blocks.push({ type: "image", src: bio.headshot, alt: bio.title });
-  blocks.push({ type: "heading", level: 6, text: bio.role });
   for (const text of bio.paragraphs) blocks.push({ type: "paragraph", html: text, text });
+
+  // The headshot rides on `featured` rather than an image block: that is what
+  // the team hub cards and the Person schema read, and TeamTemplate falls back
+  // to it for the hero. Someone's own face beats the shared stock social card.
+  const featured = bio.headshot ? { src: bio.headshot, alt: bio.title } : false;
 
   const data = {
     id: bio.slug,
@@ -49,9 +53,9 @@ for (const bio of bios) {
     title: bio.title,
     metaTitle: bio.metaTitle,
     metaDescription: bio.metaDescription,
-    ogImage: OG_IMAGE,
+    ogImage: bio.headshot ?? FALLBACK_OG,
     canonical: path,
-    featured: false,
+    featured,
     blocks,
   };
 

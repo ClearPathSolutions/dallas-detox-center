@@ -327,7 +327,7 @@
       "path": "/about-us",
       "template": "page",
       "title": "About Us",
-      "blocks": 50
+      "blocks": 54
     },
     {
       "slug": "home",
@@ -335,20 +335,6 @@
       "template": "home",
       "title": "Homepage",
       "blocks": 107
-    },
-    {
-      "slug": "antoine-gross",
-      "path": "/about-us/antoine-gross",
-      "template": "team",
-      "title": "Antoine Gross Sr.",
-      "blocks": 6
-    },
-    {
-      "slug": "sarah-bentley",
-      "path": "/about-us/sarah-bentley",
-      "template": "team",
-      "title": "Sarah Bentley",
-      "blocks": 6
     },
     {
       "slug": "notice-of-privacy-practices",
@@ -361,7 +347,14 @@
       "slug": "olivia-hadjerioua",
       "path": "/about-us/olivia-hadjerioua",
       "template": "team",
-      "title": "Olivia Hadjerioua",
+      "title": "Olivia Hadjerioua, LPC",
+      "blocks": 6
+    },
+    {
+      "slug": "antoine-gross",
+      "path": "/about-us/antoine-gross",
+      "template": "team",
+      "title": "Antoine Gross Sr., LPC",
       "blocks": 6
     },
     {
@@ -383,6 +376,13 @@
       "path": "/about-us/haley-wadlington",
       "template": "team",
       "title": "Haley Wadlington",
+      "blocks": 6
+    },
+    {
+      "slug": "sarah-bentley",
+      "path": "/about-us/sarah-bentley",
+      "template": "team",
+      "title": "Sarah Bentley",
       "blocks": 6
     }
   ],

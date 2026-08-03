@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { site } from "@/lib/site";
-import { getIndex, getPageByPath } from "@/lib/content";
+import { getIndex, getPageByPath, teamHeadshot, teamRole } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { CtaBand } from "@/components/sections/CtaBand";
@@ -33,22 +33,23 @@ function member(path: string, title: string): Member | null {
   const name = (m ? m[1] : title).trim();
   const credential = m ? m[2].trim() : null;
 
-  // Bios lead with a short role heading (e.g. "Clinical Director") before prose.
-  let role: string | null = null;
   let teaser: string | null = null;
   for (const b of page.blocks) {
-    if (!role && b.type === "heading" && b.level >= 4) {
-      const t = b.text.trim();
-      if (t && t.length < 60 && t.toLowerCase() !== name.toLowerCase()) role = t;
-    }
-    if (!teaser && b.type === "paragraph" && b.text.trim().length > 80) {
+    if (b.type === "paragraph" && b.text.trim().length > 80) {
       const t = b.text.trim().replace(/\s+/g, " ");
       teaser = t.length > 190 ? t.slice(0, 187).replace(/[,;:\s]+\S*$/, "") + "…" : t;
+      break;
     }
-    if (role && teaser) break;
   }
 
-  return { path, name, credential, role, teaser, image: page.featured?.src ?? null };
+  return {
+    path,
+    name,
+    credential,
+    role: teamRole(page),
+    teaser,
+    image: teamHeadshot(page)?.src ?? null,
+  };
 }
 
 export default function MeetTheTeamPage() {

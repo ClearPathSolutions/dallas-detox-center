@@ -129,24 +129,34 @@
       "text": "Meet Our Team"
     },
     {
+      "type": "heading",
+      "level": 3,
+      "text": "Olivia Hadjerioua, LPC"
+    },
+    {
+      "type": "paragraph",
+      "html": "Executive Director",
+      "text": "Executive Director"
+    },
+    {
       "type": "image",
       "src": "/images/content/2026/02/Screenshot-2026-02-15-190959.png",
-      "alt": ""
+      "alt": "Antoine Gross Sr., LPC"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "Antoine Gross Sr"
+      "text": "Antoine Gross Sr., LPC"
     },
     {
       "type": "paragraph",
-      "html": "Director of Clinical Services <br> (Mental Health Program)",
-      "text": "Director of Clinical Services (Mental Health Program)"
+      "html": "Director of Clinical Services",
+      "text": "Director of Clinical Services"
     },
     {
       "type": "image",
       "src": "/images/content/2026/02/Screenshot-2026-02-15-191155.png",
-      "alt": ""
+      "alt": "Deborah Wade, BSN, RN"
     },
     {
       "type": "heading",
@@ -161,7 +171,7 @@
     {
       "type": "image",
       "src": "/images/content/2026/05/Josh-L.png",
-      "alt": "Joshua Leder - Director of Operations Dallas"
+      "alt": "Joshua Leder"
     },
     {
       "type": "heading",
@@ -172,6 +182,16 @@
       "type": "paragraph",
       "html": "Director of Operations",
       "text": "Director of Operations"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Haley Wadlington"
+    },
+    {
+      "type": "paragraph",
+      "html": "Director of Client Care",
+      "text": "Director of Client Care"
     },
     {
       "type": "heading",

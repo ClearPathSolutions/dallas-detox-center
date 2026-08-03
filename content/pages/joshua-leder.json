@@ -6,9 +6,12 @@
   "title": "Joshua Leder",
   "metaTitle": "Joshua Leder — Director of Operations | Dallas Detox Center",
   "metaDescription": "Meet Joshua Leder, Director of Operations at Dallas Detox Center.",
-  "ogImage": "/images/content/2022/05/shutterstock_1377067472.jpg",
+  "ogImage": "/images/content/2026/05/Josh-L.png",
   "canonical": "/about-us/joshua-leder",
-  "featured": false,
+  "featured": {
+    "src": "/images/content/2026/05/Josh-L.png",
+    "alt": "Joshua Leder"
+  },
   "blocks": [
     {
       "type": "heading",

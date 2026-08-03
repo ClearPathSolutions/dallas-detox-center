@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Check, ArrowRight, ShieldCheck } from "lucide-react";
-import type { PageContent } from "@/lib/content";
+import type { PageContent, Block } from "@/lib/content";
 import {
   structurePage,
   serviceHref,
@@ -11,12 +11,14 @@ import {
   type Group,
   type GalleryItem,
 } from "@/lib/blocks";
-import { galleryFor } from "@/lib/media";
+import { galleryFor, heroFor } from "@/lib/media";
 import { Container } from "@/components/ui/Container";
+import { SmartImage } from "@/components/ui/SmartImage";
 import { BlockFlow } from "@/components/content/BlockRenderer";
 import { PageHero } from "@/components/content/PageHero";
 import { InsuranceStrip } from "@/components/sections/InsuranceStrip";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { GoogleReviews } from "@/components/sections/GoogleReviews";
 import { InlineCta } from "@/components/sections/InlineCta";
 import { LocationMap } from "@/components/sections/LocationMap";
 import { Faq, FaqSchema } from "@/components/ui/Faq";
@@ -51,8 +53,31 @@ export function PageTemplate({
   const { eyebrow, title, lead, byline, sections, gallery } = structurePage(page);
   const leadText = lead[0]?.type === "paragraph" ? lead[0].text : null;
 
-  // Alternate light backgrounds only across "prose" sections for rhythm.
-  let proseIdx = 0;
+  /**
+   * One alternation across every light section, not just prose.
+   *
+   * Previously each section type hardcoded its own background and only prose
+   * alternated, so a run like prose(white) → cards(sand) → prose(sand) put two
+   * sand blocks together and they read as a single oversized slab. This tracks
+   * the last light tone emitted — whatever the section type — and hands the
+   * next one the opposite.
+   *
+   * Dark sections (glance, insurance) don't consume a turn: the eye reads them
+   * as a divider, so the light rhythm continues across them.
+   */
+  // Photos for breaking up long prose. Offset past the gallery's slice so an
+  // inline image never repeats one shown at the foot of the page.
+  const inlinePool = galleryFor(page.slug, 14).slice(6);
+  let inlineUsed = 0;
+  const nextInlineImage = () =>
+    inlineUsed < inlinePool.length ? inlinePool[inlineUsed++] : undefined;
+
+  let lastLight: "white" | "sand" = "sand";
+  const nextTone = () => {
+    lastLight = lastLight === "white" ? "sand" : "white";
+    return lastLight === "sand" ? "bg-sand-50" : "bg-white";
+  };
+  const currentTone = () => (lastLight === "sand" ? "bg-sand-50" : "bg-white");
 
   // Distribute the conversion modules through the page rather than stacking
   // them after the last section. Only long pages get the mid-page break; short
@@ -69,12 +94,12 @@ export function PageTemplate({
         title={title}
         lead={leadText}
         byline={byline}
-        image={heroImageOverride || page.featured?.src || null}
+        image={heroImageOverride || page.featured?.src || heroFor(page.slug)}
         breadcrumb={breadcrumb}
       />
 
       {lead.length > 1 && (
-        <section className="bg-white pt-14">
+        <section className={cn("pt-14", nextTone())}>
           <Container>
             <div className="mx-auto max-w-3xl">
               <BlockFlow blocks={lead.slice(1)} />
@@ -89,16 +114,25 @@ export function PageTemplate({
             <ProseSection
               key={i}
               section={section}
-              tone={proseIdx++ % 2 === 1 ? "bg-sand-50" : "bg-white"}
+              tone={nextTone()}
+              image={nextInlineImage()}
             />
           ) : section.kind === "glance" ? (
             <GlanceSection key={i} section={section} />
           ) : section.kind === "steps" ? (
-            <StepsSection key={i} section={section} />
+            <StepsSection key={i} section={section} tone={nextTone()} />
           ) : section.kind === "faq" ? (
-            <FaqSection key={i} section={section} />
+            <FaqSection key={i} section={section} tone={nextTone()} />
+          ) : section.kind === "reviews" ? (
+            <GoogleReviews
+              key={i}
+              heading={section.heading ?? undefined}
+              eyebrow="What Families Say"
+              intro={section.intro}
+              tone={nextTone()}
+            />
           ) : (
-            <CardsSection key={i} section={section} />
+            <CardsSection key={i} section={section} tone={nextTone()} />
           );
 
         // Break up long pages instead of stacking every CTA at the end.
@@ -106,7 +140,7 @@ export function PageTemplate({
           <Fragment key={i}>
             {node}
             {section.heading && WANTS_MAP.test(section.heading) && (
-              <section className="bg-white pb-14">
+              <section className={cn("pb-14", currentTone())}>
                 <Container>
                   <LocationMap className="mx-auto max-w-3xl" />
                 </Container>
@@ -124,12 +158,17 @@ export function PageTemplate({
         wider facility pool instead. Pages with their own distinctive photos keep
         them.
       */}
+      {/* Short pages never reached the interleaved position above. Placed
+          before the gallery so the dark strip is separated from the dark CTA. */}
+      {showInsurance && insuranceAfter === -1 && <InsuranceStrip />}
+
       {gallery.length >= 3 && (
-        <GallerySection items={isGenericGallery(gallery) ? galleryFor(page.slug, 6) : gallery} />
+        <GallerySection
+          items={isGenericGallery(gallery) ? galleryFor(page.slug, 6) : gallery}
+          tone={nextTone()}
+        />
       )}
 
-      {/* Short pages never reached the interleaved position above. */}
-      {showInsurance && insuranceAfter === -1 && <InsuranceStrip />}
       <CtaBand />
     </>
   );
@@ -147,13 +186,60 @@ function Heading({ children, centered }: { children: React.ReactNode; centered?:
 
 /* ---------- prose ---------- */
 
+/** Words past which a prose section reads as a wall and earns a break. */
+const LONG_PROSE_WORDS = 320;
+
+const wordsIn = (blocks: Block[]) =>
+  blocks.reduce((n, b) => {
+    const t =
+      b.type === "paragraph" || b.type === "heading"
+        ? b.text
+        : b.type === "list"
+          ? b.items.join(" ")
+          : "";
+    return n + (t ? t.trim().split(/\s+/).length : 0);
+  }, 0);
+
+/**
+ * Pick a split point near the middle of a long section, preferring a heading
+ * boundary so the break lands between topics rather than mid-thought.
+ */
+function splitPoint(blocks: Block[]): number {
+  const target = wordsIn(blocks) / 2;
+  let run = 0;
+  let best = -1;
+  let bestDist = Infinity;
+  for (let i = 0; i < blocks.length; i++) {
+    const b = blocks[i];
+    if (b.type === "heading" && i > 0) {
+      const d = Math.abs(run - target);
+      if (d < bestDist) {
+        bestDist = d;
+        best = i;
+      }
+    }
+    run += wordsIn([b]);
+  }
+  return best;
+}
+
 function ProseSection({
   section,
   tone,
+  image,
 }: {
   section: Extract<Section, { kind: "prose" }>;
   tone: string;
+  image?: { src: string; alt: string };
 }) {
+  // Long sections ran to well over two screens of unbroken body copy. Where a
+  // photo is available, the section is cut at a heading near its midpoint and
+  // the image sits in the gap.
+  const long = image && wordsIn(section.blocks) > LONG_PROSE_WORDS;
+  const at = long ? splitPoint(section.blocks) : -1;
+  const head = at > 0 ? section.blocks.slice(0, at) : section.blocks;
+  const tail = at > 0 ? section.blocks.slice(at) : [];
+
   return (
     <section className={cn("py-14 lg:py-16", tone)}>
       <Container>
@@ -164,11 +250,29 @@ function ProseSection({
               <Heading>{section.heading}</Heading>
             </div>
           )}
-          <div className="">
-            <BlockFlow blocks={section.blocks} />
-          </div>
+          <BlockFlow blocks={head} />
         </div>
       </Container>
+
+      {at > 0 && image && (
+        <Container className="my-12">
+          <figure className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-navy-900/5">
+            <SmartImage
+              src={image.src}
+              alt={image.alt}
+              sizes="(min-width:1280px) 76rem, 100vw"
+            />
+          </figure>
+        </Container>
+      )}
+
+      {tail.length > 0 && (
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <BlockFlow blocks={tail} />
+          </div>
+        </Container>
+      )}
     </section>
   );
 }
@@ -226,9 +330,9 @@ function GlanceSection({ section }: { section: Extract<Section, { kind: "glance"
 
 /* ---------- steps (numbered timeline) ---------- */
 
-function StepsSection({ section }: { section: Extract<Section, { kind: "steps" }> }) {
+function StepsSection({ section, tone }: { section: Extract<Section, { kind: "steps" }>; tone: string }) {
   return (
-    <section className="bg-white py-16 lg:py-20">
+    <section className={cn("py-16 lg:py-20", tone)}>
       <Container>
         <div className="mx-auto max-w-3xl">
           {section.heading && <Heading>{section.heading}</Heading>}
@@ -272,9 +376,9 @@ function cleanStepTitle(t: string) {
  * questions were recovered these pages showed a heading followed by a wall of
  * unlabelled answers.
  */
-function FaqSection({ section }: { section: Extract<Section, { kind: "faq" }> }) {
+function FaqSection({ section, tone }: { section: Extract<Section, { kind: "faq" }>; tone: string }) {
   return (
-    <section className="bg-sand-50 py-16 lg:py-20">
+    <section className={cn("py-16 lg:py-20", tone)}>
       <Container>
         <Heading centered>{section.heading || "Frequently Asked Questions"}</Heading>
         <div className="mt-10">
@@ -288,9 +392,9 @@ function FaqSection({ section }: { section: Extract<Section, { kind: "faq" }> })
 
 /* ---------- cards ---------- */
 
-function CardsSection({ section }: { section: Extract<Section, { kind: "cards" }> }) {
+function CardsSection({ section, tone }: { section: Extract<Section, { kind: "cards" }>; tone: string }) {
   return (
-    <section className="bg-sand-50 py-16 lg:py-20">
+    <section className={cn("py-16 lg:py-20", tone)}>
       <Container>
         {section.heading && <Heading centered>{section.heading}</Heading>}
         {section.intro.length > 0 && (
@@ -298,7 +402,17 @@ function CardsSection({ section }: { section: Extract<Section, { kind: "cards" }
             <BlockFlow blocks={section.intro} />
           </div>
         )}
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {/*
+          Column count follows the card count. A four-card set in a three-column
+          grid strands one card alone on the second row, which is what made
+          several pages look lopsided; four reads better as a 2x2.
+        */}
+        <div
+          className={cn(
+            "mt-10 grid gap-6 sm:grid-cols-2",
+            section.cards.length === 4 ? "lg:grid-cols-2" : "lg:grid-cols-3",
+          )}
+        >
           {section.cards.map((card, i) => (
             <Card key={i} card={card} />
           ))}
@@ -344,13 +458,13 @@ function Card({ card }: { card: Group }) {
 
 /* ---------- gallery ---------- */
 
-function GallerySection({ items }: { items: GalleryItem[] }) {
+function GallerySection({ items, tone }: { items: GalleryItem[]; tone: string }) {
   return (
-    <section className="bg-navy-900 py-16 lg:py-20">
+    <section className={cn("py-16 lg:py-20", tone)}>
       <Container>
         <div className="text-center">
-          <p className="eyebrow text-brand-400">Our Facility</p>
-          <h2 className="mt-3 font-display text-3xl text-white sm:text-4xl">A Look Inside Our Campus</h2>
+          <p className="eyebrow text-brand-600">Our Facility</p>
+          <h2 className="mt-3 font-display text-3xl text-navy-800 sm:text-4xl">A Look Inside Our Campus</h2>
         </div>
         <div
           className={cn(

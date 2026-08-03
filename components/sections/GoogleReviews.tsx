@@ -11,20 +11,29 @@ import { Container } from "@/components/ui/Container";
  *
  * Deliberately ships no Review/aggregateRating JSON-LD — see lib/reviews.ts.
  */
-export async function GoogleReviews() {
+export async function GoogleReviews({
+  heading = "Reviews From Our Community",
+  eyebrow = "What Families Say",
+  intro,
+  tone = "bg-sand-50",
+}: {
+  heading?: string;
+  eyebrow?: string;
+  intro?: string | null;
+  tone?: string;
+} = {}) {
   const data = await getGoogleReviews();
   if (!data) return null;
 
   const { rating, total, profileUrl, reviews } = data;
 
   return (
-    <section className="bg-sand-50 py-16 lg:py-24">
+    <section className={`py-16 lg:py-24 ${tone}`}>
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <p className="eyebrow text-brand-600">What Families Say</p>
-          <h2 className="mt-3 text-3xl text-navy-800 sm:text-4xl">
-            Reviews From Our Community
-          </h2>
+          <p className="eyebrow text-brand-600">{eyebrow}</p>
+          <h2 className="mt-3 text-3xl text-navy-800 sm:text-4xl">{heading}</h2>
+          {intro && <p className="mt-4 text-navy-600">{intro}</p>}
 
           <div className="mt-5 flex flex-col items-center gap-2">
             <Stars rating={rating} />

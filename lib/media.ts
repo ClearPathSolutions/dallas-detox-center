@@ -61,6 +61,31 @@ function hash(s: string): number {
  * `count` photos for `slug`, rotated through POOL. Deterministic, so the build
  * is reproducible and a page's imagery doesn't shuffle between deploys.
  */
+/**
+ * Wide, full-bleed shots suitable for a page hero. Interiors are excluded — a
+ * close bedroom shot behind the headline scrim reads as clutter.
+ */
+const HERO_POOL: string[] = [
+  `${C}1-web-or-mls-DJI_20260206132754_0577_D.jpg`,
+  `${C}2-web-or-mls-DJI_20260206132819_0580_D-1024x576.jpg`,
+  `${C}3-web-or-mls-DJI_20260206132919_0584_D-1024x576.jpg`,
+  `${C}10-web-or-mls-DSC09526.jpg`,
+  `${C}33-web-or-mls-DSC05067.jpg`,
+  "/images/content/2026/05/33-web-or-mls-DJI_20260505155843_0939_D.jpg",
+  "/images/content/2026/05/34-web-or-mls-DJI_20260505155925_0941_D.jpg",
+  "/images/content/2026/05/38-web-or-mls-DJI_20260505160203_0953_D.jpg",
+  "/images/content/2026/05/39-web-or-mls-DJI_20260505160314_0956_D.jpg",
+];
+
+/**
+ * Hero for a page that brought no image of its own. 43 of 104 pages were
+ * defaulting to the same aerial, which made the site feel like one page
+ * repeated; this spreads them deterministically across the wide shots.
+ */
+export function heroFor(slug: string): string {
+  return HERO_POOL[hash(slug) % HERO_POOL.length];
+}
+
 export function galleryFor(slug: string, count = 6): { src: string; alt: string }[] {
   const start = hash(slug) % POOL.length;
   return Array.from({ length: Math.min(count, POOL.length) }, (_, i) => POOL[(start + i) % POOL.length]);

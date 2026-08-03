@@ -13,13 +13,14 @@ export function SmartImage({
   alt,
   className,
   sizes = "(min-width: 1024px) 800px, 100vw",
-  priority,
+  preload,
 }: {
   src: string;
   alt: string;
   className?: string;
   sizes?: string;
-  priority?: boolean;
+  /** Next 16 renamed `priority` to `preload`; use for above-the-fold images. */
+  preload?: boolean;
 }) {
   const d = DIMS[src] ?? { w: 1200, h: 800 };
   return (
@@ -29,7 +30,7 @@ export function SmartImage({
       width={d.w}
       height={d.h}
       sizes={sizes}
-      priority={priority}
+      preload={preload}
       className={cn("h-auto w-full", className)}
     />
   );
