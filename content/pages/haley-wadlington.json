@@ -1,0 +1,44 @@
+{
+  "id": "haley-wadlington",
+  "slug": "haley-wadlington",
+  "path": "/about-us/haley-wadlington",
+  "template": "team",
+  "title": "Haley Wadlington",
+  "metaTitle": "Haley Wadlington — Director of Client Care | Dallas Detox Center",
+  "metaDescription": "Meet Haley Wadlington, Director of Client Care at Dallas Detox Center.",
+  "ogImage": "/images/content/2022/05/shutterstock_1377067472.jpg",
+  "canonical": "/about-us/haley-wadlington",
+  "featured": false,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Who We Are"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Haley Wadlington"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Director of Client Care"
+    },
+    {
+      "type": "paragraph",
+      "html": "Haley Wadlington serves as the Director of Client Care, where she is dedicated to ensuring that each client receives compassionate, individualized, and consistent support throughout their treatment experience. In her role, Haley helps oversee client care coordination, discharge planning, family communication, and ongoing support services to help clients feel seen, heard, and guided during a vulnerable time in their lives.",
+      "text": "Haley Wadlington serves as the Director of Client Care, where she is dedicated to ensuring that each client receives compassionate, individualized, and consistent support throughout their treatment experience. In her role, Haley helps oversee client care coordination, discharge planning, family communication, and ongoing support services to help clients feel seen, heard, and guided during a vulnerable time in their lives."
+    },
+    {
+      "type": "paragraph",
+      "html": "Haley is passionate about creating a client-centered environment built on dignity, accountability, and meaningful connection. She works closely with clients, families, and the clinical team to help identify needs, reduce barriers, and support a smooth transition into the next appropriate level of care. Her approach emphasizes advocacy, clear communication, and practical support, ensuring that clients are not only cared for during treatment but also prepared for continued success after discharge.",
+      "text": "Haley is passionate about creating a client-centered environment built on dignity, accountability, and meaningful connection. She works closely with clients, families, and the clinical team to help identify needs, reduce barriers, and support a smooth transition into the next appropriate level of care. Her approach emphasizes advocacy, clear communication, and practical support, ensuring that clients are not only cared for during treatment but also prepared for continued success after discharge."
+    },
+    {
+      "type": "paragraph",
+      "html": "With a strong commitment to ethical care and trauma-informed support, Haley strives to make every client interaction purposeful, respectful, and rooted in hope. Her goal is to help clients and their loved ones feel supported, informed, and empowered as they move forward in their recovery journey.",
+      "text": "With a strong commitment to ethical care and trauma-informed support, Haley strives to make every client interaction purposeful, respectful, and rooted in hope. Her goal is to help clients and their loved ones feel supported, informed, and empowered as they move forward in their recovery journey."
+    }
+  ]
+}

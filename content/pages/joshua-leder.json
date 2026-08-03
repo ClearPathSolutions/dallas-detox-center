@@ -1,0 +1,44 @@
+{
+  "id": "joshua-leder",
+  "slug": "joshua-leder",
+  "path": "/about-us/joshua-leder",
+  "template": "team",
+  "title": "Joshua Leder",
+  "metaTitle": "Joshua Leder — Director of Operations | Dallas Detox Center",
+  "metaDescription": "Meet Joshua Leder, Director of Operations at Dallas Detox Center.",
+  "ogImage": "/images/content/2022/05/shutterstock_1377067472.jpg",
+  "canonical": "/about-us/joshua-leder",
+  "featured": false,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Who We Are"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Joshua Leder"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Director of Operations"
+    },
+    {
+      "type": "paragraph",
+      "html": "Joshua Leder serves as Director of Operations for the Texas facilities under Quadrant Health Group, where he oversees daily operations and supports the continued growth and development of the organization’s behavioral health programs across the state.",
+      "text": "Joshua Leder serves as Director of Operations for the Texas facilities under Quadrant Health Group, where he oversees daily operations and supports the continued growth and development of the organization’s behavioral health programs across the state."
+    },
+    {
+      "type": "paragraph",
+      "html": "Originally born in Colorado and raised primarily in Texas, Joshua brings both personal passion and professional dedication to his role. As a proud father of two children, he values family, purpose, and creating a positive impact in the lives of others.",
+      "text": "Originally born in Colorado and raised primarily in Texas, Joshua brings both personal passion and professional dedication to his role. As a proud father of two children, he values family, purpose, and creating a positive impact in the lives of others."
+    },
+    {
+      "type": "paragraph",
+      "html": "Joshua is deeply committed to helping individuals build healthier, more fulfilling lives while encouraging hope, healing, and personal growth. Guided by compassion, understanding, and faith, he strives to support others in recognizing that lasting change and recovery are possible. Drawing from his own experiences and journey, Joshua is passionate about inspiring those around him through strength, empathy, and service to others.",
+      "text": "Joshua is deeply committed to helping individuals build healthier, more fulfilling lives while encouraging hope, healing, and personal growth. Guided by compassion, understanding, and faith, he strives to support others in recognizing that lasting change and recovery are possible. Drawing from his own experiences and journey, Joshua is passionate about inspiring those around him through strength, empathy, and service to others."
+    }
+  ]
+}

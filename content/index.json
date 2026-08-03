@@ -384,6 +384,34 @@
       "template": "page",
       "title": "Notice of Privacy Practices",
       "blocks": 58
+    },
+    {
+      "slug": "olivia-hadjerioua",
+      "path": "/about-us/olivia-hadjerioua",
+      "template": "team",
+      "title": "Olivia Hadjerioua",
+      "blocks": 6
+    },
+    {
+      "slug": "deborah-wade",
+      "path": "/about-us/deborah-wade",
+      "template": "team",
+      "title": "Deborah Wade, BSN, RN",
+      "blocks": 4
+    },
+    {
+      "slug": "joshua-leder",
+      "path": "/about-us/joshua-leder",
+      "template": "team",
+      "title": "Joshua Leder",
+      "blocks": 6
+    },
+    {
+      "slug": "haley-wadlington",
+      "path": "/about-us/haley-wadlington",
+      "template": "team",
+      "title": "Haley Wadlington",
+      "blocks": 6
     }
   ],
   "posts": [

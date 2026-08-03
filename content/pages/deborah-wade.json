@@ -1,0 +1,34 @@
+{
+  "id": "deborah-wade",
+  "slug": "deborah-wade",
+  "path": "/about-us/deborah-wade",
+  "template": "team",
+  "title": "Deborah Wade, BSN, RN",
+  "metaTitle": "Deborah Wade, BSN, RN — Director of Nursing | Dallas Detox Center",
+  "metaDescription": "Meet Deborah Wade, BSN, RN, Director of Nursing at Dallas Detox Center.",
+  "ogImage": "/images/content/2022/05/shutterstock_1377067472.jpg",
+  "canonical": "/about-us/deborah-wade",
+  "featured": false,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Who We Are"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Deborah Wade, BSN, RN"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Director of Nursing"
+    },
+    {
+      "type": "paragraph",
+      "html": "Deborah has been a dedicated member of the Dallas Detox Center team for the past three years. With a strong passion for client care and recovery, Deborah plays a vital role in medically supporting clients through the detoxification process. She also manages client care at the Residential Treatment Center (RTC) level of care and provides leadership and oversight to the nursing staff. Her compassionate approach and clinical expertise help ensure a safe, supportive environment for clients at every stage of their recovery journey.",
+      "text": "Deborah has been a dedicated member of the Dallas Detox Center team for the past three years. With a strong passion for client care and recovery, Deborah plays a vital role in medically supporting clients through the detoxification process. She also manages client care at the Residential Treatment Center (RTC) level of care and provides leadership and oversight to the nursing staff. Her compassionate approach and clinical expertise help ensure a safe, supportive environment for clients at every stage of their recovery journey."
+    }
+  ]
+}

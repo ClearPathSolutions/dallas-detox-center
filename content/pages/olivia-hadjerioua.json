@@ -1,0 +1,44 @@
+{
+  "id": "olivia-hadjerioua",
+  "slug": "olivia-hadjerioua",
+  "path": "/about-us/olivia-hadjerioua",
+  "template": "team",
+  "title": "Olivia Hadjerioua",
+  "metaTitle": "Olivia Hadjerioua — Executive Director | Dallas Detox Center",
+  "metaDescription": "Meet Olivia Hadjerioua, Executive Director at Dallas Detox Center.",
+  "ogImage": "/images/content/2022/05/shutterstock_1377067472.jpg",
+  "canonical": "/about-us/olivia-hadjerioua",
+  "featured": false,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Who We Are"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Olivia Hadjerioua"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Executive Director"
+    },
+    {
+      "type": "paragraph",
+      "html": "Olivia Hadjerioua serves as Executive Director for Dallas Detox Center and Fort Worth Wellness Center, where she oversees daily operations across both Texas facilities while supporting initiatives centered on quality care, team development, and client success.",
+      "text": "Olivia Hadjerioua serves as Executive Director for Dallas Detox Center and Fort Worth Wellness Center, where she oversees daily operations across both Texas facilities while supporting initiatives centered on quality care, team development, and client success."
+    },
+    {
+      "type": "paragraph",
+      "html": "Originally from Tennessee, Olivia brings a compassionate, people-centered approach to leadership rooted in her clinical background as a Licensed Professional Counselor (LPC). With experience working across all levels of care, she is deeply passionate about helping individuals navigate mental health and substance use recovery with dignity, support, and hope.",
+      "text": "Originally from Tennessee, Olivia brings a compassionate, people-centered approach to leadership rooted in her clinical background as a Licensed Professional Counselor (LPC). With experience working across all levels of care, she is deeply passionate about helping individuals navigate mental health and substance use recovery with dignity, support, and hope."
+    },
+    {
+      "type": "paragraph",
+      "html": "In her leadership role, Olivia is committed to fostering a culture of accountability, integrity, and excellence while creating an environment where both clients and staff can thrive. Her dedication to operational excellence and individualized care continues to support the growth and mission of both Dallas Detox Center and Fort Worth Wellness Center.",
+      "text": "In her leadership role, Olivia is committed to fostering a culture of accountability, integrity, and excellence while creating an environment where both clients and staff can thrive. Her dedication to operational excellence and individualized care continues to support the growth and mission of both Dallas Detox Center and Fort Worth Wellness Center."
+    }
+  ]
+}
