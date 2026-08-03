@@ -65,19 +65,40 @@ export function PageTemplate({
    * Dark sections (glance, insurance) don't consume a turn: the eye reads them
    * as a divider, so the light rhythm continues across them.
    */
-  // Photos for breaking up long prose. Offset past the gallery's slice so an
-  // inline image never repeats one shown at the foot of the page.
+  /**
+   * Tones and inline photos are planned up front rather than pulled from a
+   * counter during render, so nothing is reassigned mid-render and the result
+   * is identical on every pass.
+   *
+   * Photos for breaking up long prose come from a slice offset past the
+   * gallery's, so an inline image never repeats one shown at the foot.
+   */
   const inlinePool = galleryFor(page.slug, 14).slice(6);
-  let inlineUsed = 0;
-  const nextInlineImage = () =>
-    inlineUsed < inlinePool.length ? inlinePool[inlineUsed++] : undefined;
 
-  let lastLight: "white" | "sand" = "sand";
-  const nextTone = () => {
-    lastLight = lastLight === "white" ? "sand" : "white";
-    return lastLight === "sand" ? "bg-sand-50" : "bg-white";
+  // Which slots take a light background, in render order: the lead block, each
+  // non-dark section, then the gallery. Dark sections are excluded so they
+  // don't consume a turn in the alternation.
+  const lightSlots = [
+    lead.length > 1,
+    ...sections.map((sec) => sec.kind !== "glance"),
+    true, // gallery
+  ];
+  const lightsBefore = (i: number) => lightSlots.slice(0, i).filter(Boolean).length;
+  const toneAt = (i: number) => (lightsBefore(i) % 2 === 0 ? "bg-white" : "bg-sand-50");
+
+  // A long prose section gets the next unused photo, by how many prose sections
+  // precede it.
+  const imageAt = (i: number) => {
+    const nth = sections.slice(0, i).filter((sec) => sec.kind === "prose").length;
+    return sections[i].kind === "prose" ? inlinePool[nth] : undefined;
   };
-  const currentTone = () => (lastLight === "sand" ? "bg-sand-50" : "bg-white");
+
+  const plan = {
+    leadTone: lead.length > 1 ? toneAt(0) : "",
+    sectionTones: sections.map((sec, i) => (sec.kind === "glance" ? "" : toneAt(i + 1))),
+    sectionImages: sections.map((_, i) => imageAt(i)),
+    galleryTone: toneAt(lightSlots.length - 1),
+  };
 
   // Distribute the conversion modules through the page rather than stacking
   // them after the last section. Only long pages get the mid-page break; short
@@ -99,7 +120,7 @@ export function PageTemplate({
       />
 
       {lead.length > 1 && (
-        <section className={cn("pt-14", nextTone())}>
+        <section className={cn("pt-14", plan.leadTone)}>
           <Container>
             <div className="mx-auto max-w-3xl">
               <BlockFlow blocks={lead.slice(1)} />
@@ -114,25 +135,25 @@ export function PageTemplate({
             <ProseSection
               key={i}
               section={section}
-              tone={nextTone()}
-              image={nextInlineImage()}
+              tone={plan.sectionTones[i]}
+              image={plan.sectionImages[i]}
             />
           ) : section.kind === "glance" ? (
             <GlanceSection key={i} section={section} />
           ) : section.kind === "steps" ? (
-            <StepsSection key={i} section={section} tone={nextTone()} />
+            <StepsSection key={i} section={section} tone={plan.sectionTones[i]} />
           ) : section.kind === "faq" ? (
-            <FaqSection key={i} section={section} tone={nextTone()} />
+            <FaqSection key={i} section={section} tone={plan.sectionTones[i]} />
           ) : section.kind === "reviews" ? (
             <GoogleReviews
               key={i}
               heading={section.heading ?? undefined}
               eyebrow="What Families Say"
               intro={section.intro}
-              tone={nextTone()}
+              tone={plan.sectionTones[i]}
             />
           ) : (
-            <CardsSection key={i} section={section} tone={nextTone()} />
+            <CardsSection key={i} section={section} tone={plan.sectionTones[i]} />
           );
 
         // Break up long pages instead of stacking every CTA at the end.
@@ -140,7 +161,7 @@ export function PageTemplate({
           <Fragment key={i}>
             {node}
             {section.heading && WANTS_MAP.test(section.heading) && (
-              <section className={cn("pb-14", currentTone())}>
+              <section className={cn("pb-14", plan.sectionTones[i])}>
                 <Container>
                   <LocationMap className="mx-auto max-w-3xl" />
                 </Container>
@@ -165,7 +186,7 @@ export function PageTemplate({
       {gallery.length >= 3 && (
         <GallerySection
           items={isGenericGallery(gallery) ? galleryFor(page.slug, 6) : gallery}
-          tone={nextTone()}
+          tone={plan.galleryTone}
         />
       )}
 
