@@ -17,10 +17,54 @@ declare global {
 }
 
 // Must match the form keys configured in the Clarion dashboard.
+//
+// Note: the Clarion endpoint returns 200 for ANY form_key, including ones that
+// do not exist, so a typo here fails silently on their side rather than ours.
+// These two strings are the only thing routing a lead to the right queue.
 const CLARION_FORM_KEY: Record<Intent, string> = {
   verify: "insurance_verification",
   contact: "contact",
 };
+
+/**
+ * Post straight to Clarion's public endpoint.
+ *
+ * Used when window.ClarionForms is missing — the capture script is a
+ * third-party <script> and is a common ad-blocker target. Without this, a
+ * blocked script meant the visitor got an error and the lead was lost. Same
+ * vendor, same endpoint, just no dependency on their script having loaded.
+ *
+ * Mirrors the payload the script builds, including the attribution fields.
+ */
+async function submitDirect(formKey: string, data: Record<string, unknown>) {
+  const params = new URLSearchParams(window.location.search);
+  const utm: Record<string, string> = {};
+  for (const k of ["source", "medium", "campaign", "term", "content"]) {
+    const v = params.get(`utm_${k}`);
+    if (v) utm[k] = v;
+  }
+  const referrer =
+    document.referrer && !document.referrer.startsWith(window.location.origin)
+      ? document.referrer
+      : null;
+
+  return fetch(`${site.widgets.clarion.api}/forms/public/submit`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    keepalive: true,
+    body: JSON.stringify({
+      site_key: site.widgets.clarion.siteKey,
+      form_key: formKey,
+      data,
+      page_url: window.location.href,
+      landing_page_url: window.location.href,
+      referrer,
+      utm: Object.keys(utm).length ? utm : null,
+      gclid: params.get("gclid"),
+      user_agent: navigator.userAgent,
+    }),
+  });
+}
 
 type Intent = "verify" | "contact";
 type Status = "idle" | "submitting" | "success" | "error";
@@ -73,15 +117,22 @@ export function LeadForm({ intent = "contact" }: { intent?: Intent }) {
       // Because of that, never resolve to a thank-you unless Clarion actually
       // accepted the submission. If its script was blocked or the POST failed,
       // the visitor must see the phone number instead of a false confirmation.
+      const payload = { ...data, intent };
+      const formKey = CLARION_FORM_KEY[intent];
       let accepted = false;
       try {
-        const res = await window.ClarionForms?.submit({
-          form_key: CLARION_FORM_KEY[intent],
-          data: { ...data, intent },
-        });
+        const res = window.ClarionForms
+          ? await window.ClarionForms.submit({ form_key: formKey, data: payload })
+          : await submitDirect(formKey, payload);
         accepted = !!res && res.ok !== false;
       } catch {
-        accepted = false;
+        // Script blocked AND the direct call failed, or the network is down.
+        try {
+          const res = await submitDirect(formKey, payload);
+          accepted = res.ok;
+        } catch {
+          accepted = false;
+        }
       }
 
       if (!accepted) {
