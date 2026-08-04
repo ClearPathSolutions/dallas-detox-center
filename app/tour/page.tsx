@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, ArrowRight } from "lucide-react";
 import { getPage } from "@/lib/content";
 import { metaFor } from "@/lib/seo";
@@ -66,9 +67,18 @@ export default function TourPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Tour Our Facility", path: "/tour" }])} />
-      <section className="bg-navy-900 py-16 lg:py-20">
-        <Container>
-          <p className="eyebrow text-brand-400">Your Private Sanctuary for Healing</p>
+      <section className="relative overflow-hidden bg-navy-950 py-16 lg:py-24">
+        <Image
+          src={heroes[2].src}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/85 via-navy-950/60 to-navy-950/30" />
+        <Container className="relative">
+          <p className="eyebrow text-brand-300">Your Private Sanctuary for Healing</p>
           <h1 className="mt-3 max-w-3xl text-4xl text-white sm:text-5xl">
             Tour Our Luxury Dallas Facility
           </h1>
@@ -82,7 +92,7 @@ export default function TourPage() {
             <a href={site.phone.href} className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-800">
               <Phone className="h-5 w-5" /> {site.phone.display}
             </a>
-            <Link href="/contact-us" className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 px-7 py-4 font-semibold text-white ring-1 ring-white/25 transition hover:bg-white/20">
+            <Link href="/contact-us" className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 px-7 py-4 font-semibold text-white ring-1 ring-white/25 backdrop-blur transition hover:bg-white/20">
               Schedule a Visit <ArrowRight className="h-5 w-5" />
             </Link>
           </div>

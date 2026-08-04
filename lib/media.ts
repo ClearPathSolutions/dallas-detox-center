@@ -138,9 +138,30 @@ function hash(s: string): number {
   return Math.abs(h);
 }
 
+/**
+ * Page-hero candidates, distinct from `heroes` (which is the grounds set the
+ * tour uses). Two of the exteriors are the barn seen across gravel and bare
+ * ground — accurate, but a weak first impression for a flagship treatment page,
+ * so the pool leans on the main house, the aerials, and the most inviting
+ * interiors. PageHero shows the photo in a card beside the headline rather than
+ * behind it, so an interior reads well here.
+ */
+const PAGE_HERO_POOL: Photo[] = [
+  heroes[0], // main house and lawn
+  heroes[1], // tree-lined approach
+  heroes[2], // aerial overhead
+  commonAreas[0], // sectional lounge
+  commonAreas[6], // sunroom bay window
+  heroes[4], // barn and lawn
+  heroes[5], // picnic under the oaks
+  commonAreas[1], // communal lounge
+  dining[0], // communal dining
+  heroes[3], // aerial countryside
+];
+
 /** Hero for a page that brought no image of its own. */
 export function heroFor(slug: string): string {
-  return heroes[hash(slug) % heroes.length].src;
+  return PAGE_HERO_POOL[hash(slug) % PAGE_HERO_POOL.length].src;
 }
 
 /** A varied run of gallery photos, offset per page so pages differ. */
