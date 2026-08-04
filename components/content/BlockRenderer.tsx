@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import type { Block } from "@/lib/content";
 import { SmartImage } from "@/components/ui/SmartImage";
+import { isApprovedSrc } from "@/lib/media";
 
 function isChecklist(items: string[]) {
   const avg = items.reduce((n, s) => n + s.length, 0) / Math.max(items.length, 1);
@@ -64,7 +65,12 @@ function BlockItem({ block }: { block: Block }) {
           ))}
         </ul>
       );
-    case "image":
+    case "image": {
+      // Only approved facility photography renders. Legacy content images are
+      // dropped: most were duplicate crops, and the rest were stock photos of
+      // places that are not this facility.
+      if (!isApprovedSrc(block.src)) return null;
+    }
       return (
         <figure className="my-2 overflow-hidden rounded-2xl shadow-sm ring-1 ring-navy-900/5">
           <SmartImage src={block.src} alt={block.alt || ""} />

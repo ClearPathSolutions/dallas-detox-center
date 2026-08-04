@@ -17,9 +17,9 @@ const nextConfig: NextConfig = {
     // Migrated media are local to /public. The one remote source is Google
     // review-author avatars, which the Places API serves from lh3.
     remotePatterns: [
+      // Google review author avatars. Blog cover images are no longer fetched
+      // remotely: Clarion posts render an approved facility photo instead.
       { protocol: "https", hostname: "lh3.googleusercontent.com", pathname: "/**" },
-      // Cover images on Clarion-managed blog posts.
-      { protocol: "https", hostname: "images.unsplash.com", pathname: "/**" },
     ],
   },
   /**

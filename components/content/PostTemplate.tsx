@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowLeft, CalendarDays } from "lucide-react";
 import type { PostContent } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
+import { approvedHero } from "@/lib/media";
 import { BlockFlow } from "@/components/content/BlockRenderer";
 import { PostCard, formatDate, type PostCardData } from "@/components/content/PostCard";
 import { CtaBand } from "@/components/sections/CtaBand";
@@ -23,7 +24,7 @@ export function PostTemplate({
           {post.featured?.src && (
             <>
               <Image
-                src={post.featured.src}
+                src={approvedHero(post.featured.src, post.slug)}
                 alt=""
                 fill
                 sizes="100vw"

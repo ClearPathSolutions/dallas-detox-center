@@ -11,7 +11,7 @@ import {
   type Group,
   type GalleryItem,
 } from "@/lib/blocks";
-import { galleryFor, heroFor } from "@/lib/media";
+import { galleryFor, approvedHero, inlinePhotoFor } from "@/lib/media";
 import { Container } from "@/components/ui/Container";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { BlockFlow } from "@/components/content/BlockRenderer";
@@ -73,7 +73,6 @@ export function PageTemplate({
    * Photos for breaking up long prose come from a slice offset past the
    * gallery's, so an inline image never repeats one shown at the foot.
    */
-  const inlinePool = galleryFor(page.slug, 14).slice(6);
 
   // Which slots take a light background, in render order: the lead block, each
   // non-dark section, then the gallery. Dark sections are excluded so they
@@ -90,7 +89,7 @@ export function PageTemplate({
   // precede it.
   const imageAt = (i: number) => {
     const nth = sections.slice(0, i).filter((sec) => sec.kind === "prose").length;
-    return sections[i].kind === "prose" ? inlinePool[nth] : undefined;
+    return sections[i].kind === "prose" ? inlinePhotoFor(page.slug, nth) : undefined;
   };
 
   const plan = {
@@ -115,7 +114,7 @@ export function PageTemplate({
         title={title}
         lead={leadText}
         byline={byline}
-        image={heroImageOverride || page.featured?.src || heroFor(page.slug)}
+        image={heroImageOverride || approvedHero(page.featured?.src, page.slug)}
         breadcrumb={breadcrumb}
       />
 
@@ -184,10 +183,7 @@ export function PageTemplate({
       {showInsurance && insuranceAfter === -1 && <InsuranceStrip />}
 
       {gallery.length >= 3 && (
-        <GallerySection
-          items={isGenericGallery(gallery) ? galleryFor(page.slug, 6) : gallery}
-          tone={plan.galleryTone}
-        />
+        <GallerySection items={galleryFor(page.slug, 6)} tone={plan.galleryTone} />
       )}
 
       <CtaBand />

@@ -1,92 +1,200 @@
-// Curated facility imagery (freshest 2026 real-estate photography set).
-const C = "/images/content/2026/02/";
+/**
+ * The site's entire photographic vocabulary.
+ *
+ * These 44 photographs are the only approved imagery: the client-supplied set
+ * of the actual Weatherford campus — main house, barn residence, clinical
+ * spaces, grounds and aerials. Nothing else is permitted.
+ *
+ * What this replaced: the migrated WordPress library mixed the property's own
+ * real-estate shoot with Shutterstock photography of unrelated places, and the
+ * same four crops illustrated nearly every page. Alt text below is written from
+ * the photographs themselves rather than inferred from filenames.
+ */
 
-export const facility = {
-  heroExterior: `${C}1-web-or-mls-DJI_20260206132754_0577_D.jpg`,
-  gallery: [
-    { src: `${C}8-web-or-mls-DSC04989.jpg`, alt: "Bright communal dining and lounge area" },
-    { src: `${C}1-web-or-mls-DSC05075.jpg`, alt: "Modern common space at Dallas Detox Center" },
-    { src: `${C}2-web-or-mls-DSC05078.jpg`, alt: "Comfortable interior lounge" },
-    { src: `${C}15-web-or-mls-DSC05010.jpg`, alt: "Private, restful bedroom" },
-    { src: `${C}20-web-or-mls-DSC05028.jpg`, alt: "Serene treatment space" },
-    { src: `${C}31-web-or-mls-DSC05061.jpg`, alt: "Relaxing amenity area" },
-    { src: `${C}33-web-or-mls-DSC05067.jpg`, alt: "Outdoor grounds and greenery" },
-    { src: `${C}10-web-or-mls-DSC09526.jpg`, alt: "Facility exterior among the trees" },
-  ] as { src: string; alt: string }[],
-};
+const F = "/images/facility/";
 
-export const heroImage = facility.heroExterior;
+export type Photo = { src: string; alt: string };
 
 /**
- * Wider pool of real facility photography for the "A Look Inside Our Campus"
- * galleries.
- *
- * The migration put the same four photos into nearly every page's body, so 36
- * of the galleries showed an identical set — which is what the content
- * walkthrough logged (as "stock images"; they are in fact the property's own
- * real-estate shoot). 33 landscape photos exist; this rotates through them so
- * each page shows a different selection.
+ * Wide exteriors and aerials — hero use only. An interior behind the headline
+ * scrim reads as clutter, and a bedroom is a poor first impression.
  */
-const POOL: { src: string; alt: string }[] = [
-  { src: "/images/content/2026/02/8-web-or-mls-DSC04989.jpg", alt: "Communal dining and lounge area" },
-  { src: "/images/content/2026/02/1-web-or-mls-DSC05075.jpg", alt: "Modern common space" },
-  { src: "/images/content/2026/02/2-web-or-mls-DSC05078.jpg", alt: "Comfortable interior lounge" },
-  { src: "/images/content/2026/02/15-web-or-mls-DSC05010.jpg", alt: "Private, restful bedroom" },
-  { src: "/images/content/2026/02/20-web-or-mls-DSC05028.jpg", alt: "Serene treatment space" },
-  { src: "/images/content/2026/02/31-web-or-mls-DSC05061.jpg", alt: "Relaxing amenity area" },
-  { src: "/images/content/2026/02/33-web-or-mls-DSC05067.jpg", alt: "Outdoor grounds and greenery" },
-  { src: "/images/content/2026/02/10-web-or-mls-DSC09526.jpg", alt: "Facility exterior among the trees" },
-  { src: "/images/content/2026/02/15-web-or-mls-DSC09539.jpg", alt: "Grounds at the Weatherford campus" },
-  { src: "/images/content/2026/02/1-web-or-mls-DJI_20260206132754_0577_D.jpg", alt: "Aerial view of the private campus" },
-  { src: "/images/content/2026/05/34-web-or-mls-DJI_20260505155925_0941_D.jpg", alt: "Aerial view of the grounds" },
-  { src: "/images/content/2026/05/38-web-or-mls-DJI_20260505160203_0953_D.jpg", alt: "The campus from above" },
-  { src: "/images/content/2026/05/39-web-or-mls-DJI_20260505160314_0956_D.jpg", alt: "Surrounding acreage" },
-  { src: "/images/content/2022/06/3-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-3.jpg", alt: "Living space at Dallas Detox Center" },
-  { src: "/images/content/2022/06/4-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-4.jpg", alt: "Shared lounge" },
-  { src: "/images/content/2022/06/7-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-7.jpg", alt: "Interior common area" },
-  { src: "/images/content/2022/06/8-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-8.jpg", alt: "Quiet seating area" },
-  { src: "/images/content/2022/06/10-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-10.jpg", alt: "Dining space" },
-  { src: "/images/content/2022/06/13-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-13.jpg", alt: "Guest bedroom" },
-  { src: "/images/content/2022/06/32-web-or-mls-Dallas-Detox-Center-_-Real-Estate-Photography-Dallas-32.jpg", alt: "Grounds and outdoor space" },
+export const heroes: Photo[] = [
+  { src: `${F}exterior-main-house.jpg`, alt: "The main residence at Dallas Detox Center, with lawn and circular drive" },
+  { src: `${F}exterior-drive-approach.jpg`, alt: "The tree-lined approach to the Dallas Detox Center campus" },
+  { src: `${F}aerial-property-overhead.jpg`, alt: "Aerial view of the campus set among mature oaks" },
+  { src: `${F}aerial-countryside.jpg`, alt: "Aerial view over the wooded countryside surrounding the campus" },
+  { src: `${F}exterior-barn-lawn.jpg`, alt: "The barn residence and its lawn, shaded by oak trees" },
+  { src: `${F}grounds-picnic-oaks.jpg`, alt: "Picnic seating under the oaks on the grounds" },
+  { src: `${F}exterior-barn-drive.jpg`, alt: "The barn residence seen from the gravel drive" },
 ];
 
-/** Simple stable hash so a given slug always gets the same photos. */
+/** Living and communal spaces. */
+export const commonAreas: Photo[] = [
+  { src: `${F}lounge-house-sectional.jpg`, alt: "Living room in the main house with a large sectional sofa" },
+  { src: `${F}lounge-sofas.jpg`, alt: "Communal lounge with sofas and natural light" },
+  { src: `${F}lounge-tv.jpg`, alt: "Lounge seating area with a wall-mounted television" },
+  { src: `${F}lounge-sofa-tv.jpg`, alt: "Comfortable lounge with sofa and television" },
+  { src: `${F}sitting-room.jpg`, alt: "Quiet sitting room with soft seating" },
+  { src: `${F}lounge-longhorn.jpg`, alt: "Lounge with Texas longhorn artwork and seating" },
+  { src: `${F}sunroom-bay-window.jpg`, alt: "Sunroom with a bay window and hardwood floors" },
+  { src: `${F}common-lounge-dining.jpg`, alt: "Open-plan lounge and dining area" },
+  { src: `${F}entry-foyer-stairs.jpg`, alt: "Entry foyer with staircase" },
+  { src: `${F}corridor-seating.jpg`, alt: "Bright corridor with a small seating nook" },
+];
+
+/** Dining and kitchen. */
+export const dining: Photo[] = [
+  { src: `${F}dining-communal.jpg`, alt: "Communal dining table beside the lounge" },
+  { src: `${F}dining-table-windows.jpg`, alt: "Dining table set beneath large windows" },
+  { src: `${F}dining-house-kitchen.jpg`, alt: "Dining room and kitchen in the main house" },
+  { src: `${F}kitchen-commercial.jpg`, alt: "Commercial kitchen where meals are prepared on site" },
+  { src: `${F}kitchen-island.jpg`, alt: "Kitchen island and preparation area" },
+  { src: `${F}kitchen-range.jpg`, alt: "Kitchen with range and green cabinetry" },
+];
+
+/** Bedrooms — private and semi-private. */
+export const bedrooms: Photo[] = [
+  { src: `${F}bedroom-twin-1.jpg`, alt: "Semi-private bedroom with two beds and garden views" },
+  { src: `${F}bedroom-twin-2.jpg`, alt: "Semi-private bedroom with two beds and storage" },
+  { src: `${F}bedroom-twin-3.jpg`, alt: "Bedroom with two beds and a dresser" },
+  { src: `${F}bedroom-twin-4.jpg`, alt: "Semi-private bedroom with a desk and workspace" },
+  { src: `${F}bedroom-twin-desk.jpg`, alt: "Two-bed room with a desk beneath the window" },
+  { src: `${F}bedroom-single-window.jpg`, alt: "Private bedroom with a window over the grounds" },
+  { src: `${F}bedroom-double-desk.jpg`, alt: "Private room with a double bed and desk" },
+  { src: `${F}bedroom-desk-1.jpg`, alt: "Private bedroom with a study desk" },
+  { src: `${F}bedroom-desk-2.jpg`, alt: "Private bedroom with desk and television" },
+  { src: `${F}bedroom-study.jpg`, alt: "Bedroom with a study area and rug" },
+  { src: `${F}bedroom-house-twin.jpg`, alt: "Two-bed room in the main house" },
+];
+
+/** Clinical and support spaces. */
+export const clinical: Photo[] = [
+  { src: `${F}clinical-station.jpg`, alt: "Nursing station where medical staff monitor clients around the clock" },
+  { src: `${F}office-consult.jpg`, alt: "Private office used for consultations and case management" },
+  { src: `${F}office-admin.jpg`, alt: "Administrative office at Dallas Detox Center" },
+];
+
+/** Bathrooms, laundry and outdoor amenities. */
+export const amenities: Photo[] = [
+  { src: `${F}bathroom-vanity.jpg`, alt: "Shared bathroom with a double vanity" },
+  { src: `${F}bathroom-shower.jpg`, alt: "Bathroom with a walk-in shower" },
+  { src: `${F}bathroom-accessible-1.jpg`, alt: "Accessible bathroom with grab rails" },
+  { src: `${F}bathroom-accessible-2.jpg`, alt: "Accessible bathroom with roll-in access" },
+  { src: `${F}laundry.jpg`, alt: "On-site laundry room for clients" },
+  { src: `${F}patio-pergola-seating.jpg`, alt: "Shaded patio seating beneath a pergola" },
+  { src: `${F}exterior-barn-parking.jpg`, alt: "Parking beside the barn residence, including an accessible space" },
+];
+
+/** Every approved photograph, in tour order. */
+export const allPhotos: Photo[] = [
+  ...heroes,
+  ...commonAreas,
+  ...dining,
+  ...bedrooms,
+  ...clinical,
+  ...amenities,
+];
+
+/** Default hero, where a page has no reason to prefer another. */
+export const heroImage = heroes[0].src;
+
+/**
+ * Interleaved so any run of six spans exterior, communal, bedroom, dining and
+ * clinical rather than six near-identical bedrooms.
+ */
+const GALLERY_POOL: Photo[] = [
+  heroes[0], commonAreas[0], bedrooms[0], dining[0], amenities[0], heroes[2],
+  commonAreas[1], bedrooms[1], dining[3], clinical[0], heroes[4], commonAreas[6],
+  bedrooms[5], dining[1], amenities[5], heroes[3], commonAreas[4], bedrooms[6],
+  dining[2], clinical[1], heroes[5], commonAreas[2], bedrooms[8], amenities[1],
+  commonAreas[3], bedrooms[3], dining[4], amenities[2], heroes[6], commonAreas[8],
+];
+
+/**
+ * Photos suitable for breaking up a long passage of body copy. Bathrooms and
+ * laundry are excluded — they belong in the tour, not as the feature image in
+ * the middle of a discussion about levels of care.
+ */
+const INLINE_POOL: Photo[] = [
+  ...commonAreas,
+  ...dining.slice(0, 3),
+  ...bedrooms.slice(0, 6),
+  ...clinical,
+  heroes[1],
+  heroes[4],
+  heroes[5],
+];
+
+/** A photo to break up a long section, keyed on page and position. */
+export function inlinePhotoFor(slug: string, index: number): Photo {
+  return INLINE_POOL[(hash(slug) + index * 7) % INLINE_POOL.length];
+}
+
+/** Stable per-slug hash so a page's imagery never shifts between builds. */
 function hash(s: string): number {
   let h = 0;
-  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
-  return h;
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
+  return Math.abs(h);
+}
+
+/** Hero for a page that brought no image of its own. */
+export function heroFor(slug: string): string {
+  return heroes[hash(slug) % heroes.length].src;
+}
+
+/** A varied run of gallery photos, offset per page so pages differ. */
+export function galleryFor(slug: string, count = 6): Photo[] {
+  const start = hash(slug) % GALLERY_POOL.length;
+  return Array.from({ length: Math.min(count, GALLERY_POOL.length) }, (_, i) =>
+    GALLERY_POOL[(start + i) % GALLERY_POOL.length],
+  );
 }
 
 /**
- * `count` photos for `slug`, rotated through POOL. Deterministic, so the build
- * is reproducible and a page's imagery doesn't shuffle between deploys.
+ * Legacy shape: the bespoke homepage and tour page index into
+ * `facility.gallery` positionally.
  */
+export const facility = {
+  heroExterior: heroes[0].src,
+  gallery: GALLERY_POOL,
+};
+
 /**
- * Wide, full-bleed shots suitable for a page hero. Interiors are excluded — a
- * close bedroom shot behind the headline scrim reads as clutter.
+ * Photography that predates the approved set — the migrated WordPress library,
+ * including Shutterstock and Unsplash images of places that are not this
+ * facility. 212 distinct legacy files were still referenced by the content JSON.
+ *
+ * Staff headshots are exempt: none were supplied in the approved pack, so team
+ * pages keep the portraits they have.
  */
-const HERO_POOL: string[] = [
-  `${C}1-web-or-mls-DJI_20260206132754_0577_D.jpg`,
-  `${C}2-web-or-mls-DJI_20260206132819_0580_D-1024x576.jpg`,
-  `${C}3-web-or-mls-DJI_20260206132919_0584_D-1024x576.jpg`,
-  `${C}10-web-or-mls-DSC09526.jpg`,
-  `${C}33-web-or-mls-DSC05067.jpg`,
-  "/images/content/2026/05/33-web-or-mls-DJI_20260505155843_0939_D.jpg",
-  "/images/content/2026/05/34-web-or-mls-DJI_20260505155925_0941_D.jpg",
-  "/images/content/2026/05/38-web-or-mls-DJI_20260505160203_0953_D.jpg",
-  "/images/content/2026/05/39-web-or-mls-DJI_20260505160314_0956_D.jpg",
+const APPROVED_PREFIXES = [
+  "/images/facility/",
+  "/images/brand/",
+  "/images/insurance/",
+  "/images/accreditation/",
+  "/images/logo",
+  "/images/icon",
+  "/images/favicon",
+  // Staff portraits: none were supplied in the approved pack, so the three we
+  // have are permitted. Two are screen captures rather than photographs and
+  // three of the six people have none at all — flagged, not silently faked.
+  "/images/team/",
 ];
 
-/**
- * Hero for a page that brought no image of its own. 43 of 104 pages were
- * defaulting to the same aerial, which made the site feel like one page
- * repeated; this spreads them deterministically across the wide shots.
- */
-export function heroFor(slug: string): string {
-  return HERO_POOL[hash(slug) % HERO_POOL.length];
+export function isApprovedSrc(src?: string | null): boolean {
+  return !!src && APPROVED_PREFIXES.some((p) => src.startsWith(p));
 }
 
-export function galleryFor(slug: string, count = 6): { src: string; alt: string }[] {
-  const start = hash(slug) % POOL.length;
-  return Array.from({ length: Math.min(count, POOL.length) }, (_, i) => POOL[(start + i) % POOL.length]);
+/**
+ * Substitute an approved photograph for any legacy source. Deterministic per
+ * key so a page's imagery is stable across builds.
+ */
+export function approvedHero(src: string | null | undefined, key: string): string {
+  return isApprovedSrc(src) ? (src as string) : heroFor(key);
+}
+
+export function approvedThumb(src: string | null | undefined, key: string): Photo {
+  if (isApprovedSrc(src)) return { src: src as string, alt: "" };
+  return galleryFor(key, 1)[0];
 }

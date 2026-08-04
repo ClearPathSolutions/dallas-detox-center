@@ -4,6 +4,15 @@ import { Phone, ArrowRight } from "lucide-react";
 import { getPage } from "@/lib/content";
 import { metaFor } from "@/lib/seo";
 import { site } from "@/lib/site";
+import {
+  heroes,
+  commonAreas,
+  dining,
+  bedrooms,
+  clinical,
+  amenities,
+  type Photo,
+} from "@/lib/media";
 import { Container } from "@/components/ui/Container";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { CtaBand } from "@/components/sections/CtaBand";
@@ -14,28 +23,46 @@ export function generateMetadata(): Metadata {
   return page ? metaFor(page) : { title: "Tour Our Facility" };
 }
 
-// De-duplicate the tour photos to one file per underlying image.
-function galleryImages() {
-  const page = getPage("tour");
-  if (!page) return [] as { src: string; alt: string }[];
-  const seen = new Set<string>();
-  const out: { src: string; alt: string }[] = [];
-  for (const b of page.blocks) {
-    if (b.type !== "image") continue;
-    const base = b.src
-      .replace(/-\d+x\d+(\.[a-z]+)$/i, "$1")
-      .replace(/-scaled/, "")
-      .replace(/-\d+(\.[a-z]+)$/i, "$1");
-    if (seen.has(base)) continue;
-    seen.add(base);
-    out.push({ src: b.src, alt: b.alt || "Dallas Detox Center facility" });
-  }
-  return out;
-}
+/**
+ * The tour shows the whole approved set, grouped the way a visitor would walk
+ * it. It previously pulled image blocks out of the migrated tour.json, which
+ * mixed the property's own photography with stock images of other places.
+ */
+const TOUR_SECTIONS: { heading: string; blurb: string; photos: Photo[] }[] = [
+  {
+    heading: "The grounds",
+    blurb:
+      "Two residences on a private, wooded campus in Weatherford — roughly an hour west of downtown Dallas.",
+    photos: heroes,
+  },
+  {
+    heading: "Living space",
+    blurb: "Where clients spend their days between sessions.",
+    photos: commonAreas,
+  },
+  {
+    heading: "Dining",
+    blurb: "Meals are prepared on site in a full commercial kitchen.",
+    photos: dining,
+  },
+  {
+    heading: "Bedrooms",
+    blurb: "Private and semi-private rooms across the house and the barn.",
+    photos: bedrooms,
+  },
+  {
+    heading: "Clinical spaces",
+    blurb: "Nursing station and private offices for consultations and case management.",
+    photos: clinical,
+  },
+  {
+    heading: "Amenities",
+    blurb: "Bathrooms, on-site laundry, and shaded outdoor seating.",
+    photos: amenities,
+  },
+];
 
 export default function TourPage() {
-  const images = galleryImages().slice(0, 24);
-
   return (
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Tour Our Facility", path: "/tour" }])} />
@@ -62,24 +89,38 @@ export default function TourPage() {
         </Container>
       </section>
 
-      <section className="bg-white py-14 lg:py-20">
-        <Container>
-          <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 [&>figure]:mb-4">
-            {images.map((img) => (
-              <figure
-                key={img.src}
-                className="break-inside-avoid overflow-hidden rounded-2xl shadow-sm ring-1 ring-navy-900/5"
-              >
-                <SmartImage
-                  src={img.src}
-                  alt={img.alt}
-                  sizes="(min-width:1024px) 26rem, (min-width:640px) 50vw, 100vw"
-                />
-              </figure>
-            ))}
-          </div>
-        </Container>
-      </section>
+      {TOUR_SECTIONS.map((section, i) => (
+        <section
+          key={section.heading}
+          className={i % 2 === 1 ? "bg-sand-50 py-14 lg:py-16" : "bg-white py-14 lg:py-16"}
+        >
+          <Container>
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="font-display text-3xl text-navy-800 sm:text-4xl">
+                {section.heading}
+              </h2>
+              <p className="mt-3 text-navy-600">{section.blurb}</p>
+            </div>
+            {/* Multi-column flow rather than a grid: the sections hold 3, 6, 7,
+                10 and 11 photos, and a fixed 3-across grid strands one alone on
+                the last row for most of those counts. */}
+            <div className="mt-10 columns-2 gap-4 md:columns-3 [&>figure]:mb-4">
+              {section.photos.map((photo) => (
+                <figure
+                  key={photo.src}
+                  className="break-inside-avoid overflow-hidden rounded-2xl shadow-sm ring-1 ring-navy-900/5"
+                >
+                  <SmartImage
+                    src={photo.src}
+                    alt={photo.alt}
+                    sizes="(min-width:1024px) 22rem, (min-width:640px) 33vw, 50vw"
+                  />
+                </figure>
+              ))}
+            </div>
+          </Container>
+        </section>
+      ))}
 
       <CtaBand />
     </>

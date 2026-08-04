@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
+import { approvedThumb } from "@/lib/media";
 import { PostCard } from "@/components/content/PostCard";
 import { CtaBand } from "@/components/sections/CtaBand";
 import Link from "next/link";
@@ -59,7 +60,7 @@ export default async function BlogIndex() {
                       {post.coverImage && (
                         <div className="relative aspect-[16/10] overflow-hidden bg-sand-100">
                           <Image
-                            src={post.coverImage}
+                            src={approvedThumb(post.coverImage, post.slug).src}
                             alt=""
                             fill
                             sizes="(min-width:1024px) 24rem, (min-width:640px) 50vw, 100vw"

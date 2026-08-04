@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { SmartImage } from "@/components/ui/SmartImage";
+import { approvedThumb } from "@/lib/media";
 
 export type PostCardData = {
   slug: string;
@@ -21,13 +22,16 @@ export function formatDate(date: string) {
 }
 
 export function PostCard({ post }: { post: PostCardData }) {
+  // Blog thumbnails were stock photography and branded graphics outside the
+  // approved set; substitute a facility photo, keyed on the slug so it is stable.
+  const thumb = approvedThumb(post.image, post.slug);
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-navy-900/5 transition hover:-translate-y-1 hover:shadow-lg">
       <Link href={post.path} className="relative block aspect-[16/10] overflow-hidden">
-        {post.image ? (
+        {thumb.src ? (
           <SmartImage
-            src={post.image}
-            alt={post.title}
+            src={thumb.src}
+            alt={thumb.alt || post.title}
             sizes="(min-width:1024px) 26rem, 100vw"
             className="h-full object-cover transition duration-500 group-hover:scale-105"
           />
