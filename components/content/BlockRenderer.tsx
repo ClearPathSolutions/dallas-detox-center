@@ -80,7 +80,9 @@ function BlockItem({ block }: { block: Block }) {
           {block.items.map((item, i) => (
             <li key={i} className="flex items-start gap-3 text-navy-600">
               <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-400" />
-              <span className="text-[1.0625rem] leading-relaxed">{item}</span>
+              <span className="text-[1.0625rem] leading-relaxed">
+                <ListItemText text={item} />
+              </span>
             </li>
           ))}
         </ul>
