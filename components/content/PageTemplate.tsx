@@ -419,13 +419,32 @@ function FaqSection({ section, tone }: { section: Extract<Section, { kind: "faq"
 
 /* ---------- cards ---------- */
 
+/** Longest intro that still reads well centred under a heading. */
+const CENTRED_INTRO_WORDS = 25;
+
 function CardsSection({ section, tone }: { section: Extract<Section, { kind: "cards" }>; tone: string }) {
+  /**
+   * Centre a one-line lead-in, but never a paragraph.
+   *
+   * This intro was unconditionally centred, and the migration routed real body
+   * copy through it — 29 blocks across 26 pages, up to 291 words and five
+   * paragraphs. Centred prose gives the eye no consistent left edge to return
+   * to at the start of each line, which is why those sections were hard to read.
+   *
+   * The heading follows the same decision: a centred heading above left-aligned
+   * prose reads as a mistake, so once the intro is long they align together and
+   * the card grid below stays centred on its own.
+   */
+  const introParagraphs = section.intro.filter((b) => b.type === "paragraph").length;
+  const centreIntro =
+    introParagraphs <= 1 && wordsIn(section.intro) <= CENTRED_INTRO_WORDS;
+
   return (
     <section className={cn("py-16 lg:py-20", tone)}>
       <Container>
-        {section.heading && <Heading centered>{section.heading}</Heading>}
+        {section.heading && <Heading centered={centreIntro}>{section.heading}</Heading>}
         {section.intro.length > 0 && (
-          <div className="mx-auto mt-5 max-w-3xl text-center">
+          <div className={cn("mx-auto mt-5 max-w-3xl", centreIntro && "text-center")}>
             <BlockFlow blocks={section.intro} />
           </div>
         )}
