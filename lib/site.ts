@@ -3,7 +3,7 @@
 
 export const site = {
   name: "Dallas Detox Center",
-  shortName: "DDC",
+  // No abbreviation: the brand is always written in full.
   url: "https://dallasdetoxcenter.com",
   description:
     "Medical detox, residential treatment, and dual diagnosis mental health care in Dallas, TX. Compassionate, 24/7 supervised recovery support.",
@@ -69,13 +69,9 @@ export const nav: NavItem[] = [
         heading: "About",
         items: [
           { label: "About Dallas Detox", href: "/about-us" },
+          // Individual bios are reached from the team hub rather than listed
+          // here — seven names made the mobile drawer a wall of links.
           { label: "Meet the Team", href: "/about-us/meet-the-team" },
-          { label: "Olivia Hadjerioua", href: "/about-us/olivia-hadjerioua" },
-          { label: "Antoine Gross Sr.", href: "/about-us/antoine-gross" },
-          { label: "Deborah Wade", href: "/about-us/deborah-wade" },
-          { label: "Joshua Leder", href: "/about-us/joshua-leder" },
-          { label: "Haley Wadlington", href: "/about-us/haley-wadlington" },
-          { label: "Sarah Bentley", href: "/about-us/sarah-bentley" },
           { label: "Latest Articles", href: "/blog" },
         ],
       },

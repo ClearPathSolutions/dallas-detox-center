@@ -19,6 +19,23 @@ export function BlockFlow({ blocks }: { blocks: Block[] }) {
   );
 }
 
+/**
+ * Several list items arrive as a short title welded to its own sentence —
+ * "360 Individualized Care Every client that enters…" — which is how the
+ * original site published them. Where a separator has been added to the copy,
+ * the title is set in a heavier weight so the two read apart.
+ */
+function ListItemText({ text }: { text: string }) {
+  const at = text.indexOf(" — ");
+  if (at === -1) return <>{text}</>;
+  return (
+    <>
+      <strong className="font-semibold text-navy-800">{text.slice(0, at)}</strong>
+      {text.slice(at + 1)}
+    </>
+  );
+}
+
 function BlockItem({ block }: { block: Block }) {
   switch (block.type) {
     case "heading": {
@@ -50,7 +67,9 @@ function BlockItem({ block }: { block: Block }) {
                 <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent-100 text-accent-600">
                   <Check className="h-3 w-3" strokeWidth={3} />
                 </span>
-                <span className="text-[1.0625rem] leading-snug">{item}</span>
+                <span className="text-[1.0625rem] leading-snug">
+                  <ListItemText text={item} />
+                </span>
               </li>
             ))}
           </ul>

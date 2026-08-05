@@ -117,7 +117,7 @@ export default function Home() {
                 Detox Center is your top-choice for treatment.
               </p>
               <p className="mt-4 leading-relaxed text-navy-600">
-                DDC was started with a simple mission: to help those suffering from drug &amp; alcohol
+                Dallas Detox Center was started with a simple mission: to help those suffering from drug &amp; alcohol
                 addiction in finding personalized solutions to achieve long-term recovery. We believe
                 in treating each client as the unique individual you are, combining traditional,
                 holistic and evidence-based practices to provide you with the healing you deserve.

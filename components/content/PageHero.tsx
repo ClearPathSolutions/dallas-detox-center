@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, ShieldCheck, Clock, Award, HeartHandshake } from "lucide-react";
+import { Phone, ShieldCheck, Clock, Award, MapPin } from "lucide-react";
 import { site } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 import { heroImage } from "@/lib/media";
@@ -59,7 +59,7 @@ export function PageHero({
               <Award className="h-4 w-4 text-brand-400" /> Joint Commission Accredited
             </li>
             <li className="inline-flex items-center gap-2">
-              <HeartHandshake className="h-4 w-4 text-brand-400" /> In-Network with Most Plans
+              <MapPin className="h-4 w-4 text-brand-400" /> Weatherford, TX
             </li>
           </ul>
           {byline && <p className="mt-6 text-xs text-navy-400">{byline}</p>}
