@@ -31,7 +31,8 @@ function ListItemText({ text }: { text: string }) {
   return (
     <>
       <strong className="font-semibold text-navy-800">{text.slice(0, at)}</strong>
-      {text.slice(at + 1)}
+      {/* slice(at), not at+1: keep the space before the dash. */}
+      {text.slice(at)}
     </>
   );
 }
