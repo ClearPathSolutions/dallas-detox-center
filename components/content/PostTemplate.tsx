@@ -38,7 +38,12 @@ export function PostTemplate({
             <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-brand-300 hover:text-white">
               <ArrowLeft className="h-4 w-4" /> All Articles
             </Link>
-            <div className="mt-6 max-w-3xl">
+            {/*
+              mx-auto matters here: the article body below uses the same 3xl
+              measure but centred, so without it the title sat 208px to the left
+              of its own text and the two blocks visibly jogged apart.
+            */}
+            <div className="mx-auto mt-6 max-w-3xl">
               {post.category && (
                 <span className="rounded-full bg-brand-500/20 px-3 py-1 text-xs font-semibold text-brand-200 ring-1 ring-brand-400/30">
                   {post.category}

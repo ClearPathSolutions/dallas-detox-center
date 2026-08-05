@@ -442,11 +442,33 @@ function CardsSection({ section, tone }: { section: Extract<Section, { kind: "ca
   return (
     <section className={cn("py-16 lg:py-20", tone)}>
       <Container>
-        {section.heading && <Heading centered={centreIntro}>{section.heading}</Heading>}
-        {section.intro.length > 0 && (
-          <div className={cn("mx-auto mt-5 max-w-3xl", centreIntro && "text-center")}>
-            <BlockFlow blocks={section.intro} />
-          </div>
+        {/*
+          Heading and intro share one measure when left-aligned. The heading used
+          to span the full container while the intro was capped at max-w-3xl and
+          centred by mx-auto, so their left edges did not line up — the heading
+          sat roughly 200px to the left of the text beneath it.
+        */}
+        {centreIntro ? (
+          <>
+            {section.heading && <Heading centered>{section.heading}</Heading>}
+            {section.intro.length > 0 && (
+              <div className="mx-auto mt-5 max-w-3xl text-center">
+                <BlockFlow blocks={section.intro} />
+              </div>
+            )}
+          </>
+        ) : (
+          (section.heading || section.intro.length > 0) && (
+            <div className="mx-auto max-w-3xl">
+              {section.heading && (
+                <div className="mb-6">
+                  <span className="mb-4 block h-1 w-12 rounded-full bg-brand-400" />
+                  <Heading>{section.heading}</Heading>
+                </div>
+              )}
+              {section.intro.length > 0 && <BlockFlow blocks={section.intro} />}
+            </div>
+          )
         )}
         {/*
           Column count follows the card count, so a row is never left ragged:
