@@ -9,13 +9,21 @@ export function InsuranceStrip() {
     <section className="bg-navy-800 py-16">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <p className="eyebrow text-brand-400">Insurance Accepted</p>
+          {/*
+            Reworded away from two claims we should not be making: network
+            status ("Insurance Accepted", "We Work With Most Major Insurance")
+            and cost outcome ("most of our clients pay little to nothing out of
+            pocket"). What is offered instead is the thing we actually do —
+            check a plan and report back on it.
+          */}
+          <p className="eyebrow text-brand-400">Insurance Verification</p>
           <h2 className="mt-3 text-3xl text-white sm:text-4xl">
-            We Work With Most Major Insurance
+            We&apos;ll Check What Your Plan Covers
           </h2>
           <p className="mt-4 text-navy-200">
-            Most of our clients pay little to nothing out of pocket. Verify your
-            benefits confidentially in minutes — no obligation.
+            Send us your details and our admissions team will confirm your
+            benefits with your provider and walk you through what they mean —
+            confidentially, at no cost, with no obligation.
           </p>
         </div>
 
