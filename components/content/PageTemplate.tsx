@@ -103,12 +103,22 @@ export function PageTemplate({
   // them after the last section. Only long pages get the mid-page break; short
   // ones would end up with two CTAs a screen apart.
   const showInsurance = SHOW_INSURANCE.has(page.template);
+  // Justified body copy, requested for the who-we-help pages. Applied by
+  // template so all seven siblings match — the request listed five of them.
+  // Every .space-y-5 body block on the page, including those inside cards and
+  // step lists — hence one rule here rather than a prop on each component.
+  // Hyphenation is paired with it: justifying a measure this narrow without it
+  // opens rivers of whitespace between words.
+  const justifyBody =
+    page.template === "audience"
+      ? "[&_.space-y-5]:text-justify [&_.space-y-5]:hyphens-auto"
+      : "";
   const inlineCtaAfter = sections.length >= 4 ? Math.floor(sections.length * 0.4) : -1;
   const insuranceAfter =
     showInsurance && sections.length >= 5 ? Math.floor(sections.length * 0.75) : -1;
 
   return (
-    <>
+    <div className={justifyBody}>
       <PageHero
         eyebrow={eyebrow}
         title={title}
@@ -187,7 +197,7 @@ export function PageTemplate({
       )}
 
       <CtaBand />
-    </>
+    </div>
   );
 }
 
@@ -420,14 +430,16 @@ function CardsSection({ section, tone }: { section: Extract<Section, { kind: "ca
           </div>
         )}
         {/*
-          Column count follows the card count. A four-card set in a three-column
-          grid strands one card alone on the second row, which is what made
-          several pages look lopsided; four reads better as a 2x2.
+          Column count follows the card count, so a row is never left ragged:
+          two cards in a three-column grid leave the third column empty, and
+          four strand one card alone on a second row. Both read as two-up.
         */}
         <div
           className={cn(
             "mt-10 grid gap-6 sm:grid-cols-2",
-            section.cards.length === 4 ? "lg:grid-cols-2" : "lg:grid-cols-3",
+            section.cards.length === 2 || section.cards.length === 4
+              ? "lg:grid-cols-2"
+              : "lg:grid-cols-3",
           )}
         >
           {section.cards.map((card, i) => (

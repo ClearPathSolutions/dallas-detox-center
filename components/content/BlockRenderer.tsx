@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import type { Block } from "@/lib/content";
 import { SmartImage } from "@/components/ui/SmartImage";
+import { cn } from "@/lib/cn";
 import { isApprovedSrc } from "@/lib/media";
 
 function isChecklist(items: string[]) {
