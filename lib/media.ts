@@ -186,8 +186,17 @@ export const facility = {
  * including Shutterstock and Unsplash images of places that are not this
  * facility. 212 distinct legacy files were still referenced by the content JSON.
  *
- * Staff headshots are exempt: none were supplied in the approved pack, so team
- * pages keep the portraits they have.
+ * Staff headshots are exempt from the approved-set rule and live in
+ * /images/team/. Five of the six come from Staff Headshots/Texas in the shared
+ * drive, matched on name and role.
+ *
+ * Haley Wadlington (Director of Client Care) has no photo by design. The pack
+ * contains "Texas/ Haley Hayes.png" from the same 2026-05-14 leadership shoot,
+ * which is tempting to use — it is a DIFFERENT PERSON, confirmed with the
+ * client. Do not wire it up. Her card falls back to a monogram.
+ *
+ * Files prefixed FWW- in that folder belong to Fort Worth Wellness, and the
+ * Virtual Staff subfolder to another entity; neither is ours.
  */
 const APPROVED_PREFIXES = [
   "/images/facility/",
