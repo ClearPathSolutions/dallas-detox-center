@@ -8,7 +8,10 @@
   "metaDescription": "Meet Olivia Hadjerioua, Executive Director at Dallas Detox Center.",
   "ogImage": "/images/content/2022/05/shutterstock_1377067472.jpg",
   "canonical": "/about-us/olivia-hadjerioua",
-  "featured": false,
+  "featured": {
+    "src": "/images/team/olivia-hadjerioua.jpg",
+    "alt": "Olivia Hadjerioua, LPC, Executive Director at Dallas Detox Center"
+  },
   "blocks": [
     {
       "type": "heading",

@@ -8,7 +8,10 @@
   "metaDescription": "Meet Sarah Bentley, Case Manager at Dallas Detox Center.",
   "ogImage": "/images/content/2022/05/shutterstock_1377067472.jpg",
   "canonical": "/about-us/sarah-bentley",
-  "featured": false,
+  "featured": {
+    "src": "/images/team/sarah-bentley.jpg",
+    "alt": "Sarah Bentley, Case Manager at Dallas Detox Center"
+  },
   "blocks": [
     {
       "type": "heading",

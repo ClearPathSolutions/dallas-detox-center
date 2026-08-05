@@ -8,7 +8,7 @@
   "metaDescription": "Meet Haley Wadlington, Director of Client Care at Dallas Detox Center.",
   "ogImage": "/images/content/2022/05/shutterstock_1377067472.jpg",
   "canonical": "/about-us/haley-wadlington",
-  "featured": false,
+  "featured": null,
   "blocks": [
     {
       "type": "heading",
