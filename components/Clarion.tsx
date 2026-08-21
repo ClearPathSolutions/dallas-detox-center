@@ -33,6 +33,19 @@ export default function Clarion() {
         data-position={BRAND.position}
         data-font={BRAND.font}
       />
+      {/*
+        Form capture. Inert on this site by design, and it must stay that way:
+        the script only auto-wires forms carrying data-clarion-form, and ours
+        carry data-intent instead. components/LeadForm.tsx builds and posts its
+        own body so that attribution survives a second pageview.
+
+        NEVER add data-clarion-form to those forms. The script does not check
+        defaultPrevented, so it would fire its own POST alongside LeadForm's and
+        every lead would reach Clarion twice.
+
+        Kept loaded only so the vendor still sees the integration installed; it
+        can be dropped outright if Clarion confirms that signal is not needed.
+      */}
       <script
         src="https://www.clarionlabs.ai/forms-capture.v1.js"
         async

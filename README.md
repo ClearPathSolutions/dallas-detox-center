@@ -41,8 +41,13 @@ vercel --prod     # production
 Lead capture needs no configuration: both forms submit to Clarion Labs, which is
 configured by site key in `lib/site.ts`, not by environment. There is no
 server-side email fallback — if Clarion does not accept a submission the form
-shows the phone number rather than a thank-you, so a blocked script never looks
+shows the phone number rather than a thank-you, so a failed POST never looks
 like a captured lead.
+
+Both forms post from the browser with first-touch attribution attached, so a
+visitor who arrives on an ad and reads a page or two before converting is still
+credited to the campaign. See `lib/attribution.ts` for what is sent and why the
+campaign is not restored into the URL.
 
 Set these in Vercel → Project → Settings → Environment Variables:
 

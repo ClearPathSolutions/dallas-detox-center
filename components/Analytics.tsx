@@ -65,7 +65,13 @@ j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNo
           // Supplied as a protocol-relative URL; pinned to https because the
           // site is https-only and protocol-relative offers nothing here.
           src={`https://${ctm}.tctm.co/t.js`}
-          strategy="afterInteractive"
+          // Eager, unlike the tags above it, for two reasons. It performs the
+          // dynamic number swap, so deferring it leaves a window in which a
+          // visitor can read and dial the untracked number. And it is what
+          // establishes the CTM session id that /contact-us and
+          // /verify-insurance attach to their leads — a visitor who lands and
+          // submits within a few seconds needs it to already exist.
+          strategy="beforeInteractive"
         />
       )}
 

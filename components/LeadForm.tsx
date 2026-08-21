@@ -4,17 +4,7 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import { Send, Loader2, CheckCircle2, ShieldCheck, ArrowRight } from "lucide-react";
 import { site, insurers } from "@/lib/site";
-
-declare global {
-  interface Window {
-    ClarionForms?: {
-      submit: (opts: {
-        form_key?: string;
-        data?: Record<string, unknown>;
-      }) => Promise<Response>;
-    };
-  }
-}
+import { buildLeadPayload } from "@/lib/attribution";
 
 // Must match the form keys configured in the Clarion dashboard.
 //
@@ -27,42 +17,28 @@ const CLARION_FORM_KEY: Record<Intent, string> = {
 };
 
 /**
- * Post straight to Clarion's public endpoint.
+ * Post the lead to Clarion's public endpoint.
  *
- * Used when window.ClarionForms is missing — the capture script is a
- * third-party <script> and is a common ad-blocker target. Without this, a
- * blocked script meant the visitor got an error and the lead was lost. Same
- * vendor, same endpoint, just no dependency on their script having loaded.
+ * One path, always — we no longer call window.ClarionForms.submit() when the
+ * capture script happens to have loaded. Two reasons:
  *
- * Mirrors the payload the script builds, including the attribution fields.
+ *  - Their submit() builds its own body and only accepts { form_key, data }.
+ *    Anything we compute would land nested inside `data`, and Clarion reads
+ *    attribution from the top level only, so corrected values would be ignored
+ *    in favour of the ones they read live off the URL.
+ *  - It was also the ad-blocker weak point. Their script is a routine block
+ *    target; this fetch is first-party code and only needs the endpoint.
+ *
+ * Same vendor, same endpoint, same key set their script sends — see
+ * buildLeadPayload. dallasdetoxcenter.com is on Clarion's CORS allowlist, so
+ * this posts straight from the browser and needs no server relay.
  */
-async function submitDirect(formKey: string, data: Record<string, unknown>) {
-  const params = new URLSearchParams(window.location.search);
-  const utm: Record<string, string> = {};
-  for (const k of ["source", "medium", "campaign", "term", "content"]) {
-    const v = params.get(`utm_${k}`);
-    if (v) utm[k] = v;
-  }
-  const referrer =
-    document.referrer && !document.referrer.startsWith(window.location.origin)
-      ? document.referrer
-      : null;
-
+async function submitLead(formKey: string, data: Record<string, unknown>) {
   return fetch(`${site.widgets.clarion.api}/forms/public/submit`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     keepalive: true,
-    body: JSON.stringify({
-      site_key: site.widgets.clarion.siteKey,
-      form_key: formKey,
-      data,
-      page_url: window.location.href,
-      landing_page_url: window.location.href,
-      referrer,
-      utm: Object.keys(utm).length ? utm : null,
-      gclid: params.get("gclid"),
-      user_agent: navigator.userAgent,
-    }),
+    body: JSON.stringify(buildLeadPayload(formKey, data)),
   });
 }
 
@@ -115,24 +91,19 @@ export function LeadForm({ intent = "contact" }: { intent?: Intent }) {
       // on another vendor, so this call succeeding IS the lead being captured.
       //
       // Because of that, never resolve to a thank-you unless Clarion actually
-      // accepted the submission. If its script was blocked or the POST failed,
-      // the visitor must see the phone number instead of a false confirmation.
+      // accepted the submission. If the POST failed, the visitor must see the
+      // phone number instead of a false confirmation.
       const payload = { ...data, intent };
       const formKey = CLARION_FORM_KEY[intent];
       let accepted = false;
       try {
-        const res = window.ClarionForms
-          ? await window.ClarionForms.submit({ form_key: formKey, data: payload })
-          : await submitDirect(formKey, payload);
-        accepted = !!res && res.ok !== false;
+        // Deliberately not retried. There is one transport now, so a retry
+        // would only repeat the same call — and a request that reached Clarion
+        // before its promise rejected would file the lead twice.
+        const res = await submitLead(formKey, payload);
+        accepted = res.ok;
       } catch {
-        // Script blocked AND the direct call failed, or the network is down.
-        try {
-          const res = await submitDirect(formKey, payload);
-          accepted = res.ok;
-        } catch {
-          accepted = false;
-        }
+        accepted = false;
       }
 
       if (!accepted) {
