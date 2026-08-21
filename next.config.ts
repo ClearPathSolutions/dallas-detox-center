@@ -1,14 +1,43 @@
 import type { NextConfig } from "next";
 
 /**
- * Hosts the Google tags need. Listed unconditionally so enabling
- * NEXT_PUBLIC_GA_ID / NEXT_PUBLIC_GTM_ID on Vercel needs no code change; with
- * no id configured nothing is ever requested from them.
+ * Hosts the measurement tags need. Kept explicit rather than wildcarded so a
+ * compromised or unexpected vendor cannot quietly start loading code.
+ *
+ * Caveat worth knowing before adding tags in Tag Manager: GTM works by
+ * injecting scripts from third-party origins, and this allowlist is what the
+ * browser enforces. A Meta pixel or Google Ads tag added in the GTM UI will be
+ * blocked until its host is added here. That is the cost of the strict policy —
+ * if the container is going to carry many vendors, switching script-src to a
+ * nonce plus 'strict-dynamic' would be the better trade.
  */
 const ANALYTICS_HOSTS = [
+  // Google Tag Manager + GA4
   "https://www.googletagmanager.com",
   "https://www.google-analytics.com",
-  "https://region1.google-analytics.com",
+  "https://*.google-analytics.com",
+  // Google Ads. The GTM container carries a conversion tag (AW-11089666205),
+  // and its conversion and remarketing pings go to these hosts — not to
+  // googletagmanager. Without them the tag loads but records nothing, which is
+  // invisible unless you watch the console.
+  "https://googleads.g.doubleclick.net",
+  "https://stats.g.doubleclick.net",
+  "https://td.doubleclick.net",
+  "https://www.googleadservices.com",
+  "https://www.google.com",
+  "https://ad.doubleclick.net",
+  "https://analytics.google.com",
+  // Microsoft Clarity — session replay and heatmaps, also deployed from the GTM
+  // container. See the note in components/Analytics.tsx about form pages.
+  "https://www.clarity.ms",
+  "https://*.clarity.ms",
+  // Clarity syncs its id against Bing via a tracking pixel.
+  "https://c.bing.com",
+  // CallTrackingMetrics: t.js is served per-account and then pulls p.js and
+  // calls the API to swap in tracking numbers.
+  "https://264810.tctm.co",
+  "https://api.calltrackingmetrics.com",
+  "https://cdn.calltrackingmetrics.com",
 ].join(" ");
 
 const nextConfig: NextConfig = {
@@ -95,6 +124,9 @@ const nextConfig: NextConfig = {
               "base-uri 'self'",
               "object-src 'none'",
               "frame-ancestors 'self'",
+              // CallTrackingMetrics requests p.js over plain http. Upgrade it
+              // instead of letting mixed content be blocked.
+              "upgrade-insecure-requests",
             ].join("; "),
           },
         ],

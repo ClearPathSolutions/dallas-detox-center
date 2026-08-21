@@ -1,4 +1,5 @@
 import Script from "next/script";
+import { site } from "@/lib/site";
 
 /**
  * Google Analytics 4 / Google Tag Manager.
@@ -7,20 +8,31 @@ import Script from "next/script";
  * no call tracking — so there was no way to see traffic, form conversions, or
  * which pages drive admissions calls.
  *
- * Both tags are opt-in via env vars, so nothing loads (and nothing appears in
- * the CSP-restricted page) until an ID is configured:
+ * Three tags, in load order:
  *
- *   NEXT_PUBLIC_GA_ID   e.g. G-XXXXXXXXXX   → GA4 via gtag.js
- *   NEXT_PUBLIC_GTM_ID  e.g. GTM-XXXXXXX    → Tag Manager container
+ *   1. Google Tag Manager  — container from site.analytics.gtmId, overridable
+ *                            with NEXT_PUBLIC_GTM_ID for a staging container.
+ *   2. GA4 via gtag.js     — only when NEXT_PUBLIC_GA_ID is set. Leave it unset
+ *                            if GA4 is deployed inside the GTM container, or
+ *                            the property receives every hit twice.
+ *   3. CallTrackingMetrics — attributes phone calls to their traffic source.
  *
- * Set either or both on Vercel. If you use GTM to deploy GA4, set only the GTM
- * id. Remember to extend the script-src/connect-src allowances in
- * next.config.ts when you enable one — see ANALYTICS_HOSTS there.
+ * The container currently also deploys GA4 (G-RJHLJX3NKL), Google Ads
+ * (AW-11089666205) and Microsoft Clarity. Clarity records session replays, so
+ * anyone changing its configuration should keep input masking on: /contact-us
+ * and /verify-insurance collect a date of birth, an insurance member ID and
+ * free-text health details, and an unmasked replay would capture them.
+ *
+ * IMPORTANT: a tag added inside the GTM container will be blocked unless its
+ * vendor's host is allowed in next.config.ts. GTM works by injecting scripts
+ * from third-party origins, and this site sends a strict CSP. Adding a Meta
+ * pixel or Google Ads tag in GTM therefore needs a one-line code change here
+ * too — see ANALYTICS_HOSTS in next.config.ts.
  */
 export function Analytics() {
   const ga = process.env.NEXT_PUBLIC_GA_ID;
-  const gtm = process.env.NEXT_PUBLIC_GTM_ID;
-  if (!ga && !gtm) return null;
+  const gtm = process.env.NEXT_PUBLIC_GTM_ID || site.analytics.gtmId;
+  const ctm = site.analytics.callTrackingAccount;
 
   return (
     <>
@@ -46,6 +58,15 @@ var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+
 j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','${gtm}');`}
         </Script>
+      )}
+
+      {ctm && (
+        <Script
+          // Supplied as a protocol-relative URL; pinned to https because the
+          // site is https-only and protocol-relative offers nothing here.
+          src={`https://${ctm}.tctm.co/t.js`}
+          strategy="afterInteractive"
+        />
       )}
 
       {/*

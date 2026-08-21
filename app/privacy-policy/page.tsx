@@ -81,11 +81,18 @@ export default function PrivacyPolicyPage() {
 
         <h2>Cookies and similar technologies</h2>
         <p>
-          The site uses browser storage in two places. The chat and form tools
-          described below store a small amount of data in your browser session to
-          remember the page you first landed on. If website analytics is enabled,
-          it sets cookies to distinguish one visit from another. No advertising or
-          cross-site tracking cookies are set by us.
+          The site uses cookies and similar browser storage for three purposes.
+          The chat and form tools store a small amount of data in your browser
+          session to remember the page you first landed on. Our analytics tags
+          set cookies that distinguish one visit from another and record which
+          campaign or search brought you here. Our call-tracking tool sets a
+          cookie so that if you telephone us, the call can be matched to that
+          visit.
+        </p>
+        <p>
+          We manage these tags through Google Tag Manager, so the specific set in
+          use can change over time and may include advertising tags that measure
+          the performance of our campaigns across sites.
         </p>
         <p>
           You can block or delete cookies in your browser settings. Doing so will
@@ -105,10 +112,31 @@ export default function PrivacyPolicyPage() {
             referred you, campaign parameters, and your browser user agent.
           </li>
           <li>
-            <strong>Google</strong> — provides the map on our contact page and the
-            reviews shown on this site. If website analytics is enabled, Google
-            also receives usage data. Google does not receive your form
+            <strong>Google</strong> — provides the map on our contact page, the
+            reviews shown on this site, and our analytics and tag management
+            (Google Analytics and Google Tag Manager), which receive the pages
+            you view and how you arrived. Google does not receive your form
             submissions.
+          </li>
+          <li>
+            <strong>Microsoft</strong> — Microsoft Clarity records how pages are
+            used, including mouse movement, scrolling and clicks, and can replay
+            a visit as a session recording. Text you type into form fields is
+            masked before it leaves your browser, so we do not receive the
+            contents of what you enter.
+          </li>
+          <li>
+            <strong>Google Ads</strong> — measures which advertisements lead to
+            enquiries and calls, and may be used to show our advertisements to
+            you on other sites.
+          </li>
+          <li>
+            <strong>CallTrackingMetrics</strong> — measures which pages and
+            campaigns lead to phone calls. It may display a tracking telephone
+            number in place of our main line; calls to it reach the same
+            admissions team. It receives the number dialled, the time and length
+            of the call, your telephone number as your carrier presents it, and
+            the visit the call is matched to.
           </li>
           <li>
             <strong>Vercel</strong> — hosts the site and keeps standard server

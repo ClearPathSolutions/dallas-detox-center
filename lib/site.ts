@@ -50,6 +50,29 @@ export const site = {
       api: "https://api.clarionlabs.ai",
     },
   },
+  /**
+   * Measurement tags. These are public identifiers — visible in page source on
+   * any site that runs them — so they live here beside the Clarion site key
+   * rather than in environment variables. NEXT_PUBLIC_GTM_ID still overrides,
+   * for staging containers.
+   *
+   * Adding a tag inside the GTM container is NOT enough on its own: this site
+   * sends a strict Content-Security-Policy, so each new vendor's host has to be
+   * allowed in next.config.ts or the browser blocks it. See ANALYTICS_HOSTS.
+   */
+  analytics: {
+    /** Google Tag Manager container. */
+    gtmId: "GTM-NVL62R97",
+    /**
+     * CallTrackingMetrics account. Its script performs dynamic number
+     * insertion — it rewrites the phone numbers rendered in the DOM to
+     * per-source tracking numbers so calls can be attributed to a campaign.
+     *
+     * It does not touch the JSON-LD, which keeps the real number, so the
+     * structured data stays consistent with Google Business Profile.
+     */
+    callTrackingAccount: "264810",
+  },
 } as const;
 
 export type NavItem = {
