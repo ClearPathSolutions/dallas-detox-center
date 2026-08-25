@@ -21,8 +21,6 @@
  * worth making when sending the fields explicitly costs nothing.
  */
 
-import { site } from "@/lib/site";
-
 declare global {
   interface Window {
     /** Installed by CallTrackingMetrics' t.js. */
@@ -208,17 +206,19 @@ export function ctmVisitorSid(): string | null {
 }
 
 /**
- * The submission body Clarion accepts.
+ * The body sent to /api/verify-insurance, which relays it to Clarion.
  *
- * Deliberately the same key set its own forms-capture.v1.js sends — no fields
- * their validator has not already been asked to accept. Only the values differ,
- * and only because theirs are read live from the URL.
+ * Two fields Clarion expects are deliberately absent here and added server
+ * side: `site_key`, which now lives only in CLARION_SITE_KEY and never reaches
+ * the browser, and `user_agent`, which the route reads off the request header
+ * rather than trusting the client for.
  *
- * ctm_visitor_sid is flat and top-level. Nesting it is the whole failure mode:
- * their parser does not go looking for it.
+ * ctm_visitor_sid stays flat and top-level all the way through. Nesting it is
+ * the whole failure mode: Clarion's parser does not go looking for it. The
+ * route also re-derives it from the __ctmid cookie, so a regression here can no
+ * longer silently un-attribute every lead.
  */
 export type LeadPayload = {
-  site_key: string;
   form_key: string;
   data: Record<string, unknown>;
   page_url: string;
@@ -227,7 +227,6 @@ export type LeadPayload = {
   utm: Record<string, string> | null;
   gclid: string | null;
   ctm_visitor_sid: string | null;
-  user_agent: string;
 };
 
 export function buildLeadPayload(
@@ -247,7 +246,6 @@ export function buildLeadPayload(
   }
 
   return {
-    site_key: site.widgets.clarion.siteKey,
     form_key: formKey,
     data,
     page_url: window.location.href,
@@ -260,6 +258,5 @@ export function buildLeadPayload(
     // error, and losing admissions enquiries to gain attribution is no trade.
     gclid: campaign.gclid ?? campaign.wbraid ?? campaign.gbraid ?? null,
     ctm_visitor_sid: ctmVisitorSid(),
-    user_agent: navigator.userAgent,
   };
 }

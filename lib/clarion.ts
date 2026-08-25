@@ -13,7 +13,11 @@ import { site } from "./site";
  * at /blog/<slug> with their own metadata, Article markup and sitemap entries.
  */
 
-const { siteKey, api } = site.widgets.clarion;
+const { api } = site.widgets.clarion;
+
+// Server-side only — this module is imported by server components and the
+// sitemap, never by the browser bundle.
+const siteKey = process.env.CLARION_SITE_KEY;
 
 export type ClarionPost = {
   slug: string;
@@ -83,6 +87,10 @@ function normalise(r: RawPost): ClarionPost | null {
 }
 
 async function fetchFeed(): Promise<ClarionPost[]> {
+  if (!siteKey) {
+    console.error("[clarion] CLARION_SITE_KEY is not set — blog feed unavailable");
+    return [];
+  }
   try {
     const res = await fetch(
       `${api}/blog/public/feed?site_key=${encodeURIComponent(siteKey)}`,
@@ -103,6 +111,10 @@ async function fetchFeed(): Promise<ClarionPost[]> {
 }
 
 async function fetchPost(slug: string): Promise<ClarionPost | null> {
+  if (!siteKey) {
+    console.error("[clarion] CLARION_SITE_KEY is not set — blog post unavailable");
+    return null;
+  }
   try {
     const res = await fetch(
       `${api}/blog/public/post?site_key=${encodeURIComponent(siteKey)}&slug=${encodeURIComponent(slug)}`,

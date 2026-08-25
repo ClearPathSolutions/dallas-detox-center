@@ -8,8 +8,24 @@ const BRAND = {
   font: "var(--font-montserrat), ui-sans-serif, system-ui, sans-serif",
 };
 
+/**
+ * Server component, deliberately. The site key now comes from CLARION_SITE_KEY,
+ * which has no NEXT_PUBLIC_ prefix and so is readable only during server
+ * render. It still reaches the browser as a data-site-key attribute — it is a
+ * public identifier and the vendor scripts need it — but it is no longer
+ * checked into the repo or bundled into any JavaScript.
+ */
 export default function Clarion() {
-  const { siteKey, api } = site.widgets.clarion;
+  const { api } = site.widgets.clarion;
+  const siteKey = process.env.CLARION_SITE_KEY;
+
+  if (!siteKey) {
+    // Rendering data-site-key="undefined" would leave a chat widget that looks
+    // installed and silently belongs to no account. Better to render nothing.
+    console.error("[clarion] CLARION_SITE_KEY is not set — chat widget not rendered");
+    return null;
+  }
+
   return (
     <>
       <style
@@ -36,8 +52,9 @@ export default function Clarion() {
       {/*
         Form capture. Inert on this site by design, and it must stay that way:
         the script only auto-wires forms carrying data-clarion-form, and ours
-        carry data-intent instead. components/LeadForm.tsx builds and posts its
-        own body so that attribution survives a second pageview.
+        carry data-intent instead. components/LeadForm.tsx posts to
+        /api/verify-insurance, which relays to Clarion with the attribution
+        attached.
 
         NEVER add data-clarion-form to those forms. The script does not check
         defaultPrevented, so it would fire its own POST alongside LeadForm's and

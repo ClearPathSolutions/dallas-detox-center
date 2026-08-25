@@ -53,8 +53,13 @@ Set these in Vercel → Project → Settings → Environment Variables:
 
 | Variable | Purpose | Without it |
 |---|---|---|
+| `CLARION_SITE_KEY` | **Required.** Identifies the site to Clarion — lead relay, chat widget, blog feed | Every lead 502s, the chat widget does not render, the blog feed is empty |
 | `GOOGLE_PLACES_API_KEY` | Pulls Google reviews for the reviews sections | Those sections render nothing |
 | `NEXT_PUBLIC_GA_ID` | GA4 measurement ID (`G-XXXXXXXXXX`) | No analytics loads at all |
+
+`CLARION_SITE_KEY` is server-side only and must never gain a `NEXT_PUBLIC_`
+prefix. It has to exist in Vercel **before** this deploys — nothing falls back
+to a checked-in value any more.
 
 ## Project structure
 

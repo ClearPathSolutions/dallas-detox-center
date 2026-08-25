@@ -17,24 +17,24 @@ const CLARION_FORM_KEY: Record<Intent, string> = {
 };
 
 /**
- * Post the lead to Clarion's public endpoint.
+ * Post the lead to our own relay, which forwards it to Clarion.
  *
- * One path, always — we no longer call window.ClarionForms.submit() when the
- * capture script happens to have loaded. Two reasons:
+ * One path, always — never window.ClarionForms.submit(). Their submit() builds
+ * its own body and accepts only { form_key, data }, so anything we compute
+ * would land nested inside `data` where Clarion does not read it, losing the
+ * corrected attribution to the values they read live off the URL.
  *
- *  - Their submit() builds its own body and only accepts { form_key, data }.
- *    Anything we compute would land nested inside `data`, and Clarion reads
- *    attribution from the top level only, so corrected values would be ignored
- *    in favour of the ones they read live off the URL.
- *  - It was also the ad-blocker weak point. Their script is a routine block
- *    target; this fetch is first-party code and only needs the endpoint.
+ * Same-origin rather than posting to Clarion directly. The browser POST does
+ * work from this origin, but a first-party path is not an ad-blocker target the
+ * way api.clarionlabs.ai is, it keeps the site key out of the page entirely,
+ * and it lets the server recover the CTM session id from the __ctmid cookie
+ * when the client could not read it.
  *
- * Same vendor, same endpoint, same key set their script sends — see
- * buildLeadPayload. dallasdetoxcenter.com is on Clarion's CORS allowlist, so
- * this posts straight from the browser and needs no server relay.
+ * No trailing slash: this site does not normalise to one, so adding it would
+ * make every lead pay a 308 first.
  */
 async function submitLead(formKey: string, data: Record<string, unknown>) {
-  return fetch(`${site.widgets.clarion.api}/forms/public/submit`, {
+  return fetch("/api/verify-insurance", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     keepalive: true,

@@ -46,15 +46,21 @@ export const site = {
   },
   widgets: {
     clarion: {
-      siteKey: "cpx_b3ULWMuK13qriOhukW31Cg48wIbMvGN6",
+      // The site key is NOT here. It lives in CLARION_SITE_KEY, read server
+      // side only — by the lead relay, the blog feed, and <Clarion /> when it
+      // renders the vendor script tags. Deliberately not NEXT_PUBLIC_: nothing
+      // in the browser bundle needs it now that leads go through
+      // /api/verify-insurance.
       api: "https://api.clarionlabs.ai",
     },
   },
   /**
    * Measurement tags. These are public identifiers — visible in page source on
-   * any site that runs them — so they live here beside the Clarion site key
-   * rather than in environment variables. NEXT_PUBLIC_GTM_ID still overrides,
-   * for staging containers.
+   * any site that runs them — so they live here rather than in environment
+   * variables. NEXT_PUBLIC_GTM_ID still overrides, for staging containers.
+   *
+   * The Clarion site key used to sit alongside them and no longer does; it is
+   * configuration for a server-side relay now, not a tag the page carries.
    *
    * Adding a tag inside the GTM container is NOT enough on its own: this site
    * sends a strict Content-Security-Policy, so each new vendor's host has to be
