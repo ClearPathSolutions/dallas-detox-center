@@ -60,20 +60,32 @@ j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNo
         </Script>
       )}
 
-      {ctm && (
-        <Script
-          // Supplied as a protocol-relative URL; pinned to https because the
-          // site is https-only and protocol-relative offers nothing here.
-          src={`https://${ctm}.tctm.co/t.js`}
-          // Eager, unlike the tags above it, for two reasons. It performs the
-          // dynamic number swap, so deferring it leaves a window in which a
-          // visitor can read and dial the untracked number. And it is what
-          // establishes the CTM session id that /contact-us and
-          // /verify-insurance attach to their leads — a visitor who lands and
-          // submits within a few seconds needs it to already exist.
-          strategy="beforeInteractive"
-        />
-      )}
+      {/*
+        CallTrackingMetrics. A plain async tag — NOT next/script, and NOT
+        synchronous. Do not "fix" this back to an eager or blocking tag; both
+        break the number swap silently, which is why it looks harmless.
+
+        A synchronous tag executes while the parser is still in <head>, before
+        <body> exists. CTM's number scan defaults its root to document.body and
+        no-ops when that is null, so it can miss every phone number on the page:
+        no swap, one hardcoded number for all traffic, and CTM left guessing
+        which web session an inbound call belongs to.
+
+        `beforeInteractive` is the same trap wearing a Next.js hat — it injects
+        into <head> during bootstrap. It has a second failure here too: it
+        rewrites the numbers before hydration, and React then reverts the swap
+        and replaces the server HTML wholesale.
+
+        Absolute https://, never the protocol-relative //264810.tctm.co/... form
+        CTM hands out. Rendered from the root layout so it is on every page,
+        campaign landing pages included.
+
+        Verifying an install: count with
+          document.querySelectorAll('script[src*="tctm.co/t.js"]').length  // 1
+        NOT script[src*="tctm.co"], which returns 2 on a healthy install
+        because t.js injects its own p.js. Removing that "duplicate" breaks CTM.
+      */}
+      {ctm && <script async src={`https://${ctm}.tctm.co/t.js`} />}
 
       {/*
         Delegated click tracking for the two conversion actions that were
