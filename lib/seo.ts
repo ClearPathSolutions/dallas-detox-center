@@ -35,18 +35,32 @@ export const NOINDEX_PATHS = new Set([
   "/luxury-inpatient-lp",
 ]);
 
+/**
+ * Bios that are published on quadranthealthgroup.com and repeated word for word
+ * across the group's facility sites. Thirteen near-identical pages would
+ * otherwise compete with each other and with the parent's copy, so the shared
+ * ones canonicalise to the parent and let it hold the ranking. Keyed by slug —
+ * every other page, including the rest of the team, still canonicalises to its
+ * own URL.
+ */
+const CANONICAL_AT_PARENT: Record<string, string> = {
+  // Network-wide medical oversight, not Dallas Detox Center staff.
+  "pamela-tambini": "https://www.quadranthealthgroup.com/team/pamela-tambini/",
+};
+
 /** Build Next.js metadata from the migrated Yoast SEO fields (verbatim). */
 export function metaFor(entry: PageContent | PostContent): Metadata {
   const { text: plainTitle, absolute } = titleFor(entry.metaTitle || entry.title);
   const title: Metadata["title"] = absolute ? { absolute: plainTitle } : plainTitle;
   const description = entry.metaDescription || undefined;
   const url = entry.path;
+  const canonical = CANONICAL_AT_PARENT[entry.slug] ?? url;
   const image = entry.ogImage || entry.featured?.src || undefined;
   const noindex = NOINDEX_PATHS.has(url);
   return {
     title,
     description,
-    alternates: { canonical: url },
+    alternates: { canonical },
     robots: noindex ? { index: false, follow: true } : undefined,
     openGraph: {
       title: plainTitle,
