@@ -13,7 +13,9 @@ import { JsonLd, breadcrumbSchema, organisationId } from "@/lib/schema";
 // New posts should appear without a redeploy, so unknown slugs are rendered on
 // demand rather than 404'd.
 export const dynamicParams = true;
-export const revalidate = 3600;
+// Matches the Clarion data cache in lib/clarion.ts: an edit in Clarion should
+// not take an hour to show up here either.
+export const revalidate = 60;
 
 type Params = { slug: string };
 

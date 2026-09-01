@@ -129,13 +129,29 @@ async function fetchPost(slug: string): Promise<ClarionPost | null> {
   }
 }
 
-/** Post list, refreshed hourly so new posts appear without a redeploy. */
+/**
+ * Post list and single posts, refreshed a minute after Clarion changes them.
+ *
+ * This window is what decides how long a newly published post stays invisible
+ * on /blog, and it used to be an hour. The failure was easy to misread as the
+ * post not having published at all: /blog/[slug] sets dynamicParams, so a brand
+ * new post is reachable at its URL immediately, while the index it should be
+ * listed on is a prerender still serving the previous hour's data. A working
+ * link and an index that omits it looks like a bug in the blog, not a cache.
+ *
+ * Sixty seconds costs at most one feed fetch a minute per region, on a page
+ * nothing else depends on. The `clarion-blog` tag is here so publishing can
+ * push instead of poll — revalidateTag('clarion-blog') from a webhook route
+ * makes it instant, if Clarion can be made to call one.
+ */
+const CLARION_REVALIDATE_SECONDS = 60;
+
 export const getClarionPosts = unstable_cache(fetchFeed, ["clarion-feed"], {
-  revalidate: 3600,
+  revalidate: CLARION_REVALIDATE_SECONDS,
   tags: ["clarion-blog"],
 });
 
 export const getClarionPost = unstable_cache(fetchPost, ["clarion-post"], {
-  revalidate: 3600,
+  revalidate: CLARION_REVALIDATE_SECONDS,
   tags: ["clarion-blog"],
 });
