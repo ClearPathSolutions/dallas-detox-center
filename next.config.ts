@@ -111,12 +111,21 @@ const nextConfig: NextConfig = {
             // capture, blog embed), the Google Maps embed on /contact-us, and
             // Google-hosted review-author avatars. 'unsafe-inline' is required
             // for Next's inline bootstrap and the Clarion brand <style> block.
+            //
+            // api.clarionlabs.ai is in img-src deliberately, even though no
+            // image loads from it today: Clarion serves blog cover images from
+            // that host, and this site substitutes an approved campus photo for
+            // any non-local src (see approvedThumb in lib/media.ts). Allowing
+            // the host is the half of the fix that belongs in policy — do not
+            // prune it as unused. Rendering those images directly would also
+            // need the substitution lifted and the host added to
+            // images.remotePatterns above.
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
               `script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.clarionlabs.ai ${ANALYTICS_HOSTS}`,
               "style-src 'self' 'unsafe-inline'",
-              `img-src 'self' data: blob: https://lh3.googleusercontent.com https://www.clarionlabs.ai https://images.unsplash.com ${ANALYTICS_HOSTS}`,
+              `img-src 'self' data: blob: https://api.clarionlabs.ai https://www.clarionlabs.ai https://lh3.googleusercontent.com https://images.unsplash.com ${ANALYTICS_HOSTS}`,
               "font-src 'self' data:",
               `connect-src 'self' https://api.clarionlabs.ai https://www.clarionlabs.ai ${ANALYTICS_HOSTS}`,
               "frame-src https://www.google.com https://www.clarionlabs.ai",
