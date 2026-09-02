@@ -43,12 +43,19 @@ const ANALYTICS_HOSTS = [
 const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
-    // Migrated media are local to /public. The one remote source is Google
-    // review-author avatars, which the Places API serves from lh3.
+    // Migrated media are local to /public. Two remote sources: Google
+    // review-author avatars, and Clarion's blog imagery.
     remotePatterns: [
-      // Google review author avatars. Blog cover images are no longer fetched
-      // remotely: Clarion posts render an approved facility photo instead.
+      // Google review author avatars.
       { protocol: "https", hostname: "lh3.googleusercontent.com", pathname: "/**" },
+      // Clarion blog cover images and the inline images inside post bodies.
+      // These are authored per post in Clarion's CMS — a cover chosen for the
+      // article and diagrams/photos placed within the copy — so unlike the
+      // migrated WordPress library they are not stock stand-ins to be replaced
+      // by an approved campus photo. Substituting one here silently published
+      // the wrong picture; see the note on approvedThumb in lib/media.ts.
+      { protocol: "https", hostname: "api.clarionlabs.ai", pathname: "/**" },
+      { protocol: "https", hostname: "www.clarionlabs.ai", pathname: "/**" },
     ],
   },
   /**
@@ -112,14 +119,13 @@ const nextConfig: NextConfig = {
             // Google-hosted review-author avatars. 'unsafe-inline' is required
             // for Next's inline bootstrap and the Clarion brand <style> block.
             //
-            // api.clarionlabs.ai is in img-src deliberately, even though no
-            // image loads from it today: Clarion serves blog cover images from
-            // that host, and this site substitutes an approved campus photo for
-            // any non-local src (see approvedThumb in lib/media.ts). Allowing
-            // the host is the half of the fix that belongs in policy — do not
-            // prune it as unused. Rendering those images directly would also
-            // need the substitution lifted and the host added to
-            // images.remotePatterns above.
+            // api.clarionlabs.ai in img-src is load-bearing: Clarion serves
+            // both blog cover images and the images inside post bodies from
+            // that host, and those now render directly rather than being
+            // swapped for a campus photo. Post bodies go through
+            // dangerouslySetInnerHTML, so their <img> tags are plain HTML
+            // checked against this directive rather than by next/image — drop
+            // the host and inline article images silently disappear.
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",

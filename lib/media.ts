@@ -230,3 +230,40 @@ export function approvedThumb(src: string | null | undefined, key: string): Phot
   if (isApprovedSrc(src)) return { src: src as string, alt: "" };
   return galleryFor(key, 1)[0];
 }
+
+/**
+ * Hosts Clarion serves post imagery from. Covers are uploaded per article in
+ * Clarion's CMS and come back as absolute URLs on these hosts.
+ */
+const CLARION_IMAGE_HOSTS = ["api.clarionlabs.ai", "www.clarionlabs.ai"];
+
+function isClarionSrc(src?: string | null): boolean {
+  if (!src) return false;
+  try {
+    return CLARION_IMAGE_HOSTS.includes(new URL(src).hostname);
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Cover image for a Clarion post.
+ *
+ * Deliberately not `approvedThumb`. That function exists for the migrated
+ * WordPress library, where a src pointing anywhere but /images/ meant
+ * Shutterstock photography of somewhere that is not this facility, and
+ * replacing it with a campus photo was the fix. A Clarion cover is the
+ * opposite case: someone chose that image for that article in the CMS, and
+ * substituting a deterministic campus photo published a picture the author
+ * never selected — a nursing station on top of an article about choosing a
+ * rehab, with no signal that anything had been swapped.
+ *
+ * So a cover on a Clarion host is trusted and rendered as-is. Anything else —
+ * an unexpected host, or a post saved with no cover — still falls back to the
+ * approved set, which keeps stock imagery from a mis-configured feed off the
+ * site.
+ */
+export function clarionCover(src: string | null | undefined, key: string): Photo {
+  if (isApprovedSrc(src) || isClarionSrc(src)) return { src: src as string, alt: "" };
+  return galleryFor(key, 1)[0];
+}

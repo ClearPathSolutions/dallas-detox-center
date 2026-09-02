@@ -64,6 +64,67 @@ export function sanitiseHtml(html: string): string {
     .replace(/(href|src)\s*=\s*(["'])\s*javascript:[^"']*\2/gi, '$1="#"');
 }
 
+/**
+ * Make the image URLs inside a post body loadable from this origin.
+ *
+ * Clarion authors images into the body in its own editor, where a root-relative
+ * path like /blog/public/image/<id> resolves against the Clarion app. Served
+ * from this domain that same path points at dallasdetoxcenter.com, where
+ * nothing is behind it — so every inline image 404s, while the cover, the one
+ * URL the API returns absolute, renders fine. Rewriting them to absolute
+ * Clarion URLs is what actually puts the pictures on the page.
+ *
+ * Absolute, protocol-relative and data: sources are left as they are. Anything
+ * rewritten lands on api.clarionlabs.ai, which is in both the img-src directive
+ * and images.remotePatterns.
+ */
+function absolutise(url: string, base: string): string {
+  const src = url.trim();
+  if (!src || /^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i.test(src)) return url;
+  try {
+    return new URL(src, base).href;
+  } catch {
+    return url;
+  }
+}
+
+export function resolveImageUrls(html: string, base: string): string {
+  return html
+    .replace(
+      /(<img\b[^>]*?\ssrc\s*=\s*)(["'])([^"']*)\2/gi,
+      (match, prefix: string, quote: string, url: string) => {
+        const resolved = absolutise(url, base);
+        return resolved === url ? match : `${prefix}${quote}${resolved}${quote}`;
+      },
+    )
+    // srcset too, and not merely for completeness: when a browser can use a
+    // srcset candidate it ignores src entirely, so leaving these relative
+    // would keep the image broken on exactly the displays that matched one.
+    .replace(
+      /(<img\b[^>]*?\ssrcset\s*=\s*)(["'])([^"']*)\2/gi,
+      (match, prefix: string, quote: string, value: string) => {
+        const resolved = value
+          .split(",")
+          .map((candidate) => {
+            const parts = candidate.trim().split(/\s+/);
+            if (!parts[0]) return candidate.trim();
+            parts[0] = absolutise(parts[0], base);
+            return parts.join(" ");
+          })
+          .join(", ");
+        return `${prefix}${quote}${resolved}${quote}`;
+      },
+    );
+}
+
+/**
+ * Body HTML as it should reach the page: stripped of anything executable, then
+ * pointed at image URLs that resolve from this origin.
+ */
+export function prepareBodyHtml(html: string): string {
+  return resolveImageUrls(sanitiseHtml(html), api);
+}
+
 function normalise(r: RawPost): ClarionPost | null {
   if (!r.slug || !r.title) return null;
   return {
@@ -73,7 +134,7 @@ function normalise(r: RawPost): ClarionPost | null {
     coverImage: r.cover_image_url ?? null,
     author: r.author_name ?? null,
     publishedAt: r.published_at ?? null,
-    bodyHtml: r.body_html ? sanitiseHtml(r.body_html) : null,
+    bodyHtml: r.body_html ? prepareBodyHtml(r.body_html) : null,
     seoTitle: r.seo_meta?.title ?? r.meta_title ?? null,
     seoDescription: r.seo_meta?.description ?? r.excerpt ?? null,
     reviewer: r.medically_reviewed_by
