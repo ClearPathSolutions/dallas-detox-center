@@ -119,19 +119,24 @@ const nextConfig: NextConfig = {
             // Google-hosted review-author avatars. 'unsafe-inline' is required
             // for Next's inline bootstrap and the Clarion brand <style> block.
             //
-            // api.clarionlabs.ai in img-src is load-bearing: Clarion serves
-            // both blog cover images and the images inside post bodies from
-            // that host, and those now render directly rather than being
-            // swapped for a campus photo. Post bodies go through
-            // dangerouslySetInnerHTML, so their <img> tags are plain HTML
-            // checked against this directive rather than by next/image — drop
-            // the host and inline article images silently disappear.
+            // Clarion image hosts in img-src are load-bearing. Clarion serves
+            // blog covers and in-body images from api.clarionlabs.ai, which
+            // 302s to a presigned URL on clarion-meta-ads-media.s3.amazonaws.com.
+            // CSP re-checks the redirect target against this directive, so the
+            // S3 host has to be listed too: with only api.clarionlabs.ai the
+            // request is allowed and then blocked one hop later.
+            //
+            // Covers survived that because next/image fetches them server-side
+            // and follows the redirect itself, so no browser request is made.
+            // Post bodies go through dangerouslySetInnerHTML, so their <img>
+            // tags are plain browser loads governed entirely by this line —
+            // which is why in-body images were the only ones that broke.
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
               `script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.clarionlabs.ai ${ANALYTICS_HOSTS}`,
               "style-src 'self' 'unsafe-inline'",
-              `img-src 'self' data: blob: https://api.clarionlabs.ai https://www.clarionlabs.ai https://lh3.googleusercontent.com https://images.unsplash.com ${ANALYTICS_HOSTS}`,
+              `img-src 'self' data: blob: https://api.clarionlabs.ai https://www.clarionlabs.ai https://clarion-meta-ads-media.s3.amazonaws.com https://lh3.googleusercontent.com https://images.unsplash.com ${ANALYTICS_HOSTS}`,
               "font-src 'self' data:",
               `connect-src 'self' https://api.clarionlabs.ai https://www.clarionlabs.ai ${ANALYTICS_HOSTS}`,
               "frame-src https://www.google.com https://www.clarionlabs.ai",

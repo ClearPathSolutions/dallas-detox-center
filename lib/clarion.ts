@@ -65,18 +65,20 @@ export function sanitiseHtml(html: string): string {
 }
 
 /**
- * Make the image URLs inside a post body loadable from this origin.
+ * Point any root-relative image URL in a post body at the Clarion host.
  *
- * Clarion authors images into the body in its own editor, where a root-relative
- * path like /blog/public/image/<id> resolves against the Clarion app. Served
- * from this domain that same path points at dallasdetoxcenter.com, where
- * nothing is behind it — so every inline image 404s, while the cover, the one
- * URL the API returns absolute, renders fine. Rewriting them to absolute
- * Clarion URLs is what actually puts the pictures on the page.
+ * Defensive, not the fix for the broken in-body images — that was a CSP hole,
+ * see the img-src note in next.config.ts. Every URL in the feed today comes
+ * back absolute, so this is a no-op on current content and was verified as
+ * such against the live payload.
  *
- * Absolute, protocol-relative and data: sources are left as they are. Anything
- * rewritten lands on api.clarionlabs.ai, which is in both the img-src directive
- * and images.remotePatterns.
+ * It stays because the editor stores what an author pastes: a root-relative
+ * /blog/public/image/<id> resolves correctly inside Clarion's own preview and
+ * would then silently point at dallasdetoxcenter.com once served from here.
+ * Cheap to keep, and the failure it prevents looks identical to the one just
+ * fixed.
+ *
+ * Absolute, protocol-relative and data: sources are left as they are.
  */
 function absolutise(url: string, base: string): string {
   const src = url.trim();
