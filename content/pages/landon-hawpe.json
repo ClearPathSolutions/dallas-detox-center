@@ -1,0 +1,47 @@
+{
+  "id": "landon-hawpe",
+  "slug": "landon-hawpe",
+  "path": "/about-us/landon-hawpe",
+  "template": "team",
+  "title": "Landon Hawpe",
+  "metaTitle": "Landon Hawpe — Head Chef | Dallas Detox Center",
+  "metaDescription": "Meet Landon Hawpe, Head Chef at Dallas Detox Center, who oversees culinary services across both Texas facilities.",
+  "ogImage": "/images/team/landon-hawpe.jpg",
+  "canonical": "/about-us/landon-hawpe",
+  "featured": {
+    "src": "/images/team/landon-hawpe.jpg",
+    "alt": "Landon Hawpe, Head Chef at Dallas Detox Center"
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Who We Are"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Landon Hawpe"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Head Chef"
+    },
+    {
+      "type": "paragraph",
+      "text": "Landon Hawpe serves as Head Chef for Dallas Detox Center and Fort Worth Wellness Center, bringing years of culinary experience and a personal passion for recovery to his role. Having spent most of his adult life in fine dining, Landon has served as Executive Chef at several restaurants, developing a deep appreciation for creating memorable experiences through food.",
+      "html": "Landon Hawpe serves as Head Chef for Dallas Detox Center and Fort Worth Wellness Center, bringing years of culinary experience and a personal passion for recovery to his role. Having spent most of his adult life in fine dining, Landon has served as Executive Chef at several restaurants, developing a deep appreciation for creating memorable experiences through food."
+    },
+    {
+      "type": "paragraph",
+      "text": "As Landon progressed in his own recovery, he felt called to take his culinary career in a more meaningful direction. About three years ago, he transitioned from the restaurant industry into behavioral healthcare, combining his love of food with his desire to serve people whose journeys he personally understands.",
+      "html": "As Landon progressed in his own recovery, he felt called to take his culinary career in a more meaningful direction. About three years ago, he transitioned from the restaurant industry into behavioral healthcare, combining his love of food with his desire to serve people whose journeys he personally understands."
+    },
+    {
+      "type": "paragraph",
+      "text": "Today, Landon oversees culinary services across both Texas facilities, creating thoughtful, high-quality meals that bring comfort, nourishment, and a sense of community to the treatment experience. For Landon, food is more than a meal—it is an opportunity to care for others and contribute to an environment where people can focus on healing and recovery.",
+      "html": "Today, Landon oversees culinary services across both Texas facilities, creating thoughtful, high-quality meals that bring comfort, nourishment, and a sense of community to the treatment experience. For Landon, food is more than a meal—it is an opportunity to care for others and contribute to an environment where people can focus on healing and recovery."
+    }
+  ]
+}

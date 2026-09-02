@@ -391,6 +391,13 @@
       "template": "team",
       "title": "Dr. Pamela Tambini",
       "blocks": 9
+    },
+    {
+      "slug": "landon-hawpe",
+      "path": "/about-us/landon-hawpe",
+      "template": "team",
+      "title": "Landon Hawpe",
+      "blocks": 6
     }
   ],
   "posts": [

@@ -56,7 +56,9 @@ function BlockItem({ block }: { block: Block }) {
       return (
         <p
           className="text-[1.0625rem] leading-relaxed text-navy-600 [&_a]:font-medium [&_a]:text-brand-700 [&_a:hover]:text-brand-800 [&_a]:underline [&_a]:underline-offset-2 [&_strong]:text-navy-800"
-          dangerouslySetInnerHTML={{ __html: block.html }}
+          // Hand-authored blocks may carry only `text`; the migrated ones
+          // carry both. Falling back keeps a missing `html` from failing the build.
+          dangerouslySetInnerHTML={{ __html: block.html ?? block.text ?? "" }}
         />
       );
     case "list":

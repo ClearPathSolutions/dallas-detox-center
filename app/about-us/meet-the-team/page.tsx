@@ -105,10 +105,18 @@ export default function MeetTheTeamPage() {
                 >
                   {t.image ? (
                     <div className="aspect-[4/3] overflow-hidden bg-sand-100">
+                      {/*
+                        The headshots arrive in three different aspect ratios —
+                        landscape, square and portrait — so without a crop the
+                        cards in a row ended up different heights and their names
+                        no longer lined up. Fill the 4:3 box and anchor the crop
+                        near the top so faces are never cut off.
+                      */}
                       <SmartImage
                         src={t.image}
                         alt={t.name}
                         sizes="(min-width:1024px) 22rem, (min-width:640px) 50vw, 100vw"
+                        className="h-full w-full object-cover object-[center_25%]"
                       />
                     </div>
                   ) : (
