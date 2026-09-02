@@ -6,7 +6,7 @@ import { ArrowLeft, CalendarDays, ShieldCheck } from "lucide-react";
 import { site } from "@/lib/site";
 import { getClarionPost, getClarionPosts } from "@/lib/clarion";
 import { Container } from "@/components/ui/Container";
-import { approvedThumb } from "@/lib/media";
+import { clarionCover } from "@/lib/media";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { JsonLd, breadcrumbSchema, organisationId } from "@/lib/schema";
 
@@ -144,7 +144,7 @@ export default async function ClarionPostPage({ params }: { params: Promise<Para
             <Container className="pb-14">
               <div className="relative aspect-[16/9] overflow-hidden rounded-2xl">
                 <Image
-                  src={approvedThumb(post.coverImage, post.slug).src}
+                  src={clarionCover(post.coverImage, post.slug).src}
                   alt=""
                   fill
                   sizes="(min-width:1280px) 76rem, 100vw"
