@@ -79,6 +79,38 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+/*
+ * Anchor targets clear the sticky header.
+ *
+ * Without this a heading jumped to from a table of contents scrolls to the very
+ * top of the viewport, which is exactly where the header sits, so the section
+ * you asked for ends up hidden behind it and the click looks like it did
+ * nothing. Clears the h-20 bar, plus the h-9 utility strip that appears from md.
+ */
+:target,
+h1[id],
+h2[id],
+h3[id],
+h4[id],
+h5[id],
+h6[id],
+li[id] {
+  scroll-margin-top: 6rem;
+}
+
+@media (min-width: 768px) {
+  :target,
+  h1[id],
+  h2[id],
+  h3[id],
+  h4[id],
+  h5[id],
+  h6[id],
+  li[id] {
+    scroll-margin-top: 8.5rem;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

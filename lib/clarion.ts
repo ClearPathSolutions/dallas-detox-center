@@ -119,12 +119,78 @@ export function resolveImageUrls(html: string, base: string): string {
     );
 }
 
+/** Entities that can legitimately appear in a heading Clarion sends. */
+const NAMED_ENTITIES: Record<string, string> = {
+  "&amp;": "&",
+  "&nbsp;": " ",
+  "&quot;": '"',
+  "&apos;": "'",
+  "&#39;": "'",
+  "&lt;": "<",
+  "&gt;": ">",
+  "&mdash;": "\u2014",
+  "&ndash;": "\u2013",
+  "&hellip;": "\u2026",
+};
+
+/** Clarion's own slug rule: lowercase, each run of non-alphanumerics to a hyphen. */
+function headingSlug(inner: string): string {
+  return inner
+    .replace(/<[^>]+>/g, " ")
+    .replace(
+      /&(?:amp|nbsp|quot|apos|#39|lt|gt|mdash|ndash|hellip);/g,
+      (m) => NAMED_ENTITIES[m] ?? " ",
+    )
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+/**
+ * Give the body's anchor targets the ids its own links already point at.
+ *
+ * Clarion writes a table of contents linking to #slug, and in-text citations
+ * linking to #ref1..#refN, but sends every heading as a bare <h2>/<h3> and the
+ * references as a plain <ol> — no ids on either. So each of those links
+ * resolves to nothing and the page sits still when one is clicked, which reads
+ * as broken scrolling rather than as markup the feed never carried.
+ *
+ * The slug rule is Clarion's, read back off a published post's own table of
+ * contents: all 11 of its links match this transform of the heading text.
+ * Anything that already carries an id is left alone.
+ */
+export function addAnchorIds(html: string): string {
+  const withHeadingIds = html.replace(
+    /<(h[1-6])([^>]*)>([\s\S]*?)<\/\1>/gi,
+    (full: string, tag: string, attrs: string, inner: string) => {
+      if (/\sid\s*=/i.test(attrs)) return full;
+      const id = headingSlug(inner);
+      return id ? `<${tag}${attrs} id="${id}">${inner}</${tag}>` : full;
+    },
+  );
+
+  // #refN addresses the Nth item of the list under the References heading.
+  return withHeadingIds.replace(
+    /(<h[1-6][^>]*>\s*references\s*<\/h[1-6]>\s*)(<ol[^>]*>)([\s\S]*?)(<\/ol>)/i,
+    (full: string, heading: string, open: string, items: string, close: string) => {
+      let n = 0;
+      const numbered = items.replace(
+        /<li((?:\s[^>]*)?)>/gi,
+        (li: string, attrs: string) =>
+          /\sid\s*=/i.test(attrs) ? li : `<li${attrs} id="ref${++n}">`,
+      );
+      return n ? heading + open + numbered + close : full;
+    },
+  );
+}
+
 /**
  * Body HTML as it should reach the page: stripped of anything executable, then
- * pointed at image URLs that resolve from this origin.
+ * pointed at image URLs that resolve from this origin, then given the anchor
+ * ids its table of contents and citations link to.
  */
 export function prepareBodyHtml(html: string): string {
-  return resolveImageUrls(sanitiseHtml(html), api);
+  return addAnchorIds(resolveImageUrls(sanitiseHtml(html), api));
 }
 
 function normalise(r: RawPost): ClarionPost | null {
