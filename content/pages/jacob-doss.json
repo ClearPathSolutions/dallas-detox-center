@@ -1,0 +1,47 @@
+{
+  "id": "jacob-doss",
+  "slug": "jacob-doss",
+  "path": "/about-us/jacob-doss",
+  "template": "team",
+  "title": "Jacob Doss",
+  "metaTitle": "Jacob Doss — Alumni Coordinator | Dallas Detox Center",
+  "metaDescription": "Meet Jacob Doss, Alumni Coordinator at Dallas Detox Center, who keeps clients connected to community and support long after discharge.",
+  "ogImage": "/images/team/jacob-doss.jpg",
+  "canonical": "/about-us/jacob-doss",
+  "featured": {
+    "src": "/images/team/jacob-doss.jpg",
+    "alt": "Jacob Doss, Alumni Coordinator at Dallas Detox Center"
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Who We Are"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Jacob Doss"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Alumni Coordinator"
+    },
+    {
+      "type": "paragraph",
+      "text": "Jacob Doss serves as the Alumni Coordinator for Quadrant Health Group's Texas facilities, supporting both Dallas Detox Center and Fort Worth Wellness Center. His role focuses on helping clients stay connected to the support, relationships, and sense of community they begin building during treatment.",
+      "html": "Jacob Doss serves as the Alumni Coordinator for Quadrant Health Group's Texas facilities, supporting both Dallas Detox Center and Fort Worth Wellness Center. His role focuses on helping clients stay connected to the support, relationships, and sense of community they begin building during treatment."
+    },
+    {
+      "type": "paragraph",
+      "text": "Jacob brings a personal understanding of mental health, addiction, treatment, and recovery to his work, allowing him to connect with clients in a genuine and relatable way. By building relationships while clients are still in residential treatment, he helps make the transition into alumni support feel more natural and ensures they know that support does not end at discharge.",
+      "html": "Jacob brings a personal understanding of mental health, addiction, treatment, and recovery to his work, allowing him to connect with clients in a genuine and relatable way. By building relationships while clients are still in residential treatment, he helps make the transition into alumni support feel more natural and ensures they know that support does not end at discharge."
+    },
+    {
+      "type": "paragraph",
+      "text": "Through alumni outreach, events, continued communication, and community engagement, Jacob works to create a strong and welcoming alumni network across both Texas locations. His goal is to make sure clients leave treatment knowing they are still part of a community—one they can stay connected to, contribute to, and continue growing alongside long after discharge.",
+      "html": "Through alumni outreach, events, continued communication, and community engagement, Jacob works to create a strong and welcoming alumni network across both Texas locations. His goal is to make sure clients leave treatment knowing they are still part of a community—one they can stay connected to, contribute to, and continue growing alongside long after discharge."
+    }
+  ]
+}

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { site } from "@/lib/site";
-import { getIndex, getPageByPath, teamHeadshot, teamRole } from "@/lib/content";
+import { getIndex, getPageByPath, teamHeadshot, teamRole, teamRank } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { CtaBand } from "@/components/sections/CtaBand";
@@ -55,6 +55,10 @@ function member(path: string, title: string): Member | null {
 export default function MeetTheTeamPage() {
   const team = getIndex()
     .pages.filter((p) => p.template === "team")
+    .sort((a, b) => {
+      const d = teamRank(a.slug) - teamRank(b.slug);
+      return d !== 0 ? d : a.title.localeCompare(b.title);
+    })
     .map((p) => member(p.path, p.title))
     .filter((m): m is Member => !!m);
 

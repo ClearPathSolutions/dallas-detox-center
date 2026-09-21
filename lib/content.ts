@@ -83,6 +83,33 @@ export function getPageByPath(path: string): PageContent | null {
  * own copy of this it omitted the eyebrow check and published "Who We Are" as
  * everyone's jobTitle.
  */
+/**
+ * The roster in the order the client wants it shown: medical oversight first,
+ * then leadership by seniority, then client-facing roles.
+ *
+ * Team pages were previously listed in whatever order they happened to sit in
+ * content/index.json, which is an artefact of when each bio was added rather
+ * than a decision. Anyone not named here sorts to the end alphabetically, so a
+ * new bio appears rather than disappearing if someone forgets this list.
+ */
+export const TEAM_ORDER = [
+  "pamela-tambini",
+  "olivia-hadjerioua",
+  "antoine-gross",
+  "deborah-wade",
+  "joshua-leder",
+  "haley-wadlington",
+  "sarah-bentley",
+  "landon-hawpe",
+  "jacob-doss",
+];
+
+/** Sort key for a team member's slug; unlisted people go last. */
+export function teamRank(slug: string): number {
+  const i = TEAM_ORDER.indexOf(slug);
+  return i === -1 ? TEAM_ORDER.length : i;
+}
+
 export function teamRole(page: PageContent): string | null {
   const heading = page.blocks.find(
     (b): b is Extract<Block, { type: "heading" }> =>

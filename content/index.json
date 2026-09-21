@@ -398,6 +398,13 @@
       "template": "team",
       "title": "Landon Hawpe",
       "blocks": 6
+    },
+    {
+      "slug": "jacob-doss",
+      "path": "/about-us/jacob-doss",
+      "template": "team",
+      "title": "Jacob Doss",
+      "blocks": 6
     }
   ],
   "posts": [
