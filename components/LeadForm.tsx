@@ -136,7 +136,7 @@ export function LeadForm({ intent = "contact" }: { intent?: Intent }) {
             ? "Our admissions team will verify your benefits and call you back — usually within the hour. "
             : "A member of our admissions team will contact you shortly. "}
           If you need immediate help, call us any time at{" "}
-          <a href={site.phone.href} className="font-semibold text-brand-700">
+          <a href={site.phone.href} className="font-semibold text-brand-700" suppressHydrationWarning>
             {site.phone.display}
           </a>
           .
@@ -270,7 +270,7 @@ export function LeadForm({ intent = "contact" }: { intent?: Intent }) {
           <ShieldCheck className="h-4 w-4 shrink-0 text-accent-600" />
           <span>
             Your information is 100% confidential. Prefer to talk now?{" "}
-            <a href={site.phone.href} className="font-semibold text-brand-700">
+            <a href={site.phone.href} className="font-semibold text-brand-700" suppressHydrationWarning>
               {site.phone.display}
             </a>
           </span>

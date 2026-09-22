@@ -77,7 +77,7 @@ export default function Home() {
               you achieve lasting sobriety.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <a href={site.phone.href} className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-brand-800">
+              <a href={site.phone.href} className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-brand-800" suppressHydrationWarning>
                 <Phone className="h-5 w-5" /> {site.phone.display}
               </a>
               <Link href="/verify-insurance" className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-700 px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-accent-800">
@@ -158,7 +158,7 @@ export default function Home() {
             <div className="flex flex-col justify-center rounded-2xl bg-navy-800 p-7 text-white">
               <h3 className="font-display text-2xl">Not sure where to start?</h3>
               <p className="mt-2 text-sm text-navy-200">Our admissions team will help you find the right level of care — confidentially and at no cost.</p>
-              <a href={site.phone.href} className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-800"><Phone className="h-4 w-4" /> {site.phone.display}</a>
+              <a href={site.phone.href} className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-800" suppressHydrationWarning><Phone className="h-4 w-4" /> {site.phone.display}</a>
             </div>
           </div>
         </Container>
@@ -278,7 +278,7 @@ export default function Home() {
                 options that meet your personal needs. Reach out — there is never any obligation.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a href={site.phone.href} className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-800"><Phone className="h-5 w-5" /> {site.phone.display}</a>
+                <a href={site.phone.href} className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-800" suppressHydrationWarning><Phone className="h-5 w-5" /> {site.phone.display}</a>
                 <Link href="/verify-insurance" className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-700 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-accent-800">Verify Insurance</Link>
               </div>
             </div>

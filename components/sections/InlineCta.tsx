@@ -35,7 +35,7 @@ export function InlineCta({
           <div className="flex w-full flex-col gap-3 sm:flex-row lg:w-auto lg:shrink-0">
             <a
               href={site.phone.href}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-brand-700 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-brand-800"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-brand-700 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-brand-800" suppressHydrationWarning
             >
               <Phone className="h-4 w-4" aria-hidden /> {site.phone.display}
             </a>

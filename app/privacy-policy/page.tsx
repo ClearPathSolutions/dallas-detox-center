@@ -181,7 +181,7 @@ export default function PrivacyPolicyPage() {
           You can ask us to access, correct, or delete the information you have
           submitted through this site, and ask us to stop contacting you. Email{" "}
           <a href={`mailto:${site.email}`}>{site.email}</a> or call{" "}
-          <a href={site.phone.href}>{site.phone.display}</a>. We will not treat you
+          <a href={site.phone.href} suppressHydrationWarning>{site.phone.display}</a>. We will not treat you
           differently for making a request.
         </p>
         <p>
@@ -220,7 +220,7 @@ export default function PrivacyPolicyPage() {
           <br />
           {site.address.full}
           <br />
-          <a href={site.phone.href}>{site.phone.display}</a>
+          <a href={site.phone.href} suppressHydrationWarning>{site.phone.display}</a>
           <br />
           <a href={`mailto:${site.email}`}>{site.email}</a>
         </p>

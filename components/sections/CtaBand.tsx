@@ -42,7 +42,7 @@ export function CtaBand({
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
               href={site.phone.href}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-brand-800"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-brand-800" suppressHydrationWarning
             >
               <Phone className="h-5 w-5" /> {site.phone.display}
             </a>

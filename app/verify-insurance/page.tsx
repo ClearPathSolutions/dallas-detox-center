@@ -61,7 +61,7 @@ export default function VerifyInsurancePage() {
                     <p.icon className="h-4 w-4 text-brand-500" /> {p.text}
                   </li>
                 ))}
-                <li className="inline-flex items-center gap-2">
+                <li className="inline-flex items-center gap-2" suppressHydrationWarning>
                   <Phone className="h-4 w-4 text-brand-500" /> Prefer to talk now?
                   Call {site.phone.display}
                 </li>

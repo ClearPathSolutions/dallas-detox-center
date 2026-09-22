@@ -71,7 +71,7 @@ export function Header() {
             <span className="text-navy-300">{site.address.full}</span>
             <a
               href={site.phone.href}
-              className="inline-flex items-center gap-1.5 font-semibold text-white hover:text-brand-300"
+              className="inline-flex items-center gap-1.5 font-semibold text-white hover:text-brand-300" suppressHydrationWarning
             >
               <Phone className="h-3.5 w-3.5" aria-hidden />
               {site.phone.display}
@@ -118,7 +118,7 @@ export function Header() {
           <div className="hidden items-center gap-3 xl:flex">
             <a
               href={site.phone.href}
-              className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-navy-200 px-4 py-2.5 text-sm font-semibold text-navy-800 transition hover:border-brand-400 hover:text-brand-700"
+              className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-navy-200 px-4 py-2.5 text-sm font-semibold text-navy-800 transition hover:border-brand-400 hover:text-brand-700" suppressHydrationWarning
             >
               <Phone className="h-4 w-4 text-brand-600" aria-hidden />
               {site.phone.display}
@@ -137,7 +137,7 @@ export function Header() {
             <a
               href={site.phone.href}
               className="inline-flex items-center gap-1.5 rounded-full bg-accent-700 px-3.5 py-2 text-sm font-semibold text-white"
-              aria-label={`Call ${site.phone.display}`}
+              aria-label={`Call ${site.phone.display}`} suppressHydrationWarning
             >
               <Phone className="h-4 w-4" aria-hidden />
               <span className="hidden sm:inline">Call</span>
@@ -425,7 +425,7 @@ function MobileDrawer({
           </Link>
           <a
             href={site.phone.href}
-            className="flex w-full items-center justify-center gap-2 rounded-full bg-brand-700 px-5 py-3.5 text-sm font-semibold text-white"
+            className="flex w-full items-center justify-center gap-2 rounded-full bg-brand-700 px-5 py-3.5 text-sm font-semibold text-white" suppressHydrationWarning
           >
             <Phone className="h-4 w-4" aria-hidden /> Call {site.phone.display}
           </a>

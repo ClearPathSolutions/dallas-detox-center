@@ -74,7 +74,7 @@ export default function AreasWeServePage() {
           <div className="mt-8">
             <a
               href={site.phone.href}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-800"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-800" suppressHydrationWarning
             >
               <Phone className="h-5 w-5" aria-hidden /> {site.phone.display}
             </a>

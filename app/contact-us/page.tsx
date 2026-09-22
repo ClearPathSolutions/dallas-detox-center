@@ -73,7 +73,7 @@ export default function ContactPage() {
               </p>
               <ul className="mt-6 space-y-3 text-sm text-navy-600">
                 <li className="inline-flex items-center gap-2"><Clock className="h-4 w-4 text-brand-500" /> Available 24 hours a day, 7 days a week</li>
-                <li className="inline-flex items-center gap-2"><Phone className="h-4 w-4 text-brand-500" /> Prefer to talk now? Call {site.phone.display}</li>
+                <li className="inline-flex items-center gap-2" suppressHydrationWarning><Phone className="h-4 w-4 text-brand-500" /> Prefer to talk now? Call {site.phone.display}</li>
               </ul>
               <LocationMap className="mt-8" />
             </div>

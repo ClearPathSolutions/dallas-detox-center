@@ -89,7 +89,7 @@ export default function TourPage() {
             and supportive place to heal.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href={site.phone.href} className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-800">
+            <a href={site.phone.href} className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-800" suppressHydrationWarning>
               <Phone className="h-5 w-5" /> {site.phone.display}
             </a>
             <Link href="/contact-us" className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 px-7 py-4 font-semibold text-white ring-1 ring-white/25 backdrop-blur transition hover:bg-white/20">
