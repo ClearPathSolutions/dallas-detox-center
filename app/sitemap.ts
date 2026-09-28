@@ -15,6 +15,7 @@ const EXTRA_PATHS = [
   "/areas-we-serve",
   "/about-us/meet-the-team",
   "/privacy-policy",
+  "/editorial-policy",
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

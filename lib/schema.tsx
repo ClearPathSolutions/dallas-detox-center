@@ -57,6 +57,10 @@ export function organisationSchema() {
     medicalSpecialty: "Addiction Medicine",
     sameAs: [site.social.instagram, site.social.facebook, site.social.linkedin],
     hasMap: site.google.profileUrl,
+    // The editorial policy covers both how content is produced and how
+    // corrections are handled, so it is the target of both properties.
+    publishingPrinciples: abs("/editorial-policy"),
+    correctionsPolicy: abs("/editorial-policy#content-updates-and-corrections"),
   };
 }
 
@@ -134,6 +138,17 @@ export function serviceSchema(page: PageContent) {
   };
 }
 
+/**
+ * Licenses a bio's credential suffix can name, keyed by abbreviation. Only
+ * licenses belong here — degrees such as BSN are not — because hasCredential
+ * is emitted as credentialCategory "license" (templates/reviewer-person.jsonld).
+ * A suffix not listed here stays in honorificSuffix and produces no credential.
+ */
+const LICENSES: Record<string, string> = {
+  LPC: "Licensed Professional Counselor",
+  RN: "Registered Nurse",
+};
+
 /** Person for a team bio. Credentials are parsed from the title when present. */
 export function personSchema(page: PageContent) {
   const raw = page.title.trim();
@@ -141,16 +156,29 @@ export function personSchema(page: PageContent) {
   const name = (m ? m[1] : raw).trim();
   const credential = m ? m[2].trim() : undefined;
   const headshot = teamHeadshot(page);
+  const licenses = (credential ?? "")
+    .split(",")
+    .map((c) => LICENSES[c.trim()])
+    .filter(Boolean)
+    .map((name) => ({
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "license",
+      name,
+    }));
+  // No sameAs: the template's LinkedIn / NPI registry link is not recorded
+  // for any team member, and a guessed profile URL is worse than none.
   return {
     "@context": "https://schema.org",
     "@type": "Person",
+    // Articles point reviewedBy at this id (templates/reviewer-person.jsonld).
+    "@id": `${abs(page.path)}#person`,
     name,
     honorificSuffix: credential,
     jobTitle: teamRole(page) ?? undefined,
     url: abs(page.path),
     image: headshot ? abs(headshot.src) : undefined,
     worksFor: { "@id": organisationId },
-    ...(credential ? { hasCredential: credential } : {}),
+    ...(licenses.length ? { hasCredential: licenses.length === 1 ? licenses[0] : licenses } : {}),
   };
 }
 

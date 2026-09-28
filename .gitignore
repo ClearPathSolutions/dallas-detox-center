@@ -43,3 +43,6 @@ next-env.d.ts
 # Local source mirror + extraction working dirs (not deployed)
 _source/
 _content/
+
+# editorial info
+app/editorial-policy/templates/

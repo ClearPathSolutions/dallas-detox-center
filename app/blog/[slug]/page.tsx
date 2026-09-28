@@ -61,34 +61,57 @@ export default async function ClarionPostPage({ params }: { params: Promise<Para
   if (!post) notFound();
 
   const date = formatDate(post.publishedAt);
+  const url = `${site.url}/blog/${post.slug}`;
+  // Absolute, so it matches the @id personSchema gives a bio page on this site.
+  const reviewerUrl = post.reviewer?.url ? new URL(post.reviewer.url, site.url).href.replace(/\/$/, "") : null;
 
   return (
     <>
       <JsonLd
         data={[
+          // templates/clinical-article.jsonld: a MedicalWebPage carrying the
+          // review, with the BlogPosting as its main entity.
+          //
+          // Departure from the template, agreed 2026-09-28: it emits reviewedBy
+          // only alongside lastReviewed, but Clarion has no review-date field,
+          // so reviewedBy is output whenever a reviewer is set and lastReviewed
+          // is omitted. Never a default reviewer — no reviewer, no reviewedBy.
           {
             "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline: post.title,
-            description: post.seoDescription ?? undefined,
-            datePublished: post.publishedAt ?? undefined,
-            dateModified: post.publishedAt ?? undefined,
-            mainEntityOfPage: { "@type": "WebPage", "@id": `${site.url}/blog/${post.slug}` },
-            image: post.coverImage ?? `${site.url}/images/logo.png`,
-            publisher: { "@id": organisationId },
-            author: post.author
-              ? { "@type": "Organization", name: post.author }
-              : { "@id": organisationId },
-            ...(post.reviewer
-              ? {
-                  reviewedBy: {
-                    "@type": "Person",
-                    name: post.reviewer.name,
-                    honorificSuffix: post.reviewer.credentials ?? undefined,
-                    url: post.reviewer.url ?? undefined,
-                  },
-                }
-              : {}),
+            "@graph": [
+              {
+                "@type": "MedicalWebPage",
+                "@id": `${url}#webpage`,
+                url,
+                name: post.title,
+                ...(post.reviewer
+                  ? {
+                      reviewedBy: {
+                        "@type": "Person",
+                        ...(reviewerUrl ? { "@id": `${reviewerUrl}#person`, url: reviewerUrl } : {}),
+                        name: post.reviewer.name,
+                        honorificSuffix: post.reviewer.credentials ?? undefined,
+                      },
+                    }
+                  : {}),
+                publisher: { "@id": organisationId },
+              },
+              {
+                "@type": "BlogPosting",
+                "@id": `${url}#article`,
+                headline: post.title,
+                description: post.seoDescription ?? undefined,
+                mainEntityOfPage: { "@id": `${url}#webpage` },
+                datePublished: post.publishedAt ?? undefined,
+                dateModified: post.publishedAt ?? undefined,
+                image: post.coverImage ?? `${site.url}/images/logo.png`,
+                // Clarion gives an author name but no bio page to point at.
+                author: post.author
+                  ? { "@type": "Organization", name: post.author }
+                  : { "@id": organisationId },
+                publisher: { "@id": organisationId },
+              },
+            ],
           },
           breadcrumbSchema([
             { name: "Recovery Resources", path: "/blog" },

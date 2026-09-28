@@ -170,6 +170,19 @@ h1, h2, h3, .font-display {
 .prose-ddc ol { list-style: decimal; padding-left: 1.4rem; }
 .prose-ddc li { margin-top: 0.4rem; }
 /*
+ * Tables that must not widen the page on phones — the editorial policy's
+ * terminology table. The wrapper scrolls; the table keeps a readable width.
+ */
+.prose-ddc .table-scroll { overflow-x: auto; max-width: 100%; }
+.prose-ddc .table-scroll table { border-collapse: collapse; width: 100%; min-width: 28rem; }
+.prose-ddc .table-scroll th,
+.prose-ddc .table-scroll td {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--color-navy-100);
+}
+.prose-ddc .table-scroll th { color: var(--color-navy-800); font-weight: 700; }
+/*
  * Images inside post bodies. Clarion posts arrive as an HTML blob rendered
  * through dangerouslySetInnerHTML, so these are plain <img> tags rather than
  * next/image — nothing constrains them but this rule. The CMS emits width and
