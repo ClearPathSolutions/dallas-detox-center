@@ -22,6 +22,7 @@ import { facility, heroImage } from "@/lib/media";
 import { getRecentPosts, getPost } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { SmartImage } from "@/components/ui/SmartImage";
+import { PhotoCarousel } from "@/components/ui/PhotoCarousel";
 import { InsuranceStrip } from "@/components/sections/InsuranceStrip";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { GoogleReviews } from "@/components/sections/GoogleReviews";
@@ -226,12 +227,8 @@ export default function Home() {
               <Link href="/tour" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-navy-800 transition hover:bg-sand-100">Take a Full Tour <ArrowRight className="h-4 w-4" /></Link>
             </div>
           </div>
-          <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
-            {facility.gallery.map((g) => (
-              <figure key={g.src} className="relative aspect-[4/3] overflow-hidden rounded-2xl ring-1 ring-white/10">
-                <Image src={g.src} alt={g.alt} fill sizes="(min-width:768px) 22rem, 50vw" className="object-cover transition duration-500 hover:scale-105" />
-              </figure>
-            ))}
+          <div className="mt-10">
+            <PhotoCarousel items={facility.gallery} label="Facility photos" />
           </div>
         </Container>
       </section>
