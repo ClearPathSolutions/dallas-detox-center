@@ -52,9 +52,15 @@ export function PostTemplate({
               <h1 className="mt-4 text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
                 {post.title}
               </h1>
-              <p className="mt-5 inline-flex items-center gap-2 text-sm text-navy-300">
-                <CalendarDays className="h-4 w-4" /> {formatDate(post.date)}
-              </p>
+              <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-navy-300">
+                <span className="inline-flex items-center gap-2">
+                  <CalendarDays className="h-4 w-4" /> {formatDate(post.date)}
+                </span>
+                {/* templates/article-byline.html: every post links the policy. */}
+                <Link href="/editorial-policy" className="underline hover:text-white">
+                  Editorial policy
+                </Link>
+              </div>
             </div>
           </Container>
         </header>

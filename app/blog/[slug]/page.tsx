@@ -158,6 +158,10 @@ export default async function ClarionPostPage({ params }: { params: Promise<Para
                   {post.reviewer.credentials ? `, ${post.reviewer.credentials}` : ""}
                 </span>
               )}
+              {/* templates/article-byline.html: every post links the policy. */}
+              <Link href="/editorial-policy" className="underline hover:text-white">
+                Editorial policy
+              </Link>
             </div>
           </Container>
         </header>
