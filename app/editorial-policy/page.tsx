@@ -13,16 +13,18 @@ import { JsonLd, breadcrumbSchema, organisationId } from "@/lib/schema";
  * owner named in the README rather than being made here.
  *
  * Merge fields, from this site's facilities.csv row:
- *   FACILITY_NAME, DOMAIN, PHONE, EDITORIAL_EMAIL — from lib/site.ts, which
- *   holds the same values as the CSV row.
+ *   FACILITY_NAME, DOMAIN, PHONE — from lib/site.ts, which holds the same
+ *   values as the CSV row.
+ *   EDITORIAL_EMAIL — blank in the CSV; confirmed 2026-10-02 as the site's
+ *   public address (info@), so it reads from site.email.
  *   LAST_REVIEWED — the policy sign-off date, below.
  */
-const LAST_REVIEWED = "2026-09-30";
+const LAST_REVIEWED = "2026-10-02";
 
 const DOMAIN = site.url.replace("https://", "");
 const EDITORIAL_EMAIL = site.email;
 
-/** "2026-09-30" → "September 2026", as the README specifies. */
+/** "2026-10-02" → "October 2026", as the README specifies. */
 function monthYear(iso: string) {
   const [y, m] = iso.split("-").map(Number);
   return new Date(Date.UTC(y, m - 1, 1)).toLocaleDateString("en-US", {
