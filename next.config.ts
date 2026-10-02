@@ -94,11 +94,22 @@ const nextConfig: NextConfig = {
       "/about-us/michael-young": "/about-us/meet-the-team",
       "/about-us/ricki-cochran": "/about-us/meet-the-team",
     };
-    return Object.entries(map).map(([source, destination]) => ({
-      source,
-      destination,
-      permanent: true,
-    }));
+    return [
+      ...Object.entries(map).map(([source, destination]) => ({
+        source,
+        destination,
+        permanent: true,
+      })),
+      // Job listings live on ADP. Temporary (307) rather than permanent so
+      // browsers and search engines don't cache it — the ADP URL can change,
+      // and /careers may become a real page later.
+      {
+        source: "/careers",
+        destination:
+          "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=e1094ba9-8b93-4f55-9dab-3102a4eaaa49&ccId=9200865813587_2&lang=en_US",
+        permanent: false,
+      },
+    ];
   },
   async headers() {
     return [
