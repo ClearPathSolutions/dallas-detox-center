@@ -19,7 +19,7 @@ import { JsonLd, breadcrumbSchema, organisationId } from "@/lib/schema";
  *   public address (info@), so it reads from site.email.
  *   LAST_REVIEWED — the policy sign-off date, below.
  */
-const LAST_REVIEWED = "2026-10-02";
+const LAST_REVIEWED = "2026-10-07";
 
 const DOMAIN = site.url.replace("https://", "");
 const EDITORIAL_EMAIL = site.email;
