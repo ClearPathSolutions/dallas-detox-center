@@ -93,6 +93,7 @@ const nextConfig: NextConfig = {
       "/about-us/trevor-grigsby": "/about-us/meet-the-team",
       "/about-us/michael-young": "/about-us/meet-the-team",
       "/about-us/ricki-cochran": "/about-us/meet-the-team",
+      "/about-us/haley-wadlington": "/about-us/meet-the-team",
     };
     return [
       ...Object.entries(map).map(([source, destination]) => ({

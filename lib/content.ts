@@ -98,7 +98,6 @@ export const TEAM_ORDER = [
   "antoine-gross",
   "deborah-wade",
   "joshua-leder",
-  "haley-wadlington",
   "sarah-bentley",
   "landon-hawpe",
   "jacob-doss",

@@ -190,13 +190,6 @@ export const facility = {
  * /images/team/. Five of the six come from Staff Headshots/Texas in the shared
  * drive, matched on name and role.
  *
- * A note on Haley Wadlington: the first headshot pack filed her photo as
- * "Texas/ Haley Hayes.png", and we were told at the time that this was someone
- * else. The client's later pack ("Staff Headshots 2", 2026-08-31) contains the
- * byte-identical file — same md5 — renamed "Texas/ Haley W.png". Same image,
- * same person; the original filename simply carried a stale surname. Her
- * headshot is now wired up like everyone else's.
- *
  * Files prefixed FWW- in that folder belong to Fort Worth Wellness, and the
  * Virtual Staff subfolder to another entity; neither is ours.
  */
