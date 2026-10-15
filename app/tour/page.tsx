@@ -6,7 +6,7 @@ import { getPage } from "@/lib/content";
 import { metaFor } from "@/lib/seo";
 import { site } from "@/lib/site";
 import {
-  heroes,
+  allPhotos,
   commonAreas,
   dining,
   bedrooms,
@@ -15,7 +15,6 @@ import {
   type Photo,
 } from "@/lib/media";
 import { Container } from "@/components/ui/Container";
-import { SmartImage } from "@/components/ui/SmartImage";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 
@@ -28,40 +27,102 @@ export function generateMetadata(): Metadata {
  * The tour shows the whole approved set, grouped the way a visitor would walk
  * it. It previously pulled image blocks out of the migrated tour.json, which
  * mixed the property's own photography with stock images of other places.
+ *
+ * The two residences lead, each as its own section. Before this the main
+ * house's seven photos were scattered one or two per topic among ~30 shots of
+ * the barn, so the tour read as a barn tour. The topic sections that follow
+ * show what is left, so no photo appears twice.
  */
+const byFile = (file: string): Photo => {
+  const photo = allPhotos.find((p) => p.src.endsWith(`/${file}`));
+  if (!photo) throw new Error(`Tour references unknown photo "${file}"`);
+  return photo;
+};
+
+const mainHouse = [
+  "exterior-main-house.jpg",
+  "exterior-drive-approach.jpg",
+  "patio-pergola-seating.jpg",
+  "sunroom-bay-window.jpg",
+  "lounge-house-sectional.jpg",
+  "dining-house-kitchen.jpg",
+  "bedroom-house-twin.jpg",
+].map(byFile);
+
+const barnResidence = [
+  "exterior-barn-lawn.jpg",
+  "exterior-barn-drive.jpg",
+  "exterior-barn-parking.jpg",
+].map(byFile);
+
+const grounds = [
+  "aerial-property-overhead.jpg",
+  "aerial-countryside.jpg",
+  "grounds-picnic-oaks.jpg",
+].map(byFile);
+
+const featured = new Set([...mainHouse, ...barnResidence, ...grounds].map((p) => p.src));
+const rest = (photos: Photo[]) => photos.filter((p) => !featured.has(p.src));
+
 const TOUR_SECTIONS: { heading: string; blurb: string; photos: Photo[] }[] = [
+  {
+    heading: "The main house",
+    blurb:
+      "A two-story home with a covered porch and balcony, a bay-window sunroom, and a shaded stone patio.",
+    photos: mainHouse,
+  },
+  {
+    heading: "The barn residence",
+    blurb: "The campus's second residence, with its own lawn and accessible parking.",
+    photos: barnResidence,
+  },
   {
     heading: "The grounds",
     blurb:
       "Two residences on a private, wooded campus in Weatherford — roughly an hour west of downtown Dallas.",
-    photos: heroes,
+    photos: grounds,
   },
   {
     heading: "Living space",
     blurb: "Where clients spend their days between sessions.",
-    photos: commonAreas,
+    photos: rest(commonAreas),
   },
   {
     heading: "Dining",
     blurb: "Meals are prepared on site in a full commercial kitchen.",
-    photos: dining,
+    photos: rest(dining),
   },
   {
     heading: "Bedrooms",
     blurb: "Private and semi-private rooms across the house and the barn.",
-    photos: bedrooms,
+    photos: rest(bedrooms),
   },
   {
     heading: "Clinical spaces",
     blurb: "Nursing station and private offices for consultations and case management.",
-    photos: clinical,
+    photos: rest(clinical),
   },
   {
     heading: "Amenities",
-    blurb: "Bathrooms, on-site laundry, and shaded outdoor seating.",
-    photos: amenities,
+    blurb: "Bathrooms and on-site laundry.",
+    photos: rest(amenities),
   },
 ];
+
+/**
+ * Column span for photo `i` of `n` on the tour grid (2 columns on mobile, a
+ * 6-track grid from md up). From md, photos run three to a row; a remainder of
+ * one turns the last four into two pairs, a remainder of two turns the last two
+ * into a pair, so every row is full. On mobile, an odd count makes the first
+ * photo full-width.
+ */
+function tileSpan(i: number, n: number): string {
+  const mobile = n % 2 === 1 && i === 0 ? "col-span-2" : "col-span-1";
+  if (n === 1) return "col-span-2 md:col-span-6";
+  const pairs = n % 3 === 1 ? 4 : n % 3 === 2 ? 2 : 0;
+  const desktop = i >= n - pairs ? "md:col-span-3" : "md:col-span-2";
+  return `${mobile} ${desktop}`;
+}
 
 export default function TourPage() {
   return (
@@ -69,7 +130,7 @@ export default function TourPage() {
       <JsonLd data={breadcrumbSchema([{ name: "Tour Our Facility", path: "/tour" }])} />
       <section className="relative overflow-hidden bg-navy-950 py-16 lg:py-24">
         <Image
-          src={heroes[2].src}
+          src={mainHouse[0].src}
           alt=""
           fill
           priority
@@ -111,19 +172,22 @@ export default function TourPage() {
               </h2>
               <p className="mt-3 text-navy-600">{section.blurb}</p>
             </div>
-            {/* Multi-column flow rather than a grid: the sections hold 3, 6, 7,
-                10 and 11 photos, and a fixed 3-across grid strands one alone on
-                the last row for most of those counts. */}
-            <div className="mt-10 columns-2 gap-4 md:columns-3 [&>figure]:mb-4">
-              {section.photos.map((photo) => (
+            {/* Uniform 3:2 cards on a grid, sized so no row is left ragged:
+                see tileSpan. The masonry columns this replaced mixed 16:9
+                aerials with 3:2 interiors and ended the columns at different
+                heights. */}
+            <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-6">
+              {section.photos.map((photo, j) => (
                 <figure
                   key={photo.src}
-                  className="break-inside-avoid overflow-hidden rounded-2xl shadow-sm ring-1 ring-navy-900/5"
+                  className={`${tileSpan(j, section.photos.length)} relative aspect-[3/2] overflow-hidden rounded-2xl shadow-sm ring-1 ring-navy-900/5`}
                 >
-                  <SmartImage
+                  <Image
                     src={photo.src}
                     alt={photo.alt}
-                    sizes="(min-width:1024px) 22rem, (min-width:640px) 33vw, 50vw"
+                    fill
+                    sizes="(min-width:1024px) 34rem, (min-width:768px) 50vw, 100vw"
+                    className="object-cover"
                   />
                 </figure>
               ))}
