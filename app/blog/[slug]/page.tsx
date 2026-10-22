@@ -4,7 +4,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowLeft, CalendarDays, ShieldCheck } from "lucide-react";
 import { site } from "@/lib/site";
-import { getClarionPost, getClarionPosts } from "@/lib/clarion";
+import { finaliseBodyHtml, getClarionPost, getClarionPosts } from "@/lib/clarion";
+import { fitTitle } from "@/lib/seo";
 import { Container } from "@/components/ui/Container";
 import { clarionCover } from "@/lib/media";
 import { CtaBand } from "@/components/sections/CtaBand";
@@ -33,7 +34,8 @@ export async function generateMetadata({
   const post = await getClarionPost(slug);
   if (!post) return {};
   return {
-    title: post.seoTitle ? { absolute: post.seoTitle } : post.title,
+    // Brand suffix only when the whole title still fits in 70 characters.
+    title: fitTitle(post.seoTitle ?? post.title),
     description: post.seoDescription ?? undefined,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
@@ -60,6 +62,16 @@ export default async function ClarionPostPage({ params }: { params: Promise<Para
   const post = await getClarionPost(slug);
   if (!post) notFound();
 
+  const feed = await getClarionPosts();
+  const knownSlugs = new Set(feed.map((p) => p.slug));
+  // Three neighbouring posts, so each post is linked from more than the index.
+  const at = feed.findIndex((p) => p.slug === post.slug);
+  const more = [1, 2, -1]
+    .map((offset) => feed[(at + offset + feed.length) % feed.length])
+    .filter((p, i, arr) => p && p.slug !== post.slug && arr.findIndex((q) => q.slug === p.slug) === i);
+  const bodyHtml = post.bodyHtml
+    ? finaliseBodyHtml(post.bodyHtml, { title: post.title, knownSlugs })
+    : null;
   const date = formatDate(post.publishedAt);
   const url = `${site.url}/blog/${post.slug}`;
   // Absolute, so it matches the @id personSchema gives a bio page on this site.
@@ -185,8 +197,8 @@ export default async function ClarionPostPage({ params }: { params: Promise<Para
         <div className="bg-white py-14 lg:py-16">
           <Container>
             <div className="prose-ddc mx-auto max-w-3xl">
-              {post.bodyHtml ? (
-                <div dangerouslySetInnerHTML={{ __html: post.bodyHtml }} />
+              {bodyHtml ? (
+                <div dangerouslySetInnerHTML={{ __html: bodyHtml }} />
               ) : (
                 <p>{post.excerpt}</p>
               )}
@@ -194,6 +206,30 @@ export default async function ClarionPostPage({ params }: { params: Promise<Para
           </Container>
         </div>
       </article>
+
+      {more.length > 0 && (
+        <section className="bg-navy-50 py-14" aria-labelledby="more-articles">
+          <Container>
+            <div className="mx-auto max-w-3xl">
+              <h2 id="more-articles" className="text-2xl text-navy-900">
+                More recovery articles
+              </h2>
+              <ul className="mt-6 space-y-3">
+                {more.map((p) => (
+                  <li key={p.slug}>
+                    <Link
+                      href={`/blog/${p.slug}`}
+                      className="font-semibold text-brand-700 underline-offset-4 hover:underline"
+                    >
+                      {p.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Container>
+        </section>
+      )}
 
       <CtaBand />
     </>

@@ -210,6 +210,7 @@ export const footerNav = {
       { label: "About Us", href: "/about-us" },
       { label: "Tour the Facility", href: "/tour" },
       { label: "Admissions", href: "/admissions" },
+      { label: "FAQs", href: "/faq-page" },
       { label: "Meet the Team", href: "/about-us/meet-the-team" },
       { label: "Areas We Serve", href: "/areas-we-serve" },
       { label: "Latest Articles", href: "/blog" },

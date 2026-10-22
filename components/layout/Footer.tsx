@@ -135,6 +135,8 @@ function SocialIcon({
       className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-brand-700"
     >
       {children}
+      {/* Real anchor text for crawlers that ignore aria-label (audit: "links with no anchor text"). */}
+      <span className="sr-only">{label}</span>
     </a>
   );
 }

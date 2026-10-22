@@ -25,7 +25,8 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Top-Rated Luxury Drug & Alcohol Rehab in Dallas, Texas | Dallas Detox Center",
+    // ≤70 characters including the brand, so the title is not truncated.
+    default: "Luxury Drug & Alcohol Rehab in Dallas, Texas | Dallas Detox Center",
     // Pages whose migrated Yoast title already ends in the brand name opt out
     // of this via `title.absolute` in lib/seo.ts — otherwise the suffix doubled
     // up on 89 of 105 pages.

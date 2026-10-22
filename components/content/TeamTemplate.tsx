@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { teamHeadshot, teamRole, type PageContent } from "@/lib/content";
+import { getIndex, teamHeadshot, teamRank, teamRole, type PageContent } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { BlockFlow } from "@/components/content/BlockRenderer";
@@ -10,6 +10,14 @@ export function TeamTemplate({ page }: { page: PageContent }) {
   const headshot = teamHeadshot(page);
   const role = teamRole(page);
   const bio = page.blocks.filter((b) => b.type === "paragraph");
+  // Cross-links to the rest of the team, so a bio is not reachable only from
+  // the team index (audit: "pages with only one internal link").
+  const colleagues = getIndex()
+    .pages.filter((p) => p.template === "team" && p.slug !== page.slug)
+    .sort((a, b) => {
+      const d = teamRank(a.slug) - teamRank(b.slug);
+      return d !== 0 ? d : a.title.localeCompare(b.title);
+    });
 
   return (
     <>
@@ -43,6 +51,34 @@ export function TeamTemplate({ page }: { page: PageContent }) {
           </div>
         </Container>
       </section>
+
+      {colleagues.length > 0 && (
+        <section className="bg-navy-50 py-14">
+          <Container>
+            <div className="mx-auto max-w-3xl">
+              <h2 className="text-2xl text-navy-900">Meet the rest of the team</h2>
+              <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
+                {colleagues.map((c) => (
+                  <li key={c.path}>
+                    <Link
+                      href={c.path}
+                      className="font-semibold text-brand-700 underline-offset-4 hover:underline"
+                    >
+                      {c.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/about-us/meet-the-team"
+                className="mt-8 inline-flex text-sm font-semibold text-navy-700 underline-offset-4 hover:underline"
+              >
+                View the full team
+              </Link>
+            </div>
+          </Container>
+        </section>
+      )}
 
       <CtaBand />
     </>

@@ -106,7 +106,9 @@ export function articleSchema(post: PostContent) {
 export function areaServedSchema(page: PageContent, city: string) {
   return {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
+    // MedicalClinic, not plain MedicalBusiness: medicalSpecialty is only
+    // defined on MedicalClinic/MedicalOrganization, and validators flag it.
+    "@type": ["MedicalBusiness", "MedicalClinic"],
     "@id": `${abs(page.path)}#area`,
     name: `${site.name} — serving ${city}`,
     parentOrganization: { "@id": organisationId },
@@ -134,7 +136,8 @@ export function serviceSchema(page: PageContent) {
     description: page.metaDescription || undefined,
     url: abs(page.path),
     procedureType: "https://schema.org/TherapeuticProcedure",
-    provider: { "@id": organisationId },
+    // No `provider`: schema.org does not define it on MedicalProcedure, and
+    // structured-data validators report it as an error.
   };
 }
 

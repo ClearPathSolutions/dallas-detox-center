@@ -105,9 +105,15 @@ export default async function CatchAll({ params }: { params: Promise<Params> }) 
   // Date-based blog post: /YYYY/MM/DD/slug
   const post = getPost(slug[slug.length - 1]);
   if (post && post.path === path) {
-    const related = getIndex()
-      .posts.filter((p) => p.slug !== post.slug)
-      .slice(0, 3)
+    // Neighbours in the archive (next two, previous one, wrapping) rather than
+    // the same three posts everywhere: every post then gets links from the
+    // posts around it, instead of most being reachable only from /blog.
+    const all = getIndex().posts;
+    const at = all.findIndex((p) => p.slug === post.slug);
+    const picks = [1, 2, -1]
+      .map((offset) => all[(at + offset + all.length) % all.length])
+      .filter((p, i, arr) => p && p.slug !== post.slug && arr.findIndex((q) => q.slug === p.slug) === i);
+    const related = picks
       .map((p) => {
         const full = getPost(p.slug)!;
         return {

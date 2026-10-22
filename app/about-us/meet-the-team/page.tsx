@@ -72,7 +72,7 @@ export default function MeetTheTeamPage() {
           ]),
           {
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": ["MedicalBusiness", "MedicalClinic"],
             "@id": organisationId,
             employee: team.map((t) => ({
               "@type": "Person",

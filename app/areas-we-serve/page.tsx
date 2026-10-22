@@ -7,9 +7,10 @@ import { Container } from "@/components/ui/Container";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { InsuranceStrip } from "@/components/sections/InsuranceStrip";
 import { JsonLd, breadcrumbSchema, organisationId } from "@/lib/schema";
+import { fitTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Areas We Serve — Drug & Alcohol Rehab Across North Texas",
+  title: fitTitle("Areas We Serve — Drug & Alcohol Rehab Across North Texas"),
   description:
     "Dallas Detox Center serves Dallas–Fort Worth and North Texas from our private campus in Weatherford. Find local detox and residential treatment information for your city.",
   alternates: { canonical: "/areas-we-serve" },
@@ -52,7 +53,7 @@ export default function AreasWeServePage() {
           },
           {
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": ["MedicalBusiness", "MedicalClinic"],
             "@id": organisationId,
             areaServed: cities.map((c) => ({ "@type": "City", name: c.title })),
           },
