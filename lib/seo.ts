@@ -13,6 +13,7 @@ const BRAND_SUFFIX_RE = new RegExp(`\\s*[|\\-–—]\\s*${BRAND}\\s*$`, "i");
 /** Longest <title> before audit tools (and Google's SERP) start truncating. */
 const MAX_TITLE = 70;
 const SUFFIX = ` | ${BRAND}`;
+const SHORT_SUFFIX = " | Dallas Detox";
 
 /**
  * Returns the final title string plus whether it must bypass the layout
@@ -27,6 +28,9 @@ function titleFor(raw: string): { text: string; absolute: boolean } {
   const bare = raw.trim().replace(BRAND_SUFFIX_RE, "").trim() || BRAND;
   if (bare === BRAND) return { text: BRAND, absolute: true };
   if (bare.length + SUFFIX.length <= MAX_TITLE) return { text: bare, absolute: false };
+  // A shorter brand keeps the <title> distinct from the page's <h1> when the
+  // full suffix would overflow.
+  if (bare.length + SHORT_SUFFIX.length <= MAX_TITLE) return { text: bare + SHORT_SUFFIX, absolute: true };
   return { text: bare, absolute: true };
 }
 
