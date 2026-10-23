@@ -54,7 +54,8 @@ export function organisationSchema() {
       opens: "00:00",
       closes: "23:59",
     },
-    medicalSpecialty: "Addiction Medicine",
+    // No medicalSpecialty: "Addiction Medicine" is not a schema.org
+    // MedicalSpecialty value, and none of the defined ones describes the clinic.
     sameAs: [site.social.instagram, site.social.facebook, site.social.linkedin],
     hasMap: site.google.profileUrl,
     // The editorial policy covers both how content is produced and how
@@ -62,6 +63,16 @@ export function organisationSchema() {
     publishingPrinciples: abs("/editorial-policy"),
     correctionsPolicy: abs("/editorial-policy#content-updates-and-corrections"),
   };
+}
+
+/**
+ * Extra facts about the organisation that a page adds to its graph alongside
+ * organisationSchema(). The node carries the shared @id and no @type, so it
+ * is read as more properties of the one entity rather than as a second,
+ * incomplete business that validators then ask for a name and address on.
+ */
+export function organisationFacts(facts: Record<string, unknown>) {
+  return { "@context": "https://schema.org", "@id": organisationId, ...facts };
 }
 
 /** BreadcrumbList from a trail of [name, path] pairs. Home is prepended. */
@@ -106,8 +117,6 @@ export function articleSchema(post: PostContent) {
 export function areaServedSchema(page: PageContent, city: string) {
   return {
     "@context": "https://schema.org",
-    // MedicalClinic, not plain MedicalBusiness: medicalSpecialty is only
-    // defined on MedicalClinic/MedicalOrganization, and validators flag it.
     "@type": ["MedicalBusiness", "MedicalClinic"],
     "@id": `${abs(page.path)}#area`,
     name: `${site.name} — serving ${city}`,
@@ -123,7 +132,8 @@ export function areaServedSchema(page: PageContent, city: string) {
       addressCountry: "US",
     },
     areaServed: { "@type": "City", name: city, containedInPlace: { "@type": "State", name: "Texas" } },
-    medicalSpecialty: "Addiction Medicine",
+    // No medicalSpecialty, as on the organisation: "Addiction Medicine" is not
+    // a valid MedicalSpecialty and validators flag it on every city page.
   };
 }
 

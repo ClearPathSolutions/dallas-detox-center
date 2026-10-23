@@ -70,12 +70,21 @@ export default async function ClarionPostPage({ params }: { params: Promise<Para
     .map((offset) => feed[(at + offset + feed.length) % feed.length])
     .filter((p, i, arr) => p && p.slug !== post.slug && arr.findIndex((q) => q.slug === p.slug) === i);
   const bodyHtml = post.bodyHtml
-    ? finaliseBodyHtml(post.bodyHtml, { title: post.title, knownSlugs })
+    ? finaliseBodyHtml(post.bodyHtml, { slug: post.slug, title: post.title, knownSlugs })
     : null;
   const date = formatDate(post.publishedAt);
   const url = `${site.url}/blog/${post.slug}`;
-  // Absolute, so it matches the @id personSchema gives a bio page on this site.
-  const reviewerUrl = post.reviewer?.url ? new URL(post.reviewer.url, site.url).href.replace(/\/$/, "") : null;
+  // A reviewer bio on this site (Clarion stores it on the www host) is linked
+  // as a same-tab internal path, and its @id is put on site.url's host so it
+  // matches the one personSchema gives that bio page.
+  const reviewerAbs = post.reviewer?.url ? new URL(post.reviewer.url, site.url) : null;
+  const reviewerPath =
+    reviewerAbs && reviewerAbs.hostname.replace(/^www\./, "") === new URL(site.url).hostname
+      ? reviewerAbs.pathname.replace(/\/+$/, "") || "/"
+      : null;
+  const reviewerUrl = reviewerPath
+    ? `${site.url}${reviewerPath}`
+    : reviewerAbs?.href.replace(/\/$/, "") ?? null;
 
   return (
     <>
@@ -155,7 +164,12 @@ export default async function ClarionPostPage({ params }: { params: Promise<Para
                 <span className="inline-flex items-center gap-2">
                   <ShieldCheck className="h-4 w-4 text-accent-400" aria-hidden />
                   Medically reviewed by{" "}
-                  {post.reviewer.url ? (
+                  {reviewerPath ? (
+                    // A bio on this site: an ordinary same-tab internal link.
+                    <Link href={reviewerPath} className="underline hover:text-white">
+                      {post.reviewer.name}
+                    </Link>
+                  ) : post.reviewer.url ? (
                     <a
                       href={post.reviewer.url}
                       target="_blank"

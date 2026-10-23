@@ -6,11 +6,11 @@ import { getIndex, getPageByPath } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { InsuranceStrip } from "@/components/sections/InsuranceStrip";
-import { JsonLd, breadcrumbSchema, organisationId } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, organisationFacts, organisationSchema } from "@/lib/schema";
 import { fitTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: fitTitle("Areas We Serve — Drug & Alcohol Rehab Across North Texas"),
+  title: fitTitle("Areas We Serve in North Texas | Dallas Detox Center"),
   description:
     "Dallas Detox Center serves Dallas–Fort Worth and North Texas from our private campus in Weatherford. Find local detox and residential treatment information for your city.",
   alternates: { canonical: "/areas-we-serve" },
@@ -51,12 +51,11 @@ export default function AreasWeServePage() {
               url: `${site.url}${c.path}`,
             })),
           },
-          {
-            "@context": "https://schema.org",
-            "@type": ["MedicalBusiness", "MedicalClinic"],
-            "@id": organisationId,
+          // The full organisation once, then the cities as more facts about it.
+          organisationSchema(),
+          organisationFacts({
             areaServed: cities.map((c) => ({ "@type": "City", name: c.title })),
-          },
+          }),
         ]}
       />
 

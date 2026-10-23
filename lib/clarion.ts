@@ -201,21 +201,33 @@ const OWN_HOSTS = new Set(
   [new URL(site.url).hostname].flatMap((h) => [h.replace(/^www\./, ""), `www.${h.replace(/^www\./, "")}`]),
 );
 
-function stripNofollow(attrs: string): string {
+/** Drop the given rel tokens; the attribute goes entirely if none are left. */
+function stripRel(attrs: string, drop: ReadonlySet<string>): string {
   return attrs.replace(/\srel\s*=\s*(["'])([^"']*)\1/i, (_m, q: string, value: string) => {
     const kept = value
       .split(/\s+/)
-      .filter((t) => t && t.toLowerCase() !== "nofollow");
+      .filter((t) => t && !drop.has(t.toLowerCase()));
     return kept.length ? ` rel=${q}${kept.join(" ")}${q}` : "";
   });
 }
+
+const NOFOLLOW = new Set(["nofollow"]);
+/**
+ * Clarion's editor puts rel="noopener noreferrer" on every link it writes,
+ * same-site ones included. Those only mean anything on a link that opens a
+ * new tab to another site, and on our own pages noreferrer also blanks the
+ * referrer analytics uses to follow a reader between posts.
+ */
+const NOT_FOR_INTERNAL = new Set(["nofollow", "noopener", "noreferrer"]);
 
 /**
  * Final pass over a post body, once the full post list is known:
  *
  * - links to this site become root-relative, slashless (this site's
- *   convention) and lose rel="nofollow" — internal nofollow tells crawlers not
- *   to follow our own pages;
+ *   convention), open in the same tab and carry no rel="nofollow", "noopener"
+ *   or "noreferrer" — internal nofollow tells crawlers not to follow our own
+ *   pages, and the other two are for external new-tab links only;
+ * - a link to the post itself is unwrapped to its text;
  * - links to /blog/<slug> that is not a published post here (Clarion reuses
  *   posts across the group, so some cite slugs that only exist on a sister
  *   site) go to the blog index instead of a 404;
@@ -228,30 +240,37 @@ function stripNofollow(attrs: string): string {
  */
 export function finaliseBodyHtml(
   html: string,
-  { title, knownSlugs }: { title: string; knownSlugs: ReadonlySet<string> },
+  { slug, title, knownSlugs }: { slug: string; title: string; knownSlugs: ReadonlySet<string> },
 ): string {
-  const withLinks = html.replace(/<a\b([^>]*)>/gi, (full: string, rawAttrs: string) => {
-    const hrefMatch = rawAttrs.match(/\shref\s*=\s*(["'])([^"']*)\1/i);
-    let attrs = stripNofollow(rawAttrs);
-    if (!hrefMatch) return `<a${attrs}>`;
-    const href = hrefMatch[2].trim();
-    let url: URL;
-    try {
-      url = new URL(href, site.url);
-    } catch {
-      return `<a${attrs}>`;
-    }
-    const internal =
-      (url.protocol === "https:" || url.protocol === "http:") && OWN_HOSTS.has(url.hostname);
-    if (!internal || href.startsWith("#")) return `<a${attrs}>`;
+  const self = `/blog/${slug}`;
+  const withLinks = html.replace(
+    /<a\b([^>]*)>([\s\S]*?)<\/a>/gi,
+    (full: string, rawAttrs: string, inner: string) => {
+      const hrefMatch = rawAttrs.match(/\shref\s*=\s*(["'])([^"']*)\1/i);
+      if (!hrefMatch) return `<a${stripRel(rawAttrs, NOFOLLOW)}>${inner}</a>`;
+      const href = hrefMatch[2].trim();
+      let url: URL;
+      try {
+        url = new URL(href, site.url);
+      } catch {
+        return `<a${stripRel(rawAttrs, NOFOLLOW)}>${inner}</a>`;
+      }
+      const internal =
+        (url.protocol === "https:" || url.protocol === "http:") && OWN_HOSTS.has(url.hostname);
+      if (!internal) return `<a${stripRel(rawAttrs, NOFOLLOW)}>${inner}</a>`;
 
-    let path = url.pathname.length > 1 ? url.pathname.replace(/\/+$/, "") : "/";
-    const blogSlug = path.match(/^\/blog\/([^/]+)$/)?.[1];
-    if (blogSlug && knownSlugs.size > 0 && !knownSlugs.has(blogSlug)) path = "/blog";
-    const next = `${path}${path === "/blog" && blogSlug ? "" : url.search + url.hash}`;
-    attrs = attrs.replace(hrefMatch[0], ` href=${hrefMatch[1]}${next}${hrefMatch[1]}`);
-    return `<a${attrs}>`;
-  });
+      let attrs = stripRel(rawAttrs, NOT_FOR_INTERNAL).replace(/\starget\s*=\s*(["'])[^"']*\1/i, "");
+      if (href.startsWith("#")) return `<a${attrs}>${inner}</a>`;
+
+      let path = url.pathname.length > 1 ? url.pathname.replace(/\/+$/, "") : "/";
+      if (path === self && !url.hash) return inner;
+      const blogSlug = path.match(/^\/blog\/([^/]+)$/)?.[1];
+      if (blogSlug && knownSlugs.size > 0 && !knownSlugs.has(blogSlug)) path = "/blog";
+      const next = `${path}${path === "/blog" && blogSlug ? "" : url.search + url.hash}`;
+      attrs = attrs.replace(hrefMatch[0], ` href=${hrefMatch[1]}${next}${hrefMatch[1]}`);
+      return `<a${attrs}>${inner}</a>`;
+    },
+  );
 
   const safeTitle = title.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
   return withLinks.replace(/<img\b([^>]*?)(\s*\/?)>/gi, (full: string, attrs: string, close: string) =>

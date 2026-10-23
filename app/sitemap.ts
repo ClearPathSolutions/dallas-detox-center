@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getIndex } from "@/lib/content";
 import { site } from "@/lib/site";
-import { NOINDEX_PATHS, canonicalisesElsewhere } from "@/lib/seo";
+import { NOINDEX_PATHS } from "@/lib/seo";
 import { getClarionPosts } from "@/lib/clarion";
 
 export const dynamic = "force-static";
@@ -23,9 +23,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const abs = (path: string) => `${site.url}${path === "/" ? "" : path}`;
 
   const pages = [
-    ...index.pages
-      .filter((p) => !NOINDEX_PATHS.has(p.path) && !canonicalisesElsewhere(p.path))
-      .map((p) => p.path),
+    ...index.pages.filter((p) => !NOINDEX_PATHS.has(p.path)).map((p) => p.path),
     ...EXTRA_PATHS,
   ].map((path) => ({
     url: abs(path),

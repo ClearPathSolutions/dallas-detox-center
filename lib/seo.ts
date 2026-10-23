@@ -22,11 +22,15 @@ const SHORT_SUFFIX = " | Dallas Detox";
  * The brand suffix is added (by the template) only when the whole title fits
  * in 70 characters; a title that would overflow is emitted bare, so the words
  * that describe the page are the ones that survive. Titles that arrive with
- * the brand already on the end are normalised the same way.
+ * the brand already on the end are normalised the same way, so an explicit SEO
+ * title written as "… | Dallas Detox Center" comes out exactly as written.
  */
 function titleFor(raw: string): { text: string; absolute: boolean } {
   const bare = raw.trim().replace(BRAND_SUFFIX_RE, "").trim() || BRAND;
   if (bare === BRAND) return { text: BRAND, absolute: true };
+  // The brand somewhere other than the end ("Dallas Detox Center: A Guiding
+  // Light…") is already branded; appending it again would name it twice.
+  if (bare.toLowerCase().includes(BRAND.toLowerCase())) return { text: bare, absolute: true };
   if (bare.length + SUFFIX.length <= MAX_TITLE) return { text: bare, absolute: false };
   // A shorter brand keeps the <title> distinct from the page's <h1> when the
   // full suffix would overflow.
@@ -52,42 +56,18 @@ export const NOINDEX_PATHS = new Set([
   "/luxury-inpatient-lp",
 ]);
 
-/**
- * Bios that are published on quadranthealthgroup.com and repeated word for word
- * across the group's facility sites. Thirteen near-identical pages would
- * otherwise compete with each other and with the parent's copy, so the shared
- * ones canonicalise to the parent and let it hold the ranking. Keyed by slug —
- * every other page, including the rest of the team, still canonicalises to its
- * own URL.
- */
-const CANONICAL_AT_PARENT: Record<string, string> = {
-  // Network-wide medical oversight, not Dallas Detox Center staff.
-  "pamela-tambini": "https://www.quadranthealthgroup.com/team/pamela-tambini/",
-};
-
-/**
- * True when a page canonicalises to another domain. Such a page must stay out
- * of this site's sitemap: listing a URL whose canonical points elsewhere is an
- * "incorrect page in sitemap.xml".
- */
-export function canonicalisesElsewhere(path: string): boolean {
-  const slug = path.replace(/\/+$/, "").split("/").pop() ?? "";
-  return slug in CANONICAL_AT_PARENT;
-}
-
 /** Build Next.js metadata from the migrated Yoast SEO fields (verbatim). */
 export function metaFor(entry: PageContent | PostContent): Metadata {
   const { text: plainTitle } = titleFor(entry.metaTitle || entry.title);
   const title = fitTitle(entry.metaTitle || entry.title);
   const description = entry.metaDescription || undefined;
   const url = entry.path;
-  const canonical = CANONICAL_AT_PARENT[entry.slug] ?? url;
   const image = entry.ogImage || entry.featured?.src || undefined;
   const noindex = NOINDEX_PATHS.has(url);
   return {
     title,
     description,
-    alternates: { canonical },
+    alternates: { canonical: url },
     robots: noindex ? { index: false, follow: true } : undefined,
     openGraph: {
       title: plainTitle,

@@ -6,7 +6,7 @@ import { getIndex, getPageByPath, teamHeadshot, teamRole, teamRank } from "@/lib
 import { Container } from "@/components/ui/Container";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { CtaBand } from "@/components/sections/CtaBand";
-import { JsonLd, breadcrumbSchema, organisationId } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, organisationFacts, organisationSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Meet the Team",
@@ -70,10 +70,9 @@ export default function MeetTheTeamPage() {
             { name: "About Us", path: "/about-us" },
             { name: "Meet the Team", path: "/about-us/meet-the-team" },
           ]),
-          {
-            "@context": "https://schema.org",
-            "@type": ["MedicalBusiness", "MedicalClinic"],
-            "@id": organisationId,
+          // The full organisation once, then the team as more facts about it.
+          organisationSchema(),
+          organisationFacts({
             employee: team.map((t) => ({
               "@type": "Person",
               name: t.name,
@@ -81,7 +80,7 @@ export default function MeetTheTeamPage() {
               jobTitle: t.role || undefined,
               url: `${site.url}${t.path}`,
             })),
-          },
+          }),
         ]}
       />
 
