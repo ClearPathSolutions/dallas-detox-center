@@ -104,3 +104,4 @@ All URLs below are canonical. Medical content is reviewed under the editorial po
 - [Notice of Privacy Practices](https://dallasdetoxcenter.com/notice-of-privacy-practices): How Dallas Detox Center may use and disclose your protected health information, and your rights regarding that information under HIPAA.
 - [Privacy Policy](https://dallasdetoxcenter.com/privacy-policy): How Dallas Detox Center collects, uses, discloses, and protects information when you visit dallasdetoxcenter.com or contact our admissions team.
 - [SMS Terms & Conditions](https://dallasdetoxcenter.com/sms-terms): How text-message communications from Dallas Detox Center work: program description, cost, opt-out, and privacy.
+- [Terms of Service](https://dallasdetoxcenter.com/terms-of-service): The terms that govern use of the Dallas Detox Center website, including our website disclaimer.

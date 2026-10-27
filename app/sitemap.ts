@@ -17,6 +17,7 @@ const EXTRA_PATHS = [
   "/privacy-policy",
   "/sms-terms",
   "/editorial-policy",
+  "/terms-of-service",
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

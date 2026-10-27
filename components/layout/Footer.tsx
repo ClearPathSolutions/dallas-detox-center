@@ -102,6 +102,10 @@ export function Footer() {
             ·{" "}
             <Link href="/editorial-policy" className="hover:text-white">
               Editorial Policy
+            </Link>{" "}
+            ·{" "}
+            <Link href="/terms-of-service" className="hover:text-white">
+              Terms of Service
             </Link>
           </p>
           <div className="flex items-center gap-3">
