@@ -9,7 +9,7 @@ import { JsonLd, breadcrumbSchema } from "@/lib/schema";
  * The copy is the portfolio-wide terms from
  * legal-pages-dev-package/production/terms-of-service.html, approved wording,
  * reproduced verbatim. Merge fields FACILITY_NAME(_CAPS), PHONE and CONTACT_EMAIL
- * read from lib/site.ts; STATE_NAME is Texas. Do not reword here; copy
+ * read from lib/site.ts; STATE_NAME is Texas (TEXAS in caps). Do not reword here; copy
  * changes come through the package.
  */
 export const metadata: Metadata = {
@@ -78,7 +78,7 @@ export default function TermsOfServicePage() {
         <p>THESE TERMS GOVERN YOUR USE OF THIS WEBSITE ONLY. THEY DO NOT LIMIT ANY RIGHTS OR REMEDIES YOU HAVE IN CONNECTION WITH TREATMENT OR OTHER SERVICES YOU RECEIVE FROM {NAME_CAPS}, WHICH ARE GOVERNED BY APPLICABLE LAW AND ANY AGREEMENTS YOU ENTER INTO AT ADMISSION.</p>
 
         <h2>Governing Law and Venue</h2>
-        <p>The laws of the State of Texas will govern these terms, as well as any claim, cause of action or dispute that might arise between you and {site.name} relating to this website (a “Claim”), without regard to conflict of law provisions. FOR ANY CLAIM BROUGHT BY EITHER PARTY, YOU AGREE TO SUBMIT AND CONSENT TO THE PERSONAL AND EXCLUSIVE JURISDICTION IN, AND THE EXCLUSIVE VENUE OF, THE STATE AND FEDERAL COURTS LOCATED WITHIN THE STATE OF Texas.</p>
+        <p>The laws of the State of Texas will govern these terms, as well as any claim, cause of action or dispute that might arise between you and {site.name} relating to this website (a “Claim”), without regard to conflict of law provisions. FOR ANY CLAIM BROUGHT BY EITHER PARTY, YOU AGREE TO SUBMIT AND CONSENT TO THE PERSONAL AND EXCLUSIVE JURISDICTION IN, AND THE EXCLUSIVE VENUE OF, THE STATE AND FEDERAL COURTS LOCATED WITHIN THE STATE OF TEXAS.</p>
 
         <h2>Changes to These Terms</h2>
         <p>{site.name} reserves the right to modify these terms at any time. Any updates will be posted on this page with a revised effective date.</p>
