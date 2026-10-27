@@ -92,12 +92,16 @@ export function Footer() {
               Privacy Policy
             </Link>{" "}
             ·{" "}
-            <Link href="/editorial-policy" className="hover:text-white">
-              Editorial Policy
-            </Link>{" "}
-            ·{" "}
             <Link href="/notice-of-privacy-practices" className="hover:text-white">
               Notice of Privacy Practices
+            </Link>{" "}
+            ·{" "}
+            <Link href="/sms-terms" className="hover:text-white">
+              SMS Terms
+            </Link>{" "}
+            ·{" "}
+            <Link href="/editorial-policy" className="hover:text-white">
+              Editorial Policy
             </Link>
           </p>
           <div className="flex items-center gap-3">

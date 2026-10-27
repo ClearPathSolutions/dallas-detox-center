@@ -7,223 +7,172 @@ import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 /**
  * Website privacy policy.
  *
- * The page that previously lived here was a generic marketplace Terms of
- * Service — 26 numbered clauses covering user accounts, "Deals", gift
- * certificates and events, none of which exist on this site — with a HIPAA
- * Notice of Privacy Practices appended. It described none of the site's actual
- * data handling: no mention of cookies, analytics, third-party processors, SMS
- * or call consent, or state privacy rights.
+ * The copy is the portfolio-wide privacy policy from
+ * legal-pages-dev-package/production/privacy-policy.html, approved wording,
+ * reproduced verbatim. Only the merge fields differ per site, and they read
+ * from lib/site.ts: FACILITY_NAME, DOMAIN, PHONE, PRIVACY_EMAIL and
+ * STREET_ADDRESS. LEGAL_ENTITY_LINE is empty for this site. Do not reword
+ * here; copy changes come through the package.
  *
- * The HIPAA notice now lives at /notice-of-privacy-practices, preserved
- * verbatim. This page documents what the website itself does, matching the
- * consent language on the lead forms.
- *
- * NOTE FOR REVIEW: this is an accurate factual description of the site's data
- * flows written to replace a document that described a different business. It
- * has not been reviewed by counsel. Have a lawyer review it before launch,
- * particularly the state-rights and SMS-consent sections.
+ * The HIPAA notice is a separate page at /notice-of-privacy-practices, and the
+ * text-messaging terms are at /sms-terms.
  */
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description:
-    "How Dallas Detox Center collects, uses, and shares information submitted through this website, the third parties involved, and the choices available to you.",
+  description: `How ${site.name} collects, uses, discloses, and protects information when you visit ${site.url.replace("https://", "")} or contact our admissions team.`,
   alternates: { canonical: "/privacy-policy" },
 };
 
-const UPDATED = "July 31, 2026";
+const UPDATED = "October 27, 2026";
+const DOMAIN = site.url.replace("https://", "");
 
 export default function PrivacyPolicyPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Privacy Policy", path: "/privacy-policy" }])} />
-      <LegalTemplate
-        title="Privacy Policy"
-        intro="This policy explains what this website collects, who it is shared with, and the choices you have."
-        updated={UPDATED}
-      >
-        <p>
-          This policy covers <strong>{site.url.replace("https://", "")}</strong>{" "}
-          — the website. If you are or become a patient, the separate{" "}
-          <Link href="/notice-of-privacy-practices">Notice of Privacy Practices</Link>{" "}
-          governs your protected health information under HIPAA. Where the two
-          overlap, the Notice of Privacy Practices controls.
-        </p>
-
-        <h2>Information you give us</h2>
-        <p>Two forms on this site collect information, and both are optional to use.</p>
+      <LegalTemplate title="Privacy Policy">
+        <p>Last updated: {UPDATED}</p>
+        <p>{site.name} (“we,” “us,” or “our”) respects your privacy and is committed to protecting the personal, health, and other sensitive information you provide to us.</p>
+        <p>This Privacy Policy explains how we collect, use, disclose, and protect information when you visit {DOMAIN}, submit information through our website, contact our admissions team, request information about our services, verify insurance benefits, or otherwise interact with us.</p>
+        <p>By using our website or voluntarily providing information to us, you acknowledge the practices described in this Privacy Policy.</p>
+        <h2>Information We Collect</h2>
+        <p>We may collect information that you voluntarily provide to us through our website, telephone communications, forms, email, or other interactions.</p>
+        <p>This information may include:</p>
         <ul>
-          <li>
-            <strong>Contact / callback request:</strong> your name, phone number,
-            and — if you choose to provide them — your email address and whatever
-            you write in the message field.
-          </li>
-          <li>
-            <strong>Insurance verification:</strong> the above, plus your date of
-            birth, insurance provider, and optionally your member ID. This is
-            health-related information, and we ask for only what a benefits check
-            requires.
-          </li>
+          <li>First and last name</li>
+          <li>Email address</li>
+          <li>Telephone number</li>
+          <li>Contact preferences</li>
+          <li>Insurance provider and insurance-related information</li>
+          <li>Information submitted through contact, admissions, insurance verification, or other website forms</li>
+          <li>Information regarding treatment needs or services being requested</li>
+          <li>Information provided when communicating with our admissions, clinical, or administrative teams</li>
+          <li>Any other information you voluntarily choose to provide</li>
         </ul>
-        <p>
-          You do not need an account to use this site, and we do not ask for
-          payment details here. Please do not send clinical details or diagnoses
-          through a web form — call us instead, so the conversation happens on a
-          channel built for it.
-        </p>
-
-        <h2>Information collected automatically</h2>
-        <p>
-          Like most websites, ours records technical details when you visit: IP
-          address, browser and device type, the pages you view, the page that
-          referred you, and — when present in the link you arrived on — campaign
-          parameters such as <code>utm_source</code> and <code>gclid</code>.
-        </p>
-
-        <h2>Cookies and similar technologies</h2>
-        <p>
-          The site uses cookies and similar browser storage for three purposes.
-          The chat and form tools store a small amount of data in your browser
-          session to remember the page you first landed on. Our analytics tags
-          set cookies that distinguish one visit from another and record which
-          campaign or search brought you here. Our call-tracking tool sets a
-          cookie so that if you telephone us, the call can be matched to that
-          visit.
-        </p>
-        <p>
-          We manage these tags through Google Tag Manager, so the specific set in
-          use can change over time and may include advertising tags that measure
-          the performance of our campaigns across sites.
-        </p>
-        <p>
-          You can block or delete cookies in your browser settings. Doing so will
-          not stop you from using the site or reaching us by phone.
-        </p>
-
-        <h2>Who we share information with</h2>
-        <p>
-          We do not sell your information. We share it with service providers who
-          help us operate the site and respond to you:
-        </p>
+        <p>Because {site.name} provides behavioral health and substance use disorder treatment services, information you provide when seeking treatment may include health-related or otherwise sensitive information.</p>
+        <h2>Information Collected Automatically</h2>
+        <p>When you visit our website, certain information may be collected automatically through cookies, analytics technologies, pixels, server logs, and similar technologies.</p>
+        <p>This information may include:</p>
         <ul>
-          <li>
-            <strong>Clarion Labs</strong> — powers the chat widget, captures form
-            submissions, and publishes articles. When you submit a form, it
-            receives the form fields along with the page URL, the page that
-            referred you, campaign parameters, and your browser user agent.
-          </li>
-          <li>
-            <strong>Google</strong> — provides the map on our contact page, the
-            reviews shown on this site, and our analytics and tag management
-            (Google Analytics and Google Tag Manager), which receive the pages
-            you view and how you arrived. Google does not receive your form
-            submissions.
-          </li>
-          <li>
-            <strong>Microsoft</strong> — Microsoft Clarity records how pages are
-            used, including mouse movement, scrolling and clicks, and can replay
-            a visit as a session recording. Text you type into form fields is
-            masked before it leaves your browser, so we do not receive the
-            contents of what you enter.
-          </li>
-          <li>
-            <strong>Google Ads</strong> — measures which advertisements lead to
-            enquiries and calls, and may be used to show our advertisements to
-            you on other sites.
-          </li>
-          <li>
-            <strong>CallTrackingMetrics</strong> — measures which pages and
-            campaigns lead to phone calls. It may display a tracking telephone
-            number in place of our main line; calls to it reach the same
-            admissions team. It receives the number dialled, the time and length
-            of the call, your telephone number as your carrier presents it, and
-            the visit the call is matched to.
-          </li>
-          <li>
-            <strong>Vercel</strong> — hosts the site and keeps standard server
-            logs.
-          </li>
+          <li>Internet Protocol (IP) address</li>
+          <li>Browser type</li>
+          <li>Device type</li>
+          <li>Operating system</li>
+          <li>Pages visited</li>
+          <li>Referring website or source</li>
+          <li>Date and time of your visit</li>
+          <li>General geographic information</li>
+          <li>Website interactions and usage information</li>
         </ul>
-        <p>
-          We may also disclose information when the law requires it, to protect
-          someone&apos;s safety, or in connection with a merger or sale of the
-          business.
-        </p>
-
-        <h2>Calls, texts, and emails</h2>
-        <p>
-          If you submit a form with your phone number, you are asking us to
-          contact you, and you agree we may do so by phone, text message, or
-          email about treatment — including with an automatic telephone dialing
-          system or a prerecorded message. Consent to those messages is{" "}
-          <strong>not a condition of receiving treatment.</strong> Message and
-          data rates may apply. Reply <strong>STOP</strong> to any text to opt out,
-          or ask us on a call to stop contacting you, and we will.
-        </p>
-
-        <h2>How long we keep it</h2>
-        <p>
-          Inquiry records are kept only as long as needed to respond to you and to
-          meet our legal and recordkeeping obligations. If you become a patient,
-          your clinical record is retained under the schedule described in the
-          Notice of Privacy Practices, which is longer.
-        </p>
-
-        <h2>How we protect it</h2>
-        <p>
-          The site is served over HTTPS, and form submissions are encrypted in
-          transit. No method of transmission over the internet is completely
-          secure, so we cannot guarantee absolute security — another reason not to
-          put clinical detail in a web form.
-        </p>
-
-        <h2>Your choices and rights</h2>
-        <p>
-          You can ask us to access, correct, or delete the information you have
-          submitted through this site, and ask us to stop contacting you. Email{" "}
-          <a href={`mailto:${site.email}`}>{site.email}</a> or call{" "}
-          <a href={site.phone.href} suppressHydrationWarning>{site.phone.display}</a>. We will not treat you
-          differently for making a request.
-        </p>
-        <p>
-          Depending on where you live, you may have additional rights under state
-          privacy law — including the right to know what personal information we
-          collect, to have it deleted, to correct it, and to opt out of its sale
-          or sharing (we do not sell or share it for advertising). Texas residents
-          have these rights under the Texas Data Privacy and Security Act, and
-          residents of California and several other states have comparable
-          rights. Use the contact details above to exercise them.
-        </p>
-
-        <h2>Children</h2>
-        <p>
-          This site is intended for adults. We do not knowingly collect
-          information from anyone under 18 through this website. If you believe a
-          minor has submitted information, contact us and we will remove it.
-        </p>
-
-        <h2>Links to other sites</h2>
-        <p>
-          Some pages link to outside resources such as SAMHSA and NIDA. Those
-          sites have their own privacy practices, and this policy does not apply
-          to them.
-        </p>
-
-        <h2>Changes to this policy</h2>
-        <p>
-          If we change this policy we will update the date at the top of this
-          page. Material changes will be highlighted here.
-        </p>
-
-        <h2>Contact us</h2>
-        <p>
-          {site.name}
-          <br />
-          {site.address.full}
-          <br />
-          <a href={site.phone.href} suppressHydrationWarning>{site.phone.display}</a>
-          <br />
-          <a href={`mailto:${site.email}`}>{site.email}</a>
-        </p>
+        <p>We may use this information to operate our website, understand how visitors use our website, improve performance and functionality, evaluate marketing efforts, and maintain website security.</p>
+        <h2>How We Use Your Information</h2>
+        <p>We may use information collected through our website or provided directly to us to:</p>
+        <ul>
+          <li>Respond to questions and requests for information</li>
+          <li>Assist individuals seeking treatment</li>
+          <li>Provide information regarding our programs and services</li>
+          <li>Process admissions inquiries</li>
+          <li>Verify insurance benefits or coverage</li>
+          <li>Coordinate assessments, admissions, appointments, and treatment-related services</li>
+          <li>Communicate with prospective or current patients as permitted by law</li>
+          <li>Provide requested follow-up communications</li>
+          <li>Improve our website and user experience</li>
+          <li>Analyze website traffic and performance</li>
+          <li>Maintain the security and functionality of our website</li>
+          <li>Comply with applicable federal, state, and local laws and regulations</li>
+          <li>Fulfill other purposes for which you provide your information or consent</li>
+        </ul>
+        <p>We do not sell patient or prospective patient information for monetary consideration.</p>
+        <h2>Protected Health Information and HIPAA</h2>
+        <p>Certain information collected or maintained by {site.name} in connection with treatment, payment, or healthcare operations may constitute Protected Health Information (“PHI”) under the Health Insurance Portability and Accountability Act of 1996 (“HIPAA”) and related regulations.</p>
+        <p>Where HIPAA applies, {site.name} uses and discloses PHI only as permitted or required by applicable law.</p>
+        <p>Additional protections may apply to certain substance use disorder treatment records under federal or state law.</p>
+        <p>Information that constitutes PHI is handled in accordance with applicable healthcare privacy and security requirements and our <Link href="/notice-of-privacy-practices">Notice of Privacy Practices</Link>, as applicable.</p>
+        <p>Information submitted through a general website interaction is not necessarily considered PHI solely because it relates to healthcare. Whether information constitutes PHI and which protections apply depends on the circumstances in which the information is collected, received, maintained, or transmitted.</p>
+        <h2>Disclosure of Information to Third Parties</h2>
+        <p>{site.name} will only disclose personal information, health information, or Protected Health Information to third parties as permitted or required by applicable law.</p>
+        <p>We may share information with third parties when reasonably necessary to:</p>
+        <ul>
+          <li>Provide treatment or services requested by an individual</li>
+          <li>Verify insurance benefits or coordinate payment</li>
+          <li>Perform healthcare operations as permitted by law</li>
+          <li>Work with service providers performing services on our behalf</li>
+          <li>Operate, maintain, secure, or improve our website and business systems</li>
+          <li>Comply with applicable laws, regulations, court orders, subpoenas, or other lawful governmental requests</li>
+          <li>Protect the rights, safety, or security of {site.name}, our patients, website visitors, employees, or others</li>
+        </ul>
+        <p>Where required, appropriate agreements and safeguards are maintained with service providers that handle protected or sensitive information on our behalf.</p>
+        <p>We do not disclose Protected Health Information except as permitted or required by applicable federal and state law.</p>
+        <p>We do not disclose patient or prospective patient information to third parties for purposes prohibited by applicable law.</p>
+        <h2>Website Security and SSL/TLS Encryption</h2>
+        <p>{site.name} takes reasonable measures to protect information submitted through our website.</p>
+        <p>Our website uses Secure Socket Layer/Transport Layer Security (SSL/TLS) encryption technology to help protect information transmitted between your browser and our website.</p>
+        <p>We also maintain reasonable administrative, technical, and physical safeguards designed to protect personal information and Protected Health Information from unauthorized access, use, alteration, loss, or disclosure.</p>
+        <p>However, no website, electronic communication, transmission method, or data storage system can be guaranteed to be completely secure.</p>
+        <p>If you believe sensitive information has been compromised or submitted to us in error, please contact us.</p>
+        <h2>Website Forms</h2>
+        <p>Our website may contain forms that allow visitors to request information, contact our admissions team, verify insurance benefits, or inquire about treatment.</p>
+        <p>Information submitted through these forms is used to respond to your request and facilitate services you have requested.</p>
+        <p>Please do not submit information through a website form unless you are comfortable providing the requested information electronically.</p>
+        <p>Information submitted through our website is transmitted using SSL/TLS encryption where applicable.</p>
+        <h2>Insurance Verification</h2>
+        <p>If you submit insurance information for verification of benefits, we may use the information you provide to determine potential insurance coverage for treatment services.</p>
+        <p>Information may be shared with your insurance provider, authorized verification services, or other parties as reasonably necessary to perform the requested verification and as permitted by applicable law.</p>
+        <p>Verification of insurance benefits does not guarantee coverage, authorization, admission, or payment for treatment.</p>
+        <h2>Cookies and Tracking Technologies</h2>
+        <p>Our website may use cookies and similar technologies to support website functionality, understand website usage, measure performance, and improve our services.</p>
+        <p>These technologies may collect information regarding your browser, device, website interactions, traffic source, and pages visited.</p>
+        <p>We may use third-party analytics or advertising technologies where permitted by applicable law.</p>
+        <p>We do not knowingly use tracking technologies to disclose Protected Health Information to third parties for purposes prohibited by HIPAA or other applicable privacy laws.</p>
+        <p>You may be able to limit or disable cookies through your browser settings. Disabling certain cookies may affect the functionality of portions of our website.</p>
+        <h2>Third-Party Websites and Services</h2>
+        <p>Our website may contain links to websites or services operated by third parties.</p>
+        <p>{site.name} is not responsible for the privacy practices, security, content, or policies of independently operated third-party websites.</p>
+        <p>Visiting a third-party website is subject to that third party’s privacy practices and terms. We encourage you to review the privacy policy of any third-party website before providing personal information.</p>
+        <h2>SMS and Text Message Communications</h2>
+        <p>If you voluntarily provide your mobile telephone number and consent to receive text messages from {site.name}, we may send SMS communications related to your inquiry, admissions process, appointments, services, care coordination, follow-up communications, or other communications you have requested or authorized.</p>
+        <p>Message frequency may vary. Message and data rates may apply.</p>
+        <p>You may opt out of receiving SMS communications at any time by replying STOP. You may reply HELP for assistance.</p>
+        <p>Consent to receive SMS communications is not a condition of purchasing or receiving treatment or services.</p>
+        <p>Mobile information, including telephone numbers and SMS consent or opt-in data, will not be sold, rented, or shared with third parties or affiliates for their own marketing or promotional purposes. SMS consent and opt-in information will not be shared with third parties for marketing purposes.</p>
+        <p>Information may be shared with service providers that facilitate communications on our behalf when necessary to provide the requested messaging service and subject to appropriate privacy and security requirements.</p>
+        <p>The full terms of our text messaging program are in our <Link href="/sms-terms">SMS Terms &amp; Conditions</Link>.</p>
+        <h2>Email Communications</h2>
+        <p>If you provide your email address, we may use it to respond to your inquiry or provide communications related to services you have requested.</p>
+        <p>Where applicable, marketing email communications will provide a method to unsubscribe from future marketing messages.</p>
+        <p>Treatment-related, administrative, legal, or other non-marketing communications may still be sent when permitted or required by law.</p>
+        <h2>Data Retention</h2>
+        <p>We may retain information for as long as reasonably necessary to fulfill the purposes for which it was collected and to comply with applicable healthcare, legal, regulatory, contractual, operational, and recordkeeping requirements.</p>
+        <p>Retention periods may vary depending on the nature of the information and applicable legal requirements.</p>
+        <h2>Your Privacy Choices</h2>
+        <p>Depending on the type of information involved and applicable law, you may have certain rights regarding your personal information.</p>
+        <p>These rights may include the ability to request access to or correction of certain information and, where legally available, request deletion or restriction of certain information.</p>
+        <p>Certain healthcare and business records may be retained when required by federal or state law.</p>
+        <p>You may also:</p>
+        <ul>
+          <li>Opt out of SMS messages by replying STOP or by following the opt-out instructions provided</li>
+          <li>Unsubscribe from applicable marketing emails using the unsubscribe instructions provided</li>
+          <li>Adjust browser settings to limit or disable certain cookies</li>
+        </ul>
+        <p>Rights relating specifically to Protected Health Information are described in our <Link href="/notice-of-privacy-practices">Notice of Privacy Practices</Link>, as applicable.</p>
+        <h2>Children’s Privacy</h2>
+        <p>Our website is not directed toward children under the age of 13, and we do not knowingly collect personal information directly from children under 13 through our website without appropriate authorization.</p>
+        <p>If we become aware that personal information from a child has been collected in a manner inconsistent with applicable law, we will take reasonable steps to appropriately address or remove that information.</p>
+        <h2>Legal Requirements</h2>
+        <p>{site.name} complies with applicable federal, state, and local privacy and security requirements governing information collected in connection with our services.</p>
+        <p>We may use or disclose information when required to do so by law or when reasonably necessary to comply with a lawful legal process, regulatory requirement, or governmental request.</p>
+        <p>Nothing in this Privacy Policy is intended to limit rights or protections provided under applicable healthcare privacy laws.</p>
+        <h2>Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy periodically to reflect changes in our practices, technology, services, legal requirements, or regulatory obligations.</p>
+        <p>When changes are made, the updated Privacy Policy will be posted on this page and the “Last Updated” date will be revised.</p>
+        <p>We encourage visitors to periodically review this Privacy Policy.</p>
+        <h2>Contact Us</h2>
+        <p>If you have questions about this Privacy Policy, our privacy practices, or how information submitted through our website is handled, please contact:</p>
+        <p>{site.name}<br />
+        {site.address.full}</p>
+        <p>Phone: <a href={site.phone.href} suppressHydrationWarning>{site.phone.display}</a><br />
+        Email: <a href={`mailto:${site.email}`}>{site.email}</a></p>
+        <p>For questions regarding your medical records, Protected Health Information, or rights under applicable healthcare privacy laws, please see our <Link href="/notice-of-privacy-practices">Notice of Privacy Practices</Link> or contact our Privacy Officer at the details above.</p>
       </LegalTemplate>
     </>
   );
