@@ -58,7 +58,7 @@ export default async function BlogIndex() {
                       className="group flex h-full flex-col overflow-hidden rounded-2xl border border-sand-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
                     >
                       {post.coverImage && (
-                        <div className="relative aspect-[16/10] overflow-hidden bg-sand-100">
+                        <div className="relative aspect-[1200/630] overflow-hidden bg-sand-100">
                           <Image
                             src={clarionCover(post.coverImage, post.slug).src}
                             alt=""

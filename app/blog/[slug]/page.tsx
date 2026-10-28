@@ -195,7 +195,7 @@ export default async function ClarionPostPage({ params }: { params: Promise<Para
         {post.coverImage && (
           <div className="bg-navy-900">
             <Container className="pb-14">
-              <div className="relative aspect-[16/9] overflow-hidden rounded-2xl">
+              <div className="relative aspect-[1200/630] overflow-hidden rounded-2xl">
                 <Image
                   src={clarionCover(post.coverImage, post.slug).src}
                   alt=""
