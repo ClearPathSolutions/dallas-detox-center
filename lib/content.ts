@@ -94,6 +94,7 @@ export function getPageByPath(path: string): PageContent | null {
  */
 export const TEAM_ORDER = [
   "pamela-tambini",
+  "casey-hyatt",
   "olivia-hadjerioua",
   "antoine-gross",
   "deborah-wade",

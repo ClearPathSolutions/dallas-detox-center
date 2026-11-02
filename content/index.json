@@ -398,6 +398,13 @@
       "template": "team",
       "title": "Jacob Doss",
       "blocks": 6
+    },
+    {
+      "slug": "casey-hyatt",
+      "path": "/about-us/casey-hyatt",
+      "template": "team",
+      "title": "Casey Hyatt",
+      "blocks": 9
     }
   ],
   "posts": [
