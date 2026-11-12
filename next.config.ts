@@ -94,6 +94,14 @@ const nextConfig: NextConfig = {
       "/about-us/michael-young": "/about-us/meet-the-team",
       "/about-us/ricki-cochran": "/about-us/meet-the-team",
       "/about-us/haley-wadlington": "/about-us/meet-the-team",
+      // Found 2026-11-11 from the Wayback Machine: population pages that sat
+      // at the root on WordPress, were indexed, and 404'd after cutover.
+      "/college-students": "/who-we-help/college-students",
+      "/first-responders": "/who-we-help/first-responders",
+      "/men": "/who-we-help/men",
+      "/veterans": "/who-we-help/veterans",
+      "/women": "/who-we-help/women",
+      "/young-adults": "/who-we-help/young-adults",
     };
     return [
       ...Object.entries(map).map(([source, destination]) => ({
@@ -101,6 +109,11 @@ const nextConfig: NextConfig = {
         destination,
         permanent: true,
       })),
+      // WordPress archive URLs (numbered blog pages, categories, authors) have
+      // no route here; the blog is one page. Wildcards catch unseen variants.
+      { source: "/blog/:n(\\d+)", destination: "/blog", permanent: true },
+      { source: "/category/:slug*", destination: "/blog", permanent: true },
+      { source: "/author/:slug*", destination: "/blog", permanent: true },
       // Job listings live on ADP. Temporary (307) rather than permanent so
       // browsers and search engines don't cache it — the ADP URL can change,
       // and /careers may become a real page later.
