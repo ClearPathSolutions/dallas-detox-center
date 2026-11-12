@@ -50,6 +50,9 @@ export const metadata: Metadata = {
     description: site.description,
   },
   robots: { index: true, follow: true },
+  verification: {
+    google: "Eouf4XZIjJzNu-_cmdK-RN7M2XnR7d0cvpDXwO8Wq30",
+  },
 };
 
 export default function RootLayout({
