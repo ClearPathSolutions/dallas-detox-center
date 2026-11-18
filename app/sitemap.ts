@@ -3,8 +3,7 @@ import { getIndex } from "@/lib/content";
 import { site } from "@/lib/site";
 import { NOINDEX_PATHS } from "@/lib/seo";
 import { getClarionPosts } from "@/lib/clarion";
-
-export const dynamic = "force-static";
+import { connection } from "next/server";
 
 /**
  * Routes that exist as bespoke pages rather than migrated content, so they are
@@ -21,6 +20,11 @@ const EXTRA_PATHS = [
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  // Render per request. With `force-static` the sitemap was built once per deploy
+  // and froze on Vercel, so a Clarion post published after a deploy never reached
+  // it (same failure as Fort Worth Wellness and Double Peak). The feed fetch keeps
+  // its own 60s cache (lib/clarion.ts), so this costs no extra Clarion calls.
+  await connection();
   const index = getIndex();
   const abs = (path: string) => `${site.url}${path === "/" ? "" : path}`;
 
