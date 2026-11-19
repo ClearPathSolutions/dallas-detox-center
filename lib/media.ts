@@ -232,6 +232,8 @@ const CLARION_IMAGE_HOSTS = ["api.clarionlabs.ai", "www.clarionlabs.ai"];
 
 function isClarionSrc(src?: string | null): boolean {
   if (!src) return false;
+  // Served from this site's own /blog-images path (rewritten to Clarion).
+  if (src.startsWith("/blog-images/")) return true;
   try {
     return CLARION_IMAGE_HOSTS.includes(new URL(src).hostname);
   } catch {

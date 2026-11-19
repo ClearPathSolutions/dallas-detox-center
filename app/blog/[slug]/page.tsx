@@ -125,7 +125,7 @@ export default async function ClarionPostPage({ params }: { params: Promise<Para
                 mainEntityOfPage: { "@id": `${url}#webpage` },
                 datePublished: post.publishedAt ?? undefined,
                 dateModified: post.publishedAt ?? undefined,
-                image: post.coverImage ?? `${site.url}/images/logo.png`,
+                image: post.coverImage ? `${site.url}${post.coverImage}` : `${site.url}/images/logo.png`,
                 // Clarion gives an author name but no bio page to point at.
                 author: post.author
                   ? { "@type": "Organization", name: post.author }
@@ -198,7 +198,7 @@ export default async function ClarionPostPage({ params }: { params: Promise<Para
               <div className="relative aspect-[1200/630] overflow-hidden rounded-2xl">
                 <Image
                   src={clarionCover(post.coverImage, post.slug).src}
-                  alt=""
+                  alt={post.coverAlt}
                   fill
                   sizes="(min-width:1280px) 76rem, 100vw"
                   className="object-cover"
