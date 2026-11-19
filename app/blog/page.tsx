@@ -61,7 +61,7 @@ export default async function BlogIndex() {
                         <div className="relative aspect-[1200/630] overflow-hidden bg-sand-100">
                           <Image
                             src={clarionCover(post.coverImage, post.slug).src}
-                            alt=""
+                            alt={post.coverAlt}
                             fill
                             sizes="(min-width:1024px) 24rem, (min-width:640px) 50vw, 100vw"
                             className="object-cover"

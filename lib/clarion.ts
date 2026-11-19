@@ -24,6 +24,8 @@ export type ClarionPost = {
   title: string;
   excerpt: string | null;
   coverImage: string | null;
+  /** The author's alt text for the cover, else the post title. Never empty. */
+  coverAlt: string;
   author: string | null;
   publishedAt: string | null;
   bodyHtml: string | null;
@@ -38,6 +40,7 @@ type RawPost = {
   excerpt?: string | null;
   body_html?: string | null;
   cover_image_url?: string | null;
+  cover_image_alt?: string | null;
   author_name?: string | null;
   published_at?: string | null;
   meta_title?: string | null;
@@ -62,6 +65,29 @@ export function sanitiseHtml(html: string): string {
     .replace(/\son[a-z]+\s*=\s*'[^']*'/gi, "")
     .replace(/\son[a-z]+\s*=\s*[^\s>]+/gi, "")
     .replace(/(href|src)\s*=\s*(["'])\s*javascript:[^"']*\2/gi, '$1="#"');
+}
+
+/**
+ * Blog images on this site's own domain. Clarion stores them and hands out
+ * `https://api.clarionlabs.ai/blog/public/image/<key>` (or, once Clarion is told
+ * this site proxies them, `<this site>/blog-images/<key>`). Both become
+ * `/blog-images/<key>`, which next.config.ts rewrites to Clarion's bytes route,
+ * so the address a visitor, Google Images or a social card sees is this site's.
+ */
+export const IMAGE_PATH = "/blog-images";
+const CLARION_IMAGE = `${api}/blog/public/image/`;
+const OWN_IMAGE = new RegExp(
+  `https://(?:www\\.)?${new URL(site.url).hostname.replace(/^www\./, "").replace(/\./g, "\\.")}(?=${IMAGE_PATH}/)`,
+  "g",
+);
+
+export function onSiteImage(src: string): string {
+  if (src.startsWith(CLARION_IMAGE)) return `${IMAGE_PATH}/${src.slice(CLARION_IMAGE.length)}`;
+  return src.replace(OWN_IMAGE, "");
+}
+
+function onSiteImages(html: string): string {
+  return html.split(CLARION_IMAGE).join(`${IMAGE_PATH}/`).replace(OWN_IMAGE, "");
 }
 
 /**
@@ -190,7 +216,7 @@ export function addAnchorIds(html: string): string {
  * ids its table of contents and citations link to.
  */
 export function prepareBodyHtml(html: string): string {
-  return addAnchorIds(resolveImageUrls(sanitiseHtml(html), api));
+  return addAnchorIds(onSiteImages(resolveImageUrls(sanitiseHtml(html), api)));
 }
 
 /**
@@ -284,7 +310,8 @@ function normalise(r: RawPost): ClarionPost | null {
     slug: r.slug,
     title: r.title,
     excerpt: r.excerpt ?? null,
-    coverImage: r.cover_image_url ?? null,
+    coverImage: r.cover_image_url ? onSiteImage(r.cover_image_url) : null,
+    coverAlt: r.cover_image_alt?.trim() || r.title,
     author: r.author_name ?? null,
     publishedAt: r.published_at ?? null,
     bodyHtml: r.body_html ? prepareBodyHtml(r.body_html) : null,

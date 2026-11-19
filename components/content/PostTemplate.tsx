@@ -25,7 +25,7 @@ export function PostTemplate({
             <>
               <Image
                 src={approvedHero(post.featured.src, post.slug)}
-                alt=""
+                alt={post.featured.alt || post.title}
                 fill
                 sizes="100vw"
                 priority
