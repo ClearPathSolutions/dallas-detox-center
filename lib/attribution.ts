@@ -21,6 +21,8 @@
  * worth making when sending the fields explicitly costs nothing.
  */
 
+import { latestReferrer, rememberReferrer } from "./latest-referrer";
+
 declare global {
   interface Window {
     /** Installed by CallTrackingMetrics' t.js. */
@@ -131,6 +133,7 @@ function externalReferrer(): string | null {
  */
 export function recordFirstTouch(): void {
   if (typeof window === "undefined") return;
+  rememberReferrer();
 
   const campaign = campaignFromSearch(window.location.search);
   const stored = readStore();
@@ -250,7 +253,7 @@ export function buildLeadPayload(
     data,
     page_url: window.location.href,
     landing_page_url: firstTouch?.landing_page_url ?? window.location.href,
-    referrer: firstTouch?.referrer ?? null,
+    referrer: latestReferrer() ?? firstTouch?.referrer ?? null,
     utm: Object.keys(utm).length ? utm : null,
     // One click-id field, three possible identifiers. Falling back through them
     // beats inventing top-level keys Clarion has not agreed to parse: an
